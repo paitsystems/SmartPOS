@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ReportListActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn1_collection_report"
+                style="@style/optionbutton1Mob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/collection_report" />
+
+            <Button
+                android:id="@+id/btn2_itemwise_sale"
+                style="@style/optionbutton2Mob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/itemwise_sale" />
+
+            <Button
+                android:id="@+id/btn3_todays_sale"
+                style="@style/optionbutton1Mob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/todays_sale_report"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        style="@style/footerstyleMob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

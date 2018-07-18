@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/bill"
+        android:icon="@drawable/ic_local_printshop_black_24dp"
+        android:title="@string/print_bill"
+        app:showAsAction="always"/>
+
+</menu>

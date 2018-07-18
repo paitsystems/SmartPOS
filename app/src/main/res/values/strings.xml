@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Smart POS</string>
+    <string name="title_activity_login">Smart POS</string>
+
+    <string name="error_invalid_password">This field is required</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="footer1">© Copyright 2017 LNB Infotech Pvt.Ltd. All Rights Reserved.</string>
+    <string name="footer">© 2018 PAIT BIZ SYSTEMS Pvt.Ltd.</string>
+
+    <!-- PREF -->
+    <string name="pref_isRegister">isRegister</string>
+    <string name="pref_isTableSaved">isTableSaved</string>
+    <string name="pref_isCategorySaved">isCategorySaved</string>
+    <string name="pref_compName">compName</string>
+    <string name="pref_address">address</string>
+    <string name="pref_contactNo">contactNo</string>
+    <string name="pref_expiryDate">expiryDate</string>
+    <string name="pref_username">username</string>
+    <string name="pref_password">password</string>
+    <string name="pref_clientID">clientID</string>
+    <string name="pref_IMEI">IMEI</string>
+    <string name="pref_logged">logged</string>
+    <string name="enter_client_id_here">Enter Client Id Here</string>
+    <string name="verify">Verify</string>
+    <string name="company_details">Company Details</string>
+    <string name="company_name">Company</string>
+    <string name="address">Address</string>
+    <string name="contact_no">Contact No</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="enter_your_credentials">Enter Your Credentials</string>
+    <string name="username">Username</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="register">Register</string>
+    <string name="enter_number_of_tables">Enter Number Of Tables</string>
+    <string name="save">Save</string>
+    <string name="total_number_of_tables_you_have">Total Number Of Tables You Have</string>
+    <string name="count">Count</string>
+    <string name="cat1">Cat1</string>
+    <string name="enter_cat1_name">Enter Cat1 Name</string>
+    <string name="select_cat1">Select Cat1</string>
+    <string name="cat2">Cat2</string>
+    <string name="enter_cat2_name">Enter Cat2 Name</string>
+    <string name="enter_tax_name">Enter Tax Name</string>
+    <string name="rate">Rate</string>
+    <string name="enter_rate">Enter Rate</string>
+    <string name="change_cat1">Change Cat1</string>
+    <string name="add">Add</string>
+    <string name="proceed">Proceed</string>
+    <string name="search_item">Search Item</string>
+    <string name="search">Search</string>
+    <string name="refresh">Refresh</string>
+    <string name="table_no">Table No</string>
+    <string name="tablename">TableName</string>
+    <string name="waiter">Waiter</string>
+    <string name="print">Print</string>
+    <string name="item">Item</string>
+    <string name="qty">Qty</string>
+    <string name="amount">Amnt</string>
+    <string name="_0">0</string>
+    <string name="paired_devices">Paired Devices</string>
+    <string name="new_devices_available">New Devices Available</string>
+    <string name="scan_new_device">Search</string>
+    <string name="categoryClass">Category</string>
+    <string name="bluetooth_new_device_list">Bluetooth New Device List</string>
+    <string name="bluetooth_paired_device_list">Bluetooth Paired Device List</string>
+    <string name="test">Test</string>
+    <string name="remark">Remark</string>
+    <string name="settings">Settings</string>
+    <string name="user">User</string>
+    <string name="tab1">TAB1</string>
+    <string name="total">Total</string>
+    <string name="cash">Cash</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="enter_cash_amount">Enter Cash Amount</string>
+    <string name="enter_card_amount">Enter Card Amount</string>
+    <string name="tender">Tender</string>
+    <string name="return_amnt">Return Amnt</string>
+    <string name="enter_tender_amount">Enter Tender Amount</string>
+    <string name="return_amount_will_show_here">Return Amount Will Show Here</string>
+    <string name="balance">Balance</string>
+    <string name="net_amt">NET AMT</string>
+    <string name="balance_amount_will_show_here">Balance Amount Will Show Here</string>
+    <string name="_5000">5000</string>
+    <string name="cancel">Cancel</string>
+    <string name="reset">Reset</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="login">LogIn</string>
+    <string name="previous_name">Previous Name</string>
+    <string name="update">Update</string>
+    <string name="print_bill">Print Bill</string>
+    <string name="add_masters">Add Masters</string>
+    <string name="add_tax">Add Tax</string>
+    <string name="logout">Logout</string>
+    <string name="prev_name">Prev Name</string>
+    <string name="tv_perv_tax_name">tv_perv_tax_name</string>
+    <string name="new_name">New Name</string>
+    <string name="tax_name">Tax Name</string>
+    <string name="collection_report">Collection Report</string>
+    <string name="itemwise_sale">Itemwise Sale</string>
+    <string name="todays_sale_report">Todays Sale Report</string>
+    <string name="data_imported_data">Data Imported Date</string>
+    <string name="no_data_imported">No Data Imported</string>
+    <string name="import_data_from_date_range">Import Data From Date Range</string>
+    <string name="from_date">From Date</string>
+    <string name="to_date">To Date</string>
+    <string name="all_dates">All Dates</string>
+    <string name="show">Show</string>
+    <string name="importx">Select File</string>
+
+    <string-array name="navigationName">
+        <item>Home</item>
+        <item>Product Master</item>
+        <item>Printer Options</item>
+        <item>Bills Report</item>
+        <item>Updated Bills</item>
+        <item>Logout</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="group_name">Group Name</string>
+    <string name="select_group_name">Select Group Name</string>
+    <string name="enter_remark">Enter Remark</string>
+    <string name="from_range">From Range</string>
+    <string name="to_range">To Range</string>
+    <string name="gst_per">GST Per</string>
+    <string name="cgst_per">CGST Per</string>
+    <string name="sgst_per">SGST Per</string>
+    <string name="cgst_share">CGST Share</string>
+    <string name="sgst_share">SGST Share</string>
+    <string name="cess_per">Cess Per</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="home">Home</string>
+    <string name="table_master">Table Master</string>
+    <string name="category_master">Category Master</string>
+    <string name="gst_master">GST Master</string>
+    <string name="printer_option">Printer Option</string>
+    <string name="reports">Reports</string>
+    <string name="other">Other</string>
+    <string name="about_us">About Us</string>
+    <string name="import_data">Import Data</string>
+    <string name="product_master">Product Master</string>
+    <string name="category_name">Category Name</string>
+    <string name="support">Support</string>
+    <string name="backup">BackUp &amp; Restore</string>
+    <string name="bill">Bill Options</string>
+    <string name="updatedbills">Updated Bills</string>
+
+    <string name="invalid_otp">Invalid OTP</string>
+    <string name="pleaseenterotp">Please Enter OTP</string>
+
+    <string name="download_progress">Download Progress:</string>
+    <string name="menu_settings">Settings</string>
+    <string name="button_subscribe">Listen for Changes</string>
+    <string name="button_unsubscribe">Stop Listening for Changes</string>
+    <string name="file_created">Created file: %1$s.</string>
+    <string name="file_create_error">Error while trying to create the file.</string>
+    <string name="select_folder">Select a folder</string>
+    <string name="select_file">Select file</string>
+    <string name="custom_property_deleted">Custom properties successfully deleted.</string>
+    <string name="update_failed">Unable to update file.</string>
+    <string name="change_event">File change event: %1$s</string>
+    <string name="tickle_finished">Finished tickling. Restart watch to resume.</string>
+    <string name="content_updated">Successfully edited contents.</string>
+    <string name="content_update_failed">Error while editing contents.</string>
+    <string name="metadata_updated">Successfully updated metadata.</string>
+    <string name="custom_property_updated">Custom property successfully inserted or updated.</string>
+    <string name="file_not_pinnable">File is not pinnable.</string>
+    <string name="file_already_pinned">File is already pinned.</string>
+    <string name="query_failed">Problem while retrieving files.</string>
+    <string name="read_failed">Error while retrieving file.</string>
+    <string name="metadata_retrieved">Metadata successfully fetched. Title: %1$s</string>
+    <string name="content_loaded">File contents successfully read.</string>
+    <string name="file_deleted">File deleted.</string>
+    <string name="delete_failed">Unable to delete file.</string>
+    <string name="subscribed">Subscribed.</string>
+    <string name="unsubscribed">Unsubscribed.</string>
+    <string name="init_failed">Unable to initialize activity.</string>
+    <string name="file_not_selected">No file selected, can not continue.</string>
+    <string name="folder_not_selected">No folder selected, can not continue.</string>
+
+</resources>

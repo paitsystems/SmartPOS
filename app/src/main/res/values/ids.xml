@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="integer" name="ed_mobileno" format="integer">1001</item>
+    <item type="integer" name="ed_firmname" format="integer">1002</item>
+    <item type="integer" name="ed_username" format="integer">1003</item>
+    <item type="integer" name="ed_emailid" format="integer">1004</item>
+</resources>

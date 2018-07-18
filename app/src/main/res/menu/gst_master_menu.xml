@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/addGST"
+        app:showAsAction="never"
+        android:title="Add"/>
+
+    <item android:id="@+id/updateGST"
+        app:showAsAction="never"
+        android:title="Update GST"/>
+
+    <item android:id="@+id/viewGST"
+        app:showAsAction="never"
+        android:title="View"/>
+
+</menu>

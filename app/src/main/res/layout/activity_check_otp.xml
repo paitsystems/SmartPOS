@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/mobmargin5"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textViewMob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mobmargin5"
+                android:text="Enter OTP You Have Received" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="Your OTP IS :- "
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/tv_otp"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="@dimen/mobmargin5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/ed1"
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/ed2"
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/ed3"
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/ed4"
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/ed5"
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/ed6"
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_verifyotp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/mobmargin5"
+                    android:layout_weight="0.5"
+                    android:enabled="true"
+                    android:text="Verify OTP"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/maroon" />
+
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_resendotp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/mobmargin5"
+                    android:layout_weight="0.5"
+                    android:enabled="false"
+                    android:text="Resend OTP"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/lightgray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_text1"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/tv_timecount"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:gravity="center"
+                    android:text="03.00"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        style="@style/footerstyleMob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

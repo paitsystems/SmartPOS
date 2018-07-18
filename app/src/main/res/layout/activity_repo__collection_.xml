@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Repo_Collection_Activity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="1dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:text="@string/data_imported_data" />
+
+                <TextView
+                    android:id="@+id/tv_imp_date"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="@string/no_data_imported" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/mobpadding2"
+                android:weightSum="1"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_branch"
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:text="Employee" />
+
+                        <CheckBox
+                            android:id="@+id/cb_supplier"
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:text="Date" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_brand"
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:text="Time" />
+
+                        <CheckBox
+                            android:id="@+id/cb_item"
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:text="@string/item"
+                            android:checked="true" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_show"
+                    style="@style/btnStyleMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:text="Show"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Collection Details"
+                    android:id="@+id/rdo_details"
+                    style="@style/textViewMob"
+                    android:layout_weight="0.5"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Collection Summary"
+                    android:id="@+id/rdo_summary"
+                    style="@style/textViewMob"
+                    android:layout_weight="0.5" />
+            </LinearLayout>
+
+            <!--<HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:fillViewport="true"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custbtndraw"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_head_bill_no"
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left|center"
+                    android:text="Bill No"
+                    android:layout_weight="0.4" />
+
+                <TextView
+                    android:id="@+id/tv_head_date"
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left|center"
+                    android:text="Date"
+                    android:layout_weight="0.5" />
+
+                <TextView
+                    android:id="@+id/tv_head_time"
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left|center"
+                    android:text="Time"
+                    android:layout_weight="0.5" />
+
+                <TextView
+                    android:id="@+id/tv_head_employee"
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="left|center"
+                    android:text="Employee"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_head_tot_sale"
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center|right"
+                    android:text="Tot Sale"
+                    android:layout_weight="0.5"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_head_net_amnt"
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center|right"
+                    android:text="Net Amnt"
+                    android:layout_weight="0.5" />
+
+                <TextView
+                    android:id="@+id/tv_head_cash_amnt"
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center|right"
+                    android:text="Cash Amnt"
+                    android:layout_weight="0.5" />
+
+                <TextView
+                    android:id="@+id/tv_head_card_amnt"
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center|right"
+                    android:text="Card Amnt"
+                    android:layout_weight="0.5" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custbtndraw"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_total_bill_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.4"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tv_total_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="0.5" />
+
+                <TextView
+                    android:id="@+id/tv_total_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tv_total_employee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="center|right" />
+
+                <TextView
+                    android:id="@+id/tv_total_tot_sale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="center|right"
+                    android:text="0"
+                    style="@style/textViewMobW" />
+
+                <TextView
+                    android:id="@+id/tv_total_net_amnt"
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="center|right"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/tv_total_cash_amnt"
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="center|right"
+                    android:text="@string/_0" />
+
+                <TextView
+                    android:id="@+id/tv_total_card_amnt"
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="center|right"
+                    android:text="@string/_0" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/filter_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_branch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:visibility="visible" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_supplier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:visibility="visible" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/auto_brand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:visibility="visible" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/auto_cost_center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_filter_fromdate"
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="22/May/2017" />
+
+                    <TextView
+                        android:id="@+id/tv_filter_todate"
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="22?May/2017" />
+
+                    <CheckBox
+                        android:id="@+id/cb_sync_alldate"
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="All Date" />
+                </LinearLayout>
+
+                <!--<Button
+                    android:id="@+id/btn_filter"
+                    style="@style/btnStyleMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apply Filter" />-->
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Apply Filter"
+                    android:textColor="@color/white"
+                    android:visibility="visible"
+                    app:backgroundTint="@color/maroon" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/sync_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/mobpadding2"
+                    android:text="@string/import_data_from_date_range" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible">
+
+                        <TextView
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:padding="2dp"
+                            android:text="@string/from_date"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#000000" />
+
+                        <TextView
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:padding="2dp"
+                            android:text="@string/to_date"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#000000" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight="0.4"
+                            android:background="@drawable/text_box_maroon"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btn_from_date"
+                                style="@style/btnStyleMob"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:text="22/May/2017" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_weight="0.4"
+                            android:background="@drawable/text_box_maroon"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btn_to_date"
+                                style="@style/btnStyleMob"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:text="23/May2017" />
+
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+
+                <CheckBox
+                    android:id="@+id/cb_filter_all"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="All Records"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_sync"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:text="@string/show"
+                        android:textColor="@color/white"
+                        android:visibility="visible"
+                        app:backgroundTint="@color/maroon" />
+
+                    <!--<Button
+                        android:id="@+id/btn_sync"
+                        style="@style/btnStyleMobW"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/show" />-->
+
+                    <Button
+                        style="@style/btnStyleMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="0.5"
+                        android:text="Delete"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <TextView
+        style="@style/footerstyleMob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

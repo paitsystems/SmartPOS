@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/home" />
+        <!--<item
+            android:id="@+id/table"
+            android:icon="@drawable/ic_table_icon_black"
+            android:title="@string/table_master" />-->
+        <item
+            android:id="@+id/product"
+            android:icon="@drawable/ic_restaurant_menu_black_24dp"
+            android:title="@string/product_master" />
+        <!--<item
+            android:id="@+id/category"
+            android:icon="@drawable/ic_four_black_squares"
+            android:title="@string/category_master" />
+        <item
+            android:id="@+id/gst"
+            android:icon="@drawable/ic_tax"
+            android:title="@string/gst_master" />-->
+        <item
+            android:id="@+id/printer"
+            android:icon="@drawable/ic_local_printshop_white_24dp"
+            android:title="@string/printer_option" />
+        <!--<item
+            android:id="@+id/report"
+            android:icon="@drawable/ic_progress_report"
+            android:title="@string/reports" />-->
+        <item
+            android:id="@+id/billreprint"
+            android:icon="@drawable/ic_pay"
+            android:title="@string/bill" />
+        <item
+            android:id="@+id/billupdate"
+            android:icon="@drawable/ic_exchange"
+            android:title="@string/updatedbills" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout" />
+    </group>
+
+    <item android:title="@string/other">
+        <menu>
+            <item
+                android:id="@+id/import_data"
+                android:icon="@drawable/ic_cloud_download_black_24dp"
+                android:title="@string/import_data" />
+            <item
+                android:id="@+id/nav_backup"
+                android:icon="@drawable/ic_cloud_upload_black_24dp"
+                android:title="@string/backup" />
+            <item
+                android:id="@+id/nav_support"
+                android:icon="@drawable/ic_email_24dp"
+                android:title="@string/support" />
+            <item
+                android:id="@+id/nav_about_us"
+                android:icon="@drawable/ic_supervisor_account_black_24dp"
+                android:title="@string/about_us" />
+        </menu>
+    </item>
+</menu>

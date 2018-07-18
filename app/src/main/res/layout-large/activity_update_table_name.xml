@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".AddProductMasterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/mobpadding5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/tabmargin5">
+
+            <TextView
+                style="@style/textViewTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="@string/previous_name" />
+
+            <TextView
+                android:id="@+id/tv_tablename"
+                style="@style/textViewTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="TableName" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/tabmargin5">
+
+            <TextView
+                style="@style/textViewTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="TableName" />
+
+            <EditText
+                android:id="@+id/ed_tablename"
+                style="@style/textViewTab"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mob_ED_size"
+                android:layout_weight="0.3"
+                android:hint="Enter New Table Name"
+                android:inputType="textNoSuggestions|textCapWords"
+                android:maxLines="1"
+                android:padding="@dimen/mobpadding2"
+                android:selectAllOnFocus="true"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_InActive"
+                style="@style/textViewMob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Table Active" />
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTintMode="multiply"
+                android:capitalize="sentences"
+                android:layout_weight="1"
+                android:checked="true"
+                android:switchTextAppearance="@android:style/TextAppearance.Medium"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textColor="@color/maroon"
+                android:textOff="INACTIVE"
+                android:textOn="ACTIVE"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            app:backgroundTint="@color/maroon" />
+
+        <!--<Button
+            android:id="@+id/btn_add"
+            style="@style/btnStyleMobW"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/mobmargin2"
+            android:padding="@dimen/mobpadding2"
+            android:text="Update Name" />-->
+    </LinearLayout>
+
+    <TextView
+        style="@style/footerstyleTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

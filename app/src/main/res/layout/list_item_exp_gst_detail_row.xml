@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/tabpadding5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/tabpadding2"
+            android:paddingTop="@dimen/tabpadding2"
+            android:text="From Range"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_gst_from_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/tabpadding2"
+            android:paddingTop="@dimen/tabpadding2"
+            android:text="@string/test"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/tabpadding2"
+            android:paddingTop="@dimen/tabpadding2"
+            android:text="To Range"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_gst_to_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/tabpadding2"
+            android:paddingTop="@dimen/tabpadding2"
+            android:text="@string/test"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/tabpadding2"
+            android:paddingTop="@dimen/tabpadding2"
+            android:text="GST Per"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_gst_per"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/tabpadding2"
+            android:paddingTop="@dimen/tabpadding2"
+            android:text="@string/test"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/tabpadding2"
+            android:paddingTop="@dimen/tabpadding2"
+            android:text="CGST Per"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_gst_cgstper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/tabpadding2"
+            android:paddingTop="@dimen/tabpadding2"
+            android:text="@string/test"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/tabpadding2"
+            android:paddingTop="@dimen/tabpadding2"
+            android:text="SGST Per"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_gst_sgstper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/tabpadding2"
+            android:paddingTop="@dimen/tabpadding2"
+            android:text="@string/test"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/tabpadding2"
+            android:paddingTop="@dimen/tabpadding2"
+            android:text="CGST Share"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_gst_cgstshare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/tabpadding2"
+            android:paddingTop="@dimen/tabpadding2"
+            android:text="@string/test"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/tabpadding2"
+            android:paddingTop="@dimen/tabpadding2"
+            android:text="SGST Share"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_gst_sgstshare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/tabpadding2"
+            android:paddingTop="@dimen/tabpadding2"
+            android:text="@string/test"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/tabpadding2"
+            android:paddingTop="@dimen/tabpadding2"
+            android:text="Cess Per"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_gst_cessper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:paddingBottom="@dimen/tabpadding2"
+            android:paddingTop="@dimen/tabpadding2"
+            android:text="@string/test"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

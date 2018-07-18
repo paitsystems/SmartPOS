@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".CashMemoActivityR">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="@string/user" />
+
+                <TextView
+                    android:id="@+id/tv_user"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="@string/tab1" />
+
+                <TextView
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="@string/table_no" />
+
+                <TextView
+                    android:id="@+id/tv_tableno"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/row_cover"
+                android:orientation="horizontal"
+                android:padding="@dimen/mobpadding2">
+
+                <TextView
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:gravity="left|center"
+                    android:text="@string/item" />
+
+                <TextView
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="right|center"
+                    android:text="@string/qty" />
+
+                <TextView
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="right|center"
+                    android:text="@string/amount" />
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:headerDividersEnabled="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/row_cover"
+                android:orientation="horizontal"
+                android:padding="@dimen/mobpadding2">
+
+                <TextView
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:gravity="center"
+                    android:text="@string/total" />
+
+                <TextView
+                    android:id="@+id/tv_totalqty"
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="right|center"
+                    android:text="@string/qty" />
+
+                <TextView
+                    android:id="@+id/tv_totalamt"
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="right|center"
+                    android:text="@string/amount" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:background="@drawable/sp_draw"
+                            android:orientation="vertical"
+                            android:padding="@dimen/mobpadding2">
+                            <Spinner
+                                android:id="@+id/sp_tax"
+                                style="@style/textViewMob"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/mob_ED_size"
+                                android:padding="@dimen/mobpadding2" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_tax_rate"
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:text="Tax Rate" />
+
+                        <TextView
+                            android:id="@+id/tv_tax_amnt"
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:text="Tax Amnt" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/mob_ED_size"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_gst_group"
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:gravity="center"
+                            android:text="GSTGroupName" />
+
+                        <TextView
+                            android:id="@+id/tv_gst_rate"
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:text="Tax Rate" />
+
+                        <TextView
+                            android:id="@+id/tv_gst_amnt"
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:text="Tax Amnt" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:text="@string/cash" />
+
+                        <TextView
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:text="@string/credit_card" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/mobpadding2">
+
+                        <EditText
+                            android:id="@+id/ed_cash"
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/tabmargin2"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/cashmwmo_ed_draw"
+                            android:gravity="center"
+                            android:hint="@string/enter_cash_amount"
+                            android:imeActionId="@+id/ed_creditcard"
+                            android:imeOptions="actionNext"
+                            android:inputType="number|numberDecimal"
+                            android:maxLines="1"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            android:text="0" />
+
+                        <EditText
+                            android:id="@+id/ed_creditcard"
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/tabmargin2"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/cashmwmo_ed_draw"
+                            android:gravity="center"
+                            android:hint="@string/enter_card_amount"
+                            android:imeActionId="@+id/ed_tender"
+                            android:imeOptions="actionNext"
+                            android:inputType="number|numberDecimal"
+                            android:maxLines="1"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            android:text="0" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:text="@string/tender" />
+
+                        <TextView
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:text="@string/balance" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/mobpadding2"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/ed_tender"
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/tabmargin2"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/cashmwmo_ed_draw"
+                            android:gravity="center"
+                            android:hint="@string/enter_tender_amount"
+                            android:imeOptions="actionDone"
+                            android:inputType="number|numberDecimal"
+                            android:maxLines="1"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            android:text="0" />
+
+                        <TextView
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/tabmargin2"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/cashmwmo_ed_draw"
+                            android:gravity="center"
+                            android:hint="@string/return_amount_will_show_here"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:id="@+id/tv_balance" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:text="@string/return_amnt" />
+
+
+                        <TextView
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:text="@string/net_amt" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/mobpadding2">
+
+                        <TextView
+                            android:id="@+id/tv_returnamnt"
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/tabmargin2"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/cashmwmo_ed_draw"
+                            android:gravity="center"
+                            android:hint="@string/balance_amount_will_show_here"
+                            android:singleLine="true"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/tv_netamnt"
+                            style="@style/textViewMob"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/tabmargin2"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/cashmwmo_ed_draw"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="0" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            android:layout_weight="0.5"
+            android:layout_gravity="center"
+            app:backgroundTint="@color/orange" />
+
+        <!--<Button
+            android:id="@+id/btn_cancel"
+            style="@style/btnStyleMobW"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mobmargin2"
+            android:layout_weight="0.5"
+            android:text="@string/cancel"
+            android:textStyle="bold" />-->
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reset"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            app:backgroundTint="@color/orange" />
+
+        <!--<Button
+            android:id="@+id/btn_reset"
+            style="@style/btnStyleMobW"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mobmargin2"
+            android:layout_weight="0.5"
+            android:text="@string/reset"
+            android:textStyle="bold" />-->
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            app:backgroundTint="@color/orange" />
+
+        <!--<Button
+            android:id="@+id/btn_save"
+            style="@style/btnStyleMobW"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mobmargin2"
+            android:layout_weight="0.5"
+            android:text="@string/save"
+            android:textStyle="bold" />-->
+    </LinearLayout>
+
+    <TextView
+        style="@style/footerstyleMob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

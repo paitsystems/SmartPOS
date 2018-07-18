@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".VerificationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                style="@style/textViewMob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="@string/enter_client_id_here" />
+
+            <EditText
+                android:id="@+id/ed_client_id"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tab_ED_size"
+                android:background="@drawable/textlines"
+                android:gravity="center"
+                android:inputType="textNoSuggestions|textCapCharacters"
+                android:maxLines="1"
+                android:padding="2dp"
+                android:singleLine="true" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/verify"
+                android:textColor="@color/white"
+                android:visibility="visible"
+                app:backgroundTint="@color/maroon" />
+
+            <!--<Button
+                android:id="@+id/btn_verify"
+                style="@style/btnStyleMobW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/verify"
+                android:layout_gravity="center"
+                android:padding="2dp"
+                android:layout_margin="5dp" />-->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        style="@style/footerstyleMob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

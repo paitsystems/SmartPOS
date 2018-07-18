@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddProductMasterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/mobpadding5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textViewTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="Tabel Name" />
+
+            <TextView
+                android:id="@+id/tv_tablename"
+                style="@style/textViewTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="TableName" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/mobmargin5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@drawable/sp_draw"
+                android:orientation="vertical"
+                android:padding="@dimen/mobpadding2">
+                <Spinner
+                    android:id="@+id/sp_gst"
+                    style="@style/textViewTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mob_ED_size"
+                    android:padding="@dimen/mobpadding2" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_tax_rate"
+                style="@style/textViewMob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="Tax Rate"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_tax_amnt"
+                style="@style/textViewMob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="Tax Amnt"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_add"
+            style="@style/btnStyleTabW"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/mobmargin2"
+            android:padding="@dimen/mobpadding2"
+            android:text="Update GST" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/footerstyleTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

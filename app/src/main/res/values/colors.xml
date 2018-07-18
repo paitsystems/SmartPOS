@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<color name="colorAccent">#FF4081</color>-->
+
+    <color name="white">#ffffff</color>
+    <color name="maroon">#990000</color>
+    <color name="black">#000000</color>
+    <color name="darkgreen">#025F1E</color>
+    <color name="lightgreen">#00A933</color>
+    <color name="lightyellow">#FFCC00</color>
+    <color name="lightgray">#b3b3b3</color>
+    <color name="faintgray">#CABBBB</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FA6C04</color>
+    <color name="blue">#3F51B5</color>
+    <color name="bg_row_background">#fa315b</color>
+
+    <color name="purpule">#660394</color>
+    <color name="test">#f8551f</color>
+    <color name="lgreen">#b5ffae</color>
+    <color name="lyellow">#f6f3ad</color>
+    <color name="lred">#ffaa7b</color>
+    <color name="lpurple">#EA80FC</color>
+    <color name="lpink">#ea6894</color>
+    <color name="lblue">#80DEEA</color>
+
+    <color name="dgreen">#8BC34A</color>
+    <color name="ldblue">#24bc96</color>
+    <color name="dorange">#FF5252</color>
+    <color name="llyellow">#FFFF8D</color>
+    <!--<darkestcolor>-->
+    <color name="i_orange">#EF6C00</color>
+    <color name="buttoncolor">#990000</color>
+    <color name="bblue">#4DB6AC</color>
+    <color name="morange">#FF8F00</color>
+    <color name="pblue">#29B6F6</color>
+    <color name="Gcolor">#455A64</color>
+    <color name="G2color">#880e4f</color>
+    <color name="G3color">#666666</color>
+    <color name="G4color">#6b311f</color>
+    <color name="G5color">#1f6b57</color>
+    <color name="G6color">#689f38</color>
+    <color name="G7color">#880e4f</color>
+    <color name="G8color">#dd2c00</color>
+    <color name="G9color">#009688</color>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/addTable"
+        app:showAsAction="never"
+        android:title="Add Table"/>
+
+    <item android:id="@+id/updateTable"
+        app:showAsAction="never"
+        android:title="Update Table"/>
+
+    <!--<item android:id="@+id/updateTableGST"
+        app:showAsAction="never"
+        android:title="Update Table GST"/>
+-->
+    <item android:id="@+id/viewTable"
+        app:showAsAction="never"
+        android:title="View"/>
+
+</menu>

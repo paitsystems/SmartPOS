@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.4"
+            android:gravity="left|center"
+            android:text="BillNo"
+            android:id="@+id/tv_billNo"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAppearance="@android:style/TextAppearance.Small" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left|center"
+            android:text="BillDate"
+            android:id="@+id/tv_billDate"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:layout_weight="0.5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left|center"
+            android:text="BillTime"
+            android:id="@+id/tv_billTime"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:layout_weight="0.5" />
+
+        <TextView
+            android:id="@+id/tv_emp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:gravity="left|center"
+            android:text="Emp"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:gravity="center|right"
+            android:text="TotSale"
+            android:id="@+id/tv_totSale"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:gravity="center|right"
+            android:text="NetAmnt"
+            android:id="@+id/tv_netAmnt"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAppearance="@android:style/TextAppearance.Small" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:gravity="center|right"
+            android:text="CashAmnt"
+            android:id="@+id/tv_cashAmnt"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAppearance="@android:style/TextAppearance.Small" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:gravity="center|right"
+            android:text="CardAmnt"
+            android:id="@+id/tv_cardAmnt"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAppearance="@android:style/TextAppearance.Small" />
+
+    </LinearLayout>
+</LinearLayout>

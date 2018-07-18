@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddProductMasterActivity">
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_proceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/mobmargin2"
+        android:padding="@dimen/mobpadding2"
+        android:text="@string/proceed"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:backgroundTint="@color/maroon" />
+
+    <!--<Button
+        android:id="@+id/btn_proceed"
+        style="@style/btnStyleMobW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/mobmargin2"
+        android:padding="@dimen/mobpadding2"
+        android:text="@string/proceed"
+        android:visibility="gone" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/mobpadding5">
+
+        <LinearLayout
+            android:id="@+id/add_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="@string/cat1" />
+
+                <EditText
+                    android:id="@+id/ed_cat1"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.2"
+                    android:hint="@string/enter_cat1_name"
+                    android:inputType="textNoSuggestions|textCapWords"
+                    android:maxLines="1"
+                    android:padding="@dimen/mobpadding2"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_cat1"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:hint="@string/select_cat1"
+                    android:imeActionId="@+id/ed_cat2"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="@string/cat2" />
+
+                <EditText
+                    android:id="@+id/ed_cat2"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mob_ED_size"
+                    android:layout_weight="0.2"
+                    android:hint="@string/enter_cat2_name"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:padding="@dimen/mobpadding2"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="@string/rate" />
+
+                <EditText
+                    android:id="@+id/ed_rate"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mob_ED_size"
+                    android:layout_weight="0.2"
+                    android:hint="@string/enter_rate"
+                    android:inputType="number|numberDecimal"
+                    android:maxLines="1"
+                    android:padding="@dimen/mobpadding2"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:background="@drawable/black_border_curve_draw"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/sp_gstgroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rdo_gstInclude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="GST Including" />
+
+                <RadioButton
+                    android:id="@+id/rdo_gstExclude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="GST Excluding" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_InActive"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Product Active" />
+
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTintMode="multiply"
+                    android:capitalize="sentences"
+                    android:checked="true"
+                    android:showText="false"
+                    android:switchTextAppearance="@android:style/TextAppearance.Medium"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/maroon"
+                    android:textOff="INACTIVE"
+                    android:textOn="ACTIVE"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_change_cat1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:text="@string/change_cat1"
+                    android:textColor="@color/white"
+                    android:visibility="visible"
+                    app:backgroundTint="@color/maroon" />
+
+                <!-- <Button
+                    android:id="@+id/btn_change_cat1"
+                    style="@style/btnStyleMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/mobmargin2"
+                    android:layout_weight="0.5"
+                    android:padding="@dimen/mobpadding2"
+                    android:text="@string/change_cat1" />-->
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:text="@string/add"
+                    android:textColor="@color/white"
+                    android:visibility="visible"
+                    app:backgroundTint="@color/maroon" />
+
+                <!--<Button
+                    android:id="@+id/btn_add"
+                    style="@style/btnStyleMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/mobmargin2"
+                    android:layout_weight="0.5"
+                    android:padding="@dimen/mobpadding2"
+                    android:text="@string/add" />-->
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/footerstyleMob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/profile_draw"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lay_pic"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/profile_img_circle_draw"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_pic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/ic_male" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/textViewMobW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="Anup Patil"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:visibility="visible"
+            android:animateLayoutChanges="true">
+
+            <LinearLayout
+                android:id="@+id/lay_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/mobpadding5">
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/ic_profile"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left" />
+
+                <TextView
+                    android:id="@+id/tv_emailid"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/ic_email_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left" />
+
+                <TextView
+                    android:id="@+id/tv_mobileno"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/ic_call_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left" />
+
+                <TextView
+                    android:id="@+id/tv_firmname"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/ic_firm"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left" />
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/ic_location_city_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left" />
+
+                <TextView
+                    android:id="@+id/tv_expDate"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/ic_insert_invitation_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:textColor="@color/red"
+                    android:gravity="center|left" />
+
+                <TextView
+                    android:id="@+id/tv_userid"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/mobpadding5"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/ed_username"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/ic_profile"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:hint="User Name"
+                    android:imeActionId="@integer/ed_emailid"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/ed_emailid"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/ic_email_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:hint="Valid Email Id"
+                    android:imeActionId="@integer/ed_mobileno"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/ed_mobileno"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/ic_call_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:hint="Valid Mobile Number"
+                    android:imeActionId="@integer/ed_firmname"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/ed_firmname"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/ic_firm"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:hint="Firm Name"
+                    android:imeActionId="@integer/ed_username"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/ed_city"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/ic_location_city_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:hint="City"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:typeface="monospace" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_isRegistered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Already Registered?"
+                        android:textColor="@color/blue" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_otp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:background="@color/bblue"
+                        android:text="Get OTP"
+                        android:textColor="@color/white"
+                        android:typeface="monospace" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardViewValid"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:visibility="gone"
+            android:animateLayoutChanges="true">
+
+            <LinearLayout
+                android:id="@+id/lay_valid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/mobpadding5">
+
+                <EditText
+                    android:id="@+id/ed_userid"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:hint="UserId"
+                    android:imeActionId="@integer/ed_emailid"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:typeface="monospace" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Cancel"
+                        android:textColor="@color/blue" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_valid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:background="@color/bblue"
+                        android:text="Validate"
+                        android:textColor="@color/white"
+                        android:typeface="monospace" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            style="@style/footerstyleMob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

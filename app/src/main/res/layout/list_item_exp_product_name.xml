@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/tabpadding5">
+
+    <TextView
+        android:id="@+id/tv_prodName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:paddingTop="@dimen/tabpadding2"
+        android:paddingBottom="@dimen/tabpadding2"
+        android:text="@string/test"
+        android:layout_weight="0.3" />
+
+    <TextView
+        android:id="@+id/tv_prodRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:paddingTop="@dimen/tabpadding2"
+        android:paddingBottom="@dimen/tabpadding2"
+        android:text="@string/test"
+        android:layout_weight="0.7"
+        android:gravity="center" />
+
+
+</LinearLayout>
