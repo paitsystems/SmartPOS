@@ -42,7 +42,6 @@ public class Constant {
 
     private Activity activity;
     private Context context;
-
     private ProgressDialog pd;
 
     public static int liveTestFlag = 0;
