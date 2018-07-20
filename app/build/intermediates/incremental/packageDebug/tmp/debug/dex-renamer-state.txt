@@ -1,10 +1,13 @@
-#Wed Jul 18 10:35:31 IST 2018
+#Thu Jul 19 17:34:29 IST 2018
+path.3=classes.dex
 path.2=classes.dex
 path.1=classes.dex
 path.0=classes.dex
+renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=D\:\\android_project\\SmartPOS\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-base.1=D\:\\android_project\\SmartPOS\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
-base.0=D\:\\android_project\\SmartPOS\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+base.3=D\:\\sneha_android_project\\SmartPOS\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
+base.2=D\:\\sneha_android_project\\SmartPOS\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
+base.1=D\:\\sneha_android_project\\SmartPOS\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
+base.0=D\:\\sneha_android_project\\SmartPOS\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13

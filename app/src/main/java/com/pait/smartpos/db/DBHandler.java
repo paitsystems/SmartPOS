@@ -1,10 +1,16 @@
 package com.pait.smartpos.db;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import com.pait.smartpos.constant.Constant;
+import com.pait.smartpos.model.ExpenseDetail;
+
+import java.util.List;
 
 public class DBHandler extends SQLiteOpenHelper {
 
@@ -701,6 +707,7 @@ public class DBHandler extends SQLiteOpenHelper {
             UB_NewQty + " float," + UB_OldRate + " float," + UB_NewRate + " float, " +
             UB_ModBy + " int," + UB_ModDate + " text," + UB_ModTime + " text, primary key(" + UB_Auto + "))";
 
+
     public DBHandler(Context context) {
         super(context, Database_Name, null, Database_Version);
     }
@@ -728,5 +735,46 @@ public class DBHandler extends SQLiteOpenHelper {
 
     public void updateTable(){
 
+    }
+
+    public void addExpenseDetail(List<ExpenseDetail> detailList) {
+        SQLiteDatabase db = getWritableDatabase();
+        db.beginTransaction();
+        ContentValues cv = new ContentValues();
+        for (ExpenseDetail detail : detailList) {
+            cv.put(EXM_Auto,detail.getAuto());
+            cv.put(EXM_Createddate,detail.getDate());
+           // cv.put(EXP_Time,detail.getTime());
+            cv.put(EXM_Remark,detail.getRemark());
+            cv.put(EXM_Costcentre,detail.getAmount());
+            db.insert(Table_ExpenseHead, null, cv);
+        }
+        db.setTransactionSuccessful();
+        db.endTransaction();
+        db.close();
+    }
+
+    public int getMaxAuto(){
+        int a = 0;
+        String str = "select MAX("+EXM_Auto+") from "+Table_ExpenseHead;
+        Constant.showLog(str);
+        Cursor cursor  = getWritableDatabase().rawQuery(str,null);
+        if (cursor.moveToFirst()) {
+
+            a = cursor.getInt(0);
+        }
+        cursor.close();
+        return a;
+    }
+
+    public Cursor getExpenseReportData(){
+        String str = "Select * from "+Table_ExpenseHead;
+        return getWritableDatabase().rawQuery(str,null);
+    }
+
+    public Cursor getListExpRemark(){
+        String str = "select distinct "+EXM_Remark+" from "+Table_ExpenseHead+" where "+EXM_Remark+" <>'NA' AND "+EXM_Remark+" NOT LIKE ('')";
+        Log.d("Log",str);
+        return getWritableDatabase().rawQuery(str, null);
     }
 }

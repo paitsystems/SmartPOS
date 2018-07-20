@@ -204,6 +204,9 @@
         <activity android:name="com.pait.smartpos.UpdatedBillReportActivity" />
         <activity android:name="com.pait.smartpos.CashMemoActivity" />
         <activity android:name="com.pait.smartpos.InwardActivity" />
+        <activity android:name="com.pait.smartpos.ExpenseActivity" />
+        <activity android:name="com.pait.smartpos.ReportMenuActivity" />
+        <activity android:name="com.pait.smartpos.ExpenseReportActivity" />
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
             android:excludeFromRecents="true"

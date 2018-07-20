@@ -44,4 +44,11 @@
     <color name="G7color">#880e4f</color>
     <color name="G8color">#dd2c00</color>
     <color name="G9color">#009688</color>
+    <color name="pblue2">#c9e2ed</color>
+    <color name="pblue1">#18a4e4</color>
+    <color name="lightblue">#5D82D9</color>
+    <color name="grey">#594D51</color>
+    <color name="yellowgreen">#5da310</color>
+    <color name="pinkd">#E91E63</color>
+    <color name="greend">#4CAF50</color>
 </resources>

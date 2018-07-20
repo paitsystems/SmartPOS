@@ -186,7 +186,10 @@
         <activity android:name=".BillReprintCancelActivity" />
         <activity android:name=".UpdatedBillReportActivity" />
         <activity android:name=".CashMemoActivity" />
-        <activity android:name=".InwardActivity"></activity>
+        <activity android:name=".InwardActivity" />
+        <activity android:name=".ExpenseActivity" />
+        <activity android:name=".ReportMenuActivity" />
+        <activity android:name=".ExpenseReportActivity"></activity>
     </application>
 
 </manifest>
