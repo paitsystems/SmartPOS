@@ -397,7 +397,7 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
             detail.setTime(curr_time);
             detail.setRemark(auto_remark.getText().toString());
 
-            maxauto = db.getMaxAuto();
+            maxauto = db.getExpMaxAuto();
 
             if (maxauto == 0) {
                 maxauto = 1;

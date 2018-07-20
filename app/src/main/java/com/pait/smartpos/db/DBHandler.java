@@ -8,6 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import com.pait.smartpos.constant.Constant;
+import com.pait.smartpos.model.BillDetailClass;
+import com.pait.smartpos.model.BillDetailClassR;
+import com.pait.smartpos.model.BillMasterClass;
 import com.pait.smartpos.model.ExpenseDetail;
 
 import java.util.List;
@@ -531,6 +534,11 @@ public class DBHandler extends SQLiteOpenHelper {
     public static final String UB_ModDate = "ModDate";
     public static final String UB_ModTime = "ModTime";
 
+    public static final String Table_Payment = "PaymentTable";
+    public static final String PY_Auto = "Auto";
+    public static final String PY_TYPE = "Type";
+    public static final String PY_Status = "Status";
+
     String table_company_master = "create table if not exists " + Table_CompanyMaster + "(" +
             CPM_Auto + " int not null," + CPM_Id + " int," + CPM_CompanyName + " text," + CPM_Mgrname + " int," +
             CPM_City + " int," + CPM_State + " int," + CPM_Address + " text," + CPM_Phone + " text," +
@@ -635,8 +643,8 @@ public class DBHandler extends SQLiteOpenHelper {
             EXM_Canceldate + " text, primary key(" + EXM_Auto + "))";
 
     String table_billmaster_master = "create table if not exists " + Table_BillMaster + "(" +
-            BM_Autono + " int not null," + BM_Id + " int," + BM_Branchid + " int," + BM_Finyr + " int," +
-            BM_Billno + " int," + BM_Custid + " text," + BM_Jobcardid + " int," + BM_Billdate + " text," +
+            BM_Autono + " int not null," + BM_Id + " int," + BM_Branchid + " int," + BM_Finyr + " text," +
+            BM_Billno + " text," + BM_Custid + " text," + BM_Jobcardid + " int," + BM_Billdate + " text," +
             BM_Totalqty + " float," + BM_Totalamt + " float," + BM_Retmemono + " text," + BM_Returnamt + " float," +
             BM_Creditamt + " float," + BM_Cashamt + " float," + BM_Paidamt + " float," +
             BM_Balamt + " float," + BM_Brakeupamt + " text," + BM_Billst + " text," +
@@ -707,6 +715,8 @@ public class DBHandler extends SQLiteOpenHelper {
             UB_NewQty + " float," + UB_OldRate + " float," + UB_NewRate + " float, " +
             UB_ModBy + " int," + UB_ModDate + " text," + UB_ModTime + " text, primary key(" + UB_Auto + "))";
 
+    public String table_paymenttable = "create table if not exists " + Table_Payment + "(" +
+            PY_Auto + " int not null," + PY_TYPE + " text," + PY_Status + " text, primary key(" + PY_Auto + "))";
 
     public DBHandler(Context context) {
         super(context, Database_Name, null, Database_Version);
@@ -733,8 +743,225 @@ public class DBHandler extends SQLiteOpenHelper {
 
     }
 
-    public void updateTable(){
+    public Cursor getPaymentType(){
+        return getWritableDatabase().rawQuery("select * from " + Table_Payment + " where "+PY_Status +" in ('Y','A') order by "+PY_TYPE, null);
+    }
 
+    public int getMaxAuto(){
+        int id = 0;
+        Cursor res = getWritableDatabase().rawQuery("select max("+BM_Autono+") from "+Table_BillMaster,null);
+        if(res.moveToFirst()){
+            do{
+                id = res.getInt(0);
+            }while (res.moveToNext());
+        }
+        res.close();
+        return ++id;
+    }
+
+    public int getMaxMastId(String finYR){
+        int id = 0;
+        Cursor res = getWritableDatabase().rawQuery("select max("+BM_Id+") from "+Table_BillMaster +" where "+BM_Finyr+"='"+finYR+"'",null);
+        if(res.moveToFirst()){
+            do{
+                id = res.getInt(0);
+            }while (res.moveToNext());
+        }
+        res.close();
+        return ++id;
+    }
+
+    public int getMaxDetAuto(){
+        int id = 0;
+        Cursor res = getWritableDatabase().rawQuery("select max("+BD_Auto+") from "+Table_BillDetails,null);
+        if(res.moveToFirst()){
+            do{
+                id = res.getInt(0);
+            }while (res.moveToNext());
+        }
+        res.close();
+        return ++id;
+    }
+
+    public int getMaxDetId(int mastAuto){
+        int id = 0;
+        Cursor res = getWritableDatabase().rawQuery("select max("+BD_Id+") from "+Table_BillDetails +" where "+BD_Billid+"="+mastAuto,null);
+        if(res.moveToFirst()){
+            do{
+                id = res.getInt(0);
+            }while (res.moveToNext());
+        }
+        res.close();
+        return ++id;
+    }
+
+    public Cursor getProductData(){
+        return getWritableDatabase().rawQuery("select * from " + Table_ProductMaster
+                + " where "+PM_Active+" in('Y','A') order by "+PM_Cat3, null);
+    }
+
+    public int saveBillMaster(BillMasterClass mast) {
+        ContentValues cv = new ContentValues();
+        cv.put(BM_Autono,mast.getAutoNo());
+        cv.put(BM_Id,mast.getId());
+        cv.put(BM_Branchid,mast.getBranchID());
+        cv.put(BM_Finyr,mast.getFinYr());
+        cv.put(BM_Billno,mast.getBillNo());
+        cv.put(BM_Custid,mast.getCustID());
+        cv.put(BM_Jobcardid,mast.getJobCardID());
+        cv.put(BM_Billdate,mast.getBillDate());
+        cv.put(BM_Totalqty,mast.getTotalQty());
+        cv.put(BM_Totalamt,mast.getTotalAmt());
+        cv.put(BM_Retmemono,mast.getRetMemoNo());
+        cv.put(BM_Returnamt,mast.getReturnAmt());
+        cv.put(BM_Creditamt,mast.getCreditAmt());
+        cv.put(BM_Cashamt,mast.getCashAmt());
+        cv.put(BM_Paidamt,mast.getPaidAmt());
+        cv.put(BM_Balamt,mast.getBalAmt());
+        cv.put(BM_Brakeupamt,mast.getBrakeUpAmt());
+        cv.put(BM_Billst,mast.getBillSt());
+        cv.put(BM_Vehicleno,mast.getVehicleNo());
+        cv.put(BM_Createdby,mast.getCreatedby());
+        cv.put(BM_Createddt,mast.getCreateddt());
+        cv.put(BM_Modifiedby,mast.getModifiedby());
+        cv.put(BM_Modifieddt,mast.getModifieddt());
+        cv.put(BM_Vehiclemake,mast.getVehiclemake());
+        cv.put(BM_Vehiclecolor,mast.getVehiclecolor());
+        cv.put(BM_Drivername,mast.getDrivername());
+        cv.put(BM_Vat12,mast.getVat12());
+        cv.put(BM_Vat4,mast.getVat4());
+        cv.put(BM_Labour,mast.getLabour());
+        cv.put(BM_Cardno,mast.getCardno());
+        cv.put(BM_Chqno,mast.getChqno());
+        cv.put(BM_Chqamt,mast.getChqamt());
+        cv.put(BM_Chqdt,mast.getChqdt());
+        cv.put(BM_Advanceamt,mast.getAdvanceamt());
+        cv.put(BM_Paymenttype,mast.getPaymenttype());
+        cv.put(BM_Billpayst,mast.getBillpayst());
+        cv.put(BM_Netamt,mast.getNetamt());
+        cv.put(BM_Bankid,mast.getBankID());
+        cv.put(BM_Comminper,mast.getCommInPer());
+        cv.put(BM_Comminrs,mast.getCommInRs());
+        cv.put(BM_Printno,mast.getPrintno());
+        cv.put(BM_Disper,mast.getDisper());
+        cv.put(BM_Disamt,mast.getDisamt());
+        cv.put(BM_Inwrds,mast.getInwrds());
+        cv.put(BM_Refundpyst,mast.getRefundpyst());
+        cv.put(BM_Pino,mast.getPino());
+        cv.put(BM_Piamt,mast.getPiamt());
+        cv.put(BM_Mon,mast.getMon());
+        cv.put(BM_Gvoucher,mast.getGVoucher());
+        cv.put(BM_Gvoucheramt,mast.getGVoucherAmt());
+        cv.put(BM_Agentid,mast.getAgentid());
+        cv.put(BM_Vouchergenerate,mast.getVouchergenerate());
+        cv.put(BM_Mon,mast.getGVSchemeId());
+        cv.put(BM_Scheme,mast.getScheme());
+        cv.put(BM_Gv,mast.getGV());
+        cv.put(BM_Gvamt,mast.getGVAmt());
+        cv.put(BM_Gvno,mast.getGVNo());
+        cv.put(BM_Issuegvst,mast.getIssueGVSt());
+        cv.put(BM_Createdfrm,mast.getCreatedfrm());
+        cv.put(BM_Grossamount,mast.getGrossAmount());
+        cv.put(BM_Cancelledby,mast.getCancelledBy());
+        cv.put(BM_Cancelleddate,mast.getCancelledDate());
+        cv.put(BM_Billingtime,mast.getBillingtime());
+        cv.put(BM_Delivered,mast.getDelivered());
+        cv.put(BM_Deliveredby,mast.getDeliveredby());
+        cv.put(BM_Delivereddate,mast.getDeliveredDate());
+        cv.put(BM_Alteration,mast.getAlteration());
+        cv.put(BM_Cashback,mast.getCashBack());
+        cv.put(BM_Schemeamt,mast.getSchemeAmt());
+        cv.put(BM_Goodsreturn,mast.getGoodsReturn());
+        cv.put(BM_Counterno,mast.getCounterNo());
+        cv.put(BM_Machinename,mast.getMachineName());
+        cv.put(BM_Againstdc,mast.getAgainstDC());
+        cv.put(BM_Dcautono,mast.getDCAutoNo());
+        cv.put(BM_CancelReason,mast.getCancelReason());
+        cv.put(BM_Tender,mast.getTender());
+        cv.put(BM_RemainAmt,mast.getRemainAmt());
+        cv.put(BM_TRetQty,mast.getTRetQty());
+        cv.put(BM_Currencyid,mast.getCurrencyid());
+        cv.put(BM_TotalCurrency,mast.getTotalCurrency());
+        cv.put(BM_CurrencyAmt,mast.getCurrencyAmt());
+        cv.put(BM_CardBank,mast.getCardBank());
+        cv.put(BM_CardTyp,mast.getCardTyp());
+        cv.put(BM_SwipReceiptNo,mast.getSwipReceiptNo());
+        cv.put(BM_Reference,mast.getReference());
+        cv.put(BM_Repl_Column,mast.getRepl_Column());
+        cv.put(BM_Through,mast.getThrough());
+        cv.put(BM_Authorised,mast.getAuthorised());
+        cv.put(BM_Remark,mast.getRemark());
+        cv.put(BM_TheirRemark,mast.getTheirRemark());
+        cv.put(BM_CGSTAMT,mast.getCGSTAMT());
+        cv.put(BM_SGSTAMT,mast.getSGSTAMT());
+        cv.put(BM_IGSTAPP,mast.getIGSTAPP());
+        cv.put(BM_IGSTAMT,mast.getIGSTAMT());
+        cv.put(BM_Type,mast.getType());
+        cv.put(BM_BothId,mast.getBothId());
+        cv.put(BM_NewAgainstDC,mast.getNewAgainstDC());
+        cv.put(BM_NewDCNo,mast.getNewDCNo());
+        getWritableDatabase().insert(Table_BillMaster,null,cv);
+        return mast.getAutoNo();
+    }
+
+    public void saveBillDetail(BillDetailClass det){
+        ContentValues cv = new ContentValues();
+        cv.put(BD_Auto,det.getAuto());
+        cv.put(BD_Id,det.getId());
+        cv.put(BD_Billid,det.getBillID());
+        cv.put(BD_Branchid,det.getBranchID());
+        cv.put(BD_Finyr,det.getFinYr());
+        cv.put(BD_Itemid,det.getItemId());
+        cv.put(BD_Rate,det.getRate());
+        cv.put(BD_Qty,det.getQty());
+        cv.put(BD_Total,det.getTotal());
+        cv.put(BD_Barcode,det.getBarcode());
+        cv.put(BD_Fathersku,det.getFatherSKU());
+        cv.put(BD_Empid,det.getEmpID());
+        cv.put(BD_Incentamt,det.getIncentamt());
+        cv.put(BD_Autobillid,det.getAutoBillId());
+        cv.put(BD_Vat,det.getVat());
+        cv.put(BD_Vatamt,det.getVatamt());
+        cv.put(BD_Amtwithoutdisc,det.getAmtWithoutDisc());
+        cv.put(BD_Disper,det.getDisper());
+        cv.put(BD_Disamt,det.getDisamt());
+        cv.put(BD_Nonbar,det.getNonBar());
+        cv.put(BD_Mon,det.getMon());
+        cv.put(BD_Ratewithtax,det.getRatewithtax());
+        cv.put(BD_Purchaseqty,det.getPurchaseQty());
+        cv.put(BD_Freeqty,det.getFreeqty());
+        cv.put(BD_Alteredstat,det.getAlteredStat());
+        cv.put(BD_Mandalper,det.getMandalper());
+        cv.put(BD_Mandal,det.getMandal());
+        cv.put(BD_Delivered,det.getDelivered());
+        cv.put(BD_Deliveredby,det.getDeliveredby());
+        cv.put(BD_Delivereddate,det.getDelivereddate());
+        cv.put(BD_Bgtype,det.getBGType());
+        cv.put(BD_Allotid,det.getAllotid());
+        cv.put(BD_Schemeapp,det.getSchemeApp());
+        cv.put(BD_Schemeid,det.getSchemeid());
+        cv.put(BD_Dispfsku,det.getDispFSKU());
+        cv.put(BD_Mrp,det.getMRP());
+        cv.put(BD_Billdisper,det.getBilldisper());
+        cv.put(BD_Billdisamt,det.getBilldisamt());
+        cv.put(BD_Dcmastauto,det.getDcmastauto());
+        cv.put(BD_Designno,det.getDesignNo());
+        cv.put(BD_Retqty,det.getRetQty());
+        cv.put(BD_Actrate,det.getActRate());
+        cv.put(BD_Actmrp,det.getActMRP());
+        cv.put(BD_Schmbenefit,det.getSchmBenefit());
+        cv.put(BD_Gstper,det.getGSTPER());
+        cv.put(BD_Cgstamt,det.getCGSTAMT());
+        cv.put(BD_Sgstamt,det.getSGSTAMT());
+        cv.put(BD_Cgstper,det.getCGSTPER());
+        cv.put(BD_Sgstper,det.getSGSTPER());
+        cv.put(BD_Cessper,det.getCESSPER());
+        cv.put(BD_Cessamt,det.getCESSAMT());
+        cv.put(BD_Igstamt,det.getIGSTAMT());
+        cv.put(BD_Taxableamt,det.getTaxableAmt());
+        cv.put(BD_Type,det.getType());
+        cv.put(BD_Seqno,det.getSeqno());
+        getWritableDatabase().insert(Table_BillDetails,null,cv);
     }
 
     public void addExpenseDetail(List<ExpenseDetail> detailList) {
@@ -754,13 +981,12 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
-    public int getMaxAuto(){
+    public int getExpMaxAuto(){
         int a = 0;
         String str = "select MAX("+EXM_Auto+") from "+Table_ExpenseHead;
         Constant.showLog(str);
         Cursor cursor  = getWritableDatabase().rawQuery(str,null);
         if (cursor.moveToFirst()) {
-
             a = cursor.getInt(0);
         }
         cursor.close();

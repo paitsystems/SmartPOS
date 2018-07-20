@@ -6,7 +6,9 @@ public class ProductClass {
 
     private int Product_ID, Product_Cat;
     private double Product_Rate;
-    private String Product_Name, Product_Barcode, Product_KArea, gstGroup, taxType, isActive;
+    private float Pprice, mrp, Wprice, ssp;
+    private String Product_Name, Product_Barcode, Product_KArea, gstGroup, taxType, isActive, hsnCode,
+            cat1, cat2,cat3,finalProduct, dispFSKU;
     private boolean isSelected;
 
     public String getProduct_Name() {
@@ -87,5 +89,85 @@ public class ProductClass {
 
     public void setSelected(boolean selected) {
         isSelected = selected;
+    }
+
+    public float getPprice() {
+        return Pprice;
+    }
+
+    public void setPprice(float pprice) {
+        Pprice = pprice;
+    }
+
+    public float getMrp() {
+        return mrp;
+    }
+
+    public void setMrp(float mrp) {
+        this.mrp = mrp;
+    }
+
+    public float getWprice() {
+        return Wprice;
+    }
+
+    public void setWprice(float wprice) {
+        Wprice = wprice;
+    }
+
+    public float getSsp() {
+        return ssp;
+    }
+
+    public void setSsp(float ssp) {
+        this.ssp = ssp;
+    }
+
+    public String getHsnCode() {
+        return hsnCode;
+    }
+
+    public void setHsnCode(String hsnCode) {
+        this.hsnCode = hsnCode;
+    }
+
+    public String getCat1() {
+        return cat1;
+    }
+
+    public void setCat1(String cat1) {
+        this.cat1 = cat1;
+    }
+
+    public String getCat2() {
+        return cat2;
+    }
+
+    public void setCat2(String cat2) {
+        this.cat2 = cat2;
+    }
+
+    public String getCat3() {
+        return cat3;
+    }
+
+    public void setCat3(String cat3) {
+        this.cat3 = cat3;
+    }
+
+    public String getFinalProduct() {
+        return finalProduct;
+    }
+
+    public void setFinalProduct(String finalProduct) {
+        this.finalProduct = finalProduct;
+    }
+
+    public String getDispFSKU() {
+        return dispFSKU;
+    }
+
+    public void setDispFSKU(String dispFSKU) {
+        this.dispFSKU = dispFSKU;
     }
 }

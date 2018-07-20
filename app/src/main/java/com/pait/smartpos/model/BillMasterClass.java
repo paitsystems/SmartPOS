@@ -1,26 +1,28 @@
 package com.pait.smartpos.model;
 
-//Created by lnb on 8/5/2017.
-
 public class BillMasterClass {
 
-    private int auto, id,branchId,CustID,CrBy,ModBy,BankID,PrintNO,GVoucher,DCAutoNo,CancelBy,
-            TableID,LocationID,SalesMan,WaiterID,NoOfPass;
+    private int autoNo, id, branchID, jobCardID, createdby, modifiedby, bankID, printno,
+            GVoucher, agentid, GVSchemeId, CancelledBy, Deliveredby, Currencyid, Type, BothId, NewDCNo;
 
-    private float TotalQty,TotalAmt,CardAmt,CashAmt,CoupanAmt,PaidAmt,BalAmt,NetAmt,Vat12,Vat5,
-            Chqamt,Advamt,Disper,DisAmt,PIAmt,GVoucherAmt,GrossAmt,GoodsReturn,Tender,RemainAmt,
-            TRetQty,ServiceTax,ServiceAmt,Vatamt,Taxper,VatPer,TaxAmt,OtherAmt,CGSTAMT,SGSTAMT;
+    private float totalQty, totalAmt, returnAmt, creditAmt, cashAmt, paidAmt, balAmt, vat12, vat4,
+            labour, chqamt, advanceamt, netamt, commInPer, commInRs, disper, disamt, piamt, GVoucherAmt,
+            GVAmt, GrossAmount, Alteration, CashBack, SchemeAmt, GoodsReturn, RemainAmt, TRetQty,
+            TotalCurrency, CGSTAMT, SGSTAMT, IGSTAMT;
 
-    private String Finyr,BillNo,BillDate,BillTime,BillSt,CrDate,ModDate,CardNo,ChqNo,Chqdt,
-            paymenttype,BillPaySt,AmtInWords,refundpyst,PIno,CounterNo,MachineName,AgainstDC,
-            Remark,CancelDate,CancelReason,KOTNo,Taxst,TotalAmtStr,CGSTAMTStr,SGSTAMTStr;
+    private String custID, finYr, billNo, billDate, retMemoNo, brakeUpAmt, billSt, vehicleNo, createddt, modifieddt,
+            vehiclemake, vehiclecolor, drivername, cardno, chqno, chqdt, paymenttype, billpayst, inwrds,
+            refundpyst, pino, mon, vouchergenerate, Scheme, GV, GVNo, IssueGVSt, Createdfrm, CancelledDate,
+            Billingtime, Delivered, DeliveredDate, CounterNo, machineName, AgainstDC, DCAutoNo, CancelReason,
+            Tender, CurrencyAmt, CardBank, CardTyp, SwipReceiptNo, Reference, Repl_Column, Through, Authorised,
+            Remark, TheirRemark, IGSTAPP, NewAgainstDC;
 
-    public int getAuto() {
-        return auto;
+    public int getAutoNo() {
+        return autoNo;
     }
 
-    public void setAuto(int auto) {
-        this.auto = auto;
+    public void setAutoNo(int autoNo) {
+        this.autoNo = autoNo;
     }
 
     public int getId() {
@@ -31,52 +33,52 @@ public class BillMasterClass {
         this.id = id;
     }
 
-    public int getBranchId() {
-        return branchId;
+    public int getBranchID() {
+        return branchID;
     }
 
-    public void setBranchId(int branchId) {
-        this.branchId = branchId;
+    public void setBranchID(int branchID) {
+        this.branchID = branchID;
     }
 
-    public int getCustID() {
-        return CustID;
+    public int getJobCardID() {
+        return jobCardID;
     }
 
-    public void setCustID(int custID) {
-        CustID = custID;
+    public void setJobCardID(int jobCardID) {
+        this.jobCardID = jobCardID;
     }
 
-    public int getCrBy() {
-        return CrBy;
+    public int getCreatedby() {
+        return createdby;
     }
 
-    public void setCrBy(int crBy) {
-        CrBy = crBy;
+    public void setCreatedby(int createdby) {
+        this.createdby = createdby;
     }
 
-    public int getModBy() {
-        return ModBy;
+    public int getModifiedby() {
+        return modifiedby;
     }
 
-    public void setModBy(int modBy) {
-        ModBy = modBy;
+    public void setModifiedby(int modifiedby) {
+        this.modifiedby = modifiedby;
     }
 
     public int getBankID() {
-        return BankID;
+        return bankID;
     }
 
     public void setBankID(int bankID) {
-        BankID = bankID;
+        this.bankID = bankID;
     }
 
-    public int getPrintNO() {
-        return PrintNO;
+    public int getPrintno() {
+        return printno;
     }
 
-    public void setPrintNO(int printNO) {
-        PrintNO = printNO;
+    public void setPrintno(int printno) {
+        this.printno = printno;
     }
 
     public int getGVoucher() {
@@ -87,180 +89,212 @@ public class BillMasterClass {
         this.GVoucher = GVoucher;
     }
 
-    public int getDCAutoNo() {
-        return DCAutoNo;
+    public int getAgentid() {
+        return agentid;
     }
 
-    public void setDCAutoNo(int DCAutoNo) {
-        this.DCAutoNo = DCAutoNo;
+    public void setAgentid(int agentid) {
+        this.agentid = agentid;
     }
 
-    public int getCancelBy() {
-        return CancelBy;
+    public int getGVSchemeId() {
+        return GVSchemeId;
     }
 
-    public void setCancelBy(int cancelBy) {
-        CancelBy = cancelBy;
+    public void setGVSchemeId(int GVSchemeId) {
+        this.GVSchemeId = GVSchemeId;
     }
 
-    public int getTableID() {
-        return TableID;
+    public int getCancelledBy() {
+        return CancelledBy;
     }
 
-    public void setTableID(int tableID) {
-        TableID = tableID;
+    public void setCancelledBy(int cancelledBy) {
+        CancelledBy = cancelledBy;
     }
 
-    public int getLocationID() {
-        return LocationID;
+    public int getDeliveredby() {
+        return Deliveredby;
     }
 
-    public void setLocationID(int locationID) {
-        LocationID = locationID;
+    public void setDeliveredby(int deliveredby) {
+        Deliveredby = deliveredby;
     }
 
-    public int getSalesMan() {
-        return SalesMan;
+    public int getCurrencyid() {
+        return Currencyid;
     }
 
-    public void setSalesMan(int salesMan) {
-        SalesMan = salesMan;
+    public void setCurrencyid(int currencyid) {
+        Currencyid = currencyid;
     }
 
-    public int getWaiterID() {
-        return WaiterID;
+    public int getType() {
+        return Type;
     }
 
-    public void setWaiterID(int waiterID) {
-        WaiterID = waiterID;
+    public void setType(int type) {
+        Type = type;
     }
 
-    public int getNoOfPass() {
-        return NoOfPass;
+    public int getBothId() {
+        return BothId;
     }
 
-    public void setNoOfPass(int noOfPass) {
-        NoOfPass = noOfPass;
+    public void setBothId(int bothId) {
+        BothId = bothId;
+    }
+
+    public int getNewDCNo() {
+        return NewDCNo;
+    }
+
+    public void setNewDCNo(int newDCNo) {
+        NewDCNo = newDCNo;
     }
 
     public float getTotalQty() {
-        return TotalQty;
+        return totalQty;
     }
 
     public void setTotalQty(float totalQty) {
-        TotalQty = totalQty;
+        this.totalQty = totalQty;
     }
 
     public float getTotalAmt() {
-        return TotalAmt;
+        return totalAmt;
     }
 
     public void setTotalAmt(float totalAmt) {
-        TotalAmt = totalAmt;
+        this.totalAmt = totalAmt;
     }
 
-    public float getCardAmt() {
-        return CardAmt;
+    public float getReturnAmt() {
+        return returnAmt;
     }
 
-    public void setCardAmt(float cardAmt) {
-        CardAmt = cardAmt;
+    public void setReturnAmt(float returnAmt) {
+        this.returnAmt = returnAmt;
+    }
+
+    public float getCreditAmt() {
+        return creditAmt;
+    }
+
+    public void setCreditAmt(float creditAmt) {
+        this.creditAmt = creditAmt;
     }
 
     public float getCashAmt() {
-        return CashAmt;
+        return cashAmt;
     }
 
     public void setCashAmt(float cashAmt) {
-        CashAmt = cashAmt;
-    }
-
-    public float getCoupanAmt() {
-        return CoupanAmt;
-    }
-
-    public void setCoupanAmt(float coupanAmt) {
-        CoupanAmt = coupanAmt;
+        this.cashAmt = cashAmt;
     }
 
     public float getPaidAmt() {
-        return PaidAmt;
+        return paidAmt;
     }
 
     public void setPaidAmt(float paidAmt) {
-        PaidAmt = paidAmt;
+        this.paidAmt = paidAmt;
     }
 
     public float getBalAmt() {
-        return BalAmt;
+        return balAmt;
     }
 
     public void setBalAmt(float balAmt) {
-        BalAmt = balAmt;
-    }
-
-    public float getNetAmt() {
-        return NetAmt;
-    }
-
-    public void setNetAmt(float netAmt) {
-        NetAmt = netAmt;
+        this.balAmt = balAmt;
     }
 
     public float getVat12() {
-        return Vat12;
+        return vat12;
     }
 
     public void setVat12(float vat12) {
-        Vat12 = vat12;
+        this.vat12 = vat12;
     }
 
-    public float getVat5() {
-        return Vat5;
+    public float getVat4() {
+        return vat4;
     }
 
-    public void setVat5(float vat5) {
-        Vat5 = vat5;
+    public void setVat4(float vat4) {
+        this.vat4 = vat4;
+    }
+
+    public float getLabour() {
+        return labour;
+    }
+
+    public void setLabour(float labour) {
+        this.labour = labour;
     }
 
     public float getChqamt() {
-        return Chqamt;
+        return chqamt;
     }
 
     public void setChqamt(float chqamt) {
-        Chqamt = chqamt;
+        this.chqamt = chqamt;
     }
 
-    public float getAdvamt() {
-        return Advamt;
+    public float getAdvanceamt() {
+        return advanceamt;
     }
 
-    public void setAdvamt(float advamt) {
-        Advamt = advamt;
+    public void setAdvanceamt(float advanceamt) {
+        this.advanceamt = advanceamt;
+    }
+
+    public float getNetamt() {
+        return netamt;
+    }
+
+    public void setNetamt(float netamt) {
+        this.netamt = netamt;
+    }
+
+    public float getCommInPer() {
+        return commInPer;
+    }
+
+    public void setCommInPer(float commInPer) {
+        this.commInPer = commInPer;
+    }
+
+    public float getCommInRs() {
+        return commInRs;
+    }
+
+    public void setCommInRs(float commInRs) {
+        this.commInRs = commInRs;
     }
 
     public float getDisper() {
-        return Disper;
+        return disper;
     }
 
     public void setDisper(float disper) {
-        Disper = disper;
+        this.disper = disper;
     }
 
-    public float getDisAmt() {
-        return DisAmt;
+    public float getDisamt() {
+        return disamt;
     }
 
-    public void setDisAmt(float disAmt) {
-        DisAmt = disAmt;
+    public void setDisamt(float disamt) {
+        this.disamt = disamt;
     }
 
-    public float getPIAmt() {
-        return PIAmt;
+    public float getPiamt() {
+        return piamt;
     }
 
-    public void setPIAmt(float PIAmt) {
-        this.PIAmt = PIAmt;
+    public void setPiamt(float piamt) {
+        this.piamt = piamt;
     }
 
     public float getGVoucherAmt() {
@@ -271,12 +305,44 @@ public class BillMasterClass {
         this.GVoucherAmt = GVoucherAmt;
     }
 
-    public float getGrossAmt() {
-        return GrossAmt;
+    public float getGVAmt() {
+        return GVAmt;
     }
 
-    public void setGrossAmt(float grossAmt) {
-        GrossAmt = grossAmt;
+    public void setGVAmt(float GVAmt) {
+        this.GVAmt = GVAmt;
+    }
+
+    public float getGrossAmount() {
+        return GrossAmount;
+    }
+
+    public void setGrossAmount(float grossAmount) {
+        GrossAmount = grossAmount;
+    }
+
+    public float getAlteration() {
+        return Alteration;
+    }
+
+    public void setAlteration(float alteration) {
+        Alteration = alteration;
+    }
+
+    public float getCashBack() {
+        return CashBack;
+    }
+
+    public void setCashBack(float cashBack) {
+        CashBack = cashBack;
+    }
+
+    public float getSchemeAmt() {
+        return SchemeAmt;
+    }
+
+    public void setSchemeAmt(float schemeAmt) {
+        SchemeAmt = schemeAmt;
     }
 
     public float getGoodsReturn() {
@@ -285,14 +351,6 @@ public class BillMasterClass {
 
     public void setGoodsReturn(float goodsReturn) {
         GoodsReturn = goodsReturn;
-    }
-
-    public float getTender() {
-        return Tender;
-    }
-
-    public void setTender(float tender) {
-        Tender = tender;
     }
 
     public float getRemainAmt() {
@@ -311,60 +369,12 @@ public class BillMasterClass {
         this.TRetQty = TRetQty;
     }
 
-    public float getServiceTax() {
-        return ServiceTax;
+    public float getTotalCurrency() {
+        return TotalCurrency;
     }
 
-    public void setServiceTax(float serviceTax) {
-        ServiceTax = serviceTax;
-    }
-
-    public float getServiceAmt() {
-        return ServiceAmt;
-    }
-
-    public void setServiceAmt(float serviceAmt) {
-        ServiceAmt = serviceAmt;
-    }
-
-    public float getVatamt() {
-        return Vatamt;
-    }
-
-    public void setVatamt(float vatamt) {
-        Vatamt = vatamt;
-    }
-
-    public float getTaxper() {
-        return Taxper;
-    }
-
-    public void setTaxper(float taxper) {
-        Taxper = taxper;
-    }
-
-    public float getVatPer() {
-        return VatPer;
-    }
-
-    public void setVatPer(float vatPer) {
-        VatPer = vatPer;
-    }
-
-    public float getTaxAmt() {
-        return TaxAmt;
-    }
-
-    public void setTaxAmt(float taxAmt) {
-        TaxAmt = taxAmt;
-    }
-
-    public float getOtherAmt() {
-        return OtherAmt;
-    }
-
-    public void setOtherAmt(float otherAmt) {
-        OtherAmt = otherAmt;
+    public void setTotalCurrency(float totalCurrency) {
+        TotalCurrency = totalCurrency;
     }
 
     public float getCGSTAMT() {
@@ -383,84 +393,124 @@ public class BillMasterClass {
         this.SGSTAMT = SGSTAMT;
     }
 
-    public String getFinyr() {
-        return Finyr;
+    public float getIGSTAMT() {
+        return IGSTAMT;
     }
 
-    public void setFinyr(String finyr) {
-        Finyr = finyr;
+    public void setIGSTAMT(float IGSTAMT) {
+        this.IGSTAMT = IGSTAMT;
     }
 
-    public String getBillNo() {
-        return BillNo;
+    public String getCustID() {
+        return custID;
     }
 
-    public void setBillNo(String billNo) {
-        BillNo = billNo;
+    public void setCustID(String custID) {
+        this.custID = custID;
     }
 
     public String getBillDate() {
-        return BillDate;
+        return billDate;
     }
 
     public void setBillDate(String billDate) {
-        BillDate = billDate;
+        this.billDate = billDate;
     }
 
-    public String getBillTime() {
-        return BillTime;
+    public String getRetMemoNo() {
+        return retMemoNo;
     }
 
-    public void setBillTime(String billTime) {
-        BillTime = billTime;
+    public void setRetMemoNo(String retMemoNo) {
+        this.retMemoNo = retMemoNo;
+    }
+
+    public String getBrakeUpAmt() {
+        return brakeUpAmt;
+    }
+
+    public void setBrakeUpAmt(String brakeUpAmt) {
+        this.brakeUpAmt = brakeUpAmt;
     }
 
     public String getBillSt() {
-        return BillSt;
+        return billSt;
     }
 
     public void setBillSt(String billSt) {
-        BillSt = billSt;
+        this.billSt = billSt;
     }
 
-    public String getCrDate() {
-        return CrDate;
+    public String getVehicleNo() {
+        return vehicleNo;
     }
 
-    public void setCrDate(String crDate) {
-        CrDate = crDate;
+    public void setVehicleNo(String vehicleNo) {
+        this.vehicleNo = vehicleNo;
     }
 
-    public String getModDate() {
-        return ModDate;
+    public String getCreateddt() {
+        return createddt;
     }
 
-    public void setModDate(String modDate) {
-        ModDate = modDate;
+    public void setCreateddt(String createddt) {
+        this.createddt = createddt;
     }
 
-    public String getCardNo() {
-        return CardNo;
+    public String getModifieddt() {
+        return modifieddt;
     }
 
-    public void setCardNo(String cardNo) {
-        CardNo = cardNo;
+    public void setModifieddt(String modifieddt) {
+        this.modifieddt = modifieddt;
     }
 
-    public String getChqNo() {
-        return ChqNo;
+    public String getVehiclemake() {
+        return vehiclemake;
     }
 
-    public void setChqNo(String chqNo) {
-        ChqNo = chqNo;
+    public void setVehiclemake(String vehiclemake) {
+        this.vehiclemake = vehiclemake;
+    }
+
+    public String getVehiclecolor() {
+        return vehiclecolor;
+    }
+
+    public void setVehiclecolor(String vehiclecolor) {
+        this.vehiclecolor = vehiclecolor;
+    }
+
+    public String getDrivername() {
+        return drivername;
+    }
+
+    public void setDrivername(String drivername) {
+        this.drivername = drivername;
+    }
+
+    public String getCardno() {
+        return cardno;
+    }
+
+    public void setCardno(String cardno) {
+        this.cardno = cardno;
+    }
+
+    public String getChqno() {
+        return chqno;
+    }
+
+    public void setChqno(String chqno) {
+        this.chqno = chqno;
     }
 
     public String getChqdt() {
-        return Chqdt;
+        return chqdt;
     }
 
     public void setChqdt(String chqdt) {
-        Chqdt = chqdt;
+        this.chqdt = chqdt;
     }
 
     public String getPaymenttype() {
@@ -471,20 +521,20 @@ public class BillMasterClass {
         this.paymenttype = paymenttype;
     }
 
-    public String getBillPaySt() {
-        return BillPaySt;
+    public String getBillpayst() {
+        return billpayst;
     }
 
-    public void setBillPaySt(String billPaySt) {
-        BillPaySt = billPaySt;
+    public void setBillpayst(String billpayst) {
+        this.billpayst = billpayst;
     }
 
-    public String getAmtInWords() {
-        return AmtInWords;
+    public String getInwrds() {
+        return inwrds;
     }
 
-    public void setAmtInWords(String amtInWords) {
-        AmtInWords = amtInWords;
+    public void setInwrds(String inwrds) {
+        this.inwrds = inwrds;
     }
 
     public String getRefundpyst() {
@@ -495,12 +545,100 @@ public class BillMasterClass {
         this.refundpyst = refundpyst;
     }
 
-    public String getPIno() {
-        return PIno;
+    public String getPino() {
+        return pino;
     }
 
-    public void setPIno(String PIno) {
-        this.PIno = PIno;
+    public void setPino(String pino) {
+        this.pino = pino;
+    }
+
+    public String getMon() {
+        return mon;
+    }
+
+    public void setMon(String mon) {
+        this.mon = mon;
+    }
+
+    public String getVouchergenerate() {
+        return vouchergenerate;
+    }
+
+    public void setVouchergenerate(String vouchergenerate) {
+        this.vouchergenerate = vouchergenerate;
+    }
+
+    public String getScheme() {
+        return Scheme;
+    }
+
+    public void setScheme(String scheme) {
+        Scheme = scheme;
+    }
+
+    public String getGV() {
+        return GV;
+    }
+
+    public void setGV(String GV) {
+        this.GV = GV;
+    }
+
+    public String getGVNo() {
+        return GVNo;
+    }
+
+    public void setGVNo(String GVNo) {
+        this.GVNo = GVNo;
+    }
+
+    public String getIssueGVSt() {
+        return IssueGVSt;
+    }
+
+    public void setIssueGVSt(String issueGVSt) {
+        IssueGVSt = issueGVSt;
+    }
+
+    public String getCreatedfrm() {
+        return Createdfrm;
+    }
+
+    public void setCreatedfrm(String createdfrm) {
+        Createdfrm = createdfrm;
+    }
+
+    public String getCancelledDate() {
+        return CancelledDate;
+    }
+
+    public void setCancelledDate(String cancelledDate) {
+        CancelledDate = cancelledDate;
+    }
+
+    public String getBillingtime() {
+        return Billingtime;
+    }
+
+    public void setBillingtime(String billingtime) {
+        Billingtime = billingtime;
+    }
+
+    public String getDelivered() {
+        return Delivered;
+    }
+
+    public void setDelivered(String delivered) {
+        Delivered = delivered;
+    }
+
+    public String getDeliveredDate() {
+        return DeliveredDate;
+    }
+
+    public void setDeliveredDate(String deliveredDate) {
+        DeliveredDate = deliveredDate;
     }
 
     public String getCounterNo() {
@@ -512,11 +650,11 @@ public class BillMasterClass {
     }
 
     public String getMachineName() {
-        return MachineName;
+        return machineName;
     }
 
     public void setMachineName(String machineName) {
-        MachineName = machineName;
+        this.machineName = machineName;
     }
 
     public String getAgainstDC() {
@@ -527,20 +665,12 @@ public class BillMasterClass {
         AgainstDC = againstDC;
     }
 
-    public String getRemark() {
-        return Remark;
+    public String getDCAutoNo() {
+        return DCAutoNo;
     }
 
-    public void setRemark(String remark) {
-        Remark = remark;
-    }
-
-    public String getCancelDate() {
-        return CancelDate;
-    }
-
-    public void setCancelDate(String cancelDate) {
-        CancelDate = cancelDate;
+    public void setDCAutoNo(String DCAutoNo) {
+        this.DCAutoNo = DCAutoNo;
     }
 
     public String getCancelReason() {
@@ -551,43 +681,123 @@ public class BillMasterClass {
         CancelReason = cancelReason;
     }
 
-    public String getKOTNo() {
-        return KOTNo;
+    public String getTender() {
+        return Tender;
     }
 
-    public void setKOTNo(String KOTNo) {
-        this.KOTNo = KOTNo;
+    public void setTender(String tender) {
+        Tender = tender;
     }
 
-    public String getTaxst() {
-        return Taxst;
+    public String getCurrencyAmt() {
+        return CurrencyAmt;
     }
 
-    public void setTaxst(String taxst) {
-        Taxst = taxst;
+    public void setCurrencyAmt(String currencyAmt) {
+        CurrencyAmt = currencyAmt;
     }
 
-    public String getCGSTAMTStr() {
-        return CGSTAMTStr;
+    public String getCardBank() {
+        return CardBank;
     }
 
-    public void setCGSTAMTStr(String CGSTAMTStr) {
-        this.CGSTAMTStr = CGSTAMTStr;
+    public void setCardBank(String cardBank) {
+        CardBank = cardBank;
     }
 
-    public String getSGSTAMTStr() {
-        return SGSTAMTStr;
+    public String getCardTyp() {
+        return CardTyp;
     }
 
-    public void setSGSTAMTStr(String SGSTAMTStr) {
-        this.SGSTAMTStr = SGSTAMTStr;
+    public void setCardTyp(String cardTyp) {
+        CardTyp = cardTyp;
     }
 
-    public String getTotalAmtStr() {
-        return TotalAmtStr;
+    public String getSwipReceiptNo() {
+        return SwipReceiptNo;
     }
 
-    public void setTotalAmtStr(String totalAmtStr) {
-        TotalAmtStr = totalAmtStr;
+    public void setSwipReceiptNo(String swipReceiptNo) {
+        SwipReceiptNo = swipReceiptNo;
+    }
+
+    public String getReference() {
+        return Reference;
+    }
+
+    public void setReference(String reference) {
+        Reference = reference;
+    }
+
+    public String getRepl_Column() {
+        return Repl_Column;
+    }
+
+    public void setRepl_Column(String repl_Column) {
+        Repl_Column = repl_Column;
+    }
+
+    public String getThrough() {
+        return Through;
+    }
+
+    public void setThrough(String through) {
+        Through = through;
+    }
+
+    public String getAuthorised() {
+        return Authorised;
+    }
+
+    public void setAuthorised(String authorised) {
+        Authorised = authorised;
+    }
+
+    public String getRemark() {
+        return Remark;
+    }
+
+    public void setRemark(String remark) {
+        Remark = remark;
+    }
+
+    public String getTheirRemark() {
+        return TheirRemark;
+    }
+
+    public void setTheirRemark(String theirRemark) {
+        TheirRemark = theirRemark;
+    }
+
+    public String getIGSTAPP() {
+        return IGSTAPP;
+    }
+
+    public void setIGSTAPP(String IGSTAPP) {
+        this.IGSTAPP = IGSTAPP;
+    }
+
+    public String getNewAgainstDC() {
+        return NewAgainstDC;
+    }
+
+    public void setNewAgainstDC(String newAgainstDC) {
+        NewAgainstDC = newAgainstDC;
+    }
+
+    public String getFinYr() {
+        return finYr;
+    }
+
+    public void setFinYr(String finYr) {
+        this.finYr = finYr;
+    }
+
+    public String getBillNo() {
+        return billNo;
+    }
+
+    public void setBillNo(String billNo) {
+        this.billNo = billNo;
     }
 }

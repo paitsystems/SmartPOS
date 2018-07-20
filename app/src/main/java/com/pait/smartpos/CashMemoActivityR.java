@@ -33,8 +33,8 @@ import com.pait.smartpos.constant.PrinterCommands;
 import com.pait.smartpos.db.DBHandlerR;
 import com.pait.smartpos.interfaces.UpdateValue;
 import com.pait.smartpos.log.WriteLog;
-import com.pait.smartpos.model.BillDetailClass;
-import com.pait.smartpos.model.BillMasterClass;
+import com.pait.smartpos.model.BillDetailClassR;
+import com.pait.smartpos.model.BillMasterClassR;
 import com.pait.smartpos.model.UserProfileClass;
 import com.hoin.btsdk.BluetoothService;
 
@@ -617,7 +617,7 @@ public class CashMemoActivityR extends AppCompatActivity implements UpdateValue{
 
                 int detAuto = db.getMaxDetAuto();
                 int detId = db.getMaxDetId(mastAuto);
-                BillDetailClass detail = new BillDetailClass();
+                BillDetailClassR detail = new BillDetailClassR();
                 detail.setAuto(detAuto);
                 detail.setID(detId);
                 detail.setBillID(mastAuto);
@@ -665,7 +665,7 @@ public class CashMemoActivityR extends AppCompatActivity implements UpdateValue{
             String OrderNo = "0";
             balAmt = netAmt-paidAmnt;
 
-            BillMasterClass master = new BillMasterClass();
+            BillMasterClassR master = new BillMasterClassR();
             master.setAuto(mastAuto);
             master.setId(id);
             master.setBranchId(branchid);
@@ -1051,7 +1051,7 @@ public class CashMemoActivityR extends AppCompatActivity implements UpdateValue{
                 int oldQty = Integer.parseInt(oldListDet.get(0));
 
                 if(qty!=oldQty){
-                    BillDetailClass det = new BillDetailClass();
+                    BillDetailClassR det = new BillDetailClassR();
                     det.setBillNo(oldBillNo);
                     det.setQty(Float.parseFloat(String.valueOf(oldQty)));
                     det.setNewQty(Float.parseFloat(String.valueOf(qty)));
@@ -1125,7 +1125,7 @@ public class CashMemoActivityR extends AppCompatActivity implements UpdateValue{
 
                 int detAuto = db.getMaxDetAuto();
                 int detId = db.getMaxDetId(mastAuto);
-                BillDetailClass detail = new BillDetailClass();
+                BillDetailClassR detail = new BillDetailClassR();
                 detail.setAuto(detAuto);
                 detail.setID(detId);
                 detail.setBillID(mastAuto);
@@ -1172,7 +1172,7 @@ public class CashMemoActivityR extends AppCompatActivity implements UpdateValue{
             String OrderNo = "0";
             balAmt = netAmt-paidAmnt;
 
-            BillMasterClass master = new BillMasterClass();
+            BillMasterClassR master = new BillMasterClassR();
             master.setAuto(mastAuto);
             master.setId(id);
             master.setBranchId(branchid);
@@ -1293,7 +1293,7 @@ public class CashMemoActivityR extends AppCompatActivity implements UpdateValue{
                 Return = 0, VatPer = 0,
                 TaxAmt = 0, OtherAmt = 0;
 
-        BillMasterClass master = new BillMasterClass();
+        BillMasterClassR master = new BillMasterClassR();
         master.setAuto(auto);
         master.setId(id);
         master.setBranchId(branchid);
@@ -1396,7 +1396,7 @@ public class CashMemoActivityR extends AppCompatActivity implements UpdateValue{
             float BDiscAmt = 0;
 
             String rate = list1.get(2), qty = list1.get(1), total = list1.get(3), barcode = list1.get(4);
-            BillDetailClass detail = new BillDetailClass();
+            BillDetailClassR detail = new BillDetailClassR();
             detail.setAuto(auto);
             detail.setID(id);
             detail.setBillID(mastid);

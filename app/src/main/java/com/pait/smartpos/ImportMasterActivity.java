@@ -22,7 +22,7 @@ import android.widget.Toast;
 
 import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.db.DBHandler;
-import com.pait.smartpos.db.DBHandlerR;
+import com.pait.smartpos.db.DBHandler;
 import com.pait.smartpos.log.WriteLog;
 import com.pait.smartpos.model.UserProfileClass;
 import com.pait.smartpos.model.XlsxCon;
@@ -370,7 +370,7 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                         String sheetName = sheet.getSheetName();
                                         Constant.showLog(sheetName);
 
-                                        for (Iterator<Row> rit = sheet.rowIterator(); rit.hasNext(); ) {
+                                        for (Iterator<Row> rit = sheet.rowIterator(); rit.hasNext();) {
                                             count++;
                                             Constant.showLog("Row Count "+ count);
                                             Row row = rit.next();
@@ -861,7 +861,7 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                         if (_groupName.equals(XlsxCon.GM_GroupName)) {
                                                             if (_active.equals(XlsxCon.GM_Status)) {
                                                                 sequence = true;
-                                                                dbAdapter.delete(DBHandlerR.GSTMaster_Table);
+                                                                dbAdapter.delete(DBHandler.GSTMaster_Table);
                                                             } else {
                                                                 showColMisMatchToast("Sheet "+XlsxCon.Sheet_GM+" Column "+XlsxCon.GM_Status);
                                                                 writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_GM+" Column "+XlsxCon.GM_Status);
@@ -885,13 +885,13 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                     row.getCell(1, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
                                                     row.getCell(2, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
 
-                                                    cv.put(DBHandlerR.GSTMaster_Auto, row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                    cv.put(DBHandlerR.GSTMaster_GroupName, row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                    cv.put(DBHandlerR.GSTMaster_Status, row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                    cv.put(DBHandlerR.GSTMaster_CrDate, new Constant(getApplicationContext()).getDate());
-                                                    cv.put(DBHandlerR.GSTMaster_CrTime, new Constant(getApplicationContext()).getTime());
+                                                    cv.put(DBHandler.GSTMaster_Auto, row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.GSTMaster_GroupName, row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.GSTMaster_Status, row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.GSTMaster_CrDate, new Constant(getApplicationContext()).getDate());
+                                                    cv.put(DBHandler.GSTMaster_CrTime, new Constant(getApplicationContext()).getTime());
 
-                                                    dbAdapter.insert(DBHandlerR.GSTMaster_Table, cv);
+                                                    dbAdapter.insert(DBHandler.GSTMaster_Table, cv);
                                                 }
                                             }else if(sheetName.equals(XlsxCon.Sheet_GD)) {
                                                 if (count == 1) {
@@ -917,7 +917,7 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                                                     if (_SGSTShare.equals(XlsxCon.GD_SGSTShare)) {
                                                                                         if (_CessPer.equals(XlsxCon.GD_CESSPer)) {
                                                                                             sequence = true;
-                                                                                            dbAdapter.delete(DBHandlerR.GSTDetail_Table);
+                                                                                            dbAdapter.delete(DBHandler.GSTDetail_Table);
                                                                                         } else {
                                                                                             showColMisMatchToast("Sheet "+XlsxCon.Sheet_GD+" Column "+XlsxCon.GD_CESSPer);
                                                                                             writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_GD+" Column "+XlsxCon.GD_CESSPer);
@@ -990,18 +990,56 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                     row.getCell(8, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
                                                     row.getCell(9, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
 
-                                                    cv.put(DBHandlerR.GSTDetail_Auto, row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                    cv.put(DBHandlerR.GSTDetail_MastAuto, row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                    cv.put(DBHandlerR.GSTDetail_FromRange, row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                    cv.put(DBHandlerR.GSTDetail_ToRange, row.getCell(3, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                    cv.put(DBHandlerR.GSTDetail_GSTPer, row.getCell(4, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                    cv.put(DBHandlerR.GSTDetail_CGSTPer, row.getCell(5, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                    cv.put(DBHandlerR.GSTDetail_SGSTPer, row.getCell(6, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                    cv.put(DBHandlerR.GSTDetail_CGSTShare, row.getCell(7, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                    cv.put(DBHandlerR.GSTDetail_SGSTShare, row.getCell(8, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                    cv.put(DBHandlerR.GSTDetail_CessPer, row.getCell(9, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.GSTDetail_Auto, row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.GSTDetail_MastAuto, row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.GSTDetail_FromRange, row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.GSTDetail_ToRange, row.getCell(3, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.GSTDetail_GSTPer, row.getCell(4, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.GSTDetail_CGSTPer, row.getCell(5, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.GSTDetail_SGSTPer, row.getCell(6, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.GSTDetail_CGSTShare, row.getCell(7, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.GSTDetail_SGSTShare, row.getCell(8, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.GSTDetail_CessPer, row.getCell(9, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
 
-                                                    dbAdapter.insert(DBHandlerR.GSTDetail_Table, cv);
+                                                    dbAdapter.insert(DBHandler.GSTDetail_Table, cv);
+                                                }
+                                            }else if(sheetName.equals(XlsxCon.Sheet_PY)) {
+                                                if (count == 1) {
+                                                    String _auto = row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _type = row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _status = row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    if (_auto.equals(XlsxCon.PY_Auto)) {
+                                                        if (_type.equals(XlsxCon.PY_TYPE)) {
+                                                            if (_status.equals(XlsxCon.PY_Status)) {
+                                                                sequence = true;
+                                                                dbAdapter.delete(DBHandler.Table_Payment);
+                                                            } else {
+                                                                showColMisMatchToast("Sheet "+XlsxCon.Sheet_PY+" Column "+XlsxCon.PY_Status);
+                                                                writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_PY+" Column "+XlsxCon.PY_Status);
+                                                                status = null;
+                                                                break;
+                                                            }
+                                                        } else {
+                                                            showColMisMatchToast("Sheet "+XlsxCon.Sheet_PY+" Column "+XlsxCon.PY_TYPE);
+                                                            writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_PY+" Column "+XlsxCon.PY_TYPE);
+                                                            status = null;
+                                                            break;
+                                                        }
+                                                    } else {
+                                                        showColMisMatchToast("Sheet "+XlsxCon.Sheet_PY+" Column "+XlsxCon.PY_Auto);
+                                                        writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_PY+" Column "+XlsxCon.PY_Auto);
+                                                        status = null;
+                                                        break;
+                                                    }
+                                                } else if (sequence) {
+                                                    row.getCell(0, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(1, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(2, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+
+                                                    cv.put(DBHandler.PY_Auto, row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.PY_TYPE, row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.PY_Status, row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    dbAdapter.insert(DBHandler.Table_Payment, cv);
                                                 }
                                             }
                                             pd1.setProgress(count);

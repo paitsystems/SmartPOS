@@ -7,8 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.pait.smartpos.constant.Constant;
-import com.pait.smartpos.model.BillDetailClass;
-import com.pait.smartpos.model.BillMasterClass;
+import com.pait.smartpos.model.BillDetailClassR;
+import com.pait.smartpos.model.BillMasterClassR;
 import com.pait.smartpos.model.CategoryClass;
 import com.pait.smartpos.model.GSTDetailClass;
 import com.pait.smartpos.model.GSTMasterClass;
@@ -538,7 +538,7 @@ public class DBHandlerR extends SQLiteOpenHelper {
         return kotno;
     }
 
-    public int saveBillMaster(BillMasterClass master,int auto,String kotno){
+    public int saveBillMaster(BillMasterClassR master, int auto, String kotno){
         ContentValues cv = new ContentValues();
         cv.put(BillMaster_Auto,master.getAuto());
         cv.put(BillMaster_Id,master.getId());
@@ -599,7 +599,7 @@ public class DBHandlerR extends SQLiteOpenHelper {
         return auto;
     }
 
-    public void saveBillDetail(BillDetailClass detail){
+    public void saveBillDetail(BillDetailClassR detail){
         ContentValues cv = new ContentValues();
         cv.put(BillDetail_Auto,detail.getAuto());
         cv.put(BillDetail_ID,detail.getID());
@@ -1224,9 +1224,9 @@ public class DBHandlerR extends SQLiteOpenHelper {
         getWritableDatabase().update(BillMaster_Table,cv,BillMaster_Auto+"=? and "+BillMaster_BillNo+"=?",new String[]{String.valueOf(bill.getAuto()),bill.getBillNo()});
     }
 
-    public List<BillDetailClass> getBillDetailData(BillReprintCancelClass billM){
+    public List<BillDetailClassR> getBillDetailData(BillReprintCancelClass billM){
         //String  str = "select * from "+BillMaster_Table+" where "+BillMaster_CrDate+">='"+fromDate+"' and "+BillMaster_CrDate+"<='"+fromDate+"'";
-        List<BillDetailClass> list = new ArrayList<>();
+        List<BillDetailClassR> list = new ArrayList<>();
         String  str = "select "+Product_Table+"."+Product_Name+" as Prod, "+BillDetail_Table+"."+BillDetail_Qty+","+
                 BillDetail_Table+"."+BillDetail_Rate+","+BillDetail_Table+"."+BillDetail_Total+
                 ","+BillDetail_Table+"."+BillDetail_CGSTPER+
@@ -1237,7 +1237,7 @@ public class DBHandlerR extends SQLiteOpenHelper {
         Cursor res = getWritableDatabase().rawQuery(str,null);
         if(res.moveToFirst()){
             do{
-                BillDetailClass bill = new BillDetailClass();
+                BillDetailClassR bill = new BillDetailClassR();
                 bill.setProd(res.getString(res.getColumnIndex("Prod")));
                 bill.setQty(res.getFloat(res.getColumnIndex(BillDetail_Qty)));
                 bill.setRateStr(res.getString(res.getColumnIndex(BillDetail_Rate)));
@@ -1276,7 +1276,7 @@ public class DBHandlerR extends SQLiteOpenHelper {
         return ++id;
     }
 
-    public void addupdateBill(BillDetailClass det){
+    public void addupdateBill(BillDetailClassR det){
         String date = new SimpleDateFormat("yyyy-MM-dd",Locale.ENGLISH).format(Calendar.getInstance().getTime());
         String time = new SimpleDateFormat("HH:mm",Locale.ENGLISH).format(Calendar.getInstance().getTime());
         SQLiteDatabase db = getWritableDatabase();

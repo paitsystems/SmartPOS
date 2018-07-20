@@ -15,7 +15,7 @@ import com.pait.smartpos.adpaters.BillReprintCancelAdapter;
 import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.constant.PrinterCommands;
 import com.pait.smartpos.db.DBHandlerR;
-import com.pait.smartpos.model.BillDetailClass;
+import com.pait.smartpos.model.BillDetailClassR;
 import com.pait.smartpos.model.UserProfileClass;
 import com.pait.smartpos.parse.BillReprintCancelClass;
 
@@ -72,7 +72,7 @@ public class BillReprintCancelActivity extends AppCompatActivity {
     }
 
     private void reprintBill(){
-        List<BillDetailClass> detList = db.getBillDetailData(bill);
+        List<BillDetailClassR> detList = db.getBillDetailData(bill);
         new CashMemoPrint(detList).execute();
     }
 
@@ -80,9 +80,9 @@ public class BillReprintCancelActivity extends AppCompatActivity {
     private class CashMemoPrint extends AsyncTask<Void, Void, String> {
 
         private ProgressDialog pd;
-        private List<BillDetailClass> detList;
+        private List<BillDetailClassR> detList;
 
-        private CashMemoPrint(List<BillDetailClass> _detList){
+        private CashMemoPrint(List<BillDetailClassR> _detList){
             this.detList = _detList;
         }
 
@@ -153,7 +153,7 @@ public class BillReprintCancelActivity extends AppCompatActivity {
                 String cgstPer = "0";
                 String sgstPer = "0";
                 for (int i = 0; i < detList.size(); i++) {
-                    BillDetailClass det = detList.get(i);
+                    BillDetailClassR det = detList.get(i);
                     StringBuilder item = new StringBuilder(det.getProd());
                     String item1 = det.getProd();
                     int flag = 0;

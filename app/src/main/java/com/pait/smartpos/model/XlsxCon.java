@@ -21,6 +21,7 @@ public class XlsxCon {
     public static final String Sheet_CSM = "CustomerMaster";
     public static final String Sheet_GM = "GSTMaster";
     public static final String Sheet_GD = "GSTDetail";
+    public static final String Sheet_PY = "PaymentType";
 
     /*public static final String TM_ID = "ID";
     public static final String TM_Tables = "Tables";
@@ -119,6 +120,9 @@ public class XlsxCon {
     public static final String CSM_Panno = "Panno";
     public static final String CSM_Gstno = "Gstno";
 
+    public static final String PY_Auto = "Auto";
+    public static final String PY_TYPE = "Type";
+    public static final String PY_Status = "Status";
 
     public XlsxCon(Context context){
         dbHelper = new DBHandlerR(context);

@@ -1,161 +1,157 @@
 package com.pait.smartpos.model;
 
-//Created by lnb on 8/5/2017.
-
 public class BillDetailClass {
 
-    private int Auto,ID,BillID,BranchId,Itemid,DCMastAuto,WaiterID;
+    private float rate,qty, total, incentamt, vat, vatamt, amtWithoutDisc, disper, disamt, nonBar, ratewithtax,
+            purchaseQty,freeqty, Mandalper, Mandal, MRP, billdisper, billdisamt, RetQty, ActRate, ActMRP,
+            SchmBenefit,GSTPER, CGSTAMT, SGSTAMT, CGSTPER, SGSTPER, CESSPER, CESSAMT, IGSTAMT, TaxableAmt;
 
-    private float Rate,Qty,Total,Vat,Vatamt,Disper,Disamt,
-            RateWithTax,FreeQty,BillDiscper,BillDiscAmt,RetQty,
-            AmtWithDisc,NetAmt,GSTPER,CGSTAMT,SGSTAMT,CGSTPER,
-            SGSTPER,CESSPER,CESSAMT, newQty;
+    private int auto, id, billID, branchID, itemId, empID, autoBillId, Deliveredby, Allotid, Schemeid, dcmastauto, Type, seqno;
 
-    private String Finyr,CmpSt,NonBar,Barcode,RateStr, TotalStr,AmtWithDiscStr,
-            NetAmtStr,CGSTAMTStr,SGSTAMTStr,CESSAMTStr, prod, billNo, newRate;
-
-    public int getAuto() {
-        return Auto;
-    }
-
-    public void setAuto(int auto) {
-        Auto = auto;
-    }
-
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
-    }
-
-    public int getBillID() {
-        return BillID;
-    }
-
-    public void setBillID(int billID) {
-        BillID = billID;
-    }
-
-    public int getBranchId() {
-        return BranchId;
-    }
-
-    public void setBranchId(int branchId) {
-        BranchId = branchId;
-    }
-
-    public int getItemid() {
-        return Itemid;
-    }
-
-    public void setItemid(int itemid) {
-        Itemid = itemid;
-    }
-
-    public int getDCMastAuto() {
-        return DCMastAuto;
-    }
-
-    public void setDCMastAuto(int DCMastAuto) {
-        this.DCMastAuto = DCMastAuto;
-    }
-
-    public int getWaiterID() {
-        return WaiterID;
-    }
-
-    public void setWaiterID(int waiterID) {
-        WaiterID = waiterID;
-    }
+    private String finYr, barcode, fatherSKU, mon, AlteredStat, Delivered, Delivereddate, BGType, SchemeApp, DispFSKU, DesignNo;
 
     public float getRate() {
-        return Rate;
+        return rate;
     }
 
     public void setRate(float rate) {
-        Rate = rate;
+        this.rate = rate;
     }
 
     public float getQty() {
-        return Qty;
+        return qty;
     }
 
     public void setQty(float qty) {
-        Qty = qty;
+        this.qty = qty;
     }
 
     public float getTotal() {
-        return Total;
+        return total;
     }
 
     public void setTotal(float total) {
-        Total = total;
+        this.total = total;
+    }
+
+    public float getIncentamt() {
+        return incentamt;
+    }
+
+    public void setIncentamt(float incentamt) {
+        this.incentamt = incentamt;
     }
 
     public float getVat() {
-        return Vat;
+        return vat;
     }
 
     public void setVat(float vat) {
-        Vat = vat;
+        this.vat = vat;
     }
 
     public float getVatamt() {
-        return Vatamt;
+        return vatamt;
     }
 
     public void setVatamt(float vatamt) {
-        Vatamt = vatamt;
+        this.vatamt = vatamt;
+    }
+
+    public float getAmtWithoutDisc() {
+        return amtWithoutDisc;
+    }
+
+    public void setAmtWithoutDisc(float amtWithoutDisc) {
+        this.amtWithoutDisc = amtWithoutDisc;
     }
 
     public float getDisper() {
-        return Disper;
+        return disper;
     }
 
     public void setDisper(float disper) {
-        Disper = disper;
+        this.disper = disper;
     }
 
     public float getDisamt() {
-        return Disamt;
+        return disamt;
     }
 
     public void setDisamt(float disamt) {
-        Disamt = disamt;
+        this.disamt = disamt;
     }
 
-    public float getRateWithTax() {
-        return RateWithTax;
+    public float getNonBar() {
+        return nonBar;
     }
 
-    public void setRateWithTax(float rateWithTax) {
-        RateWithTax = rateWithTax;
+    public void setNonBar(float nonBar) {
+        this.nonBar = nonBar;
     }
 
-    public float getFreeQty() {
-        return FreeQty;
+    public float getRatewithtax() {
+        return ratewithtax;
     }
 
-    public void setFreeQty(float freeQty) {
-        FreeQty = freeQty;
+    public void setRatewithtax(float ratewithtax) {
+        this.ratewithtax = ratewithtax;
     }
 
-    public float getBillDiscper() {
-        return BillDiscper;
+    public float getPurchaseQty() {
+        return purchaseQty;
     }
 
-    public void setBillDiscper(float billDiscper) {
-        BillDiscper = billDiscper;
+    public void setPurchaseQty(float purchaseQty) {
+        this.purchaseQty = purchaseQty;
     }
 
-    public float getBillDiscAmt() {
-        return BillDiscAmt;
+    public float getFreeqty() {
+        return freeqty;
     }
 
-    public void setBillDiscAmt(float billDiscAmt) {
-        BillDiscAmt = billDiscAmt;
+    public void setFreeqty(float freeqty) {
+        this.freeqty = freeqty;
+    }
+
+    public float getMandalper() {
+        return Mandalper;
+    }
+
+    public void setMandalper(float mandalper) {
+        Mandalper = mandalper;
+    }
+
+    public float getMandal() {
+        return Mandal;
+    }
+
+    public void setMandal(float mandal) {
+        Mandal = mandal;
+    }
+
+    public float getMRP() {
+        return MRP;
+    }
+
+    public void setMRP(float MRP) {
+        this.MRP = MRP;
+    }
+
+    public float getBilldisper() {
+        return billdisper;
+    }
+
+    public void setBilldisper(float billdisper) {
+        this.billdisper = billdisper;
+    }
+
+    public float getBilldisamt() {
+        return billdisamt;
+    }
+
+    public void setBilldisamt(float billdisamt) {
+        this.billdisamt = billdisamt;
     }
 
     public float getRetQty() {
@@ -166,20 +162,28 @@ public class BillDetailClass {
         RetQty = retQty;
     }
 
-    public float getAmtWithDisc() {
-        return AmtWithDisc;
+    public float getActRate() {
+        return ActRate;
     }
 
-    public void setAmtWithDisc(float amtWithDisc) {
-        AmtWithDisc = amtWithDisc;
+    public void setActRate(float actRate) {
+        ActRate = actRate;
     }
 
-    public float getNetAmt() {
-        return NetAmt;
+    public float getActMRP() {
+        return ActMRP;
     }
 
-    public void setNetAmt(float netAmt) {
-        NetAmt = netAmt;
+    public void setActMRP(float actMRP) {
+        ActMRP = actMRP;
+    }
+
+    public float getSchmBenefit() {
+        return SchmBenefit;
+    }
+
+    public void setSchmBenefit(float schmBenefit) {
+        SchmBenefit = schmBenefit;
     }
 
     public float getGSTPER() {
@@ -238,123 +242,211 @@ public class BillDetailClass {
         this.CESSAMT = CESSAMT;
     }
 
-    public String getFinyr() {
-        return Finyr;
+    public float getIGSTAMT() {
+        return IGSTAMT;
     }
 
-    public void setFinyr(String finyr) {
-        Finyr = finyr;
+    public void setIGSTAMT(float IGSTAMT) {
+        this.IGSTAMT = IGSTAMT;
     }
 
-    public String getCmpSt() {
-        return CmpSt;
+    public float getTaxableAmt() {
+        return TaxableAmt;
     }
 
-    public void setCmpSt(String cmpSt) {
-        CmpSt = cmpSt;
+    public void setTaxableAmt(float taxableAmt) {
+        TaxableAmt = taxableAmt;
     }
 
-    public String getNonBar() {
-        return NonBar;
+    public int getAuto() {
+        return auto;
     }
 
-    public void setNonBar(String nonBar) {
-        NonBar = nonBar;
+    public void setAuto(int auto) {
+        this.auto = auto;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getBillID() {
+        return billID;
+    }
+
+    public void setBillID(int billID) {
+        this.billID = billID;
+    }
+
+    public int getBranchID() {
+        return branchID;
+    }
+
+    public void setBranchID(int branchID) {
+        this.branchID = branchID;
+    }
+
+    public int getEmpID() {
+        return empID;
+    }
+
+    public void setEmpID(int empID) {
+        this.empID = empID;
+    }
+
+    public int getAutoBillId() {
+        return autoBillId;
+    }
+
+    public void setAutoBillId(int autoBillId) {
+        this.autoBillId = autoBillId;
+    }
+
+    public int getDeliveredby() {
+        return Deliveredby;
+    }
+
+    public void setDeliveredby(int deliveredby) {
+        Deliveredby = deliveredby;
+    }
+
+    public int getAllotid() {
+        return Allotid;
+    }
+
+    public void setAllotid(int allotid) {
+        Allotid = allotid;
+    }
+
+    public int getSchemeid() {
+        return Schemeid;
+    }
+
+    public void setSchemeid(int schemeid) {
+        Schemeid = schemeid;
+    }
+
+    public int getDcmastauto() {
+        return dcmastauto;
+    }
+
+    public void setDcmastauto(int dcmastauto) {
+        this.dcmastauto = dcmastauto;
+    }
+
+    public int getType() {
+        return Type;
+    }
+
+    public void setType(int type) {
+        Type = type;
+    }
+
+    public int getSeqno() {
+        return seqno;
+    }
+
+    public void setSeqno(int seqno) {
+        this.seqno = seqno;
+    }
+
+    public String getFinYr() {
+        return finYr;
+    }
+
+    public void setFinYr(String finYr) {
+        this.finYr = finYr;
     }
 
     public String getBarcode() {
-        return Barcode;
+        return barcode;
     }
 
     public void setBarcode(String barcode) {
-        Barcode = barcode;
+        this.barcode = barcode;
     }
 
-    public String getRateStr() {
-        return RateStr;
+    public String getFatherSKU() {
+        return fatherSKU;
     }
 
-    public void setRateStr(String rateStr) {
-        RateStr = rateStr;
+    public void setFatherSKU(String fatherSKU) {
+        this.fatherSKU = fatherSKU;
     }
 
-    public String getTotalStr() {
-        return TotalStr;
+    public String getMon() {
+        return mon;
     }
 
-    public void setTotalStr(String totalStr) {
-        TotalStr = totalStr;
+    public void setMon(String mon) {
+        this.mon = mon;
     }
 
-    public String getNetAmtStr() {
-        return NetAmtStr;
+    public String getAlteredStat() {
+        return AlteredStat;
     }
 
-    public void setNetAmtStr(String netAmtStr) {
-        NetAmtStr = netAmtStr;
+    public void setAlteredStat(String alteredStat) {
+        AlteredStat = alteredStat;
     }
 
-    public String getCGSTAMTStr() {
-        return CGSTAMTStr;
+    public String getDelivered() {
+        return Delivered;
     }
 
-    public void setCGSTAMTStr(String CGSTAMTStr) {
-        this.CGSTAMTStr = CGSTAMTStr;
+    public void setDelivered(String delivered) {
+        Delivered = delivered;
     }
 
-    public String getSGSTAMTStr() {
-        return SGSTAMTStr;
+    public String getDelivereddate() {
+        return Delivereddate;
     }
 
-    public void setSGSTAMTStr(String SGSTAMTStr) {
-        this.SGSTAMTStr = SGSTAMTStr;
+    public void setDelivereddate(String delivereddate) {
+        Delivereddate = delivereddate;
     }
 
-    public String getCESSAMTStr() {
-        return CESSAMTStr;
+    public String getBGType() {
+        return BGType;
     }
 
-    public void setCESSAMTStr(String CESSAMTStr) {
-        this.CESSAMTStr = CESSAMTStr;
+    public void setBGType(String BGType) {
+        this.BGType = BGType;
     }
 
-    public String getAmtWithDiscStr() {
-        return AmtWithDiscStr;
+    public String getSchemeApp() {
+        return SchemeApp;
     }
 
-    public void setAmtWithDiscStr(String amtWithDiscStr) {
-        AmtWithDiscStr = amtWithDiscStr;
+    public void setSchemeApp(String schemeApp) {
+        SchemeApp = schemeApp;
     }
 
-    public String getProd() {
-        return prod;
+    public String getDispFSKU() {
+        return DispFSKU;
     }
 
-    public void setProd(String prod) {
-        this.prod = prod;
+    public void setDispFSKU(String dispFSKU) {
+        DispFSKU = dispFSKU;
     }
 
-    public float getNewQty() {
-        return newQty;
+    public String getDesignNo() {
+        return DesignNo;
     }
 
-    public void setNewQty(float newQty) {
-        this.newQty = newQty;
+    public void setDesignNo(String designNo) {
+        DesignNo = designNo;
     }
 
-    public String getNewRate() {
-        return newRate;
+    public int getItemId() {
+        return itemId;
     }
 
-    public void setNewRate(String newRate) {
-        this.newRate = newRate;
-    }
-
-    public String getBillNo() {
-        return billNo;
-    }
-
-    public void setBillNo(String billNo) {
-        this.billNo = billNo;
+    public void setItemId(int itemId) {
+        this.itemId = itemId;
     }
 }
