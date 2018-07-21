@@ -106,6 +106,19 @@ public class XlsxCon {
     public static final String PM_Gstgroup = "Gstgroup";
     public static final String PM_Hsncode = "Hsncode";
 
+    public static final String SM_Auto = "Auto";
+    public static final String SM_Id = "Id";
+    public static final String SM_Name = "Name";
+    public static final String SM_Address = "Address";
+    public static final String SM_Phone1 = "Phone1";
+    public static final String SM_Phone2 = "Phone2";
+    public static final String SM_Mobile = "Mobile";
+    public static final String SM_Email = "Email";
+    public static final String SM_CP = "Contactperson";
+    public static final String SM_Remark = "Remark";
+    public static final String SM_City = "City";
+    public static final String SM_GSTNO = "Gstno";
+
     public static final String CSM_Auto = "Auto";
     public static final String CSM_Id = "Id";
     public static final String CSM_Name = "Name";

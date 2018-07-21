@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
@@ -55,12 +56,14 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
     private EditText ed_Qty, ed_Amnt, ed_cash, ed_cardNo, ed_custName, ed_custMobNo, ed_remark;
     private Button btn_Add, btn_Save;
     private Spinner sp_paymentType;
+    private AutoCompleteTextView auto_CustName;
     private Constant constant;
     private DBHandler db;
     private Toast toast;
     private List<ProductClass> prodList;
     private List<RateMasterClass> rateList;
     private List<AddToCartClass> cartList;
+    private List<String> custList;
     private float rate = 0, totQty = 0, totAmnt = 0;
     private ProductClass productClass = null;
     private RateMasterClass rateMasterClass = null;
@@ -72,7 +75,8 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_cash_memo);
         init();
         setProdData();
-
+        setSpinnerData();
+        setCustData();
         sp_paymentType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -146,6 +150,8 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                 }
             }
         });
+
+
     }
 
     @Override
@@ -239,6 +245,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
         ed_remark = findViewById(R.id.ed_remark);
         btn_Add = findViewById(R.id.btn_add);
         btn_Save = findViewById(R.id.btn_save);
+        auto_CustName = findViewById(R.id.auto_Cust);
 
         tv_prodAll.setOnClickListener(this);
         tv_priceAll.setOnClickListener(this);
@@ -251,8 +258,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
         prodList = new ArrayList<>();
         rateList = new ArrayList<>();
         cartList = new ArrayList<>();
-
-        setSpinnerData();
+        custList = new ArrayList<>();
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         rv_Order.setLayoutManager(mLayoutManager);
@@ -265,6 +271,15 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                 new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
         rv_Price.setLayoutManager(mLayoutManager2);
         rv_Price.setItemAnimator(new DefaultItemAnimator());
+
+        auto_CustName.setOnItemClickListener((adapterView, view, i, l) -> {
+            String str = (String) adapterView.getSelectedItem();
+            Constant.showLog(str);
+            /*String arr[] = str.split("-");
+            auto_CustName.setText(arr[0]);
+            ed_custMobNo.setText(arr[1]);
+            ed_remark.requestFocus();*/
+        });
     }
 
     private void setProdData(){
@@ -306,6 +321,24 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
         ProductRateRecyclerAdapter adapter1 = new ProductRateRecyclerAdapter(getApplicationContext(),rateList);
         adapter1.setOnClickListener1(this);
         rv_Price.setAdapter(adapter1);
+
+    }
+
+    private void setCustData(){
+        custList.clear();
+        Cursor res = db.getCustomerData();
+        if (res.moveToFirst()) {
+            do {
+                String str;
+                String name = res.getString(res.getColumnIndex(DBHandler.CSM_Name));
+                String mob = res.getString(res.getColumnIndex(DBHandler.CSM_Mobno));
+                str = name + "-"+mob;
+                custList.add(str);
+            } while (res.moveToNext());
+        }
+        res.close();
+        auto_CustName.setAdapter(new ArrayAdapter<>(getApplication(),R.layout.cust_drop_down,custList));
+        auto_CustName.setThreshold(0);
 
     }
 

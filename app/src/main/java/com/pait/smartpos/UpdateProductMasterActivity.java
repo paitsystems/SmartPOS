@@ -74,13 +74,13 @@ public class UpdateProductMasterActivity extends AppCompatActivity implements Vi
         rateText = master.getMasterRate();
         prodId  = String.valueOf(master.getMasterAuto());
         catName = master.getMasterCat();
-        if(master.getMasterTaxType().equals("I")){
+        /*if(master.getMasterTaxType().equals("I")){
             rdo_gstInclude.setChecked(true);
             rdo_gstExclude.setChecked(false);
         }else{
             rdo_gstInclude.setChecked(false);
             rdo_gstExclude.setChecked(true);
-        }
+        }*/
         int i=-1;
         for(String s : gstList){
             i++;

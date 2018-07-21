@@ -1,10 +1,12 @@
 package com.pait.smartpos.adpaters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.pait.smartpos.R;
@@ -44,22 +46,22 @@ public class AllProductAdapter extends BaseAdapter {
         if(view==null) {
             view = inflater.inflate(R.layout.list_item_all_product, null);
             holder = new ViewHolder();
-            holder.tv_allPord = view.findViewById(R.id.tv_allPord);
+            holder.btn_allProd = view.findViewById(R.id.btn_allProd);
             view.setTag(holder);
         }else{
             holder = (ViewHolder) view.getTag();
         }
         ProductClass prod = prodList.get(i);
-        holder.tv_allPord.setText(prod.getProduct_Name());
+        holder.btn_allProd.setText(prod.getProduct_Name());
         if(prod.isSelected()){
-            holder.tv_allPord.setTextColor(context.getResources().getColor(R.color.red));
+            holder.btn_allProd.setTextColor(context.getResources().getColor(R.color.red));
         }else{
-            holder.tv_allPord.setTextColor(context.getResources().getColor(R.color.black));
+            holder.btn_allProd.setTextColor(context.getResources().getColor(R.color.black));
         }
         return view;
     }
 
     private class ViewHolder{
-        TextView tv_allPord;
+        Button btn_allProd;
     }
 }

@@ -21,6 +21,7 @@ import com.pait.smartpos.VerificationActivity;
 import com.pait.smartpos.adpaters.BillReprintCancelAdapter;
 import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.constant.PrinterCommands;
+import com.pait.smartpos.db.DBHandler;
 import com.pait.smartpos.db.DBHandlerR;
 import com.pait.smartpos.model.BillDetailClassR;
 import com.pait.smartpos.model.UserProfileClass;
@@ -36,7 +37,7 @@ public class BillReprintCancelFragment extends Fragment {
 
     private List<BillReprintCancelClass> list;
     private ListView listView;
-    private DBHandlerR db;
+    private DBHandler db;
     private BillReprintCancelClass bill;
     private Toast toast;
     
@@ -62,7 +63,7 @@ public class BillReprintCancelFragment extends Fragment {
         toast.setGravity(Gravity.CENTER,0,0);
         listView = view.findViewById(R.id.listView);
         list = new ArrayList<>();
-        db = new DBHandlerR(getContext());
+        db = new DBHandler(getContext());
     }
 
     private void setList(){

@@ -26,6 +26,7 @@ import com.pait.smartpos.UpdateProductMasterActivity;
 import com.pait.smartpos.UpdateTableMasterActivity;
 import com.pait.smartpos.adpaters.MasterUpdationRecyclerAdapter;
 import com.pait.smartpos.constant.Constant;
+import com.pait.smartpos.db.DBHandler;
 import com.pait.smartpos.db.DBHandlerR;
 import com.pait.smartpos.interfaces.OnItemClickListener;
 import com.pait.smartpos.log.WriteLog;
@@ -40,7 +41,7 @@ public class MasterUpdationFragment extends Fragment
     private Constant constant, constant1;
     private Toast toast;
     private List<MasterUpdationClass> list;
-    private DBHandlerR db;
+    private DBHandler db;
     private RecyclerView recyclerView;
     private MasterUpdationRecyclerAdapter adapter;
     private LinearLayout lay;
@@ -66,6 +67,8 @@ public class MasterUpdationFragment extends Fragment
     public void onResume() {
         super.onResume();
         if (masterType.equals("product")) {
+            setProductData();
+        } else if (masterType.equals("cat3")) {
             setProductData();
         } else if (masterType.equals("table")) {
             setTableData();
@@ -128,9 +131,9 @@ public class MasterUpdationFragment extends Fragment
         if (viewHolder instanceof MasterUpdationRecyclerAdapter.MyViewHolder) {
             Intent intent = null;
             MasterUpdationClass master = list.get(position);
-            if(masterType.equals("product")) {
-                String cat = db.getCatgoryName(master.getMasterCatId());
-                master.setMasterCat(cat);
+            if(masterType.equals("cat3")) {
+                intent = new Intent(getContext(),UpdateProductMasterActivity.class);
+            }else if(masterType.equals("product")) {
                 intent = new Intent(getContext(),UpdateProductMasterActivity.class);
             }else if(masterType.equals("table")) {
                 intent = new Intent(getContext(),UpdateTableMasterActivity.class);
@@ -152,7 +155,7 @@ public class MasterUpdationFragment extends Fragment
     }
 
     private void init(View view){
-        db = new DBHandlerR(getContext());
+        db = new DBHandler(getContext());
         list = new ArrayList<>();
         recyclerView = view.findViewById(R.id.recycler_view);
         lay = view.findViewById(R.id.layout);
@@ -165,13 +168,11 @@ public class MasterUpdationFragment extends Fragment
         if(res.moveToFirst()){
             do{
                 MasterUpdationClass master = new MasterUpdationClass();
-                master.setMasterAuto(res.getInt(res.getColumnIndex(DBHandlerR.Product_ID)));
-                master.setMasterName(res.getString(res.getColumnIndex(DBHandlerR.Product_Name)));
-                master.setIsMasterActive(res.getString(res.getColumnIndex(DBHandlerR.Product_Active)));
-                master.setMasterRate(res.getString(res.getColumnIndex(DBHandlerR.Product_Rate)));
-                master.setMasterCatId(res.getInt(res.getColumnIndex(DBHandlerR.Product_Cat)));
-                master.setMasterGSTGroup(res.getString(res.getColumnIndex(DBHandlerR.Product_GSTGroup)));
-                master.setMasterTaxType(res.getString(res.getColumnIndex(DBHandlerR.Product_TaxTyp)));
+                master.setMasterAuto(res.getInt(res.getColumnIndex(DBHandler.PM_Id)));
+                master.setMasterName(res.getString(res.getColumnIndex(DBHandler.PM_Cat3)));
+                master.setIsMasterActive(res.getString(res.getColumnIndex(DBHandler.PM_Active)));
+                master.setMasterRate(res.getString(res.getColumnIndex(DBHandler.PM_Mrp)));
+                master.setMasterGSTGroup(res.getString(res.getColumnIndex(DBHandler.PM_Gstgroup)));
                 master.setMasterType("P");
                 list.add(master);
             }while (res.moveToNext());
@@ -185,47 +186,9 @@ public class MasterUpdationFragment extends Fragment
     }
 
     private void setTableData(){
-        list.clear();
-        recyclerView.setAdapter(null);
-        Cursor res = db.getAllTable();
-        if(res.moveToFirst()){
-            do{
-                MasterUpdationClass master = new MasterUpdationClass();
-                master.setMasterAuto(res.getInt(res.getColumnIndex(DBHandlerR.Table_ID)));
-                master.setMasterName(res.getString(res.getColumnIndex(DBHandlerR.Table_Table)));
-                master.setIsMasterActive(res.getString(res.getColumnIndex(DBHandlerR.Table_Active)));
-                master.setMasterType("T");
-                list.add(master);
-            }while (res.moveToNext());
-        }
-        res.close();
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        adapter = new MasterUpdationRecyclerAdapter(getContext(),list,this);
-        recyclerView.setAdapter(adapter);
     }
 
     private void setCategoryData(){
-        list.clear();
-        recyclerView.setAdapter(null);
-        Cursor res = db.getAllCatgory();
-        if(res.moveToFirst()){
-            do{
-                MasterUpdationClass master = new MasterUpdationClass();
-                master.setMasterAuto(res.getInt(res.getColumnIndex(DBHandlerR.Category_ID)));
-                master.setMasterName(res.getString(res.getColumnIndex(DBHandlerR.Category_Cat)));
-                master.setIsMasterActive(res.getString(res.getColumnIndex(DBHandlerR.Category_Active)));
-                master.setMasterType("C");
-                list.add(master);
-            }while (res.moveToNext());
-        }
-        res.close();
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        adapter = new MasterUpdationRecyclerAdapter(getContext(),list,this);
-        recyclerView.setAdapter(adapter);
     }
 
     private void writeLog(String _data) {

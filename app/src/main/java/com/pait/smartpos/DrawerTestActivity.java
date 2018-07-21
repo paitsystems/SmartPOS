@@ -463,7 +463,7 @@ public class DrawerTestActivity extends AppCompatActivity implements View.OnClic
                 break;
             case 1:
                 Bundle bundle2 = new Bundle();
-                bundle2.putString("master","product");
+                bundle2.putString("master","cat3");
                 fragment = new MasterUpdationFragment();
                 fragment.setArguments(bundle2);
                 menuflag = 12;

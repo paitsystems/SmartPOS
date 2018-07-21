@@ -981,7 +981,7 @@
     <string name="change_event">File change event: %1$s</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="collection_report">Collection Report</string>
-    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">b94c4b5c-9bf4-4a79-98dc-c7b2931df6ad</string>
+    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">6190ade3-aaa9-4867-99bd-8ffe0f8b0988</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t work unless you enable Google Play services.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>

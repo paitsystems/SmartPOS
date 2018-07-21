@@ -1041,6 +1041,266 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                     cv.put(DBHandler.PY_Status, row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
                                                     dbAdapter.insert(DBHandler.Table_Payment, cv);
                                                 }
+                                            }else if(sheetName.equals(XlsxCon.Sheet_SM)) {
+                                                if (count == 1) {
+                                                    String _auto = row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _id = row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _name = row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _address = row.getCell(3, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _phone1 = row.getCell(4, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _phone2 = row.getCell(5, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _mobNo = row.getCell(6, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _email = row.getCell(7, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _cp = row.getCell(8, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _reamark = row.getCell(9, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _city = row.getCell(10, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _gstno = row.getCell(11, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+
+                                                    if (_auto.equals(XlsxCon.SM_Auto)) {
+                                                        if (_id.equals(XlsxCon.SM_Id)) {
+                                                            if (_name.equals(XlsxCon.SM_Name)) {
+                                                                if (_address.equals(XlsxCon.SM_Address)) {
+                                                                    if (_phone1.equals(XlsxCon.SM_Phone1)) {
+                                                                        if (_phone2.equals(XlsxCon.SM_Phone2)) {
+                                                                            if (_mobNo.equals(XlsxCon.SM_Mobile)) {
+                                                                                if (_email.equals(XlsxCon.SM_Email)) {
+                                                                                    if (_cp.equals(XlsxCon.SM_CP)) {
+                                                                                        if (_reamark.equals(XlsxCon.SM_Remark)) {
+                                                                                            if (_city.equals(XlsxCon.SM_City)) {
+                                                                                                if (_gstno.equals(XlsxCon.SM_GSTNO)) {
+                                                                                                    sequence = true;
+                                                                                                    dbAdapter.delete(DBHandler.Table_SupplierMaster);
+                                                                                                } else {
+                                                                                                    showColMisMatchToast("Sheet " + XlsxCon.Sheet_SM + " Column " + XlsxCon.SM_GSTNO);
+                                                                                                    writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_SM + " Column " + XlsxCon.SM_GSTNO);
+                                                                                                    status = null;
+                                                                                                    break;
+                                                                                                }
+                                                                                            } else {
+                                                                                                showColMisMatchToast("Sheet " + XlsxCon.Sheet_SM + " Column " + XlsxCon.SM_City);
+                                                                                                writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_SM + " Column " + XlsxCon.SM_City);
+                                                                                                status = null;
+                                                                                                break;
+                                                                                            }
+
+                                                                                        } else {
+                                                                                            showColMisMatchToast("Sheet " + XlsxCon.Sheet_SM + " Column " + XlsxCon.SM_Remark);
+                                                                                            writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_SM + " Column " + XlsxCon.SM_Remark);
+                                                                                            status = null;
+                                                                                            break;
+                                                                                        }
+                                                                                    }else {
+                                                                                        showColMisMatchToast("Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_CP);
+                                                                                        writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_CP);
+                                                                                        status = null;
+                                                                                        break;
+                                                                                    }
+                                                                                }else {
+                                                                                    showColMisMatchToast("Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_Email);
+                                                                                    writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_Email);
+                                                                                    status = null;
+                                                                                    break;
+                                                                                }
+                                                                            }else {
+                                                                                showColMisMatchToast("Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_Mobile);
+                                                                                writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_Mobile);
+                                                                                status = null;
+                                                                                break;
+                                                                            }
+                                                                        }else {
+                                                                            showColMisMatchToast("Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_Phone2);
+                                                                            writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_Phone2);
+                                                                            status = null;
+                                                                            break;
+                                                                        }
+                                                                    }else {
+                                                                        showColMisMatchToast("Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_Phone1);
+                                                                        writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_Phone1);
+                                                                        status = null;
+                                                                        break;
+                                                                    }
+                                                                }else {
+                                                                    showColMisMatchToast("Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_Address);
+                                                                    writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_Address);
+                                                                    status = null;
+                                                                    break;
+                                                                }
+                                                            } else {
+                                                                showColMisMatchToast("Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_Name);
+                                                                writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_Name);
+                                                                status = null;
+                                                                break;
+                                                            }
+                                                        } else {
+                                                            showColMisMatchToast("Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_Id);
+                                                            writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_Id);
+                                                            status = null;
+                                                            break;
+                                                        }
+                                                    } else {
+                                                        showColMisMatchToast("Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_Auto);
+                                                        writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_SM+" Column "+XlsxCon.SM_Auto);
+                                                        status = null;
+                                                        break;
+                                                    }
+                                                } else if (sequence) {
+                                                    row.getCell(0, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(1, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(2, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(3, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(4, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(5, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(6, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(7, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(8, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(9, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(10, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(11, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+
+                                                    cv.put(DBHandler.SM_Auto, row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.SM_Id, row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.SM_Name, row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.SM_Address, row.getCell(3, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.SM_Phone1, row.getCell(4, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.SM_Phone2, row.getCell(5, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.SM_Mobile, row.getCell(6, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.SM_Email, row.getCell(7, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.SM_Contactperson, row.getCell(8, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.SM_Remark, row.getCell(9, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.SM_City, row.getCell(10, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.SM_Gstno, row.getCell(11, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+
+                                                    dbAdapter.insert(DBHandler.Table_SupplierMaster, cv);
+                                                }
+                                            }else if(sheetName.equals(XlsxCon.Sheet_CSM)) {
+                                                if (count == 1) {
+                                                    String _auto = row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _id = row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _name = row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _cityid = row.getCell(3, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _adress = row.getCell(4, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _area = row.getCell(5, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _phone = row.getCell(6, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _mobno = row.getCell(7, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _dob = row.getCell(8, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _adob = row.getCell(9, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _panno = row.getCell(10, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _gstno = row.getCell(11, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+
+                                                    if (_auto.equals(XlsxCon.CSM_Auto)) {
+                                                        if (_id.equals(XlsxCon.CSM_Id)) {
+                                                            if (_name.equals(XlsxCon.CSM_Name)) {
+                                                                if (_cityid.equals(XlsxCon.CSM_Cityid)) {
+                                                                    if (_adress.equals(XlsxCon.CSM_Address)) {
+                                                                        if (_area.equals(XlsxCon.CSM_Area)) {
+                                                                            if (_phone.equals(XlsxCon.CSM_Phone)) {
+                                                                                if (_mobno.equals(XlsxCon.CSM_Mobno)) {
+                                                                                    if (_dob.equals(XlsxCon.CSM_Dob)) {
+                                                                                        if (_adob.equals(XlsxCon.CSM_Anniversarydate)) {
+                                                                                            if (_panno.equals(XlsxCon.CSM_Panno)) {
+                                                                                                if (_gstno.equals(XlsxCon.CSM_Gstno)) {
+                                                                                                    sequence = true;
+                                                                                                    dbAdapter.delete(DBHandler.Table_CustomerMaster);
+                                                                                                } else {
+                                                                                                    showColMisMatchToast("Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Gstno);
+                                                                                                    writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Gstno);
+                                                                                                    status = null;
+                                                                                                    break;
+                                                                                                }
+                                                                                            } else {
+                                                                                                showColMisMatchToast("Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Panno);
+                                                                                                writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Panno);
+                                                                                                status = null;
+                                                                                                break;
+                                                                                            }
+                                                                                        } else {
+                                                                                            showColMisMatchToast("Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Anniversarydate);
+                                                                                            writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Anniversarydate);
+                                                                                            status = null;
+                                                                                            break;
+                                                                                        }
+                                                                                    } else {
+                                                                                        showColMisMatchToast("Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Dob);
+                                                                                        writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Dob);
+                                                                                        status = null;
+                                                                                        break;
+                                                                                    }
+                                                                                } else {
+                                                                                    showColMisMatchToast("Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Mobno);
+                                                                                    writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Mobno);
+                                                                                    status = null;
+                                                                                    break;
+                                                                                }
+                                                                            } else {
+                                                                                showColMisMatchToast("Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Phone);
+                                                                                writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Phone);
+                                                                                status = null;
+                                                                                break;
+                                                                            }
+                                                                        } else {
+                                                                            showColMisMatchToast("Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Area);
+                                                                            writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Area);
+                                                                            status = null;
+                                                                            break;
+                                                                        }
+                                                                    } else {
+                                                                        showColMisMatchToast("Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Address);
+                                                                        writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Address);
+                                                                        status = null;
+                                                                        break;
+                                                                    }
+                                                                } else {
+                                                                    showColMisMatchToast("Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Cityid);
+                                                                    writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Cityid);
+                                                                    status = null;
+                                                                    break;
+                                                                }
+                                                            } else {
+                                                                showColMisMatchToast("Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Name);
+                                                                writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Name);
+                                                                status = null;
+                                                                break;
+                                                            }
+                                                        } else {
+                                                            showColMisMatchToast("Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Id);
+                                                            writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Id);
+                                                            status = null;
+                                                            break;
+                                                        }
+                                                    } else {
+                                                        showColMisMatchToast("Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Auto);
+                                                        writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_CSM + " Column " + XlsxCon.CSM_Auto);
+                                                        status = null;
+                                                        break;
+                                                    }
+                                                }else if (sequence) {
+                                                    row.getCell(0, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(1, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(2, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(3, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(4, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(5, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(6, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(7, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(8, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(9, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(10, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(11, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+
+                                                    cv.put(DBHandler.CSM_Auto, row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.CSM_Id, row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.CSM_Name, row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.CSM_Cityid, row.getCell(3, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.CSM_Address, row.getCell(4, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.CSM_Area, row.getCell(5, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.CSM_Phone, row.getCell(6, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.CSM_Mobno, row.getCell(7, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.CSM_Dob, row.getCell(8, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.CSM_Anniversarydate, row.getCell(9, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.CSM_Panno, row.getCell(10, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.CSM_Gstno, row.getCell(11, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    dbAdapter.insert(DBHandler.Table_CustomerMaster, cv);
+                                                }
                                             }
                                             pd1.setProgress(count);
                                         }

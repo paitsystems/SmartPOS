@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="2dp">
@@ -14,7 +14,7 @@
         <TextView
             android:id="@+id/tv_prodName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0.3"
             android:gravity="left|center"
             android:text="@string/item"
@@ -25,7 +25,7 @@
         <TextView
             android:id="@+id/tv_qty"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:gravity="right|center"
             android:text="@string/qty"
@@ -36,7 +36,7 @@
         <TextView
             android:id="@+id/tv_rate"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:gravity="right|center"
             android:text="@string/rate"
@@ -47,7 +47,7 @@
         <TextView
             android:id="@+id/tv_amnt"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:gravity="right|center"
             android:text="@string/amount"

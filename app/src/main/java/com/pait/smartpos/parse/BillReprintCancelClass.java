@@ -2,7 +2,7 @@ package com.pait.smartpos.parse;
 
 public class BillReprintCancelClass {
 
-    private int auto;
+    private int auto, qty;
     private String billNo, status, billDate, billTime, CGSTAMNT, SGSTAMNT, netAmt, tableNo, billAmnt;
 
     public int getAuto() {
@@ -83,5 +83,13 @@ public class BillReprintCancelClass {
 
     public void setBillAmnt(String billAmnt) {
         this.billAmnt = billAmnt;
+    }
+
+    public int getQty() {
+        return qty;
+    }
+
+    public void setQty(int qty) {
+        this.qty = qty;
     }
 }

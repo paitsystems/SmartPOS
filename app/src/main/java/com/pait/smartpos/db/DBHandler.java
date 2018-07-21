@@ -12,7 +12,9 @@ import com.pait.smartpos.model.BillDetailClass;
 import com.pait.smartpos.model.BillDetailClassR;
 import com.pait.smartpos.model.BillMasterClass;
 import com.pait.smartpos.model.ExpenseDetail;
+import com.pait.smartpos.parse.BillReprintCancelClass;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DBHandler extends SQLiteOpenHelper {
@@ -797,6 +799,30 @@ public class DBHandler extends SQLiteOpenHelper {
         return ++id;
     }
 
+    public int getMaxCustAuto(){
+        int id = 0;
+        Cursor res = getWritableDatabase().rawQuery("select max("+CSM_Auto+") from "+Table_CustomerMaster,null);
+        if(res.moveToFirst()){
+            do{
+                id = res.getInt(0);
+            }while (res.moveToNext());
+        }
+        res.close();
+        return ++id;
+    }
+
+    public int getMaxCustId(int mastAuto){
+        int id = 0;
+        Cursor res = getWritableDatabase().rawQuery("select max("+CSM_Id+") from "+Table_CustomerMaster,null);
+        if(res.moveToFirst()){
+            do{
+                id = res.getInt(0);
+            }while (res.moveToNext());
+        }
+        res.close();
+        return ++id;
+    }
+
     public Cursor getProductData(){
         return getWritableDatabase().rawQuery("select * from " + Table_ProductMaster
                 + " where "+PM_Active+" in('Y','A') order by "+PM_Cat3, null);
@@ -1014,5 +1040,78 @@ public class DBHandler extends SQLiteOpenHelper {
     public Cursor getDistinctSupplier(){
         String str = "Select distinct "+SM_Name+" from "+Table_SupplierMaster;
         return getWritableDatabase().rawQuery(str,null);
+    }
+
+    public List<BillReprintCancelClass> getBillMasterData(String fromDate, String toData){
+        List<BillReprintCancelClass> list = new ArrayList<>();
+        String  str = "select * from "+Table_BillMaster + " order by "+BM_Autono +" desc";
+        Cursor res = getWritableDatabase().rawQuery(str,null);
+        if(res.moveToFirst()){
+            do{
+                BillReprintCancelClass bill = new BillReprintCancelClass();
+                bill.setAuto(res.getInt(res.getColumnIndex(BM_Autono)));
+                bill.setBillNo(res.getString(res.getColumnIndex(BM_Billno)));
+                bill.setStatus(res.getString(res.getColumnIndex(BM_Billst)));
+                bill.setBillDate(res.getString(res.getColumnIndex(BM_Billdate)));
+                bill.setBillTime(res.getString(res.getColumnIndex(BM_Billingtime)));
+                bill.setNetAmt(res.getString(res.getColumnIndex(BM_Netamt)));
+                bill.setCGSTAMNT(res.getString(res.getColumnIndex(BM_CGSTAMT)));
+                bill.setSGSTAMNT(res.getString(res.getColumnIndex(BM_SGSTAMT)));
+                list.add(bill);
+            }while (res.moveToNext());
+        }
+        res.close();
+        return list;
+    }
+
+    public List<BillDetailClassR> getBillDetailData(BillReprintCancelClass billM){
+        //String  str = "select * from "+BillMaster_Table+" where "+BillMaster_CrDate+">='"+fromDate+"' and "+BillMaster_CrDate+"<='"+fromDate+"'";
+        List<BillDetailClassR> list = new ArrayList<>();
+        String  str = "select "+Table_ProductMaster+"."+PM_Cat3+" as Prod, "+Table_BillDetails+"."+BD_Qty+","+
+                Table_BillDetails+"."+BD_Rate+","+Table_BillDetails+"."+BD_Total+
+                ","+Table_BillDetails+"."+BD_Cgstper+","+Table_BillDetails+"."+BD_Sgstper+
+                " from "+Table_BillDetails+","+Table_ProductMaster +
+                " where "+Table_BillDetails+"."+BD_Itemid+"="+Table_ProductMaster+"."+PM_Id
+                +" and "+Table_BillDetails+"."+BD_Billid+"="+billM.getAuto();
+        Cursor res = getWritableDatabase().rawQuery(str,null);
+        if(res.moveToFirst()){
+            do{
+                BillDetailClassR bill = new BillDetailClassR();
+                bill.setProd(res.getString(res.getColumnIndex("Prod")));
+                bill.setQty(res.getFloat(res.getColumnIndex(BD_Qty)));
+                bill.setRateStr(res.getString(res.getColumnIndex(BD_Rate)));
+                bill.setTotalStr(res.getString(res.getColumnIndex(BD_Total)));
+                bill.setCGSTPER(res.getFloat(res.getColumnIndex(BD_Cgstper)));
+                bill.setSGSTPER(res.getFloat(res.getColumnIndex(BD_Sgstper)));
+                list.add(bill);
+            }while (res.moveToNext());
+        }
+        res.close();
+        return list;
+    }
+
+    public void cancelBill(BillReprintCancelClass bill, String date){
+        ContentValues cv = new ContentValues();
+        cv.put(BM_Billst,"C");
+        cv.put(BM_Modifiedby,1);
+        cv.put(BM_Modifieddt,date);
+        getWritableDatabase().update(Table_BillMaster,cv,BM_Autono+"=? and "+BM_Billno+"=?",new String[]{String.valueOf(bill.getAuto()),bill.getBillNo()});
+    }
+
+    public Cursor getAllProduct(){
+        return getWritableDatabase().rawQuery("select * from " + Table_ProductMaster +" order by "+PM_Cat3, null);
+    }
+
+    public void inActivateItem(String masterType, String tableName, int id, String cat){
+        ContentValues cv = new ContentValues();
+        if(masterType.equals("product")) {
+            cv.put(PM_Active, "N");
+            getWritableDatabase().update(tableName, cv, PM_Id + "=? and " + PM_Cat3 + "=?", new String[]{String.valueOf(id), cat});
+        }
+    }
+
+    public Cursor getCustomerData(){
+        return getWritableDatabase().rawQuery("select "+CSM_Name+","+CSM_Mobno+" from " + Table_CustomerMaster
+                + " order by "+CSM_Name, null);
     }
 }

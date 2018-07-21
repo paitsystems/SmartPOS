@@ -62,9 +62,11 @@ public class PairedDeviceFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        if (!mService.isBTopen()) {
-            Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
+        if(mService!=null) {
+            if (!mService.isBTopen()) {
+                Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
+            }
         }
     }
 
@@ -112,16 +114,21 @@ public class PairedDeviceFragment extends Fragment {
     }
 
     private void getPairedDevice(){
-        list_paired_device.clear();
-        Set<BluetoothDevice> set = mService.getPairedDev();
-        if (!set.isEmpty()) {
-            for (BluetoothDevice device : set) {
-                list_paired_device.add(device.getName() + "-" + device.getAddress());
+        try{
+            list_paired_device.clear();
+            Set<BluetoothDevice> set = mService.getPairedDev();
+            if (!set.isEmpty()) {
+                for (BluetoothDevice device : set) {
+                    list_paired_device.add(device.getName() + "-" + device.getAddress());
+                }
+            } else {
+                list_paired_device.add("No Paired Device Available");
             }
-        } else {
+            listView_paired.setAdapter(list_paired_device);
+        }catch (Exception e){
             list_paired_device.add("No Paired Device Available");
+            e.printStackTrace();
         }
-        listView_paired.setAdapter(list_paired_device);
     }
 
     private AdapterView.OnItemClickListener mDeviceClickListener = new AdapterView.OnItemClickListener() {
