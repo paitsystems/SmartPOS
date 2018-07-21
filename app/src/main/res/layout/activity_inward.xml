@@ -10,39 +10,200 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:background="@drawable/black_border_curve_draw"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="3dp">
 
-            <Spinner
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_supplier"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="50dp"
+                android:backgroundTint="@color/pinkd"
+                android:clickable="true"
+                android:drawableRight="@drawable/search"
+                android:focusable="true"
+                android:hint="Enter Supplier"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/black_border_curve_draw"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="3dp">
 
-            <Spinner
-                android:id="@+id/sp_prod"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/date_border"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/sp_prod"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/pinkd" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center|bottom"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="center|bottom"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/date_color_green"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Qty"
+                        android:textColor="@color/white"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="center|bottom"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/date_color_green"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Rate"
+                        android:textColor="@color/white"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <EditText
+                    android:id="@+id/ed_qty"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/date_border"
+                    android:gravity="center"
+                    android:hint="Enter Qty"
+                    android:inputType="number"
+                    android:maxLines="2"
+                    android:padding="5dp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/ed_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/date_border"
+                    android:gravity="center"
+                    android:hint="Enter Rate"
+                    android:inputType="number"
+                    android:maxLines="2"
+                    android:padding="5dp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/date_color_border"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/date_color_border"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="SAVE"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/date_color_border"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:visibility="invisible" />
+            </LinearLayout>
         </LinearLayout>
 
 
     </LinearLayout>
 
     <TextView
+        style="@style/footerstyleMob"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/footerstyleMob"/>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

@@ -734,6 +734,8 @@ public class DBHandler extends SQLiteOpenHelper {
         db.execSQL(table_billdetail);
         db.execSQL(table_gstmaster);
         db.execSQL(table_gstdetail);
+        db.execSQL(table_updatebill);
+        db.execSQL(table_paymenttable);
         Constant.showLog("onCreate");
 
     }
@@ -1002,5 +1004,15 @@ public class DBHandler extends SQLiteOpenHelper {
         String str = "select distinct "+EXM_Remark+" from "+Table_ExpenseHead+" where "+EXM_Remark+" <>'NA' AND "+EXM_Remark+" NOT LIKE ('')";
         Log.d("Log",str);
         return getWritableDatabase().rawQuery(str, null);
+    }
+
+    public Cursor getDistinctProduct(){
+        String str = "Select distinct "+PM_Cat3+" from "+Table_ProductMaster;
+        return getWritableDatabase().rawQuery(str,null);
+    }
+
+    public Cursor getDistinctSupplier(){
+        String str = "Select distinct "+SM_Name+" from "+Table_SupplierMaster;
+        return getWritableDatabase().rawQuery(str,null);
     }
 }

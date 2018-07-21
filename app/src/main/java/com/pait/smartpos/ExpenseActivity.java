@@ -81,7 +81,6 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
         tv_date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                amount_menu_lay.setVisibility(View.GONE);
                 showDialog(vdt);
             }
         });
