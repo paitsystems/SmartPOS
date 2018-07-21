@@ -17,6 +17,7 @@ import com.pait.smartpos.model.UserProfileClass;
 import java.io.File;
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -144,5 +145,15 @@ public class Constant {
         Gson gson = new Gson();
         String json = VerificationActivity.pref.getString("obj", null);
         return gson.fromJson(json, UserProfileClass.class);
+    }
+
+    private String getFinYr(){
+        String date1 = getDate();
+        String[] dateArr = date1.split("/");
+        String year = dateArr[2];
+        int y = Integer.parseInt(year.substring(2, 4));
+        String finyr = y + "-" + String.valueOf(y + 1);
+        showLog(finyr);
+        return finyr;
     }
 }

@@ -541,6 +541,338 @@ public class DBHandler extends SQLiteOpenHelper {
     public static final String PY_TYPE = "Type";
     public static final String PY_Status = "Status";
 
+    public static final String Table_InwardMaster = "InwardMaster";
+    public static final String IWM_Autono = "Autono";
+    public static final String IWM_Id = "Id";
+    public static final String IWM_Inwarddate = "Inwarddate";
+    public static final String IWM_Branchid = "Branchid";
+    public static final String IWM_Supplierid = "Supplierid";
+    public static final String IWM_Againstpo = "Againstpo";
+    public static final String IWM_Pono = "Pono";
+    public static final String IWM_Podate = "Podate";
+    public static final String IWM_Totalqty = "Totalqty";
+    public static final String IWM_Totalamt = "Totalamt";
+    public static final String IWM_Netamt = "Netamt";
+    public static final String IWM_Inwardst = "Inwardst";
+    public static final String IWM_Ramark = "Ramark";
+    public static final String IWM_Netamtinword = "Netamtinword";
+    public static final String IWM_Totalamtinword = "Totalamtinword";
+    public static final String IWM_Finyr = "Finyr";
+    public static final String IWM_Rebarcodest = "Rebarcodest";
+    public static final String IWM_Rebarcnt = "Rebarcnt";
+    public static final String IWM_Billno = "Billno";
+    public static final String IWM_Billgenerated = "Billgenerated";
+    public static final String IWM_Bgenerateno = "Bgenerateno";
+    public static final String IWM_Createby = "Createby";
+    public static final String IWM_Createdate = "Createdate";
+    public static final String IWM_Transport_Id = "Transport_Id";
+    public static final String IWM_Lr_No = "Lr_No";
+    public static final String IWM_Lr_Date = "Lr_Date";
+    public static final String IWM_Refund = "Refund";
+    public static final String IWM_Refunddate = "Refunddate";
+    public static final String IWM_Pimadest = "Pimadest";
+    public static final String IWM_Invno = "Invno";
+    public static final String IWM_Baleopenno = "Baleopenno";
+    public static final String IWM_Jobworktyp = "Jobworktyp";
+    public static final String IWM_Jobwrkdcid = "Jobwrkdcid";
+    public static final String IWM_Barcodegenerate = "Barcodegenerate";
+    public static final String IWM_Orderamt = "Orderamt";
+    public static final String IWM_Consignmentpur = "Consignmentpur";
+    public static final String IWM_Balanceqty = "Balanceqty";
+    public static final String IWM_Forbranch = "Forbranch";
+    public static final String IWM_Nan = "Nan";
+    public static final String IWM_Totsuppdisamt = "Totsuppdisamt";
+    public static final String IWM_Inwno = "Inwno";
+    public static final String IWM_Replcolumns = "Replcolumns";
+    public static final String IWM_Disper = "Disper";
+    public static final String IWM_Disamt = "Disamt";
+    public static final String IWM_Grossamt = "Grossamt";
+    public static final String IWM_Totvat = "Totvat";
+    public static final String IWM_Otheradd = "Otheradd";
+    public static final String IWM_Rounduppamt = "Rounduppamt";
+    public static final String IWM_Status = "Status";
+    public static final String IWM_Cancelledby = "Cancelledby";
+    public static final String IWM_Canceldate = "Canceldate";
+    public static final String IWM_Cancelreson = "Cancelreson";
+    public static final String IWM_Chkcst = "Chkcst";
+    public static final String IWM_Cstvatper = "Cstvatper";
+    public static final String IWM_Hocode = "Hocode";
+    public static final String IWM_Esugamno = "Esugamno";
+    public static final String IWM_Reason = "Reason";
+    public static final String IWM_Cgstamt = "Cgstamt";
+    public static final String IWM_Sgstamt = "Sgstamt";
+    public static final String IWM_Igstapp = "Igstapp";
+    public static final String IWM_Igstamt = "Igstamt";
+
+    public static final String Table_InwardDetail = "InwardDetail";
+    public static final String IWD_Autono = "Autono";
+    public static final String IWD_Id = "Id";
+    public static final String IWD_Inwardid = "Inwardid";
+    public static final String IWD_Productid = "Productid";
+    public static final String IWD_Fathersku = "Fathersku";
+    public static final String IWD_Recqty = "Recqty";
+    public static final String IWD_Rate = "Rate";
+    public static final String IWD_Totalamt = "Totalamt";
+    public static final String IWD_Tax = "Tax";
+    public static final String IWD_Taxamt = "Taxamt";
+    public static final String IWD_Productnetamt = "Productnetamt";
+    public static final String IWD_Barcode = "Barcode";
+    public static final String IWD_Itemname = "Itemname";
+    public static final String IWD_Rebarcodest = "Rebarcodest";
+    public static final String IWD_Rebarcnt = "Rebarcnt";
+    public static final String IWD_Refinwid = "Refinwid";
+    public static final String IWD_Discamt = "Discamt";
+    public static final String IWD_Branchid = "Branchid";
+    public static final String IWD_Discfrompr = "Discfrompr";
+    public static final String IWD_Purchaserate = "Purchaserate";
+    public static final String IWD_Freeqty = "Freeqty";
+    public static final String IWD_Designno = "Designno";
+    public static final String IWD_Color = "Color";
+    public static final String IWD_Itmimage = "Itmimage";
+    public static final String IWD_Imagepath = "Imagepath";
+    public static final String IWD_Mandalper = "Mandalper";
+    public static final String IWD_Mandal = "Mandal";
+    public static final String IWD_Custdisper = "Custdisper";
+    public static final String IWD_Custdisamt = "Custdisamt";
+    public static final String IWD_Itemsize = "Itemsize";
+    public static final String IWD_Itemsaleper = "Itemsaleper";
+    public static final String IWD_Jobworktyp = "Jobworktyp";
+    public static final String IWD_Oldbarcode = "Oldbarcode";
+    public static final String IWD_Expqty = "Expqty";
+    public static final String IWD_Podetauto = "Podetauto";
+    public static final String IWD_Balanceqty = "Balanceqty";
+    public static final String IWD_Mrp = "Mrp";
+    public static final String IWD_Nan = "Nan";
+    public static final String IWD_Suppdisper = "Suppdisper";
+    public static final String IWD_Suppdisamt = "Suppdisamt";
+    public static final String IWD_Repcolumn = "Repcolumn";
+    public static final String IWD_Suppbilldisper = "Suppbilldisper";
+    public static final String IWD_Suppbilldisamt = "Suppbilldisamt";
+    public static final String IWD_Otheraddded = "Otheraddded";
+    public static final String IWD_Gvapp = "Gvapp";
+    public static final String IWD_Scheme1 = "Scheme1";
+    public static final String IWD_Scheme2 = "Scheme2";
+    public static final String IWD_Barcodeqty = "Barcodeqty";
+    public static final String IWD_Wsp = "Wsp";
+    public static final String IWD_Hocode = "Hocode";
+    public static final String IWD_Txincextyp = "Txincextyp";
+    public static final String IWD_Netrate = "Netrate";
+    public static final String IWD_Gstper = "Gstper";
+    public static final String IWD_Cgstamt = "Cgstamt";
+    public static final String IWD_Sgstamt = "Sgstamt";
+    public static final String IWD_Igstamt = "Igstamt";
+    public static final String IWD_Cgstper = "Cgstper";
+    public static final String IWD_Sgstper = "Sgstper";
+    public static final String IWD_Cessper = "Cessper";
+    public static final String IWD_Cessamt = "Cessamt";
+    public static final String IWD_Hsncode = "Hsncode";
+    public static final String IWD_Attr1 = "Attr1";
+    public static final String IWD_Attr2 = "Attr2";
+    public static final String IWD_Atrr3 = "Atrr3";
+    public static final String IWD_Attr4 = "Attr4";
+    public static final String IWD_Atrr5 = "Atrr5";
+    public static final String IWD_Suppdisper1 = "Suppdisper1";
+    public static final String IWD_Suppdisamt1 = "Suppdisamt1";
+
+    public static final String Table_ReturnGoodMaster = "ReturnGoodMaster";
+    public static final String RGM_Autoid = "Autoid";
+    public static final String RGM_Id = "Id";
+    public static final String RGM_Branchid = "Branchid";
+    public static final String RGM_Supplierid = "Supplierid";
+    public static final String RGM_Retqty = "Retqty";
+    public static final String RGM_Retamt = "Retamt";
+    public static final String RGM_Finyr = "Finyr";
+    public static final String RGM_Taxamt = "Taxamt";
+    public static final String RGM_Otheramt = "Otheramt";
+    public static final String RGM_Netpay = "Netpay";
+    public static final String RGM_Inwardid = "Inwardid";
+    public static final String RGM_Createdt = "Createdt";
+    public static final String RGM_Createby = "Createby";
+    public static final String RGM_Transport_Id = "Transport_Id";
+    public static final String RGM_Lr_No = "Lr_No";
+    public static final String RGM_Lr_Date = "Lr_Date";
+    public static final String RGM_Retdate = "Retdate";
+    public static final String RGM_Dncreated = "Dncreated";
+    public static final String RGM_Remarks = "Remarks";
+    public static final String RGM_Status = "Status";
+    public static final String RGM_Cancelreason = "Cancelreason";
+    public static final String RGM_Canceldate = "Canceldate";
+    public static final String RGM_Cancelby = "Cancelby";
+    public static final String RGM_Createtime = "Createtime";
+    public static final String RGM_Returntype = "Returntype";
+    public static final String RGM_Grrno = "Grrno";
+    public static final String RGM_Authorisedby = "Authorisedby";
+    public static final String RGM_Cstype = "Cstype";
+    public static final String RGM_Parcelst = "Parcelst";
+    public static final String RGM_Tlbtamt = "Tlbtamt";
+    public static final String RGM_Amtinwrds = "Amtinwrds";
+    public static final String RGM_Grossamt = "Grossamt";
+    public static final String RGM_Totaldisamt = "Totaldisamt";
+    public static final String RGM_Roundup = "Roundup";
+    public static final String RGM_Hocode = "Hocode";
+    public static final String RGM_Reason = "Reason";
+    public static final String RGM_Othertax = "Othertax";
+    public static final String RGM_Docpath = "Docpath";
+    public static final String RGM_Cgstamt = "Cgstamt";
+    public static final String RGM_Sgstamt = "Sgstamt";
+    public static final String RGM_Igstapp = "Igstapp";
+    public static final String RGM_Igstamt = "Igstamt";
+    public static final String RGM_Trachar = "Trachar";
+    public static final String RGM_Trataxamt = "Trataxamt";
+    public static final String RGM_Tranamt = "Tranamt";
+
+    public static final String Table_ReturnGoodDetail = "ReturnGoodDetail";
+    public static final String RGD_Autoid = "Autoid";
+    public static final String RGD_Id = "Id";
+    public static final String RGD_Retautoid = "Retautoid";
+    public static final String RGD_Branchid = "Branchid";
+    public static final String RGD_Barcode = "Barcode";
+    public static final String RGD_Itemid = "Itemid";
+    public static final String RGD_Rate = "Rate";
+    public static final String RGD_Retqty = "Retqty";
+    public static final String RGD_Balqty = "Balqty";
+    public static final String RGD_Finyr = "Finyr";
+    public static final String RGD_Taxper = "Taxper";
+    public static final String RGD_Taxamt = "Taxamt";
+    public static final String RGD_Inwardid = "Inwardid";
+    public static final String RGD_Lbtper = "Lbtper";
+    public static final String RGD_Lbtamt = "Lbtamt";
+    public static final String RGD_Lbtcalamt = "Lbtcalamt";
+    public static final String RGD_Replcolumn = "Replcolumn";
+    public static final String RGD_Amount = "Amount";
+    public static final String RGD_Itmdisper = "Itmdisper";
+    public static final String RGD_Itmdisamt = "Itmdisamt";
+    public static final String RGD_Total = "Total";
+    public static final String RGD_Disper = "Disper";
+    public static final String RGD_Disamt = "Disamt";
+    public static final String RGD_Otheradd = "Otheradd";
+    public static final String RGD_Hocode = "Hocode";
+    public static final String RGD_Gstper = "Gstper";
+    public static final String RGD_Cgstamt = "Cgstamt";
+    public static final String RGD_Sgstamt = "Sgstamt";
+    public static final String RGD_Igstamt = "Igstamt";
+    public static final String RGD_Cgstper = "Cgstper";
+    public static final String RGD_Sgstper = "Sgstper";
+    public static final String RGD_Cessper = "Cessper";
+    public static final String RGD_Cessamt = "Cessamt";
+    public static final String RGD_Supdisc1 = "Supdisc1";
+    public static final String RGD_Supdiscamt1 = "Supdiscamt1";
+    public static final String RGD_Reason = "Reason";
+
+    public static final String Table_ReturnMemoMaster = "ReturnMemoMaster";
+    public static final String RMM_Auto = "Auto";
+    public static final String RMM_Id = "Id";
+    public static final String RMM_Machinename = "Machinename";
+    public static final String RMM_Counterno = "Counterno";
+    public static final String RMM_Rmemono = "Rmemono";
+    public static final String RMM_Billno = "Billno";
+    public static final String RMM_Custcode = "Custcode";
+    public static final String RMM_Netbillamt = "Netbillamt";
+    public static final String RMM_Returnqty = "Returnqty";
+    public static final String RMM_Returnamt = "Returnamt";
+    public static final String RMM_Dis = "Dis";
+    public static final String RMM_Tax = "Tax";
+    public static final String RMM_Grossamt = "Grossamt";
+    public static final String RMM_Netamt = "Netamt";
+    public static final String RMM_Remark = "Remark";
+    public static final String RMM_Empname = "Empname";
+    public static final String RMM_Createby = "Createby";
+    public static final String RMM_Createdt = "Createdt";
+    public static final String RMM_Modifiedby = "Modifiedby";
+    public static final String RMM_Modifieddt = "Modifieddt";
+    public static final String RMM_Deletedby = "Deletedby";
+    public static final String RMM_Deleteddt = "Deleteddt";
+    public static final String RMM_Financialyr = "Financialyr";
+    public static final String RMM_Maxno = "Maxno";
+    public static final String RMM_Branchid = "Branchid";
+    public static final String RMM_Inwrds = "Inwrds";
+    public static final String RMM_Redeemst = "Redeemst";
+    public static final String RMM_Status = "Status";
+    public static final String RMM_Actualcreatedate = "Actualcreatedate";
+    public static final String RMM_Createtime = "Createtime";
+    public static final String RMM_Type = "Type";
+    public static final String RMM_Redeemtype = "Redeemtype";
+    public static final String RMM_Specialright = "Specialright";
+    public static final String RMM_Balredeem = "Balredeem";
+    public static final String RMM_Msreplclm = "Msreplclm";
+    public static final String RMM_Billknockamt = "Billknockamt";
+    public static final String RMM_Openst = "Openst";
+    public static final String RMM_Openby = "Openby";
+    public static final String RMM_Opendate = "Opendate";
+    public static final String RMM_Openreason = "Openreason";
+    public static final String RMM_Returnreason = "Returnreason";
+    public static final String RMM_Gatepassno = "Gatepassno";
+    public static final String RMM_Cntype = "Cntype";
+    public static final String RMM_Createdfrom = "Createdfrom";
+    public static final String RMM_Revgainpts = "Revgainpts";
+    public static final String RMM_Revrdmpts = "Revrdmpts";
+    public static final String RMM_Cgstamt = "Cgstamt";
+    public static final String RMM_Sgstamt = "Sgstamt";
+    public static final String RMM_Igstapp = "Igstapp";
+    public static final String RMM_Igstamt = "Igstamt";
+
+    public static final String Table_ReturnMemoDetails = "ReturnMemoDetails";
+    public static final String RMD_Id = "Id";
+    public static final String RMD_Rmemono = "Rmemono";
+    public static final String RMD_Itemcode = "Itemcode";
+    public static final String RMD_Barcode = "Barcode";
+    public static final String RMD_Qty = "Qty";
+    public static final String RMD_Rate = "Rate";
+    public static final String RMD_Amt = "Amt";
+    public static final String RMD_Returnid = "Returnid";
+    public static final String RMD_Branchid = "Branchid";
+    public static final String RMD_Financialyr = "Financialyr";
+    public static final String RMD_Counterno = "Counterno";
+    public static final String RMD_Autoid = "Autoid";
+    public static final String RMD_Disper = "Disper";
+    public static final String RMD_Disamt = "Disamt";
+    public static final String RMD_Vatper = "Vatper";
+    public static final String RMD_Vatamt = "Vatamt";
+    public static final String RMD_Nonbarst = "Nonbarst";
+    public static final String RMD_Itemname = "Itemname";
+    public static final String RMD_Empid = "Empid";
+    public static final String RMD_Mrp = "Mrp";
+    public static final String RMD_Mastid = "Mastid";
+    public static final String RMD_Billdetauto = "Billdetauto";
+    public static final String RMD_Billdisper = "Billdisper";
+    public static final String RMD_Billdisamt = "Billdisamt";
+    public static final String RMD_Dtlid = "Dtlid";
+    public static final String RMD_Gstper = "Gstper";
+    public static final String RMD_Cgstamt = "Cgstamt";
+    public static final String RMD_Sgstamt = "Sgstamt";
+    public static final String RMD_Cgstper = "Cgstper";
+    public static final String RMD_Sgstper = "Sgstper";
+    public static final String RMD_Cessper = "Cessper";
+    public static final String RMD_Cessamt = "Cessamt";
+    public static final String RMD_Igstamt = "Igstamt";
+    public static final String RMD_Taxableamt = "Taxableamt";
+
+    public static final String Table_DailyPettyExp = "DailyPettyExp";
+    public static final String DPE_Autoid = "Autoid";
+    public static final String DPE_Branchid = "Branchid";
+    public static final String DPE_Date = "Date";
+    public static final String DPE_Toemp = "Toemp";
+    public static final String DPE_Amount = "Amount";
+    public static final String DPE_Exphead = "Exphead";
+    public static final String DPE_Authoby = "Authoby";
+    public static final String DPE_Remark = "Remark";
+    public static final String DPE_Createdby = "Createdby";
+    public static final String DPE_Createddate = "Createddate";
+    public static final String DPE_Status = "Status";
+    public static final String DPE_Cancleby = "Cancleby";
+    public static final String DPE_Cancledate = "Cancledate";
+    public static final String DPE_Cancelreason = "Cancelreason";
+    public static final String DPE_Amtinwords = "Amtinwords";
+    public static final String DPE_Voutype = "Voutype";
+    public static final String DPE_Againstref = "Againstref";
+    public static final String DPE_Id = "Id";
+    public static final String DPE_Finyr = "Finyr";
+    public static final String DPE_Voucherno = "Voucherno";
+    public static final String DPE_Cstype = "Cstype";
+    public static final String DPE_Counterno = "Counterno";
+    public static final String DPE_Subhead = "Subhead";
+
+
     String table_company_master = "create table if not exists " + Table_CompanyMaster + "(" +
             CPM_Auto + " int not null," + CPM_Id + " int," + CPM_CompanyName + " text," + CPM_Mgrname + " int," +
             CPM_City + " int," + CPM_State + " int," + CPM_Address + " text," + CPM_Phone + " text," +
@@ -720,6 +1052,337 @@ public class DBHandler extends SQLiteOpenHelper {
     public String table_paymenttable = "create table if not exists " + Table_Payment + "(" +
             PY_Auto + " int not null," + PY_TYPE + " text," + PY_Status + " text, primary key(" + PY_Auto + "))";
 
+    private String table_inward_master = "create table if not exists " + Table_InwardMaster + "(" +
+            IWM_Autono + " int not null," +
+                    IWM_Id + " int," +
+                    IWM_Inwarddate + " text," +
+                    IWM_Branchid + " int," +
+                    IWM_Supplierid + " int," +
+                    IWM_Againstpo + " text," +
+                    IWM_Pono + " int," +
+                    IWM_Podate + " text," +
+                    IWM_Totalqty + " float," +
+                    IWM_Totalamt + " float," +
+                    IWM_Netamt + " float," +
+                    IWM_Inwardst + " text," +
+                    IWM_Ramark + " text," +
+                    IWM_Netamtinword + " text," +
+                    IWM_Totalamtinword + " text," +
+                    IWM_Finyr + " text," +
+                    IWM_Rebarcodest + " text," +
+                    IWM_Rebarcnt + " int," +
+                    IWM_Billno + " text," +
+                    IWM_Billgenerated + " text," +
+                    IWM_Bgenerateno + " text," +
+                    IWM_Createby + " int," +
+                    IWM_Createdate + " text," +
+                    IWM_Transport_Id + " int," +
+                    IWM_Lr_No + " text," +
+                    IWM_Lr_Date + " text," +
+                    IWM_Refund + " text," +
+                    IWM_Refunddate + " text," +
+                    IWM_Pimadest + " text," +
+                    IWM_Invno + " text," +
+                    IWM_Baleopenno + " text," +
+                    IWM_Jobworktyp + " text," +
+                    IWM_Jobwrkdcid + " int," +
+                    IWM_Barcodegenerate + " text," +
+                    IWM_Orderamt + " float," +
+                    IWM_Consignmentpur + " text," +
+                    IWM_Balanceqty + " float," +
+                    IWM_Forbranch + " text," +
+                    IWM_Nan + " text," +
+                    IWM_Totsuppdisamt + " float," +
+                    IWM_Inwno + " text," +
+                    IWM_Replcolumns + " float," +
+                    IWM_Disper + " float," +
+                    IWM_Disamt + " float," +
+                    IWM_Grossamt + " float," +
+                    IWM_Totvat + " float," +
+                    IWM_Otheradd + " float," +
+                    IWM_Rounduppamt + " float," +
+                    IWM_Status + " text," +
+                    IWM_Cancelledby + " int," +
+                    IWM_Canceldate + " text," +
+                    IWM_Cancelreson + " text," +
+                    IWM_Chkcst + " text," +
+                    IWM_Cstvatper + " float," +
+                    IWM_Hocode + " int," +
+                    IWM_Esugamno + " text," +
+                    IWM_Reason + " text," +
+                    IWM_Cgstamt + " float," +
+                    IWM_Sgstamt + " float," +
+                    IWM_Igstapp + " text," +
+                    IWM_Igstamt + " float, primary key(" + IWM_Autono + "))";
+
+    private String table_inward_detail = "create table if not exists " + Table_InwardDetail + "(" +
+            IWD_Autono + " int not null," +
+            IWD_Id + " int," +
+            IWD_Inwardid + " int," +
+            IWD_Productid + " text," +
+            IWD_Fathersku + " text," +
+            IWD_Recqty + " float," +
+            IWD_Rate + " float," +
+            IWD_Totalamt + " float," +
+            IWD_Tax + " float," +
+            IWD_Taxamt + " float," +
+            IWD_Productnetamt + " float," +
+            IWD_Barcode + " text," +
+            IWD_Itemname + " text," +
+            IWD_Rebarcodest + " text," +
+            IWD_Rebarcnt + " int," +
+            IWD_Refinwid + " int," +
+            IWD_Discamt + " float," +
+            IWD_Branchid + " int," +
+            IWD_Discfrompr + " float," +
+            IWD_Purchaserate + " float," +
+            IWD_Freeqty + " float," +
+            IWD_Designno + " text," +
+            IWD_Color + " text," +
+            IWD_Itmimage + " text," +
+            IWD_Imagepath + " text," +
+            IWD_Mandalper + " float," +
+            IWD_Mandal + " float," +
+            IWD_Custdisper + " float," +
+            IWD_Custdisamt + " float," +
+            IWD_Itemsize + " text," +
+            IWD_Itemsaleper + " float," +
+            IWD_Jobworktyp + " text," +
+            IWD_Oldbarcode + " text," +
+            IWD_Expqty + " float," +
+            IWD_Podetauto + " int," +
+            IWD_Balanceqty + " float," +
+            IWD_Mrp + " float," +
+            IWD_Nan + " float," +
+            IWD_Suppdisper + " float," +
+            IWD_Suppdisamt + " float," +
+            IWD_Repcolumn + " text," +
+            IWD_Suppbilldisper + " float," +
+            IWD_Suppbilldisamt + " float," +
+            IWD_Otheraddded + " float," +
+            IWD_Gvapp + " text," +
+            IWD_Scheme1 + " text," +
+            IWD_Scheme2 + " text," +
+            IWD_Barcodeqty + " float," +
+            IWD_Wsp + " float," +
+            IWD_Hocode + " int," +
+            IWD_Txincextyp + " text," +
+            IWD_Netrate + " float," +
+            IWD_Gstper + " float," +
+            IWD_Cgstamt + " float," +
+            IWD_Sgstamt + " float," +
+            IWD_Igstamt + " float," +
+            IWD_Cgstper + " float," +
+            IWD_Sgstper + " float," +
+            IWD_Cessper + " float," +
+            IWD_Cessamt + " float," +
+            IWD_Hsncode + " text," +
+            IWD_Attr1 + " text," +
+            IWD_Attr2 + " text," +
+            IWD_Atrr3 + " text," +
+            IWD_Attr4 + " text," +
+            IWD_Atrr5 + " text," +
+            IWD_Suppdisper1 + " float," +
+            IWD_Suppdisamt1 + " float, primary key(" + IWD_Autono + "))";
+
+    private String table_returngood_master = "create table if not exists " + Table_ReturnGoodMaster + "(" +
+            RGM_Autoid + " int not null," +
+            RGM_Id + " int," +
+            RGM_Branchid + " int," +
+            RGM_Supplierid + " int," +
+            RGM_Retqty + " float," +
+            RGM_Retamt + " float," +
+            RGM_Finyr + " text," +
+            RGM_Taxamt + " float," +
+            RGM_Otheramt + " float," +
+            RGM_Netpay + " float," +
+            RGM_Inwardid + " text," +
+            RGM_Createdt + " text," +
+            RGM_Createby + " int," +
+            RGM_Transport_Id + " int," +
+            RGM_Lr_No + " text," +
+            RGM_Lr_Date + " text," +
+            RGM_Retdate + " text," +
+            RGM_Dncreated + " text," +
+            RGM_Remarks + " text," +
+            RGM_Status + " text," +
+            RGM_Cancelreason + " text," +
+            RGM_Canceldate + " text," +
+            RGM_Cancelby + " int," +
+            RGM_Createtime + " text," +
+            RGM_Returntype + " text," +
+            RGM_Grrno + " text," +
+            RGM_Authorisedby + " int," +
+            RGM_Cstype + " text," +
+            RGM_Parcelst + " text," +
+            RGM_Tlbtamt + " float," +
+            RGM_Amtinwrds + " text," +
+            RGM_Grossamt + " float," +
+            RGM_Totaldisamt + " float," +
+            RGM_Roundup + " float," +
+            RGM_Hocode + " int," +
+            RGM_Reason + " text," +
+            RGM_Othertax + " float," +
+            RGM_Docpath + " text," +
+            RGM_Cgstamt + " float," +
+            RGM_Sgstamt + " float," +
+            RGM_Igstapp + " text," +
+            RGM_Igstamt + " float," +
+            RGM_Trachar + " float," +
+            RGM_Trataxamt + " float," +
+            RGM_Tranamt + " float, primary key(" + RGM_Autoid + "))";
+
+    private String table_returngood_detail = "create table if not exists " + Table_ReturnGoodDetail + "(" +
+            RGD_Autoid + " int not null," +
+            RGD_Id + " int," +
+            RGD_Retautoid + " int," +
+            RGD_Branchid + " int," +
+            RGD_Barcode + " text," +
+            RGD_Itemid + " int," +
+            RGD_Rate + " float," +
+            RGD_Retqty + " float," +
+            RGD_Balqty + " float," +
+            RGD_Finyr + " text," +
+            RGD_Taxper + " float," +
+            RGD_Taxamt + " float," +
+            RGD_Inwardid + " int," +
+            RGD_Lbtper + " float," +
+            RGD_Lbtamt + " float," +
+            RGD_Lbtcalamt + " float," +
+            RGD_Replcolumn + " text," +
+            RGD_Amount + " float," +
+            RGD_Itmdisper + " float," +
+            RGD_Itmdisamt + " float," +
+            RGD_Total + " float," +
+            RGD_Disper + " float," +
+            RGD_Disamt + " float," +
+            RGD_Otheradd + " float," +
+            RGD_Hocode + " int," +
+            RGD_Gstper + " float," +
+            RGD_Cgstamt + " float," +
+            RGD_Sgstamt + " float," +
+            RGD_Igstamt + " float," +
+            RGD_Cgstper + " float," +
+            RGD_Sgstper + " float," +
+            RGD_Cessper + " float," +
+            RGD_Cessamt + " float," +
+            RGD_Supdisc1 + " float," +
+            RGD_Supdiscamt1 + " float," +
+            RGD_Reason + " text, primary key(" + RGD_Autoid + "))";
+
+    private String table_returnmemo_master = "create table if not exists " + Table_ReturnMemoMaster + "(" +
+            RMM_Auto + " int not null," +
+            RMM_Id + " int," +
+            RMM_Machinename + " text," +
+            RMM_Counterno + " text," +
+            RMM_Rmemono + " text," +
+            RMM_Billno + " text," +
+            RMM_Custcode + " text," +
+            RMM_Netbillamt + " float," +
+            RMM_Returnqty + " float," +
+            RMM_Returnamt + " float," +
+            RMM_Dis + " float," +
+            RMM_Tax + " float," +
+            RMM_Grossamt + " float," +
+            RMM_Netamt + " float," +
+            RMM_Remark + " text," +
+            RMM_Empname + " int," +
+            RMM_Createby + " int," +
+            RMM_Createdt + " text," +
+            RMM_Modifiedby + " int," +
+            RMM_Modifieddt + " text," +
+            RMM_Deletedby + " int," +
+            RMM_Deleteddt + " text," +
+            RMM_Financialyr + " text," +
+            RMM_Maxno + " int," +
+            RMM_Branchid + " int," +
+            RMM_Inwrds + " text," +
+            RMM_Redeemst + " text," +
+            RMM_Status + " text," +
+            RMM_Actualcreatedate + " text," +
+            RMM_Createtime + " text," +
+            RMM_Type + " text," +
+            RMM_Redeemtype + " text," +
+            RMM_Specialright + " text," +
+            RMM_Balredeem + " float," +
+            RMM_Msreplclm + " text," +
+            RMM_Billknockamt + " float," +
+            RMM_Openst + " text," +
+            RMM_Openby + " int," +
+            RMM_Opendate + " text," +
+            RMM_Openreason + " text," +
+            RMM_Returnreason + " text," +
+            RMM_Gatepassno + " text," +
+            RMM_Cntype + " text," +
+            RMM_Createdfrom + " text," +
+            RMM_Revgainpts + " float," +
+            RMM_Revrdmpts + " float," +
+            RMM_Cgstamt + " float," +
+            RMM_Sgstamt + " float," +
+            RMM_Igstapp + " text," +
+            RMM_Igstamt + " float, primary key(" + RMM_Auto + "))";
+
+    private String table_returnmemo_detail = "create table if not exists " + Table_ReturnMemoDetails + "(" +
+            RMD_Id + " int not null," +
+            RMD_Rmemono + " text," +
+            RMD_Itemcode + " int," +
+            RMD_Barcode + " text," +
+            RMD_Qty + " float," +
+            RMD_Rate + " float," +
+            RMD_Amt + " float," +
+            RMD_Returnid + " int," +
+            RMD_Branchid + " int," +
+            RMD_Financialyr + " text," +
+            RMD_Counterno + " text," +
+            RMD_Autoid + " int," +
+            RMD_Disper + " float," +
+            RMD_Disamt + " float," +
+            RMD_Vatper + " float," +
+            RMD_Vatamt + " float," +
+            RMD_Nonbarst + " text," +
+            RMD_Itemname + " text," +
+            RMD_Empid + " int," +
+            RMD_Mrp + " float," +
+            RMD_Mastid + " int," +
+            RMD_Billdetauto + " int," +
+            RMD_Billdisper + " float," +
+            RMD_Billdisamt + " float," +
+            RMD_Dtlid + " int," +
+            RMD_Gstper + " float," +
+            RMD_Cgstamt + " float," +
+            RMD_Sgstamt + " float," +
+            RMD_Cgstper + " float," +
+            RMD_Sgstper + " float," +
+            RMD_Cessper + " float," +
+            RMD_Cessamt + " float," +
+            RMD_Igstamt + " float," +
+            RMD_Taxableamt + " float, primary key(" + RMD_Id + "))";
+
+    private String table_dailypatyexp = "create table if not exists " + Table_DailyPettyExp + "(" +
+            DPE_Autoid + " int not null," +
+            DPE_Branchid + " int," +
+            DPE_Date + " text," +
+            DPE_Toemp + " text," +
+            DPE_Amount + " float," +
+            DPE_Exphead + " int," +
+            DPE_Authoby + " int," +
+            DPE_Remark + " text," +
+            DPE_Createdby + " int," +
+            DPE_Createddate + " text," +
+            DPE_Status + " text," +
+            DPE_Cancleby + " int," +
+            DPE_Cancledate + " text," +
+            DPE_Cancelreason + " text," +
+            DPE_Amtinwords + " text," +
+            DPE_Voutype + " text," +
+            DPE_Againstref + " int," +
+            DPE_Id + " int," +
+            DPE_Finyr + " text," +
+            DPE_Voucherno + " text," +
+            DPE_Cstype + " int," +
+            DPE_Counterno + " text," +
+            DPE_Subhead + " text, primary key(" + DPE_Autoid + "))";
+
     public DBHandler(Context context) {
         super(context, Database_Name, null, Database_Version);
     }
@@ -738,6 +1401,13 @@ public class DBHandler extends SQLiteOpenHelper {
         db.execSQL(table_gstdetail);
         db.execSQL(table_updatebill);
         db.execSQL(table_paymenttable);
+        db.execSQL(table_inward_master);
+        db.execSQL(table_inward_detail);
+        db.execSQL(table_returngood_master);
+        db.execSQL(table_returngood_detail);
+        db.execSQL(table_returnmemo_master);
+        db.execSQL(table_returnmemo_detail);
+        db.execSQL(table_dailypatyexp);
         Constant.showLog("onCreate");
 
     }
