@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ import com.pait.smartpos.adpaters.ExpenseAdapter;
 import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.db.DBHandler;
 import com.pait.smartpos.log.WriteLog;
+import com.pait.smartpos.model.DailyPettyExpClass;
 import com.pait.smartpos.model.ExpenseDetail;
 
 import java.text.DecimalFormat;
@@ -36,11 +38,16 @@ public class ExpenseReportActivity extends AppCompatActivity implements View.OnC
     private DBHandler db;
     private double totAmt=0;
     private DecimalFormat flt_price;
-    private Button  btn_fromdate, btn_todate;
+    private TextView  tv_fromdate, tv_todate;
     private CheckBox cb_all;
     private String currentdate;
     private Constant constant;
     private int day, month, year;
+    private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
+    private SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MMM/yyyy", Locale.ENGLISH);
+    private Button btn_show;
+    private int flag = 0;
+    private Toast toast;
 
 
     @Override
@@ -53,18 +60,22 @@ public class ExpenseReportActivity extends AppCompatActivity implements View.OnC
         }
 
         init();
-        currentdate = constant.getDate();
-        btn_fromdate.setText(currentdate);
-        btn_todate.setText(currentdate);
+        try {
+            currentdate = sdf.format(sdf1.parse(constant.getDate()));
+            tv_fromdate.setText(currentdate);
+            tv_todate.setText(currentdate);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
-        btn_fromdate.setOnClickListener(new View.OnClickListener() {
+        tv_fromdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showDialog(1);
             }
         });
 
-        btn_todate.setOnClickListener(new View.OnClickListener() {
+        tv_todate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showDialog(2);
@@ -74,25 +85,46 @@ public class ExpenseReportActivity extends AppCompatActivity implements View.OnC
         cb_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if (cb_all.isChecked()) {
-                    btn_fromdate.setFocusable(false);
-                    btn_fromdate.setClickable(false);
-                    btn_todate.setFocusable(false);
-                    btn_todate.setClickable(false);
+                    flag = 1;
+                    tv_fromdate.setFocusable(false);
+                    tv_fromdate.setClickable(false);
+                    tv_todate.setFocusable(false);
+                    tv_todate.setClickable(false);
                 } else {
-                    btn_fromdate.setFocusable(true);
-                    btn_fromdate.setClickable(true);
-                    btn_todate.setFocusable(true);
-                    btn_todate.setClickable(true);
+                    flag = 0;
+                    tv_fromdate.setFocusable(true);
+                    tv_fromdate.setClickable(true);
+                    tv_todate.setFocusable(true);
+                    tv_todate.setClickable(true);
                 }
             }
         });
+        try {
+            String fadate = new SimpleDateFormat("yyyy-dd-MM", Locale.ENGLISH).format(sdf.parse(currentdate));
+            String tadate = new SimpleDateFormat("yyyy-dd-MM", Locale.ENGLISH).format(sdf.parse(currentdate));
+            setData(fadate,tadate);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        btn_show.setOnClickListener(this);
 
-        setData();
     }
 
     @Override
     public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.btn_show:
+                try {
+                    String fadate = new SimpleDateFormat("yyyy-dd-MM", Locale.ENGLISH).format(sdf.parse(tv_fromdate.getText().toString()));
+                    String tadate = new SimpleDateFormat("yyyy-dd-MM", Locale.ENGLISH).format(sdf.parse(tv_todate.getText().toString()));
+                    setData(fadate,tadate);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                break;
+        }
 
     }
     @Override
@@ -122,43 +154,52 @@ public class ExpenseReportActivity extends AppCompatActivity implements View.OnC
         db = new DBHandler(ExpenseReportActivity.this);
         flt_price = new DecimalFormat();
         flt_price.setMinimumFractionDigits(2);
-        btn_fromdate = (Button) findViewById(R.id.btn_from_date);
-        btn_todate = (Button) findViewById(R.id.btn_to_date);
+        tv_fromdate = (TextView) findViewById(R.id.tv_fromdate);
+        tv_todate = (TextView) findViewById(R.id.tv_todate);
         cb_all = findViewById(R.id.cb_all);
         constant = new Constant(ExpenseReportActivity.this);
         Calendar c = Calendar.getInstance();
         year = c.get(Calendar.YEAR);
         month = c.get(Calendar.MONTH);
         day = c.get(Calendar.DAY_OF_MONTH);
+        btn_show = findViewById(R.id.btn_show);
+        toast = Toast.makeText(getApplicationContext(), "", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
     }
 
-    private void setData() {
-        listView.setAdapter(null);
-        Cursor c = db.getExpenseReportData();
-        List<ExpenseDetail> list = new ArrayList<>();
-        if (c.moveToFirst()) {
-            do {
-                ExpenseDetail exp = new ExpenseDetail();
-                exp.setRemark(c.getString(c.getColumnIndex(DBHandler.EXM_Remark)));
-                exp.setAmount(c.getFloat(c.getColumnIndex(DBHandler.EXM_Costcentre)));
-                exp.setDate(c.getString(c.getColumnIndex(DBHandler.EXM_Createddate)));
-               // exp.setTime(c.getString(c.getColumnIndex(DBHandler.EXM_Remark)));
-                list.add(exp);
-            } while (c.moveToNext());
-        }
+    private void setData(String fadate,String tadate) {
 
-        ExpenseAdapter adapter = new ExpenseAdapter(list,getApplicationContext());
-        listView.setAdapter(adapter);
-        setTotal(list);
-        db.close();
-        c.close();
-        //setTotal(list);
+            listView.setAdapter(null);
+            Cursor c = db.getExpenseReportData(fadate,tadate,flag);
+            List<DailyPettyExpClass> list = new ArrayList<>();
+            if (c.moveToFirst()) {
+                do {
+                    DailyPettyExpClass exp = new DailyPettyExpClass();
+                    exp.setRemark(c.getString(c.getColumnIndex(DBHandler.DPE_Remark)));
+                    exp.setAmount(c.getFloat(c.getColumnIndex(DBHandler.DPE_Amount)));
+                    exp.setDate(c.getString(c.getColumnIndex(DBHandler.DPE_Date)));
+                    // exp.setTime(c.getString(c.getColumnIndex(DBHandler.EXM_Remark)));
+                    list.add(exp);
+                } while (c.moveToNext());
+            }
+
+            ExpenseAdapter adapter = new ExpenseAdapter(list, getApplicationContext());
+            listView.setAdapter(adapter);
+            setTotal(list);
+            if(list.size() == 0){
+              toast.setText("Data Not Available..");
+              toast.show();
+            }
+            db.close();
+            c.close();
+            //setTotal(list);
+
     }
 
-    private void setTotal(List<ExpenseDetail> list) {
+    private void setTotal(List<DailyPettyExpClass> list) {
         totAmt = 0;
 
-        for (ExpenseDetail eClass : list) {
+        for (DailyPettyExpClass eClass : list) {
             totAmt = totAmt + eClass.getAmount();
         }
 
@@ -172,24 +213,24 @@ public class ExpenseReportActivity extends AppCompatActivity implements View.OnC
             try {
                 String selectedDate = day + "/" + (month + 1) + "/" + year;
                 //SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
-                Date sdate = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(selectedDate);
-                Date tdate = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(btn_todate.getText().toString());
-                Date cdate = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(currentdate);
+                Date sdate = sdf.parse(selectedDate);
+                Date tdate = sdf.parse(tv_fromdate.getText().toString());
+                Date cdate = sdf.parse(currentdate);
                 Toast toast = Toast.makeText(getApplicationContext(), "Please Select Proper Date", Toast.LENGTH_LONG);
                 toast.setGravity(Gravity.CENTER, 0, 0);
 
                 if (sdate.compareTo(cdate) <= 0) {
                     if (sdate.compareTo(tdate) <= 0) {
-                        btn_fromdate.setText(selectedDate);
+                        tv_fromdate.setText(selectedDate);
                     } else {
                         toast.show();
-                        btn_fromdate.setText(currentdate);
-                        btn_todate.setText(currentdate);
+                        tv_fromdate.setText(currentdate);
+                        tv_todate.setText(currentdate);
                     }
                 } else {
                     toast.show();
-                    btn_fromdate.setText(currentdate);
-                    btn_todate.setText(currentdate);
+                    tv_fromdate.setText(currentdate);
+                    tv_todate.setText(currentdate);
                 }
             } catch (ParseException e) {
                 e.printStackTrace();
@@ -204,22 +245,23 @@ public class ExpenseReportActivity extends AppCompatActivity implements View.OnC
             try {
                 String selectedDate = day + "/" + (month + 1) + "/" + year;
                 // SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
-                Date sdate = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(selectedDate);
-                Date fdate = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(btn_fromdate.getText().toString());
-                Date cdate = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(currentdate);
+                Date sdate = sdf.parse(selectedDate);
+                Date fdate = sdf.parse(tv_fromdate.getText().toString());
+                Date cdate = sdf.parse(currentdate);
                 Toast toast = Toast.makeText(getApplicationContext(), "Please Select Proper Date", Toast.LENGTH_LONG);
                 toast.setGravity(Gravity.CENTER, 0, 0);
 
                 if (sdate.compareTo(cdate) <= 0) {
                     if (sdate.compareTo(fdate) >= 0) {
-                        btn_todate.setText(selectedDate);
+                        tv_todate.setText(selectedDate);
+                        Constant.showLog("selectedDate:" + selectedDate);
                     } else {
                         toast.show();
-                        btn_todate.setText(currentdate);
+                        tv_todate.setText(currentdate);
                     }
                 } else {
                     toast.show();
-                    btn_todate.setText(currentdate);
+                    tv_todate.setText(currentdate);
                 }
             } catch (ParseException e) {
                 e.printStackTrace();

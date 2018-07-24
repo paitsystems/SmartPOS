@@ -10,14 +10,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.pait.smartpos.adpaters.CheckableSpinnerAdapter;
 import com.pait.smartpos.adpaters.CustomSpinnerAdapter;
+import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.db.DBHandler;
+import com.pait.smartpos.interfaces.checkBoxListener;
 import com.pait.smartpos.model.CustomSpinnerClass;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
-public class InwardActivity extends AppCompatActivity {
+public class InwardActivity extends AppCompatActivity implements checkBoxListener{
 
     private AutoCompleteTextView auto_supplier;
     private Spinner spinner;
@@ -27,6 +32,8 @@ public class InwardActivity extends AppCompatActivity {
     private DBHandler db;
     private Button btn_save;
     private EditText ed_qty,ed_rate;
+    private List<Integer> posLs;
+    private CustomSpinnerAdapter myAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +44,12 @@ public class InwardActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             //getSupportActionBar().setTitle();
         }
-
         init();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         setSupplier();
         setSpinnerValue();
     }
@@ -53,6 +64,8 @@ public class InwardActivity extends AppCompatActivity {
         btn_save = findViewById(R.id.btn_save);
         ed_qty = findViewById(R.id.ed_qty);
         ed_rate = findViewById(R.id.ed_rate);
+        posLs = new ArrayList<>();
+
 
         auto_supplier.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +87,7 @@ public class InwardActivity extends AppCompatActivity {
             }
         }
         res.close();*/   //todo uncomment for live data
-
+        auto_supplier.setAdapter(null);
         suppList.add("GANESH");
         suppList.add("Digvijay");
         suppList.add("Prashant");
@@ -88,6 +101,42 @@ public class InwardActivity extends AppCompatActivity {
     }
 
     private void setSpinnerValue(){
+       final List<CheckableSpinnerAdapter.SpinnerItem<CustomSpinnerClass>> spinner_items = new ArrayList<>();
+       final Set<CustomSpinnerClass> selected_items = new HashSet<>();
+       prodList.clear();
+       listVOs.clear();
+
+        //prodList.add("Select Product");
+        Cursor res = db.getDistinctProduct();
+        if(res != null){
+            if (res.moveToFirst()){
+                do{
+                    prodList.add(res.getString(res.getColumnIndex(DBHandler.PM_Cat3)));
+                }while (res.moveToNext());
+            }
+        }
+        res.close();
+
+        for (String product : prodList) {
+            CustomSpinnerClass stateVO = new CustomSpinnerClass();
+            stateVO.setTitle(product);
+            stateVO.setSelected(false);
+            listVOs.add(stateVO);
+        }
+
+        //List<CustomSpinnerClass> all_objects = getMyObjects();
+        for(CustomSpinnerClass o : listVOs) {
+            spinner_items.add(new CheckableSpinnerAdapter.SpinnerItem<CustomSpinnerClass>(o, o.getTitle()));
+        }
+
+        String headerText = "Select Product";
+        CheckableSpinnerAdapter adapter = new CheckableSpinnerAdapter<CustomSpinnerClass>(this, headerText, spinner_items, selected_items);
+        spinner.setAdapter(adapter);
+
+    }
+
+    private void setSpinnerValue1(){
+
         prodList.clear();
         listVOs.clear();
 
@@ -102,14 +151,29 @@ public class InwardActivity extends AppCompatActivity {
         }
         res.close();
 
-
         for (String product : prodList) {
             CustomSpinnerClass stateVO = new CustomSpinnerClass();
             stateVO.setTitle(product);
             stateVO.setSelected(false);
             listVOs.add(stateVO);
         }
-        CustomSpinnerAdapter myAdapter = new CustomSpinnerAdapter(InwardActivity.this, 0,listVOs);
+
+        myAdapter = new CustomSpinnerAdapter(InwardActivity.this, 0,listVOs,posLs);
         spinner.setAdapter(myAdapter);
     }
+
+    @Override
+    public List<Integer> setPosition(List<Integer> ls) {
+        posLs = ls;
+        //myAdapter.notifyDataSetChanged();
+        Constant.showLog("ls.size"+posLs.size());
+        return ls;
+    }
+
+    /*public List<Integer> setPosition( List<Integer> ls){
+        Constant.showLog("ls.size"+ls.size());
+      //posLs.clear();
+        posLs = ls;
+        return ls;
+    }*/
 }

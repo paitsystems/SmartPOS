@@ -21,6 +21,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.db.DBHandler;
 import com.pait.smartpos.log.WriteLog;
+import com.pait.smartpos.model.DailyPettyExpClass;
 import com.pait.smartpos.model.ExpenseDetail;
 
 import java.text.SimpleDateFormat;
@@ -54,10 +56,11 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
             bt_home, bt_food, bt_entertainment, bt_education, bt_transport, bt_shopping, bt_medical, bt_savings, bt_borrow,
             bt_other;
     private int money = 0, amt_money, total_money, check = 0;
-    private AutoCompleteTextView auto_remark;
+    private AutoCompleteTextView auto_remark,auto_exphead;
     private DBHandler db;
     private EditText ed_amount;
-    private List<ExpenseDetail> list;
+    private List<DailyPettyExpClass> list;
+    private Spinner sp_exphead;
 
 
     @Override
@@ -154,10 +157,9 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
         constant1 = new Constant(getApplicationContext());
         toast = Toast.makeText(getApplicationContext(), "", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0, 0);
-        tv_cat = (TextView) findViewById(R.id.tv_cat);
         tv_date = (TextView) findViewById(R.id.tv_date);
-
         ed_amount = (EditText) findViewById(R.id.ed_amount);
+        auto_exphead = (AutoCompleteTextView) findViewById(R.id.auto_exphead);
         amount_menu_lay = (LinearLayout) findViewById(R.id.amount_menu);
         lay_add = (LinearLayout) findViewById(R.id.lay_add);
         bt_add_money = (AppCompatButton) findViewById(R.id.bt_addmoney);
@@ -168,11 +170,11 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
         bt_5000 = (AppCompatButton) findViewById(R.id.bt_5000);
         bt_10000 = (AppCompatButton) findViewById(R.id.bt_10000);
         auto_remark = findViewById(R.id.auto_remark);
-
         day = cal.get(Calendar.DAY_OF_MONTH);
         month = cal.get(Calendar.MONTH);
         year = cal.get(Calendar.YEAR);
         list = new ArrayList<>();
+        sp_exphead = findViewById(R.id.sp_exphead);
     }
 
     private void moneyMenu() {
@@ -272,6 +274,7 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
                 }*/
             }
         });
+
         bt_2000.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -305,6 +308,7 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
                 }*/
             }
         });
+
         bt_5000.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -380,8 +384,8 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
             ed_amount.setError(null);
             auto_remark.setAdapter(null);
 
-            ExpenseDetail detail = new ExpenseDetail();
-            detail.setAmount(Double.valueOf(ed_amount.getText().toString()));
+            DailyPettyExpClass detail = new DailyPettyExpClass();
+            detail.setAmount(Float.valueOf(ed_amount.getText().toString()));
 
             try {
                 String date = new SimpleDateFormat("yyyy-dd-MM", Locale.ENGLISH).format(new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(tv_date.getText().toString()));
@@ -393,7 +397,12 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
 
             curr_time = constant.getTime();
             Log.d("Log", "curr_time:" + curr_time);
-            detail.setTime(curr_time);
+            //detail.settime(curr_time);
+            String expHead = sp_exphead.getSelectedItem().toString();
+            /*int head = db.getExpHeadAuto(expHead);
+            detail.setExpHead(head);*/    //uncomment
+
+            detail.setExpHead(1);    //todo find id of expense head function using expHead
             detail.setRemark(auto_remark.getText().toString());
 
             maxauto = db.getExpMaxAuto();
@@ -403,7 +412,7 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
             } else {
                 maxauto = maxauto + 1;
             }
-            detail.setAuto(maxauto);
+            detail.setAutoid(maxauto);
             list.add(detail);
             db.addExpenseDetail(list);
             toast.setText("Expense added successfully.");
@@ -415,17 +424,38 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void get_auto_remark(){
-        ArrayAdapter adapter;
+        ArrayAdapter adapter,adapter2;
         auto_remark.setAdapter(null);
         List<String> uList = new ArrayList<>();
             Cursor cursor = db.getListExpRemark();
             while (cursor.moveToNext()) {
-                uList.add(cursor.getString(cursor.getColumnIndex(DBHandler.EXM_Remark)));
+                uList.add(cursor.getString(cursor.getColumnIndex(DBHandler.DPE_Remark)));
             }
             cursor.close();
 
         adapter = new ArrayAdapter(getApplicationContext(),R.layout.adapter_item,uList);
         auto_remark.setAdapter(adapter);
+
+        List<String> eList = new ArrayList<>();
+       /*
+         Cursor cursor1 = db.getListExpRemark();
+        while (cursor1.moveToNext()) {
+            eList.add(cursor1.getString(cursor1.getColumnIndex(DBHandler.EXM_Expdesc)));
+        }
+        cursor1.close();*/    //TODO UNCOMENT AND ADD VALUE FROM Table
+
+        eList.add("GIFTS");
+        eList.add("OFFICE");
+        eList.add("PETROL");
+        eList.add("WORK");
+        eList.add("TEA");
+        eList.add("PEN");
+        eList.add("BOOK");
+        eList.add("NOTE");
+        eList.add("BIRHDAY");
+
+        adapter2 = new ArrayAdapter(getApplicationContext(),R.layout.spinner_item,eList);
+        sp_exphead.setAdapter(adapter2);
     }
 
     private DatePickerDialog.OnDateSetListener vDate = new DatePickerDialog.OnDateSetListener() {

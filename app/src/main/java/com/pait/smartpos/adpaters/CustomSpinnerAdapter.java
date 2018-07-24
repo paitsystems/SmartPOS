@@ -9,8 +9,10 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
+import com.pait.smartpos.InwardActivity;
 import com.pait.smartpos.R;
 import com.pait.smartpos.constant.Constant;
+import com.pait.smartpos.interfaces.checkBoxListener;
 import com.pait.smartpos.model.CustomSpinnerClass;
 
 import java.util.ArrayList;
@@ -22,12 +24,18 @@ public class CustomSpinnerAdapter extends ArrayAdapter<CustomSpinnerClass> {
     private ArrayList<CustomSpinnerClass> listState;
     private CustomSpinnerAdapter CustomSpinnerAdapter;
     private boolean isFromView = false;
+    private List<Integer> posLs;
+    private List<Integer> checkedValue;
+    private checkBoxListener listener;
 
-    public CustomSpinnerAdapter(Context context, int resource, List<CustomSpinnerClass> objects) {
+
+    public CustomSpinnerAdapter(Context context, int resource, List<CustomSpinnerClass> objects,List<Integer> _checkedValue) {
         super(context, resource, objects);
         this.mContext = context;
         this.listState = (ArrayList<CustomSpinnerClass>) objects;
         this.CustomSpinnerAdapter = this;
+        this.checkedValue = _checkedValue;
+        listener = (checkBoxListener)mContext;
     }
 
     @Override
@@ -42,6 +50,7 @@ public class CustomSpinnerAdapter extends ArrayAdapter<CustomSpinnerClass> {
 
     public View getCustomView(final int position, View convertView,ViewGroup parent) {
         final ViewHolder holder;
+        posLs = new ArrayList<>();
         if (convertView == null) {
             LayoutInflater layoutInflator = LayoutInflater.from(mContext);
             convertView = layoutInflator.inflate(R.layout.custom_spinner_option, null);
@@ -66,13 +75,30 @@ public class CustomSpinnerAdapter extends ArrayAdapter<CustomSpinnerClass> {
             holder.mCheckBox.setVisibility(View.VISIBLE);
         }
         holder.mCheckBox.setTag(position);
+
+
+            for (int k=0;k<checkedValue.size();k++){
+                holder.mCheckBox.setChecked(listState.get(k).isSelected());
+        }
+
         holder.mCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
             int getPosition = (Integer) buttonView.getTag();
             if(isChecked)
-            Constant.showLog(""+getPosition);
+            Constant.showLog("getPosition: "+getPosition);
+            if(!posLs.contains(getPosition)){
+                posLs.add(getPosition);
+            }
+            listener.setPosition(posLs);
         });
         return convertView;
     }
+
+
+    /*public List<Integer> setPosition(){
+        List<Integer> ls = posLs;
+        Constant.showLog(""+ls.size());
+      return ls;
+    }*/
 
     private class ViewHolder {
         private TextView mTextView;

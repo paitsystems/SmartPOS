@@ -189,7 +189,8 @@
         <activity android:name=".InwardActivity" />
         <activity android:name=".ExpenseActivity" />
         <activity android:name=".ReportMenuActivity" />
-        <activity android:name=".ExpenseReportActivity"></activity>
+        <activity android:name=".ExpenseReportActivity" />
+        <activity android:name=".CollectionSumReportActivity"></activity>
     </application>
 
 </manifest>

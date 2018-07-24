@@ -8,14 +8,16 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.pait.smartpos.R;
+import com.pait.smartpos.db.DBHandler;
+import com.pait.smartpos.model.DailyPettyExpClass;
 import com.pait.smartpos.model.ExpenseDetail;
 import java.util.List;
 
 public class ExpenseAdapter extends BaseAdapter {
-    List<ExpenseDetail> list;
+    List<DailyPettyExpClass> list;
     Context context;
 
-    public ExpenseAdapter(List<ExpenseDetail> list,Context _context){
+    public ExpenseAdapter(List<DailyPettyExpClass> list, Context _context){
       this.context = _context;
       this.list  = list;
     }
@@ -46,20 +48,24 @@ public class ExpenseAdapter extends BaseAdapter {
              holder.tv_amt = view.findViewById(R.id.tv_amt);
              holder.tv_remark = view.findViewById(R.id.tv_remark);
              holder.tv_date = view.findViewById(R.id.tv_date);
+             holder.tv_exphed = view.findViewById(R.id.tv_exphed);
              view.setTag(holder);
          }else {
              holder = (ViewHolder) view.getTag();
          }
 
-         ExpenseDetail detail = (ExpenseDetail) getItem(i);
+         DailyPettyExpClass detail = (DailyPettyExpClass) getItem(i);
          holder.tv_date.setText(detail.getDate());
          holder.tv_remark.setText(detail.getRemark());
          holder.tv_amt.setText(String.valueOf(detail.getAmount()));
+        /* String head = new DBHandler(context).getExpHeadName(detail.getExpHead());
+         holder.tv_exphed.setText(head);*/
+         holder.tv_exphed.setText(String.valueOf(detail.getExpHead()));   //todo pass here exphead instead of id
 
         return view;
     }
 
     private class ViewHolder{
-        TextView tv_date,tv_remark,tv_amt;
+        TextView tv_date,tv_remark,tv_amt,tv_exphed;
     }
 }

@@ -20,6 +20,16 @@
             android:layout_weight="0.5" />
 
         <TextView
+            android:id="@+id/tv_exphed"
+            style="@style/textViewMobW"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left|center"
+            android:textColor="@color/black"
+            android:layout_weight="0.5" />
+
+        <TextView
             android:id="@+id/tv_remark"
             style="@style/textViewMobW"
             android:layout_width="match_parent"
@@ -30,12 +40,13 @@
             android:layout_weight="0.5" />
 
         <TextView
+            android:paddingLeft="2dp"
             android:id="@+id/tv_amt"
             style="@style/textViewMobW"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="left|center"
+            android:gravity="right|center"
             android:textColor="@color/black"
             android:layout_weight="0.5" />
 
