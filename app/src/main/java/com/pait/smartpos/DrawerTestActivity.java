@@ -113,11 +113,11 @@ public class DrawerTestActivity extends AppCompatActivity implements View.OnClic
             loadHomeFragment();
         }
 
-        if(VerificationActivity.mService!=null) {
+        /*if(VerificationActivity.mService!=null) {
             VerificationActivity.mService.stop();
         }
         VerificationActivity.mService = new BluetoothService(getApplicationContext(), mHandler1);
-        connectBT();
+        connectBT();*/
 
     }
 

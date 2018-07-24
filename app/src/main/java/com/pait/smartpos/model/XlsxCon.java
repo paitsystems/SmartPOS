@@ -76,6 +76,7 @@ public class XlsxCon {
     public static final String CPM_MailPwd = "MailPwd";
     public static final String CPM_Mailfrom = "Mailfrom";
     public static final String CPM_SMTPServer = "SMTPServer";
+    public static final String CPM_GSTType = "GSTType";
 
     public static final String EM_Auto = "Auto";
     public static final String EM_Id = "Id";
@@ -105,6 +106,8 @@ public class XlsxCon {
     public static final String PM_Ssp = "Ssp";
     public static final String PM_Gstgroup = "Gstgroup";
     public static final String PM_Hsncode = "Hsncode";
+    public static final String PM_GSTType = "GSTType";
+    public static final String PM_StockQty = "StockQty";
 
     public static final String SM_Auto = "Auto";
     public static final String SM_Id = "Id";

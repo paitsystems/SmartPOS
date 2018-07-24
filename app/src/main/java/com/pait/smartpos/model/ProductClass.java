@@ -4,11 +4,11 @@ package com.pait.smartpos.model;
 
 public class ProductClass {
 
-    private int Product_ID, Product_Cat;
+    private int Product_ID, Product_Cat, stockQty;
     private double Product_Rate;
     private float Pprice, mrp, Wprice, ssp;
     private String Product_Name, Product_Barcode, Product_KArea, gstGroup, taxType, isActive, hsnCode,
-            cat1, cat2,cat3,finalProduct, dispFSKU;
+            cat1, cat2,cat3,finalProduct, dispFSKU, gstType;
     private boolean isSelected;
 
     public String getProduct_Name() {
@@ -169,5 +169,21 @@ public class ProductClass {
 
     public void setDispFSKU(String dispFSKU) {
         this.dispFSKU = dispFSKU;
+    }
+
+    public int getStockQty() {
+        return stockQty;
+    }
+
+    public void setStockQty(int stockQty) {
+        this.stockQty = stockQty;
+    }
+
+    public String getGstType() {
+        return gstType;
+    }
+
+    public void setGstType(String gstType) {
+        this.gstType = gstType;
     }
 }

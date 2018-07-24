@@ -5,12 +5,10 @@ public class BillMasterClass {
     private int autoNo, id, branchID, jobCardID, createdby, modifiedby, bankID, printno,
             GVoucher, agentid, GVSchemeId, CancelledBy, Deliveredby, Currencyid, Type, BothId, NewDCNo;
 
-    private float totalQty, totalAmt, returnAmt, creditAmt, cashAmt, paidAmt, balAmt, vat12, vat4,
+    private String totalQty, totalAmt, returnAmt, creditAmt, cashAmt, paidAmt, balAmt, vat12, vat4,
             labour, chqamt, advanceamt, netamt, commInPer, commInRs, disper, disamt, piamt, GVoucherAmt,
             GVAmt, GrossAmount, Alteration, CashBack, SchemeAmt, GoodsReturn, RemainAmt, TRetQty,
-            TotalCurrency, CGSTAMT, SGSTAMT, IGSTAMT;
-
-    private String custID, finYr, billNo, billDate, retMemoNo, brakeUpAmt, billSt, vehicleNo, createddt, modifieddt,
+            TotalCurrency, CGSTAMT, SGSTAMT, IGSTAMT, custID, finYr, billNo, billDate, retMemoNo, brakeUpAmt, billSt, vehicleNo, createddt, modifieddt,
             vehiclemake, vehiclecolor, drivername, cardno, chqno, chqdt, paymenttype, billpayst, inwrds,
             refundpyst, pino, mon, vouchergenerate, Scheme, GV, GVNo, IssueGVSt, Createdfrm, CancelledDate,
             Billingtime, Delivered, DeliveredDate, CounterNo, machineName, AgainstDC, DCAutoNo, CancelReason,
@@ -153,251 +151,251 @@ public class BillMasterClass {
         NewDCNo = newDCNo;
     }
 
-    public float getTotalQty() {
+    public String getTotalQty() {
         return totalQty;
     }
 
-    public void setTotalQty(float totalQty) {
+    public void setTotalQty(String totalQty) {
         this.totalQty = totalQty;
     }
 
-    public float getTotalAmt() {
+    public String getTotalAmt() {
         return totalAmt;
     }
 
-    public void setTotalAmt(float totalAmt) {
+    public void setTotalAmt(String totalAmt) {
         this.totalAmt = totalAmt;
     }
 
-    public float getReturnAmt() {
+    public String getReturnAmt() {
         return returnAmt;
     }
 
-    public void setReturnAmt(float returnAmt) {
+    public void setReturnAmt(String returnAmt) {
         this.returnAmt = returnAmt;
     }
 
-    public float getCreditAmt() {
+    public String getCreditAmt() {
         return creditAmt;
     }
 
-    public void setCreditAmt(float creditAmt) {
+    public void setCreditAmt(String creditAmt) {
         this.creditAmt = creditAmt;
     }
 
-    public float getCashAmt() {
+    public String getCashAmt() {
         return cashAmt;
     }
 
-    public void setCashAmt(float cashAmt) {
+    public void setCashAmt(String cashAmt) {
         this.cashAmt = cashAmt;
     }
 
-    public float getPaidAmt() {
+    public String getPaidAmt() {
         return paidAmt;
     }
 
-    public void setPaidAmt(float paidAmt) {
+    public void setPaidAmt(String paidAmt) {
         this.paidAmt = paidAmt;
     }
 
-    public float getBalAmt() {
+    public String getBalAmt() {
         return balAmt;
     }
 
-    public void setBalAmt(float balAmt) {
+    public void setBalAmt(String balAmt) {
         this.balAmt = balAmt;
     }
 
-    public float getVat12() {
+    public String getVat12() {
         return vat12;
     }
 
-    public void setVat12(float vat12) {
+    public void setVat12(String vat12) {
         this.vat12 = vat12;
     }
 
-    public float getVat4() {
+    public String getVat4() {
         return vat4;
     }
 
-    public void setVat4(float vat4) {
+    public void setVat4(String vat4) {
         this.vat4 = vat4;
     }
 
-    public float getLabour() {
+    public String getLabour() {
         return labour;
     }
 
-    public void setLabour(float labour) {
+    public void setLabour(String labour) {
         this.labour = labour;
     }
 
-    public float getChqamt() {
+    public String getChqamt() {
         return chqamt;
     }
 
-    public void setChqamt(float chqamt) {
+    public void setChqamt(String chqamt) {
         this.chqamt = chqamt;
     }
 
-    public float getAdvanceamt() {
+    public String getAdvanceamt() {
         return advanceamt;
     }
 
-    public void setAdvanceamt(float advanceamt) {
+    public void setAdvanceamt(String advanceamt) {
         this.advanceamt = advanceamt;
     }
 
-    public float getNetamt() {
+    public String getNetamt() {
         return netamt;
     }
 
-    public void setNetamt(float netamt) {
+    public void setNetamt(String netamt) {
         this.netamt = netamt;
     }
 
-    public float getCommInPer() {
+    public String getCommInPer() {
         return commInPer;
     }
 
-    public void setCommInPer(float commInPer) {
+    public void setCommInPer(String commInPer) {
         this.commInPer = commInPer;
     }
 
-    public float getCommInRs() {
+    public String getCommInRs() {
         return commInRs;
     }
 
-    public void setCommInRs(float commInRs) {
+    public void setCommInRs(String commInRs) {
         this.commInRs = commInRs;
     }
 
-    public float getDisper() {
+    public String getDisper() {
         return disper;
     }
 
-    public void setDisper(float disper) {
+    public void setDisper(String disper) {
         this.disper = disper;
     }
 
-    public float getDisamt() {
+    public String getDisamt() {
         return disamt;
     }
 
-    public void setDisamt(float disamt) {
+    public void setDisamt(String disamt) {
         this.disamt = disamt;
     }
 
-    public float getPiamt() {
+    public String getPiamt() {
         return piamt;
     }
 
-    public void setPiamt(float piamt) {
+    public void setPiamt(String piamt) {
         this.piamt = piamt;
     }
 
-    public float getGVoucherAmt() {
+    public String getGVoucherAmt() {
         return GVoucherAmt;
     }
 
-    public void setGVoucherAmt(float GVoucherAmt) {
+    public void setGVoucherAmt(String GVoucherAmt) {
         this.GVoucherAmt = GVoucherAmt;
     }
 
-    public float getGVAmt() {
+    public String getGVAmt() {
         return GVAmt;
     }
 
-    public void setGVAmt(float GVAmt) {
+    public void setGVAmt(String GVAmt) {
         this.GVAmt = GVAmt;
     }
 
-    public float getGrossAmount() {
+    public String getGrossAmount() {
         return GrossAmount;
     }
 
-    public void setGrossAmount(float grossAmount) {
+    public void setGrossAmount(String grossAmount) {
         GrossAmount = grossAmount;
     }
 
-    public float getAlteration() {
+    public String getAlteration() {
         return Alteration;
     }
 
-    public void setAlteration(float alteration) {
+    public void setAlteration(String alteration) {
         Alteration = alteration;
     }
 
-    public float getCashBack() {
+    public String getCashBack() {
         return CashBack;
     }
 
-    public void setCashBack(float cashBack) {
+    public void setCashBack(String cashBack) {
         CashBack = cashBack;
     }
 
-    public float getSchemeAmt() {
+    public String getSchemeAmt() {
         return SchemeAmt;
     }
 
-    public void setSchemeAmt(float schemeAmt) {
+    public void setSchemeAmt(String schemeAmt) {
         SchemeAmt = schemeAmt;
     }
 
-    public float getGoodsReturn() {
+    public String getGoodsReturn() {
         return GoodsReturn;
     }
 
-    public void setGoodsReturn(float goodsReturn) {
+    public void setGoodsReturn(String goodsReturn) {
         GoodsReturn = goodsReturn;
     }
 
-    public float getRemainAmt() {
+    public String getRemainAmt() {
         return RemainAmt;
     }
 
-    public void setRemainAmt(float remainAmt) {
+    public void setRemainAmt(String remainAmt) {
         RemainAmt = remainAmt;
     }
 
-    public float getTRetQty() {
+    public String getTRetQty() {
         return TRetQty;
     }
 
-    public void setTRetQty(float TRetQty) {
+    public void setTRetQty(String TRetQty) {
         this.TRetQty = TRetQty;
     }
 
-    public float getTotalCurrency() {
+    public String getTotalCurrency() {
         return TotalCurrency;
     }
 
-    public void setTotalCurrency(float totalCurrency) {
+    public void setTotalCurrency(String totalCurrency) {
         TotalCurrency = totalCurrency;
     }
 
-    public float getCGSTAMT() {
+    public String getCGSTAMT() {
         return CGSTAMT;
     }
 
-    public void setCGSTAMT(float CGSTAMT) {
+    public void setCGSTAMT(String CGSTAMT) {
         this.CGSTAMT = CGSTAMT;
     }
 
-    public float getSGSTAMT() {
+    public String getSGSTAMT() {
         return SGSTAMT;
     }
 
-    public void setSGSTAMT(float SGSTAMT) {
+    public void setSGSTAMT(String SGSTAMT) {
         this.SGSTAMT = SGSTAMT;
     }
 
-    public float getIGSTAMT() {
+    public String getIGSTAMT() {
         return IGSTAMT;
     }
 
-    public void setIGSTAMT(float IGSTAMT) {
+    public void setIGSTAMT(String IGSTAMT) {
         this.IGSTAMT = IGSTAMT;
     }
 
@@ -407,6 +405,22 @@ public class BillMasterClass {
 
     public void setCustID(String custID) {
         this.custID = custID;
+    }
+
+    public String getFinYr() {
+        return finYr;
+    }
+
+    public void setFinYr(String finYr) {
+        this.finYr = finYr;
+    }
+
+    public String getBillNo() {
+        return billNo;
+    }
+
+    public void setBillNo(String billNo) {
+        this.billNo = billNo;
     }
 
     public String getBillDate() {
@@ -783,21 +797,5 @@ public class BillMasterClass {
 
     public void setNewAgainstDC(String newAgainstDC) {
         NewAgainstDC = newAgainstDC;
-    }
-
-    public String getFinYr() {
-        return finYr;
-    }
-
-    public void setFinYr(String finYr) {
-        this.finYr = finYr;
-    }
-
-    public String getBillNo() {
-        return billNo;
-    }
-
-    public void setBillNo(String billNo) {
-        this.billNo = billNo;
     }
 }

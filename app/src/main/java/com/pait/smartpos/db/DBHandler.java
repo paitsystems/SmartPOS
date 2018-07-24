@@ -94,6 +94,7 @@ public class DBHandler extends SQLiteOpenHelper {
     public static final String CPM_Returnprintmessage = "Returnprintmessage";
     public static final String CPM_Prtype = "Prtype";
     public static final String CPM_Admin_Password = "Admin_Password";
+    public static final String CPM_GSTType = "GSTType";
 
     public static final String Table_EmployeeMaster = "EmployeeMaster";
     public static final String EM_Auto = "Auto";
@@ -222,6 +223,8 @@ public class DBHandler extends SQLiteOpenHelper {
     public static final String PM_Gstgroup = "Gstgroup";
     public static final String PM_Hsncode = "Hsncode";
     public static final String PM_Btype = "Btype";
+    public static final String PM_GSTType = "GSTType";
+    public static final String PM_StockQty = "StockQty";
 
     public static final String Table_SupplierMaster = "SupplierMaster";
     public static final String SM_Auto = "Auto";
@@ -898,7 +901,7 @@ public class DBHandler extends SQLiteOpenHelper {
             CPM_Custdeftyp + " text," + CPM_Gstdisc + " text," + CPM_Prodeftyp + " text," +
             CPM_Attendcodet + " text," + CPM_Tokeny + " text," + CPM_Gstex + " text," +
             CPM_Returnprintmessage + " text," + CPM_Prtype + " text," +
-            CPM_Admin_Password + " text, primary key(" + CPM_Auto + "))";
+            CPM_Admin_Password + " text,"+CPM_GSTType + " text, primary key(" + CPM_Auto + "))";
 
     String table_employee_master = "create table if not exists " + Table_EmployeeMaster + "(" +
             EM_Auto + " int not null," + EM_Id + " int," + EM_Branchcode + " int," +
@@ -938,8 +941,7 @@ public class DBHandler extends SQLiteOpenHelper {
             PM_Loyaltycardno + " text," + PM_Cs_Type + " text," + PM_Lbtper + " float," + PM_Considerlength + " text," +
             PM_Cat7 + " text," + PM_Cat8 + " text," + PM_Cat9 + " text," + PM_Cat10 + " text," +
             PM_Cat11 + " text," + PM_Cat12 + " text," + PM_Ssp + " float," + PM_Gstgroup + " text," +
-            PM_Hsncode + " text," +
-            PM_Btype + " text, primary key(" + PM_Id + "))";
+            PM_Hsncode + " text," +PM_Btype + " text,"+PM_GSTType + " text,"+PM_StockQty + " float, primary key(" + PM_Id + "))";
 
     String table_supplier_master = "create table if not exists " + Table_SupplierMaster + "(" +
             SM_Auto + " int not null," + SM_Id + " int," + SM_Name + " text," + SM_Address + " text," +
@@ -982,7 +984,7 @@ public class DBHandler extends SQLiteOpenHelper {
     String table_billmaster_master = "create table if not exists " + Table_BillMaster + "(" +
             BM_Autono + " int not null," + BM_Id + " int," + BM_Branchid + " int," + BM_Finyr + " text," +
             BM_Billno + " text," + BM_Custid + " text," + BM_Jobcardid + " int," + BM_Billdate + " text," +
-            BM_Totalqty + " float," + BM_Totalamt + " float," + BM_Retmemono + " text," + BM_Returnamt + " float," +
+            BM_Totalqty + " int," + BM_Totalamt + " float," + BM_Retmemono + " text," + BM_Returnamt + " float," +
             BM_Creditamt + " float," + BM_Cashamt + " float," + BM_Paidamt + " float," +
             BM_Balamt + " float," + BM_Brakeupamt + " text," + BM_Billst + " text," +
             BM_Vehicleno + " text," + BM_Createdby + " int," + BM_Createddt + " text," +
@@ -1015,7 +1017,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     String table_billdetail = "create table if not exists " + Table_BillDetails + "(" +
             BD_Auto + " int not null," + BD_Id + " int," + BD_Billid + " int," + BD_Branchid + " int," +
-            BD_Finyr + " text," + BD_Itemid + " float," + BD_Rate + " float," + BD_Qty + " float," +
+            BD_Finyr + " text," + BD_Itemid + " int," + BD_Rate + " float," + BD_Qty + " int," +
             BD_Total + " float," + BD_Barcode + " text," + BD_Fathersku + " text," +
             BD_Empid + " int," + BD_Incentamt + " float," + BD_Autobillid + " int," + BD_Vat + " float," +
             BD_Vatamt + " float," + BD_Amtwithoutdisc + " float," + BD_Disper + " float," + BD_Disamt + " float," +
@@ -1868,4 +1870,54 @@ public class DBHandler extends SQLiteOpenHelper {
         String str = "Select * from " + VIEW_BillCash;
         return getWritableDatabase().rawQuery(str, null);
     }
+
+    public String getCustid(String custName, String mobNo){
+        String id = "0";
+        String str =  "select "+CSM_Id+" from "+Table_CustomerMaster+" where "+CSM_Name+"='"+custName+"' and "+
+                    CSM_Mobno+"='"+mobNo+"'";
+        Constant.showLog(str);
+        Cursor res = getWritableDatabase().rawQuery(str,null);
+        if(res.moveToFirst()){
+            do{
+                id = res.getString(0);
+            }while (res.moveToNext());
+        }
+        res.close();
+        return id;
+    }
+
+    public String saveCustomerMaster(String custName, String mobNo){
+        int auto;
+        String id;
+        auto = getMaxCustAuto();
+        id = auto+"#"+1;
+        ContentValues cv = new ContentValues();
+        cv.put(CSM_Auto,auto);
+        cv.put(CSM_Id,id);
+        cv.put(CSM_Name,custName);
+        cv.put(CSM_Mobno,mobNo);
+        getWritableDatabase().insert(Table_CustomerMaster,null,cv);
+        return id;
+    }
+
+    public String getCompIni(){
+        String ini = "PA";
+        String str =  "select "+CPM_Initials+" from "+Table_CompanyMaster;
+        Constant.showLog(str);
+        Cursor res = getWritableDatabase().rawQuery(str,null);
+        if(res.moveToFirst()){
+            do{
+                ini = res.getString(0);
+            }while (res.moveToNext());
+        }
+        res.close();
+        return ini;
+    }
+
+    public Cursor getGSTPer(String gstGroup){
+        String str = "select * from GSTMaster,GSTDetail where GSTMaster.Auto=GSTDetail.MastAuto and GSTMaster.GroupName='"+gstGroup+"'";
+        Constant.showLog(str);
+        return getWritableDatabase().rawQuery(str,null);
+    }
+
 }

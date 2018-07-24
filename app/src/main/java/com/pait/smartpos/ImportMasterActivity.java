@@ -395,6 +395,7 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                     String _mpwd = row.getCell(14, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
                                                     String _mfrom = row.getCell(15, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
                                                     String _smtp = row.getCell(16, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _gsttype = row.getCell(17, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
 
                                                     if (_auto.equals(XlsxCon.CPM_Auto)) {
                                                         if (_id.equals(XlsxCon.CPM_Id)) {
@@ -413,10 +414,17 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                                                                             if (_mpwd.equals(XlsxCon.CPM_MailPwd)) {
                                                                                                                 if (_mfrom.equals(XlsxCon.CPM_Mailfrom)) {
                                                                                                                     if (_smtp.equals(XlsxCon.CPM_SMTPServer)) {
-                                                                                                                        sequence = true;
-                                                                                                                        dbAdapter.delete(DBHandler.Table_CompanyMaster);
-                                                                                                                        Constant.showLog(DBHandler.Table_CompanyMaster + " Deleted");
-                                                                                                                    } else {
+                                                                                                                        if (_gsttype.equals(XlsxCon.CPM_GSTType)) {
+                                                                                                                            sequence = true;
+                                                                                                                            dbAdapter.delete(DBHandler.Table_CompanyMaster);
+                                                                                                                            Constant.showLog(DBHandler.Table_CompanyMaster + " Deleted");
+                                                                                                                        } else {
+                                                                                                                            status = null;
+                                                                                                                            showColMisMatchToast("Sheet " + XlsxCon.Sheet_CPM + " Column " + XlsxCon.CPM_GSTType);
+                                                                                                                            writeLog("readFile_Column_Not_Matched_" + XlsxCon.Sheet_CPM + " Column " + XlsxCon.CPM_GSTType);
+                                                                                                                            break;
+                                                                                                                        }
+                                                                                                                    }else {
                                                                                                                         status = null;
                                                                                                                         showColMisMatchToast("Sheet " + XlsxCon.Sheet_CPM + " Column " + XlsxCon.CPM_SMTPServer);
                                                                                                                         writeLog("readFile_Column_Not_Matched_" + XlsxCon.Sheet_CPM + " Column " + XlsxCon.CPM_SMTPServer);
@@ -534,6 +542,7 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                     row.getCell(14, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
                                                     row.getCell(15, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
                                                     row.getCell(16, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(17, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
 
                                                     cv.put(DBHandler.CPM_Auto, row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
                                                     cv.put(DBHandler.CPM_Id, row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
@@ -552,6 +561,7 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                     cv.put(DBHandler.CPM_MailPwd, row.getCell(14, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
                                                     cv.put(DBHandler.CPM_Mailfrom, row.getCell(15, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
                                                     cv.put(DBHandler.CPM_SMTPServer, row.getCell(16, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.CPM_GSTType, row.getCell(17, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
 
                                                     dbAdapter.insert(DBHandler.Table_CompanyMaster, cv);
                                                     Constant.showLog(DBHandler.Table_CompanyMaster + " Added");
@@ -687,6 +697,9 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                         String _ssp = row.getCell(14, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
                                                         String _gstgroup = row.getCell(15, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
                                                         String _hsncode = row.getCell(16, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                        String _gsttype = row.getCell(17, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                        String _stockqty = row.getCell(18, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+
 
                                                         if (_id.equals(XlsxCon.PM_Id)) {
                                                             if (_cat1.equals(XlsxCon.PM_Cat1)) {
@@ -705,9 +718,23 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                                                                                 if (_ssp.equals(XlsxCon.PM_Ssp)) {
                                                                                                                     if (_gstgroup.equals(XlsxCon.PM_Gstgroup)) {
                                                                                                                         if (_hsncode.equals(XlsxCon.PM_Hsncode)) {
-                                                                                                                            sequence = true;
-                                                                                                                            dbAdapter.delete(DBHandler.Table_ProductMaster);
-                                                                                                                            Constant.showLog(DBHandler.Table_ProductMaster + " Deleted");
+                                                                                                                            if (_gsttype.equals(XlsxCon.PM_GSTType)) {
+                                                                                                                                if (_stockqty.equals(XlsxCon.PM_StockQty)) {
+                                                                                                                                    sequence = true;
+                                                                                                                                    dbAdapter.delete(DBHandler.Table_ProductMaster);
+                                                                                                                                    Constant.showLog(DBHandler.Table_ProductMaster + " Deleted");
+                                                                                                                                }else {
+                                                                                                                                    showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_StockQty);
+                                                                                                                                    writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_StockQty);
+                                                                                                                                    status = null;
+                                                                                                                                    break;
+                                                                                                                                }
+                                                                                                                            }else {
+                                                                                                                                showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_GSTType);
+                                                                                                                                writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_GSTType);
+                                                                                                                                status = null;
+                                                                                                                                break;
+                                                                                                                            }
                                                                                                                         } else {
                                                                                                                             showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Hsncode);
                                                                                                                             writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Hsncode);
@@ -830,6 +857,8 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                         row.getCell(14, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
                                                         row.getCell(15, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
                                                         row.getCell(16, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                        row.getCell(17, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                        row.getCell(18, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
 
                                                         cv.put(DBHandler.PM_Id, row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
                                                         cv.put(DBHandler.PM_Cat1, row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
@@ -848,6 +877,8 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                         cv.put(DBHandler.PM_Ssp, row.getCell(14, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
                                                         cv.put(DBHandler.PM_Gstgroup, row.getCell(15, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
                                                         cv.put(DBHandler.PM_Hsncode, row.getCell(16, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                        cv.put(DBHandler.PM_GSTType, row.getCell(17, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                        cv.put(DBHandler.PM_StockQty, row.getCell(18, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
 
                                                         dbAdapter.insert(DBHandler.Table_ProductMaster, cv);
                                                         Constant.showLog(DBHandler.Table_ProductMaster + " Added");
@@ -890,7 +921,7 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                     cv.put(DBHandler.GSTMaster_Status, row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
                                                     cv.put(DBHandler.GSTMaster_CrDate, new Constant(getApplicationContext()).getDate());
                                                     cv.put(DBHandler.GSTMaster_CrTime, new Constant(getApplicationContext()).getTime());
-
+                                                    Constant.showLog(row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
                                                     dbAdapter.insert(DBHandler.GSTMaster_Table, cv);
                                                 }
                                             }else if(sheetName.equals(XlsxCon.Sheet_GD)) {

@@ -37,8 +37,10 @@ public class AddToCartRecyclerAdapter extends RecyclerView.Adapter<AddToCartRecy
         AddToCartClass cart = cartList.get(position);
         holder.tv_prodName.setText(cart.getProdName());
         holder.tv_qty.setText(String.valueOf(cart.getQty()));
-        holder.tv_rate.setText(String.valueOf(cart.getRate()));
-        holder.tv_amnt.setText(String.valueOf(cart.getAmnt()));
+        //holder.tv_rate.setText(String.valueOf(cart.getRate()));
+        //holder.tv_amnt.setText(String.valueOf(cart.getAmnt()));
+        holder.tv_rate.setText(String.valueOf(cart.getTaxableRate()));
+        holder.tv_amnt.setText(String.valueOf(cart.getTotal()));
         if(position == cartList.size()-1){
             listener.calculation(0,0);
         }

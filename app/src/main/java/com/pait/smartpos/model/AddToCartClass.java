@@ -2,9 +2,10 @@ package com.pait.smartpos.model;
 
 public class AddToCartClass {
 
-    private String prodName, barcode, fatherSKU, dispFSKU, designNo, gstGroup, hsnCode;
-    private float  qty, rate, total, amnt, mrp, actRate, actMRP;
-    private int itemId;
+    private String prodName, barcode, fatherSKU, dispFSKU, designNo, gstGroup, hsnCode,
+            rate, total, amnt, mrp, actRate, actMRP, taxableRate, billDiscPer, billDiscAmnt,
+            gstPer, cgstAmnt,sgstAmnt, cgstPer, sgstPer, cessPer, cessAmnt, igstAmnt;
+    private int qty, itemId;
 
     public String getProdName() {
         return prodName;
@@ -12,30 +13,6 @@ public class AddToCartClass {
 
     public void setProdName(String prodName) {
         this.prodName = prodName;
-    }
-
-    public float getRate() {
-        return rate;
-    }
-
-    public void setRate(float rate) {
-        this.rate = rate;
-    }
-
-    public float getAmnt() {
-        return amnt;
-    }
-
-    public void setAmnt(float amnt) {
-        this.amnt = amnt;
-    }
-
-    public float getQty() {
-        return qty;
-    }
-
-    public void setQty(float qty) {
-        this.qty = qty;
     }
 
     public String getBarcode() {
@@ -78,36 +55,156 @@ public class AddToCartClass {
         this.gstGroup = gstGroup;
     }
 
-    public float getTotal() {
+    public String getHsnCode() {
+        return hsnCode;
+    }
+
+    public void setHsnCode(String hsnCode) {
+        this.hsnCode = hsnCode;
+    }
+
+    public String getRate() {
+        return rate;
+    }
+
+    public void setRate(String rate) {
+        this.rate = rate;
+    }
+
+    public String getTotal() {
         return total;
     }
 
-    public void setTotal(float total) {
+    public void setTotal(String total) {
         this.total = total;
     }
 
-    public float getMrp() {
+    public String getAmnt() {
+        return amnt;
+    }
+
+    public void setAmnt(String amnt) {
+        this.amnt = amnt;
+    }
+
+    public String getMrp() {
         return mrp;
     }
 
-    public void setMrp(float mrp) {
+    public void setMrp(String mrp) {
         this.mrp = mrp;
     }
 
-    public float getActRate() {
+    public String getActRate() {
         return actRate;
     }
 
-    public void setActRate(float actRate) {
+    public void setActRate(String actRate) {
         this.actRate = actRate;
     }
 
-    public float getActMRP() {
+    public String getActMRP() {
         return actMRP;
     }
 
-    public void setActMRP(float actMRP) {
+    public void setActMRP(String actMRP) {
         this.actMRP = actMRP;
+    }
+
+    public String getTaxableRate() {
+        return taxableRate;
+    }
+
+    public void setTaxableRate(String taxableRate) {
+        this.taxableRate = taxableRate;
+    }
+
+    public String getBillDiscPer() {
+        return billDiscPer;
+    }
+
+    public void setBillDiscPer(String billDiscPer) {
+        this.billDiscPer = billDiscPer;
+    }
+
+    public String getBillDiscAmnt() {
+        return billDiscAmnt;
+    }
+
+    public void setBillDiscAmnt(String billDiscAmnt) {
+        this.billDiscAmnt = billDiscAmnt;
+    }
+
+    public String getGstPer() {
+        return gstPer;
+    }
+
+    public void setGstPer(String gstPer) {
+        this.gstPer = gstPer;
+    }
+
+    public String getCgstAmnt() {
+        return cgstAmnt;
+    }
+
+    public void setCgstAmnt(String cgstAmnt) {
+        this.cgstAmnt = cgstAmnt;
+    }
+
+    public String getSgstAmnt() {
+        return sgstAmnt;
+    }
+
+    public void setSgstAmnt(String sgstAmnt) {
+        this.sgstAmnt = sgstAmnt;
+    }
+
+    public String getCgstPer() {
+        return cgstPer;
+    }
+
+    public void setCgstPer(String cgstPer) {
+        this.cgstPer = cgstPer;
+    }
+
+    public String getSgstPer() {
+        return sgstPer;
+    }
+
+    public void setSgstPer(String sgstPer) {
+        this.sgstPer = sgstPer;
+    }
+
+    public String getCessPer() {
+        return cessPer;
+    }
+
+    public void setCessPer(String cessPer) {
+        this.cessPer = cessPer;
+    }
+
+    public String getCessAmnt() {
+        return cessAmnt;
+    }
+
+    public void setCessAmnt(String cessAmnt) {
+        this.cessAmnt = cessAmnt;
+    }
+
+    public String getIgstAmnt() {
+        return igstAmnt;
+    }
+
+    public void setIgstAmnt(String igstAmnt) {
+        this.igstAmnt = igstAmnt;
+    }
+
+    public int getQty() {
+        return qty;
+    }
+
+    public void setQty(int qty) {
+        this.qty = qty;
     }
 
     public int getItemId() {
@@ -116,13 +213,5 @@ public class AddToCartClass {
 
     public void setItemId(int itemId) {
         this.itemId = itemId;
-    }
-
-    public String getHsnCode() {
-        return hsnCode;
-    }
-
-    public void setHsnCode(String hsnCode) {
-        this.hsnCode = hsnCode;
     }
 }
