@@ -388,7 +388,7 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
             detail.setAmount(Float.valueOf(ed_amount.getText().toString()));
 
             try {
-                String date = new SimpleDateFormat("yyyy-dd-MM", Locale.ENGLISH).format(new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(tv_date.getText().toString()));
+                String date = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(tv_date.getText().toString()));
                 Log.d("Log", "date:" + date);
                 detail.setDate(date);
             } catch (Exception e) {

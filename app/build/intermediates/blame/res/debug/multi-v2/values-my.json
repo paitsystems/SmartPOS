@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\android_project\\SmartPOS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-my\\values-my.xml",
+            "outputFile": "D:\\sneha_android_project\\SmartPOS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-my\\values-my.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Anup\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\056536ad8395229cfaad7b1df409ad56\\res\\values-my\\values.xml",
+                    "source": "C:\\Users\\Sneha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\27ed19a1b7a5e824a0f3c66129ecb96f\\res\\values-my\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Anup\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\2f1723a30b21833b2fefb46e4502bbfb\\res\\values-my\\values-my.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,214,319,436,529,641,769,847,926,1012,1135,1247,1349,1475,1586,1696,1856,1956",
-                        "endColumns": "108,104,116,92,111,127,77,78,85,122,111,101,125,110,109,159,99,83",
-                        "endOffsets": "209,314,431,524,636,764,842,921,1007,1130,1242,1344,1470,1581,1691,1851,1951,2035"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,37",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,214,319,436,529,641,769,847,926,1012,1135,1247,1349,1475,1586,1696,1856,4799",
-                        "endColumns": "108,104,116,92,111,127,77,78,85,122,111,101,125,110,109,159,99,83",
-                        "endOffsets": "209,314,431,524,636,764,842,921,1007,1130,1242,1344,1470,1581,1691,1851,1951,4878"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Anup\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\3ad3ecabd52cf4aa90562c721fc2d2ee\\res\\values-my\\values-my.xml",
+                    "source": "C:\\Users\\Sneha\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5a53c5e03d84d3086d35a5ed37d8cd34\\res\\values-my\\values-my.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -55,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Anup\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\a1e6338af8162e4f9eb7df240088d09a\\res\\values-my\\values.xml",
+                    "source": "C:\\Users\\Sneha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\b003cf73860436da23e6759e4d0c0b7a\\res\\values-my\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -69,6 +52,23 @@
                         "startOffsets": "1956,2065,2261,2397,2510,2716,2850,3003,3355,3590,3698,3899,4044,4261,4478,4578,4681",
                         "endColumns": "108,195,135,112,205,133,152,138,234,107,200,144,216,216,99,102,117",
                         "endOffsets": "2060,2256,2392,2505,2711,2845,2998,3137,3585,3693,3894,4039,4256,4473,4573,4676,4794"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Sneha\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\33dc76c6462636cb5830abab43339dca\\res\\values-my\\values-my.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,214,319,436,529,641,769,847,926,1012,1135,1247,1349,1475,1586,1696,1856,1956",
+                        "endColumns": "108,104,116,92,111,127,77,78,85,122,111,101,125,110,109,159,99,83",
+                        "endOffsets": "209,314,431,524,636,764,842,921,1007,1130,1242,1344,1470,1581,1691,1851,1951,2035"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,37",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,214,319,436,529,641,769,847,926,1012,1135,1247,1349,1475,1586,1696,1856,4799",
+                        "endColumns": "108,104,116,92,111,127,77,78,85,122,111,101,125,110,109,159,99,83",
+                        "endOffsets": "209,314,431,524,636,764,842,921,1007,1130,1242,1344,1470,1581,1691,1851,1951,4878"
                     }
                 }
             ]

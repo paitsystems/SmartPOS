@@ -102,8 +102,8 @@ public class ExpenseReportActivity extends AppCompatActivity implements View.OnC
             }
         });
         try {
-            String fadate = new SimpleDateFormat("yyyy-dd-MM", Locale.ENGLISH).format(sdf.parse(currentdate));
-            String tadate = new SimpleDateFormat("yyyy-dd-MM", Locale.ENGLISH).format(sdf.parse(currentdate));
+            String fadate = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(sdf.parse(currentdate));
+            String tadate = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(sdf.parse(currentdate));
             setData(fadate,tadate);
         }catch (Exception e){
             e.printStackTrace();
@@ -117,8 +117,8 @@ public class ExpenseReportActivity extends AppCompatActivity implements View.OnC
         switch (view.getId()){
             case R.id.btn_show:
                 try {
-                    String fadate = new SimpleDateFormat("yyyy-dd-MM", Locale.ENGLISH).format(sdf.parse(tv_fromdate.getText().toString()));
-                    String tadate = new SimpleDateFormat("yyyy-dd-MM", Locale.ENGLISH).format(sdf.parse(tv_todate.getText().toString()));
+                    String fadate = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(sdf.parse(tv_fromdate.getText().toString()));
+                    String tadate = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(sdf.parse(tv_todate.getText().toString()));
                     setData(fadate,tadate);
                 }catch (Exception e){
                     e.printStackTrace();

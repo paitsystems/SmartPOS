@@ -33,11 +33,12 @@ public class ReportMenuActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View view) {
       switch (view.getId()){
           case R.id.lay_collection:
-              //startActivity(new Intent(ReportMenuActivity.this,));
+              startActivity(new Intent(ReportMenuActivity.this,CollectionSumReportActivity.class));
               break;
           case R.id.lay_inward:
               break;
           case R.id.lay_prod_stock:
+              startActivity(new Intent(ReportMenuActivity.this,ProductwiseStockReportActivity.class));
               break;
           case R.id.lay_expense:
               startActivity(new Intent(ReportMenuActivity.this,ExpenseReportActivity.class));

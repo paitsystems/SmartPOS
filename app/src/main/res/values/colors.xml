@@ -50,5 +50,8 @@
     <color name="grey">#594D51</color>
     <color name="yellowgreen">#5da310</color>
     <color name="pinkd">#E91E63</color>
+    <color name="pinkshade">#d6157c</color>
     <color name="greend">#4CAF50</color>
+    <color name="purpled">#9C27B0</color>
+
 </resources>

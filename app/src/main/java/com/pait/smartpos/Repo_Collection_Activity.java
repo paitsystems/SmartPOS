@@ -31,7 +31,7 @@ import android.widget.Toast;
 import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.adpaters.CollectionReportAdapter;
 import com.pait.smartpos.db.DBHandlerR;
-import com.pait.smartpos.model.CollectionClass;
+import com.pait.smartpos.model.CollectionClassR;
 
 import java.net.URLEncoder;
 import java.text.DecimalFormat;
@@ -601,9 +601,9 @@ public class Repo_Collection_Activity extends AppCompatActivity implements View.
             Cursor c = db.getBillMaster(fdate, tdate, bool);
             double _totalNetAmnt = 0, _totalCashAmnt = 0, _totCardAmnt = 0;
             if (c.moveToFirst()) {
-                List<CollectionClass> list = new ArrayList<>();
+                List<CollectionClassR> list = new ArrayList<>();
                 do {
-                    CollectionClass collection = new CollectionClass();
+                    CollectionClassR collection = new CollectionClassR();
                     //BillMaster_BillNo, BillMaster_BillDate, BillMaster_BillTime, BillMaster_TotalAmt,
                     // BillMaster_CashAmt, BillMaster_CardAmt
                     collection.setBillNo(c.getString(0));//BillNo

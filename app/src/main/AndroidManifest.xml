@@ -190,8 +190,9 @@
         <activity android:name=".ExpenseActivity" />
         <activity android:name=".ReportMenuActivity" />
         <activity android:name=".ExpenseReportActivity" />
-        <activity android:name=".ReturnMemoActivity"></activity>
-        <activity android:name=".CollectionSumReportActivity"></activity>
+        <activity android:name=".ReturnMemoActivity" />
+        <activity android:name=".CollectionSumReportActivity" />
+        <activity android:name=".ProductwiseStockReportActivity"></activity>
     </application>
 
 </manifest>

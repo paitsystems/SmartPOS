@@ -19,6 +19,8 @@ import com.pait.smartpos.adpaters.ExpenseAdapter;
 import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.db.DBHandler;
 import com.pait.smartpos.log.WriteLog;
+import com.pait.smartpos.model.CollectionClass;
+import com.pait.smartpos.model.CollectionClassR;
 import com.pait.smartpos.model.DailyPettyExpClass;
 
 import java.text.DecimalFormat;
@@ -34,9 +36,10 @@ public class CollectionSumReportActivity extends AppCompatActivity implements Vi
     private ListView listView;
     private TextView tv_total_amt;
     private DBHandler db;
-    private double totAmt=0;
+    private double totnetcoll=0,totsalecash=0,totcashback=0,totnetcash=0,totcheque=0,totothpayamt=0;
     private DecimalFormat flt_price;
-    private TextView  tv_fromdate, tv_todate;
+    private TextView  tv_fromdate, tv_todate,tv_total_netcoll,tv_total_salecash,tv_total_cashback,tv_total_netcash,
+            tv_total_cheque,tv_total_card,tv_total_opa,tv_total_expreceipt,tv_total_exppay;
     private CheckBox cb_all;
     private String currentdate;
     private Constant constant;
@@ -100,8 +103,8 @@ public class CollectionSumReportActivity extends AppCompatActivity implements Vi
             }
         });
         try {
-            String fadate = new SimpleDateFormat("yyyy-dd-MM", Locale.ENGLISH).format(sdf.parse(currentdate));
-            String tadate = new SimpleDateFormat("yyyy-dd-MM", Locale.ENGLISH).format(sdf.parse(currentdate));
+            String fadate = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(sdf.parse(currentdate));
+            String tadate = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(sdf.parse(currentdate));
             setData(fadate,tadate);
         }catch (Exception e){
             e.printStackTrace();
@@ -115,8 +118,8 @@ public class CollectionSumReportActivity extends AppCompatActivity implements Vi
         switch (view.getId()){
             case R.id.btn_show:
                 try {
-                    String fadate = new SimpleDateFormat("yyyy-dd-MM", Locale.ENGLISH).format(sdf.parse(tv_fromdate.getText().toString()));
-                    String tadate = new SimpleDateFormat("yyyy-dd-MM", Locale.ENGLISH).format(sdf.parse(tv_todate.getText().toString()));
+                    String fadate = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(sdf.parse(tv_fromdate.getText().toString()));
+                    String tadate = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(sdf.parse(tv_todate.getText().toString()));
                     setData(fadate,tadate);
                 }catch (Exception e){
                     e.printStackTrace();
@@ -162,26 +165,47 @@ public class CollectionSumReportActivity extends AppCompatActivity implements Vi
         btn_show = findViewById(R.id.btn_show);
         toast = Toast.makeText(getApplicationContext(), "", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0, 0);
+
+        tv_total_netcoll = (TextView) findViewById(R.id.tv_total_netcoll);
+        tv_total_salecash= (TextView) findViewById(R.id.tv_total_salecash);
+        tv_total_cashback = (TextView) findViewById(R.id.tv_total_cashback);
+        tv_total_netcash = (TextView) findViewById(R.id.tv_total_netcash);
+        tv_total_cheque = (TextView) findViewById(R.id.tv_total_cheque);
+        tv_total_card = (TextView) findViewById(R.id.tv_total_card);
+        tv_total_opa = (TextView) findViewById(R.id.tv_total_opa);
+        tv_total_expreceipt = (TextView) findViewById(R.id.tv_total_expreceipt);
+        tv_total_exppay = (TextView) findViewById(R.id.tv_total_exppay);
     }
     private void setData(String fadate,String tadate) {
 
+       //Cashier,Net Collection,Sale Cash,CashBack, Net Cash,Cheque,CRRef.Cheque,Card,Other,
+        // CN Redeem,Exp Receipt, Exp Payment
+
         listView.setAdapter(null);
-        Cursor c = db.getExpenseReportData(fadate,tadate,flag);
-        List<DailyPettyExpClass> list = new ArrayList<>();
+        Cursor c = db.getCollectionSumData(fadate,tadate);
+        List<CollectionClass> list = new ArrayList<>();
         if (c.moveToFirst()) {
             do {
-                DailyPettyExpClass exp = new DailyPettyExpClass();
-                exp.setRemark(c.getString(c.getColumnIndex(DBHandler.DPE_Remark)));
-                exp.setAmount(c.getFloat(c.getColumnIndex(DBHandler.DPE_Amount)));
-                exp.setDate(c.getString(c.getColumnIndex(DBHandler.DPE_Date)));
-                // exp.setTime(c.getString(c.getColumnIndex(DBHandler.EXM_Remark)));
-                list.add(exp);
+                CollectionClass coll = new CollectionClass();
+                coll.setCashier(c.getString(0));
+                coll.setNetCollection(c.getString(1));
+                coll.setSaleCash(c.getString(2));
+                coll.setCashback(c.getString(3));
+                coll.setNetcash(c.getString(4));
+                coll.setCheck(c.getString(5));
+                coll.setCRRef_Cheque(c.getString(6));
+                coll.setCard(c.getString(7));
+                coll.setOtherPayAmt(c.getString(8));
+                coll.setCN_Redeem(c.getString(9));
+                coll.setExp_receipt(c.getString(10));
+                coll.setExp_payment(c.getString(11));
+                list.add(coll);
             } while (c.moveToNext());
         }
 
         CollectionSumAdapter adapter = new CollectionSumAdapter(list, getApplicationContext());
         listView.setAdapter(adapter);
-        setTotal(list);
+        //setTotal(list);                             //no need
         if(list.size() == 0){
             toast.setText("Data Not Available..");
             toast.show();
@@ -191,14 +215,19 @@ public class CollectionSumReportActivity extends AppCompatActivity implements Vi
         //setTotal(list);
 
     }
-    private void setTotal(List<DailyPettyExpClass> list) {
-        totAmt = 0;
+    private void setTotal(List<CollectionClass> list) {
+        totnetcoll=0;
+        totsalecash=0;
+        totcashback=0;
+        totnetcash=0;
+        totcheque=0;
+        totothpayamt=0;
 
-        for (DailyPettyExpClass eClass : list) {
-            totAmt = totAmt + eClass.getAmount();
+        for (CollectionClass eClass : list) {
+
         }
 
-        tv_total_amt.setText(flt_price.format(totAmt));
+        //tv_total_amt.setText(flt_price.format(totAmt));
     }
 
     private DatePickerDialog.OnDateSetListener _from_date = new DatePickerDialog.OnDateSetListener() {

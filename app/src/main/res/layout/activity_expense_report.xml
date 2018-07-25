@@ -8,8 +8,22 @@
     tools:context=".ExpenseReportActivity">
 
 
-
-        <LinearLayout
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:orientation="vertical">
+    <TextView
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/color_back"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:padding="2dp"
+        android:text="Expense Report"
+        android:visibility="visible" />
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -19,7 +33,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/mobpadding2"
-                android:text="@string/import_data_from_date_range" />
+                android:text="@string/import_data_from_date_range"
+                android:visibility="gone" />
 
             <TableLayout
                 android:layout_width="match_parent"
@@ -110,7 +125,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="0.5"
-                        android:text="all_date"
+                        android:text="All Date"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
                 </LinearLayout>
             </TableLayout>
@@ -128,7 +143,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/mobmargin5"
-                    android:background="@color/buttoncolor"
+                    android:background="@drawable/date_color_border"
                     android:enabled="true"
                     android:gravity="center"
                     android:text="@string/show"
@@ -137,7 +152,6 @@
 
             </LinearLayout>
         </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -254,4 +268,9 @@
         </LinearLayout>
     </HorizontalScrollView>
     </LinearLayout>
+  </LinearLayout>
+    <TextView
+        style="@style/footerstyleMob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

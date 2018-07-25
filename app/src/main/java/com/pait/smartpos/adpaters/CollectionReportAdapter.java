@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.pait.smartpos.model.CollectionClass;
+import com.pait.smartpos.model.CollectionClassR;
 import com.pait.smartpos.R;
 
 import java.text.SimpleDateFormat;
@@ -18,10 +18,10 @@ import java.util.Locale;
 public class CollectionReportAdapter extends BaseAdapter {
 
     private Context context;
-    private List<CollectionClass> list;
+    private List<CollectionClassR> list;
     private SimpleDateFormat sdf,sdf1;
 
-    public CollectionReportAdapter(Context _context, List<CollectionClass> _list){
+    public CollectionReportAdapter(Context _context, List<CollectionClassR> _list){
         this.context = _context;
         this.list = _list;
         sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
@@ -62,7 +62,7 @@ public class CollectionReportAdapter extends BaseAdapter {
         }else{
             holder = (ViewHolder) view.getTag();
         }
-        CollectionClass collection = (CollectionClass) getItem(i);
+        CollectionClassR collection = (CollectionClassR) getItem(i);
         holder.tv_billNo.setText(collection.getBillNo());
         try {
             Date d = sdf.parse(collection.getBillDate());

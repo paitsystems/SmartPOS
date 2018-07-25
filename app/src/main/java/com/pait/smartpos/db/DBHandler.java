@@ -1866,8 +1866,106 @@ public class DBHandler extends SQLiteOpenHelper {
         return a;
     }
 
-    public Cursor getCollectionSumData() {
-        String str = "Select * from " + VIEW_BillCash;
+    public Cursor getCollectionSumData(String fdate,String tdate) {
+
+        String str = "with ctebill as " +
+                "(" +
+                "SELECT     " +
+                " CASE WHEN BillMaster.Cashamt < 0 THEN 0 ELSE BillMaster.Cashamt END AS Cashamt," +
+                " BillMaster.Creditamt AS Creditamt, BillMaster.Billdate, BillMaster.Billno, BillMaster.Chqamt, " +
+                " BillMaster.Createdby, BillMaster.Branchid, BillMaster.Billst,BillMaster.Gvamt, BillMaster.Netamt," +
+                " CASE WHEN BillMaster.Netamt < 0 THEN ABS(BillMaster.Netamt) WHEN BillMaster.Balamt < 0 THEN ABS(BillMaster.Balamt) ELSE 0 END AS  CashReturn , " +
+                " BillMaster.Counterno,BillMaster.CurrencyAmt ,   " +
+                " CASE WHEN BillMaster.Netamt  > 0 THEN (BillMaster.Netamt+BillMaster.Gvamt) - (BillMaster.Cashamt + BillMaster.Creditamt + BillMaster.Gvamt + BillMaster.Chqamt )" +
+                " ELSE 0 END AS Balance,BillMaster.Autono, BillMaster.Billingtime , BillMaster.Billst, CASE WHEN BillMaster.Creditamt > 0\n" +
+                " THEN Through - CardBank ELSE '' END AS BankName, BillMaster.Returnamt, BillMaster.Piamt, BillMaster.TheirRemark, ROUND(BillMaster.Totalamt - BillMaster.Disamt, 0) AS GrossSale,CustomerMaster.Name, BillMaster.CardBank ," +
+                " BillMaster .Createdby , EmployeeMaster . Empname,'Bill' as Against,BillMaster.Netamt,CustomerMaster.Name" +
+                " FROM  BillMaster INNER JOIN CustomerMaster ON BillMaster.Custid = CustomerMaster.Id" +
+                "  INNER JOIN  EmployeeMaster ON   BillMaster.Createdby  =  EmployeeMaster.Id" +
+                ")" +
+                ", cteexp as" +
+                "(" +
+                "SELECT     0 AS Cash, 0 AS Card, Date AS TakenDate, '' AS AgainstBills, Voucherno AS Receipt_BillNo, 'PettyCash' AS Against, 0 AS ChequeAmount, CreatedBy AS CollectedBy, " +
+                "                      branchID, Status, 0 AS CashReturn, counterNo, 0 AS GVAmt, 0 AS Accor, 0 AS Sodexo, 0 AS [Own GV], 0 AS [Gift Voucher], 0 AS ICICI, 0 AS CITI, 0 AS IDBI, 0 AS SBI, " +
+                "                      0 AS OtherCurrency, 0 AS Balance, Autoid AS Id, Amount AS Amount, CreatedDate createtime, '' BankName, Remark, 0 AS RedeemAmt, 0 AS ReturnAmt, 0 AS GrossSale, " +
+                "                      ( case when VouType='Receipt' then Amount else 0 end)AS [Exp Receipt],( case when VouType='Payment' then Amount else 0 end)AS [Exp Payment],'' as [Customer],'' as city" +
+                "                      ,0 as AdvKnockOff,'' cardbank FROM  DailyPettyExp WHERE     (Status = 'A')" +
+                ")" +
+                ", cte as" +
+                "(" +
+                "SELECT     cashamt as Cash,Creditamt as Card, billdate as Takendate, billno as  Receipt_BillNo, Against,Chqamt as ChequeAmount\n" +
+                ", empname as Collectedby, branchID,billst as  Status," +
+                "          CashReturn,GVAMT as OtherAmt, " +
+                "                      Balance, netamt as Amount, " +
+                "                      Billingtime, BankName" +
+                "  , returnAmt AS RedeemAmt, 0 AS ReturnAmt, GrossSale, 0 as [Exp Receipt]" +
+                "  ,0 as [Exp Payment],name as [Customer]," +
+                "                      piamt as AdvKnockOff,cardbank " +
+                "FROM        ctebill " +
+                "union " +
+                " SELECT 0 as Cash,0 as Card,Takendate, Receipt_BillNo, Against,0 as ChequeAmount" +
+                ", Collectedby, branchID,  Status," +
+                "          CashReturn, 0 as otheramt, " +
+                "                      0 as Balance,  Amount, " +
+                "                      createtime as Billingtime,'' as BankName" +
+                "  , 0 AS RedeemAmt, 0 AS ReturnAmt, GrossSale,  [Exp Receipt]" +
+                "  , [Exp Payment],\"\" as [Customer]," +
+                "                      0 as AdvKnockOff,'' cardbank " +
+                "" +
+                "FROM        cteexp" +
+                "" +
+                ")" +
+                " Select  collectedby as Cashier " +
+                ", (sum(Cash) + sum(case when Against <> 'CRRefund' then ChequeAmount else 0 end) " +
+                "+ sum(Card) + sum(OtherAmt)+  sum(CashReturn) " +
+                " ) as [Net Collection], " +
+                " (sum(case when Against = 'Bill' then Cash else 0 end)" +
+                ") as [Sale Cash]," +
+                "sum(CashReturn) as CashBack ," +
+                "(sum(Cash) - sum(CashReturn) + sum(case when Against = 'PettyCash' " +
+                "then [Exp Receipt]else 0 end) - sum(case when Against = 'PettyCash' " +
+                "then [Exp Payment]else 0 end)) as [Net Cash], " +
+                "sum(case when Against <> 'CRRefund' then ChequeAmount else 0 end) as Cheque, " +
+                "sum(case when Against = 'CRRefund' then ChequeAmount else 0 end) as [CRRef.Cheque]," +
+                " sum(Card) as Card,  sum(otheramt) as Other, " +
+                " sum(RedeemAmt) as [CN Redeem], Sum([Exp Receipt]) as [Exp Receipt],Sum([Exp Payment]) as [Exp Payment]" +
+                "    from cte where Status = 'A'  and  Takendate >= '"+fdate+"' and Takendate <= '"+tdate+"' group by collectedby order by collectedby";
+
+        return getWritableDatabase().rawQuery(str, null);
+    }
+
+    public Cursor getCollectionSumData1() {
+        /*String str =  " SELECT     \n" +
+                " CASE WHEN BillMaster.Cashamt < 0 THEN 0 ELSE BillMaster.Cashamt END AS Cashamt,\n" +
+                " BillMaster.Creditamt AS Creditamt, BillMaster.Billdate, BillMaster.Billno, BillMaster.Chqamt, \n" +
+                " BillMaster.Createdby, BillMaster.Branchid, BillMaster.Billst,BillMaster.Gvamt, BillMaster.Netamt,\n" +
+                " CASE WHEN BillMaster.Netamt < 0 THEN ABS(BillMaster.Netamt) WHEN BillMaster.Balamt < 0 THEN ABS(BillMaster.Balamt) ELSE 0 END AS  CashReturn , \n" +
+                " BillMaster.Counterno,BillMaster.CurrencyAmt ,   \n" +
+                " CASE WHEN BillMaster.Netamt  > 0 THEN (BillMaster.Netamt+BillMaster.Gvamt) - (BillMaster.Cashamt + BillMaster.Creditamt + BillMaster.Gvamt + BillMaster.Chqamt )\n" +
+                " ELSE 0 END AS Balance,BillMaster.Autono, BillMaster.Billingtime , BillMaster.Billst, CASE WHEN BillMaster.Creditamt > 0\n" +
+                " THEN Through - CardBank ELSE '' END AS BankName, BillMaster.Returnamt, BillMaster.Piamt, BillMaster.TheirRemark, ROUND(BillMaster.Totalamt - BillMaster.Disamt, 0) AS GrossSale,CustomerMaster.Name, BillMaster.CardBank \n" +
+                " FROM  BillMaster INNER JOIN CustomerMaster ON BillMaster.Custid = CustomerMaster.Id";*/
+
+        String str = "SELECT  CASE WHEN " + Table_BillMaster + "." + BM_Cashamt + " < 0 THEN 0 ELSE " + Table_BillMaster + "." + BM_Cashamt +
+                " END AS " + BM_Cashamt + ", " + Table_BillMaster + "." + BM_Creditamt + " AS " + BM_Creditamt + ", " + Table_BillMaster +
+                "." + BM_Billdate + ", " + Table_BillMaster + "." + BM_Billno + ", " + Table_BillMaster + "." + BM_Chqamt + ", " + Table_BillMaster + "." +
+                BM_Createdby + ", " + Table_BillMaster + "." + BM_Branchid + ", " + Table_BillMaster + "." + BM_Billst+ ", " +
+                Table_BillMaster + "." + BM_Gvamt + ", " + Table_BillMaster + "." + BM_Netamt + ", " + Table_BillMaster + "." + BM_Gvamt + ", CASE WHEN " +
+                Table_BillMaster + "." + BM_Netamt + " < 0 THEN ABS(" + Table_BillMaster + "." + BM_Netamt + ") WHEN " + Table_BillMaster + "." + BM_Balamt +
+                " < 0 THEN ABS(" + Table_BillMaster + "." + BM_Balamt + ") ELSE 0 END AS  CashReturn , " + Table_BillMaster + "." + BM_Counterno + ", " +
+                Table_BillMaster + "." + BM_CurrencyAmt +
+                " ,   CASE WHEN " + Table_BillMaster + "." + BM_Netamt + "  > 0 THEN (" + Table_BillMaster + "." + BM_Netamt + "+" + Table_BillMaster + "." + BM_Gvamt + ") - (" +
+                Table_BillMaster + "." + BM_Cashamt + " + " + Table_BillMaster + "." + BM_Creditamt + " + " + Table_BillMaster + "." + BM_Gvamt + " + " + Table_BillMaster + "." + BM_Chqamt +
+                " ) ELSE 0 END AS Balance," + Table_BillMaster + "." + BM_Autono + ", " + Table_BillMaster + "." + BM_Billingtime + " , " + Table_BillMaster + "." + BM_Billst +
+                ", CASE WHEN " + Table_BillMaster + "." + BM_Creditamt + " > 0 THEN Through -" + BM_CardBank + " ELSE '' END AS BankName, " + Table_BillMaster + "." + BM_Returnamt + ", "
+                + Table_BillMaster + "." + BM_Piamt + ", " + Table_BillMaster + "." + BM_TheirRemark + ", ROUND(" + Table_BillMaster + "." + BM_Totalamt + " - "
+                + Table_BillMaster + "." + BM_Disamt + ", 0)  AS GrossSale," + Table_CustomerMaster + "." + CSM_Name + ", " + Table_BillMaster + "." + BM_CardBank +
+                Table_BillMaster + "." + BM_Createdby + ", " + Table_EmployeeMaster + "." + EM_Empname +
+                " FROM  " + Table_BillMaster + " INNER JOIN " + Table_CustomerMaster + " ON " + Table_BillMaster + "." + BM_Custid + " = " + Table_CustomerMaster + "." + CSM_Id
+                + " INNER JOIN " + Table_EmployeeMaster + " ON " + Table_BillMaster + "." + BM_Createdby + " = " + Table_EmployeeMaster + "." + EM_Id;
+        ;
+
+
         return getWritableDatabase().rawQuery(str, null);
     }
 
@@ -1918,6 +2016,11 @@ public class DBHandler extends SQLiteOpenHelper {
         String str = "select * from GSTMaster,GSTDetail where GSTMaster.Auto=GSTDetail.MastAuto and GSTMaster.GroupName='"+gstGroup+"'";
         Constant.showLog(str);
         return getWritableDatabase().rawQuery(str,null);
+    }
+
+    public Cursor getProductReportData() {
+        String str = "Select * from " + Table_ProductMaster ;
+        return getWritableDatabase().rawQuery(str, null);
     }
 
 }

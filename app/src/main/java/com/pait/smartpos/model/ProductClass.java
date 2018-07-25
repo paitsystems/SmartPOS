@@ -4,7 +4,7 @@ package com.pait.smartpos.model;
 
 public class ProductClass {
 
-    private int Product_ID, Product_Cat, stockQty;
+    private int Product_ID, Product_Cat, stockQty,suppId;
     private double Product_Rate;
     private float Pprice, mrp, Wprice, ssp;
     private String Product_Name, Product_Barcode, Product_KArea, gstGroup, taxType, isActive, hsnCode,
@@ -185,5 +185,13 @@ public class ProductClass {
 
     public void setGstType(String gstType) {
         this.gstType = gstType;
+    }
+
+    public int getSuppId() {
+        return suppId;
+    }
+
+    public void setSuppId(int suppId) {
+        this.suppId = suppId;
     }
 }

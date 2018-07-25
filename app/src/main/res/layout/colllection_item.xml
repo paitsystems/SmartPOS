@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--<HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="horizontal"
+            android:layout_weight="1">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:background="@drawable/lighht_border"
+                android:id="@+id/tv_cashier"
+                style="@style/textViewMobW"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:background="@drawable/lighht_border"
+                android:id="@+id/tv_netcoll"
+                style="@style/textViewMobW"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:visibility="visible" />
+
+            <TextView
+                android:background="@drawable/lighht_border"
+                android:id="@+id/tv_salecash"
+                style="@style/textViewMobW"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:background="@drawable/lighht_border"
+                android:id="@+id/tv_cashback"
+                style="@style/textViewMobW"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:background="@drawable/lighht_border"
+                android:id="@+id/tv_netcash"
+                style="@style/textViewMobW"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:background="@drawable/lighht_border"
+                android:id="@+id/tv_cheque"
+                style="@style/textViewMobW"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:background="@drawable/lighht_border"
+                android:id="@+id/tv_card"
+                style="@style/textViewMobW"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:background="@drawable/lighht_border"
+                android:id="@+id/tv_opa"
+                style="@style/textViewMobW"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:background="@drawable/lighht_border"
+                android:id="@+id/tv_exprec"
+                style="@style/textViewMobW"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:background="@drawable/lighht_border"
+                android:id="@+id/tv_exppay"
+                style="@style/textViewMobW"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+        <!-- </HorizontalScrollView>-->
+    </LinearLayout>
+
+</LinearLayout>

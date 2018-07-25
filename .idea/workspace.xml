@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="198fd9bb-516e-4e63-abe6-97c17fafd262" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_commons_net_3_3_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_ePOS2_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_hoinsdk_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_poi_3_8_20120326_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_universal_image_loader_1_9_5_jar_unspecified_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_android_27.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReturnMemoActivity.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_return_memo.xml" />
+    <list default="true" id="43a5bf23-48b7-4547-9255-a4b7e3378107" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ProductwiseStockReportActivity.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ProductwiseStockAdapter.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/CollectionClassR.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bill64light.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/billing64.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/color_back.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/expense64light.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/expense64llight.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/inward64light.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/inward64llight.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/inward_rpt_c_32.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/inward_rpt_c_64.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/lighht_border.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rep2_color_32.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rep_color_32.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rep_color_32_circle.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rep_color_64_circle.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/reports64light.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/returnmemo64.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rpt_color_64.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/stock_rpt_color_32.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/stock_rpt_color_64.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_productwise_stock_report.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/colllection_item.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/option.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/productwise_stock_item.xml" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
@@ -20,11 +46,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__sneha_android_project_SmartPOS_app_lib_commons_net_3_3_jar_unspecified_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__sneha_android_project_SmartPOS_app_lib_ePOS2_jar_unspecified_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__sneha_android_project_SmartPOS_app_lib_hoinsdk_jar_unspecified_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__sneha_android_project_SmartPOS_app_lib_poi_3_8_20120326_jar_unspecified_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__sneha_android_project_SmartPOS_app_lib_universal_image_loader_1_9_5_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_commons_net_3_3_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_ePOS2_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_hoinsdk_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_poi_3_8_20120326_jar_unspecified_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_universal_image_loader_1_9_5_jar_unspecified_jar.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" />
@@ -204,7 +230,7 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugShaders/merger.xml" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
@@ -1082,20 +1108,58 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/xml_provider_paths.xml.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/xml_provider_paths.xml.flat" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/build-history.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream.len" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.len" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.at" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab.keystream" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab.len" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab.values.at" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab_i" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.len" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab_i" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/last-build.bin" afterPath="" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CashMemoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CashMemoActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/DrawerTestActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/DrawerTestActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ImportMasterActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ImportMasterActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/AddToCartRecyclerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/AddToCartRecyclerAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/constant/Constant.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/constant/Constant.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CollectionSumReportActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CollectionSumReportActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseReportActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseReportActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/Repo_Collection_Activity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/Repo_Collection_Activity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReportMenuActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReportMenuActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/CollectionReportAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/CollectionReportAdapter.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/CollectionSumAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/CollectionSumAdapter.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/db/DBHandler.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/db/DBHandler.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/AddToCartClass.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/AddToCartClass.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/BillDetailClass.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/BillDetailClass.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/BillMasterClass.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/BillMasterClass.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/MainOptionFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/MainOptionFragment.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/CollectionClass.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/CollectionClass.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/ProductClass.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/ProductClass.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/XlsxCon.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/XlsxCon.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cash_memo.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cash_memo.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/custbtndraw.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/custbtndraw.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/date_color_border.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/date_color_border.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_collection_sum_report.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_collection_sum_report.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_expense_report.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_expense_report.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_report_menu.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_report_menu.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_main_option.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_main_option.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -1117,18 +1181,94 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="AddCategoryMasterActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/AddCategoryMasterActivity.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="activity_productwise_stock_report.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_productwise_stock_report.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+              <folding>
+                <element signature="e#1375#1395#0" expanded="true" />
+                <element signature="e#1425#1462#0" expanded="true" />
+                <element signature="e#2258#2277#0" expanded="true" />
+                <element signature="e#2806#2823#0" expanded="true" />
+                <element signature="e#3203#3222#0" expanded="true" />
+                <element signature="e#6249#6268#0" expanded="true" />
+                <element signature="e#6459#6473#0" expanded="true" />
+                <element signature="e#12338#16940#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductwiseStockAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ProductwiseStockAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-154">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="312">
+              <caret line="44" column="56" lean-forward="false" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ProductwiseStockReportActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ProductwiseStockReportActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3648">
+              <caret line="189" column="46" lean-forward="false" selection-start-line="189" selection-start-column="46" selection-end-line="189" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="productwise_stock_item.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/productwise_stock_item.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="layoutResourceFile" />
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Table_CustomerMaster</find>
+      <find>DailyPettyExp</find>
+      <find>#d6157c</find>
+      <find>#4CAF50</find>
+      <find>#29B6F6</find>
+      <find>#ff0000</find>
+      <find>CSM_Id</find>
+      <find>custbtndraw</find>
+      <find>yyyy-dd-MM</find>
+      <find>dorange</find>
+      <find>tv_supp</find>
+      <find>tv_fathersku</find>
+      <find>tv_qty</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>lighht_border</replace>
+      <replace>tv_finalprod</replace>
+      <replace>tv_cat3</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -1136,7 +1276,7 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="C:\Users\Anup\.gradle\wrapper\dists\gradle-4.4-all\9br9xq1tocpiv8o6njlyu5op1\gradle-4.4" />
+        <entry key="$PROJECT_DIR$" value="C:\Users\Sneha\.gradle\wrapper\dists\gradle-4.4-all\9br9xq1tocpiv8o6njlyu5op1\gradle-4.4" />
       </map>
     </option>
     <option name="myGradleVersions">
@@ -3359,9 +3499,40 @@
       </map>
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/CollectionClassR.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/CollectionClass.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/CollectionSumAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/colllection_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CollectionSumReportActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseReportActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/ProductClass.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_main_option.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/MainOptionFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/db/DBHandler.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ProductwiseStockReportActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReportMenuActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ProductwiseStockAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/date_color_border.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/color_back.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/lighht_border.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_collection_sum_report.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/custbtndraw.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_report_menu.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/option.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_expense_report.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/productwise_stock_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_productwise_stock_report.xml" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="29" />
-    <option name="y" value="5" />
+    <option name="x" value="10" />
+    <option name="y" value="20" />
     <option name="width" value="1260" />
     <option name="height" value="944" />
   </component>
@@ -3381,7 +3552,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -3398,35 +3571,56 @@
               <item name="SmartPOS" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="smartpos" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
             <path>
               <item name="SmartPOS" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="pait" type="462c0819:PsiDirectoryNode" />
+              <item name="smartpos" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SmartPOS" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="pait" type="462c0819:PsiDirectoryNode" />
-              <item name="smartpos" type="462c0819:PsiDirectoryNode" />
+              <item name="smartpos" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="fragments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartPOS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="SmartPOS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="D:/android-sdk" />
-    <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
+    <property name="device.picker.selection" value="0123456789ABCDEF" />
+    <property name="last_opened_file_path" value="D:/databases" />
+    <property name="android.profiler.active" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="ScreenshotViewer.SavePath" value="D:/databases" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.packageName">
+      <recent name="com.pait.smartpos" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\sneha_android_project\SmartPOS\app\src\main\res\drawable" />
+      <recent name="D:\sneha_android_project\SmartPOS\app\src\main\res\layout" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -3464,7 +3658,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -3584,11 +3778,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="198fd9bb-516e-4e63-abe6-97c17fafd262" name="Default" comment="" />
-      <created>1532409736997</created>
+      <changelist id="43a5bf23-48b7-4547-9255-a4b7e3378107" name="Default" comment="" />
+      <created>1532410363638</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1532409736997</updated>
+      <updated>1532410363638</updated>
     </task>
     <servers />
   </component>
@@ -3596,49 +3790,601 @@
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.764977" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5253456" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976957" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="13" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/AddCategoryMasterActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_productwise_stock_report.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="8040">
+          <caret line="335" column="54" lean-forward="false" selection-start-line="335" selection-start-column="54" selection-end-line="335" selection-end-column="54" />
+          <folding>
+            <element signature="e#1375#1395#0" expanded="true" />
+            <element signature="e#1425#1462#0" expanded="true" />
+            <element signature="e#2258#2277#0" expanded="true" />
+            <element signature="e#2806#2823#0" expanded="true" />
+            <element signature="e#3203#3222#0" expanded="true" />
+            <element signature="e#6249#6268#0" expanded="true" />
+            <element signature="e#6459#6473#0" expanded="true" />
+            <element signature="e#12338#16940#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReportMenuActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-154">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="816">
+          <caret line="40" column="70" lean-forward="false" selection-start-line="40" selection-start-column="70" selection-end-line="40" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ProductwiseStockAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="61" column="29" lean-forward="false" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/productwise_stock_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="31" column="47" lean-forward="false" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ProductwiseStockReportActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="57" column="47" lean-forward="false" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/db/DBHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3840">
+          <caret line="176" column="44" lean-forward="false" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
+          <folding>
+            <element signature="method#onCreate#0;class#DBHandler#0" expanded="false" />
+            <element signature="e#83547#83576#0" expanded="false" />
+            <element signature="method#onUpgrade#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getPaymentType#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getMaxAuto#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getMaxMastId#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getMaxDetAuto#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getMaxDetId#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getMaxCustAuto#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getMaxCustId#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getProductData#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#saveBillMaster#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#saveBillDetail#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#addExpenseDetail#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getExpMaxAuto#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getListExpRemark#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getListExpHead#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getDistinctProduct#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getDistinctSupplier#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getBillMasterData#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getBillDetailData#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#cancelBill#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getAllProduct#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#inActivateItem#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getCustomerData#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getExpHeadAuto#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getExpHeadName#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getCustid#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#saveCustomerMaster#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getCompIni#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getGSTPer#0;class#DBHandler#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CollectionSumReportActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6648">
+          <caret line="277" column="50" lean-forward="false" selection-start-line="277" selection-start-column="50" selection-end-line="277" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1872">
+          <caret line="78" column="21" lean-forward="false" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ExpenseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1704">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="71" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ProductwiseStockAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/productwise_stock_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ProductwiseStockReportActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4152">
+          <caret line="173" column="63" lean-forward="false" selection-start-line="173" selection-start-column="63" selection-end-line="173" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/CollectionClassR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="68" column="5" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="68" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/CollectionClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="94" column="34" lean-forward="false" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/databases/device-2018-07-24-172723.png" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="984">
+          <caret line="78" column="21" lean-forward="false" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ExpenseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1296">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="71" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/expense_item.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/test.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_test.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/MainFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2424">
+          <caret line="59" column="13" lean-forward="false" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main_option.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/MainOptionFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1163">
+          <caret line="81" column="37" lean-forward="false" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="37" />
+          <folding>
+            <marker date="1532510162115" expanded="true" signature="2244:3514" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/db/DBHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2021" column="61" lean-forward="false" selection-start-line="2021" selection-start-column="61" selection-end-line="2021" selection-end-column="61" />
+          <folding>
+            <element signature="method#onCreate#0;class#DBHandler#0" expanded="false" />
+            <element signature="e#83547#83576#0" expanded="false" />
+            <element signature="method#onUpgrade#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getPaymentType#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getMaxAuto#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getMaxMastId#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getMaxDetAuto#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getMaxDetId#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getMaxCustAuto#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getMaxCustId#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getProductData#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#saveBillMaster#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#saveBillDetail#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#addExpenseDetail#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getExpMaxAuto#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getListExpRemark#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getListExpHead#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getDistinctProduct#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getDistinctSupplier#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getBillMasterData#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getBillDetailData#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#cancelBill#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getAllProduct#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#inActivateItem#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getCustomerData#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getExpHeadAuto#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getExpHeadName#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getCustid#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#saveCustomerMaster#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getCompIni#0;class#DBHandler#0" expanded="false" />
+            <element signature="method#getGSTPer#0;class#DBHandler#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/ProductClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/date_color_green.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_inward.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="92" column="62" lean-forward="false" selection-start-line="92" selection-start-column="62" selection-end-line="92" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="193" column="32" lean-forward="false" selection-start-line="193" selection-start-column="32" selection-end-line="193" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/date_color_border.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/color_back.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/lighht_border.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/colllection_item.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="24" column="53" lean-forward="false" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_collection_sum_report.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CollectionSumReportActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/custbtndraw.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="62" lean-forward="false" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/CollectionSumAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="46" column="53" lean-forward="false" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_report_menu.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="297" column="27" lean-forward="false" selection-start-line="297" selection-start-column="27" selection-end-line="297" selection-end-column="27" />
+          <folding>
+            <element signature="e#5081#9461#0" expanded="false" />
+            <element signature="e#9475#13902#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReportMenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="43" column="75" lean-forward="false" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/option.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="211" column="27" lean-forward="false" selection-start-line="211" selection-start-column="27" selection-end-line="211" selection-end-column="27" />
+          <folding>
+            <element signature="e#2564#4197#0" expanded="false" />
+            <element signature="e#4696#6043#0" expanded="false" />
+            <element signature="e#6314#7570#0" expanded="false" />
+            <element signature="e#7883#9039#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/drawertest.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_master_updation.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/MasterUpdationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/DrawerTestActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="59" column="13" lean-forward="false" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseReportActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ProductwiseStockReportActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3648">
+          <caret line="189" column="46" lean-forward="false" selection-start-line="189" selection-start-column="46" selection-end-line="189" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_expense_report.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="205" column="41" lean-forward="false" selection-start-line="205" selection-start-column="41" selection-end-line="205" selection-end-column="41" />
+          <folding>
+            <element signature="e#547#909#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/productwise_stock_item.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_productwise_stock_report.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+          <folding>
+            <element signature="e#1375#1395#0" expanded="true" />
+            <element signature="e#1425#1462#0" expanded="true" />
+            <element signature="e#2258#2277#0" expanded="true" />
+            <element signature="e#2806#2823#0" expanded="true" />
+            <element signature="e#3203#3222#0" expanded="true" />
+            <element signature="e#6249#6268#0" expanded="true" />
+            <element signature="e#6459#6473#0" expanded="true" />
+            <element signature="e#12338#16940#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ProductwiseStockAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="44" column="56" lean-forward="false" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
           <folding />
         </state>
       </provider>
