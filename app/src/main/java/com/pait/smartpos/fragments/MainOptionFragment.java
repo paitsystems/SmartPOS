@@ -16,6 +16,7 @@ import com.pait.smartpos.ExpenseActivity;
 import com.pait.smartpos.InwardActivity;
 import com.pait.smartpos.R;
 import com.pait.smartpos.ReportMenuActivity;
+import com.pait.smartpos.ReturnMemoActivity;
 
 public class MainOptionFragment extends Fragment implements View.OnClickListener{
 
@@ -59,7 +60,7 @@ public class MainOptionFragment extends Fragment implements View.OnClickListener
                 startActivity(new Intent(getContext(), CashMemoActivity.class));
                 break;
             case R.id.btn_inward:
-                startActivity(new Intent(getContext(), InwardActivity.class));
+                startActivity(new Intent(getContext(), ReturnMemoActivity.class));
                 break;
             case R.id.btn_expense:
                 startActivity(new Intent(getContext(), ExpenseActivity.class));

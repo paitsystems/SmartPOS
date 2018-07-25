@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.pait.smartpos.R;
-import com.pait.smartpos.interfaces.OnItemClickListener;
+import com.pait.smartpos.interfaces.OnItemClickListenerCustom;
 import com.pait.smartpos.model.MasterUpdationClass;
 
 import java.util.List;
@@ -21,10 +21,10 @@ import java.util.List;
 public class MasterUpdationRecyclerAdapter extends RecyclerView.Adapter<MasterUpdationRecyclerAdapter.MyViewHolder>{
 
     private List<MasterUpdationClass> list;
-    private OnItemClickListener listener;
+    private OnItemClickListenerCustom listener;
     private Context context;
 
-    public MasterUpdationRecyclerAdapter(Context _context,List<MasterUpdationClass> _list, OnItemClickListener _listener){
+    public MasterUpdationRecyclerAdapter(Context _context,List<MasterUpdationClass> _list, OnItemClickListenerCustom _listener){
         this.list = _list;
         this.listener = _listener;
         this.context = _context;
@@ -48,11 +48,11 @@ public class MasterUpdationRecyclerAdapter extends RecyclerView.Adapter<MasterUp
             }
         });
         if(master.getMasterType().equals("P")){
-            holder.thumbnail.setImageDrawable(ContextCompat.getDrawable(context,R.drawable.ic_restaurant_menu_black_24dp));
+            holder.thumbnail.setImageDrawable(ContextCompat.getDrawable(context,R.drawable.ic_four_black_squares));
         }else if(master.getMasterType().equals("T")){
             holder.thumbnail.setImageDrawable(ContextCompat.getDrawable(context,R.drawable.ic_table_icon_black));
         }else if(master.getMasterType().equals("C")){
-            holder.thumbnail.setImageDrawable(ContextCompat.getDrawable(context,R.drawable.ic_four_black_squares));
+            holder.thumbnail.setImageDrawable(ContextCompat.getDrawable(context,R.drawable.ic_restaurant_menu_black_24dp));
         }
         if(master.getIsMasterActive().equals("Y")||master.getIsMasterActive().equals("A")){
             holder.tv_active.setBackground(ContextCompat.getDrawable(context,R.drawable.active_draw));

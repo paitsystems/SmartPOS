@@ -22,6 +22,8 @@ public class XlsxCon {
     public static final String Sheet_GM = "GSTMaster";
     public static final String Sheet_GD = "GSTDetail";
     public static final String Sheet_PY = "PaymentType";
+    public static final String Sheet_EX = "ExpenseHead";
+    public static final String Sheet_RM = "RateMaster";
 
     /*public static final String TM_ID = "ID";
     public static final String TM_Tables = "Tables";
@@ -139,6 +141,19 @@ public class XlsxCon {
     public static final String PY_Auto = "Auto";
     public static final String PY_TYPE = "Type";
     public static final String PY_Status = "Status";
+
+    public static final String RTM_Auto = "Auto";
+    public static final String RTM_Rates = "Rates";
+    public static final String RTM_Active = "Active";
+
+    public static final String EX_Auto = "Auto";
+    public static final String EX_Id = "Id";
+    public static final String EX_Name = "Name";
+    public static final String EX_Expdesc = "Expdesc";
+    public static final String EX_Active = "Active";
+    public static final String EX_Costcentre = "Costcentre";
+    public static final String EX_Remark = "Remark";
+
 
     public XlsxCon(Context context){
         dbHelper = new DBHandlerR(context);

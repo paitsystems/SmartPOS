@@ -2,126 +2,13 @@ package com.pait.smartpos.model;
 
 public class ReturnMemoMasterClass {
 
-    private float netbillamt,returnqty,returnamt,dis,tax,grossamt,netamt,BalRedeem,
-            BillKnockAmt,RevGainPts,RevRdmPts,CGSTAMT,SGSTAMT,IGSTAMT;
-
     private int auto,id,empname,createby,modifiedby,deletedby,maxno,branchID,OpenBy;
 
     private String machineName,counterNo,rMemoNo,billNo,custcode,remark,createdt,modifieddt,deleteddt,financialyr,inwrds,redeemst,
             Status,ActualCreateDate,createtime,type,redeemtype,SpecialRight,msreplclm,OpenSt,
-            OpenDate,OpenReason,ReturnReason,GatePassNo,CNType,CreatedFrom,IGSTAPP;
-
-    public float getNetbillamt() {
-        return netbillamt;
-    }
-
-    public void setNetbillamt(float netbillamt) {
-        this.netbillamt = netbillamt;
-    }
-
-    public float getReturnqty() {
-        return returnqty;
-    }
-
-    public void setReturnqty(float returnqty) {
-        this.returnqty = returnqty;
-    }
-
-    public float getReturnamt() {
-        return returnamt;
-    }
-
-    public void setReturnamt(float returnamt) {
-        this.returnamt = returnamt;
-    }
-
-    public float getDis() {
-        return dis;
-    }
-
-    public void setDis(float dis) {
-        this.dis = dis;
-    }
-
-    public float getTax() {
-        return tax;
-    }
-
-    public void setTax(float tax) {
-        this.tax = tax;
-    }
-
-    public float getGrossamt() {
-        return grossamt;
-    }
-
-    public void setGrossamt(float grossamt) {
-        this.grossamt = grossamt;
-    }
-
-    public float getNetamt() {
-        return netamt;
-    }
-
-    public void setNetamt(float netamt) {
-        this.netamt = netamt;
-    }
-
-    public float getBalRedeem() {
-        return BalRedeem;
-    }
-
-    public void setBalRedeem(float balRedeem) {
-        BalRedeem = balRedeem;
-    }
-
-    public float getBillKnockAmt() {
-        return BillKnockAmt;
-    }
-
-    public void setBillKnockAmt(float billKnockAmt) {
-        BillKnockAmt = billKnockAmt;
-    }
-
-    public float getRevGainPts() {
-        return RevGainPts;
-    }
-
-    public void setRevGainPts(float revGainPts) {
-        RevGainPts = revGainPts;
-    }
-
-    public float getRevRdmPts() {
-        return RevRdmPts;
-    }
-
-    public void setRevRdmPts(float revRdmPts) {
-        RevRdmPts = revRdmPts;
-    }
-
-    public float getCGSTAMT() {
-        return CGSTAMT;
-    }
-
-    public void setCGSTAMT(float CGSTAMT) {
-        this.CGSTAMT = CGSTAMT;
-    }
-
-    public float getSGSTAMT() {
-        return SGSTAMT;
-    }
-
-    public void setSGSTAMT(float SGSTAMT) {
-        this.SGSTAMT = SGSTAMT;
-    }
-
-    public float getIGSTAMT() {
-        return IGSTAMT;
-    }
-
-    public void setIGSTAMT(float IGSTAMT) {
-        this.IGSTAMT = IGSTAMT;
-    }
+            OpenDate,OpenReason,ReturnReason,GatePassNo,CNType,CreatedFrom,IGSTAPP,
+            netbillamt,returnqty,returnamt,dis,tax,grossamt,netamt,BalRedeem,
+            BillKnockAmt,RevGainPts,RevRdmPts,CGSTAMT,SGSTAMT,IGSTAMT;
 
     public int getAuto() {
         return auto;
@@ -409,5 +296,117 @@ public class ReturnMemoMasterClass {
 
     public void setIGSTAPP(String IGSTAPP) {
         this.IGSTAPP = IGSTAPP;
+    }
+
+    public String getNetbillamt() {
+        return netbillamt;
+    }
+
+    public void setNetbillamt(String netbillamt) {
+        this.netbillamt = netbillamt;
+    }
+
+    public String getReturnqty() {
+        return returnqty;
+    }
+
+    public void setReturnqty(String returnqty) {
+        this.returnqty = returnqty;
+    }
+
+    public String getReturnamt() {
+        return returnamt;
+    }
+
+    public void setReturnamt(String returnamt) {
+        this.returnamt = returnamt;
+    }
+
+    public String getDis() {
+        return dis;
+    }
+
+    public void setDis(String dis) {
+        this.dis = dis;
+    }
+
+    public String getTax() {
+        return tax;
+    }
+
+    public void setTax(String tax) {
+        this.tax = tax;
+    }
+
+    public String getGrossamt() {
+        return grossamt;
+    }
+
+    public void setGrossamt(String grossamt) {
+        this.grossamt = grossamt;
+    }
+
+    public String getNetamt() {
+        return netamt;
+    }
+
+    public void setNetamt(String netamt) {
+        this.netamt = netamt;
+    }
+
+    public String getBalRedeem() {
+        return BalRedeem;
+    }
+
+    public void setBalRedeem(String balRedeem) {
+        BalRedeem = balRedeem;
+    }
+
+    public String getBillKnockAmt() {
+        return BillKnockAmt;
+    }
+
+    public void setBillKnockAmt(String billKnockAmt) {
+        BillKnockAmt = billKnockAmt;
+    }
+
+    public String getRevGainPts() {
+        return RevGainPts;
+    }
+
+    public void setRevGainPts(String revGainPts) {
+        RevGainPts = revGainPts;
+    }
+
+    public String getRevRdmPts() {
+        return RevRdmPts;
+    }
+
+    public void setRevRdmPts(String revRdmPts) {
+        RevRdmPts = revRdmPts;
+    }
+
+    public String getCGSTAMT() {
+        return CGSTAMT;
+    }
+
+    public void setCGSTAMT(String CGSTAMT) {
+        this.CGSTAMT = CGSTAMT;
+    }
+
+    public String getSGSTAMT() {
+        return SGSTAMT;
+    }
+
+    public void setSGSTAMT(String SGSTAMT) {
+        this.SGSTAMT = SGSTAMT;
+    }
+
+    public String getIGSTAMT() {
+        return IGSTAMT;
+    }
+
+    public void setIGSTAMT(String IGSTAMT) {
+        this.IGSTAMT = IGSTAMT;
     }
 }

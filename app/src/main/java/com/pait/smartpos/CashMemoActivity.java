@@ -19,6 +19,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -29,13 +30,14 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hoin.btsdk.BluetoothService;
 import com.pait.smartpos.adpaters.AddToCartRecyclerAdapter;
-import com.pait.smartpos.adpaters.AllProductAdapter;
+import com.pait.smartpos.adpaters.AllProductDialogAdapter;
 import com.pait.smartpos.adpaters.AllRateAdapter;
 import com.pait.smartpos.adpaters.ProductListRecyclerAdapter;
 import com.pait.smartpos.adpaters.ProductRateRecyclerAdapter;
@@ -43,12 +45,10 @@ import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.constant.PrinterCommands;
 import com.pait.smartpos.db.DBHandler;
 import com.pait.smartpos.db.DBHandlerR;
-import com.pait.smartpos.interfaces.OnItemClickListener;
 import com.pait.smartpos.interfaces.RecyclerViewToActivityInterface;
 import com.pait.smartpos.model.AddToCartClass;
 import com.pait.smartpos.model.BillDetailClass;
 import com.pait.smartpos.model.BillMasterClass;
-import com.pait.smartpos.model.MasterUpdationClass;
 import com.pait.smartpos.model.ProductClass;
 import com.pait.smartpos.model.RateMasterClass;
 import com.pait.smartpos.model.UserProfileClass;
@@ -62,8 +62,10 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import android.widget.AdapterView.OnItemClickListener;
 
-public class CashMemoActivity extends AppCompatActivity implements View.OnClickListener, RecyclerViewToActivityInterface {
+public class CashMemoActivity extends AppCompatActivity implements View.OnClickListener,
+        RecyclerViewToActivityInterface,OnItemClickListener {
 
     private RecyclerView rv_Prod, rv_Price, rv_Order;
     private TextView tv_prodAll, tv_priceAll, tv_remove, tv_add, tv_totalQty, tv_totalAmnt,
@@ -76,7 +78,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
     private Constant constant;
     private DBHandler db;
     private Toast toast;
-    private List<ProductClass> prodList;
+    private ArrayList<ProductClass> prodList;
     private List<RateMasterClass> rateList;
     private List<AddToCartClass> cartList;
     private List<String> custList;
@@ -88,6 +90,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
     public static BluetoothService mService;
     private BluetoothDevice con_dev = null;
     private String billNo, cgstPerStr, sgstPerStr;
+    private Dialog prodDialog = null;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -100,7 +103,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
         setSpinnerData();
         setCustData();
 
-        if(mService!=null) {
+        if (mService != null) {
             mService.stop();
         }
         mService = new BluetoothService(getApplicationContext(), mHandler1);
@@ -111,10 +114,10 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String str = (String) adapterView.getItemAtPosition(i);
                 Constant.showLog(str);
-                if(str.equalsIgnoreCase("Card") || str.equalsIgnoreCase("Credit")
-                        || str.equalsIgnoreCase(" Credit Card") || str.contains("CreditCard") ){
+                if (str.equalsIgnoreCase("Card") || str.equalsIgnoreCase("Credit")
+                        || str.equalsIgnoreCase(" Credit Card") || str.contains("CreditCard")) {
                     ed_cardNo.setVisibility(View.VISIBLE);
-                }else{
+                } else {
                     ed_cardNo.setVisibility(View.GONE);
                 }
             }
@@ -195,11 +198,11 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
             public void afterTextChanged(Editable editable) {
                 if (!ed_discPer.getText().toString().equals("")) {
                     float disc = Float.parseFloat(ed_discPer.getText().toString());
-                    float discAmt = (totAmnt * disc)/100;
-                    ed_discAmnt.setText(String.valueOf(discAmt));
-                    ed_cash.setText(String.valueOf(totAmnt - discAmt));
-                    tv_netAmnt.setText(String.valueOf(totAmnt - discAmt));
-                    //setItemwiseDiscount();
+                    float discAmt = (totAmnt * disc) / 100;
+                    ed_discAmnt.setText(roundTwoDecimals(discAmt));
+                    ed_cash.setText(roundTwoDecimals(totAmnt - discAmt));
+                    tv_netAmnt.setText(roundTwoDecimals(totAmnt - discAmt));
+                    setItemwiseDiscount();
                 } else {
                     ed_cash.setText(roundTwoDecimals(totAmnt));
                     tv_netAmnt.setText(roundTwoDecimals(totAmnt));
@@ -305,17 +308,36 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void calculation(float qty, float amnt) {
+        if (!ed_discPer.getText().toString().equals("")) {
+            float disc = Float.parseFloat(ed_discPer.getText().toString());
+            float discAmt = (totAmnt * disc) / 100;
+            ed_discAmnt.setText(String.valueOf(discAmt));
+            ed_cash.setText(String.valueOf(totAmnt - discAmt));
+            tv_netAmnt.setText(String.valueOf(totAmnt - discAmt));
+        } else {
+            ed_cash.setText(roundTwoDecimals(totAmnt));
+            tv_netAmnt.setText(roundTwoDecimals(totAmnt));
+        }
         tv_totalQty.setText(String.valueOf(totQty));
         tv_totalAmnt.setText(roundTwoDecimals(totAmnt));
-        ed_cash.setText(String.valueOf(totAmnt));
-        tv_netAmnt.setText(roundTwoDecimals(totAmnt));
+        tv_retAmnt.setText("0");
     }
 
-    private void init(){
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        if(prodDialog!=null) {
+            productClass = (ProductClass) adapterView.getItemAtPosition(i);
+            setProdData();
+            Constant.showLog("Position is " + i);
+            prodDialog.dismiss();
+        }
+    }
+
+    private void init() {
         constant = new Constant(CashMemoActivity.this);
         db = new DBHandler(getApplicationContext());
-        toast = Toast.makeText(getApplicationContext(),"",Toast.LENGTH_LONG);
-        toast.setGravity(Gravity.CENTER,0,0);
+        toast = Toast.makeText(getApplicationContext(), "", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
         rv_Prod = findViewById(R.id.rv_prod);
         rv_Price = findViewById(R.id.rv_price);
         rv_Order = findViewById(R.id.rv_Order);
@@ -380,7 +402,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
         });
     }
 
-    private void setProdData(){
+    private void setProdData() {
         prodList.clear();
         rv_Prod.setAdapter(null);
         Cursor res = db.getProductData();
@@ -408,7 +430,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
             } while (res.moveToNext());
         }
         res.close();
-        ProductListRecyclerAdapter adapter = new ProductListRecyclerAdapter(getApplicationContext(),prodList);
+        ProductListRecyclerAdapter adapter = new ProductListRecyclerAdapter(getApplicationContext(), prodList);
         adapter.setOnClickListener1(this);
         rv_Prod.setAdapter(adapter);
     }
@@ -416,16 +438,19 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
     private void setRateList() {
         rateList.clear();
         rv_Price.setAdapter(null);
-        for (int i = 0; i < 11; i++) {
-            RateMasterClass rate = new RateMasterClass();
-            rate.setRate(1000 + i);
-            rate.setSelected(false);
-            rateList.add(rate);
-
-            ProductRateRecyclerAdapter adapter1 = new ProductRateRecyclerAdapter(getApplicationContext(), rateList);
-            adapter1.setOnClickListener1(this);
-            rv_Price.setAdapter(adapter1);
+        Cursor res = db.getRateMaster();
+        if (res.moveToFirst()) {
+            do {
+                RateMasterClass rate = new RateMasterClass();
+                rate.setRate(res.getFloat(res.getColumnIndex(DBHandler.RTM_Rates)));
+                rate.setSelected(false);
+                rateList.add(rate);
+            } while (res.moveToNext());
         }
+        res.close();
+        ProductRateRecyclerAdapter adapter1 = new ProductRateRecyclerAdapter(getApplicationContext(), rateList);
+        adapter1.setOnClickListener1(this);
+        rv_Price.setAdapter(adapter1);
     }
 
     private void setCustData(){
@@ -447,18 +472,39 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void showProdAlertDialog() {
-        GridView gridView = new GridView(this);
-        gridView.setAdapter(new AllProductAdapter(getApplicationContext(),prodList));
-        gridView.setNumColumns(5);
-        gridView.setOnItemClickListener((parent, view, position, id) -> {
-                productClass = prodList.get(position);
-                toast.setText(productClass.getProduct_Cat());
-                toast.show();
+        prodDialog = new Dialog(this);
+        prodDialog.setTitle("Select Item");
+        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+
+        final View layout = inflater.inflate(R.layout.categorydialog,null,false);
+        prodDialog.setContentView(layout);
+        prodDialog.setTitle("All Product");
+
+        ListView list1 = prodDialog.findViewById(R.id.listview);
+        AllProductDialogAdapter adapter = new AllProductDialogAdapter(this,
+                android.R.layout.simple_list_item_1, prodList);
+        EditText ed_search = prodDialog.findViewById(R.id.ed_search);
+        ed_search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                adapter.getFilter().filter(ed_search.getText().toString());
+            }
         });
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setView(gridView);
-        builder.setTitle("All Product");
-        builder.show();
+
+        list1.setOnItemClickListener(this);
+        list1.setAdapter(adapter);
+        prodDialog.show();
+
     }
 
     private void showRateAlertDialog() {
@@ -538,7 +584,6 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                         AddToCartClass addToCart = new AddToCartClass();
                         addToCart.setItemId(productClass.getProduct_ID());
                         addToCart.setProdName(productClass.getProduct_Name());
-                        addToCart.setRate(roundTwoDecimals(rate));
                         addToCart.setMrp(roundTwoDecimals(productClass.getMrp()));
                         addToCart.setAmnt(roundTwoDecimals(productClass.getSsp()));
                         addToCart.setActRate(roundTwoDecimals(productClass.getSsp()));
@@ -573,12 +618,16 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                             float totalGST = (disctedTotal * gstPer)/100;
                             float cgstAmt = (disctedTotal * cgstPer) / 100;
                             float sgstAmt = (disctedTotal * sgstPer) / 100;
-                            float netAmt = billDiscAmnt + cgstAmt + sgstAmt;
-                            totAmnt = totAmnt + total;
+                            float netAmt = disctedTotal + cgstAmt + sgstAmt;
+                            totAmnt = totAmnt + netAmt;
+                            addToCart.setRate(roundTwoDecimals(taxableRate));
+                            addToCart.setDiscountedTotal(roundTwoDecimals(disctedTotal));
+                            addToCart.setTotalGST(roundTwoDecimals(totalGST));
+                            addToCart.setNetAmnt(roundTwoDecimals(netAmt));
                             addToCart.setTotal(roundTwoDecimals(total));
                             addToCart.setBillDiscPer(roundTwoDecimals(billdiscPer));
                             addToCart.setBillDiscAmnt(roundTwoDecimals(billDiscAmnt));
-                            addToCart.setTaxableRate(roundTwoDecimals(taxableRate));
+                            addToCart.setTaxableRate(roundTwoDecimals(disctedTotal));
                             addToCart.setGstPer(roundTwoDecimals(gstPer));
                             addToCart.setCgstAmnt(roundTwoDecimals(cgstAmt));
                             addToCart.setSgstAmnt(roundTwoDecimals(sgstAmt));
@@ -587,6 +636,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                             addToCart.setCessAmnt(roundTwoDecimals(0));
                             addToCart.setCessPer(roundTwoDecimals(0));
                             addToCart.setIgstAmnt(roundTwoDecimals(0));
+                            addToCart.setGstType(productClass.getGstType());
                             cgstPerStr = roundTwoDecimals(cgstPer);
                             sgstPerStr = roundTwoDecimals(sgstPer);
                             totCGSTAmnt = totCGSTAmnt + cgstAmt;
@@ -601,12 +651,16 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                             float totalGST = (disctedTotal * gstPer)/100;
                             float cgstAmt = (disctedTotal * cgstPer) / 100;
                             float sgstAmt = (disctedTotal * sgstPer) / 100;
-                            float netAmt = billDiscAmnt + cgstAmt + sgstAmt;
-                            totAmnt = totAmnt + total;
+                            float netAmt = disctedTotal + cgstAmt + sgstAmt;
+                            totAmnt = totAmnt + netAmt;
+                            addToCart.setRate(roundTwoDecimals(taxableRate));
+                            addToCart.setDiscountedTotal(roundTwoDecimals(disctedTotal));
+                            addToCart.setTotalGST(roundTwoDecimals(totalGST));
+                            addToCart.setNetAmnt(roundTwoDecimals(netAmt));
                             addToCart.setTotal(roundTwoDecimals(total));
                             addToCart.setBillDiscPer(roundTwoDecimals(billdiscPer));
                             addToCart.setBillDiscAmnt(roundTwoDecimals(billDiscAmnt));
-                            addToCart.setTaxableRate(roundTwoDecimals(taxableRate));
+                            addToCart.setTaxableRate(roundTwoDecimals(disctedTotal));
                             addToCart.setGstPer(roundTwoDecimals(gstPer));
                             addToCart.setCgstAmnt(roundTwoDecimals(cgstAmt));
                             addToCart.setSgstAmnt(roundTwoDecimals(sgstAmt));
@@ -615,6 +669,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                             addToCart.setCessAmnt(roundTwoDecimals(0));
                             addToCart.setCessPer(roundTwoDecimals(0));
                             addToCart.setIgstAmnt(roundTwoDecimals(0));
+                            addToCart.setGstType(productClass.getGstType());
                             cgstPerStr = roundTwoDecimals(cgstPer);
                             sgstPerStr = roundTwoDecimals(sgstPer);
                             totCGSTAmnt = totCGSTAmnt + cgstAmt;
@@ -650,25 +705,27 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void setItemwiseDiscount() {
-        String qty = ed_Qty.getText().toString();
-        String rate = ed_rate.getText().toString();
-        cartList.clear();
+        //cartList.clear();
+        totAmnt = 0;
+        totQty = 0;
+        totCGSTAmnt = 0;
+        totSGSTAmnt = 0;
         rv_Order.setAdapter(null);
-        for(ProductClass _productClass : prodList) {
+        for (int i = 0; i < cartList.size(); i++) {
+            AddToCartClass cart = cartList.get(i);
             AddToCartClass addToCart = new AddToCartClass();
-            addToCart.setItemId(_productClass.getProduct_ID());
-            addToCart.setProdName(_productClass.getProduct_Name());
-            addToCart.setRate(roundTwoDecimals(String.valueOf(_productClass.getProduct_Rate())));
-            addToCart.setMrp(roundTwoDecimals(_productClass.getMrp()));
-            addToCart.setAmnt(roundTwoDecimals(_productClass.getSsp()));
-            addToCart.setActRate(roundTwoDecimals(_productClass.getSsp()));
-            addToCart.setActMRP(roundTwoDecimals(_productClass.getMrp()));
-            addToCart.setFatherSKU(_productClass.getFinalProduct());
-            addToCart.setDispFSKU(_productClass.getDispFSKU());
-            addToCart.setGstGroup(_productClass.getGstGroup());
-            addToCart.setHsnCode(_productClass.getHsnCode());
+            addToCart.setItemId(cart.getItemId());
+            addToCart.setProdName(cart.getProdName());
+            addToCart.setMrp(cart.getMrp());
+            addToCart.setAmnt(cart.getAmnt());
+            addToCart.setActRate(cart.getActRate());
+            addToCart.setActMRP(cart.getActMRP());
+            addToCart.setFatherSKU(cart.getFatherSKU());
+            addToCart.setDispFSKU(cart.getDispFSKU());
+            addToCart.setGstGroup(cart.getGstGroup());
+            addToCart.setHsnCode(cart.getHsnCode());
 
-            Cursor cursor = db.getGSTPer(_productClass.getGstGroup());
+            Cursor cursor = db.getGSTPer(cart.getGstGroup());
             cursor.moveToFirst();
             float gstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_GSTPer));
             float cgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTPer));
@@ -677,12 +734,12 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
             float sgstShare = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_SGSTShare));
             cursor.close();
 
-            int qty1 = stringToInt(qty);
-            float _rate = stringToFloat(rate);
+            int qty1 = cart.getQty();
+            float _rate = stringToFloat(cart.getRate());
             float _total = qty1 * _rate;
             totQty = totQty + qty1;
 
-            if (_productClass.getGstType().equals("I")) {
+            if (cart.getGstType().equals("I")) {
                 float accValue = ((gstPer * 100) / (gstPer + 100));
                 float gstAmnt = (_rate * accValue) / 100;
                 float taxableRate = _rate - gstAmnt;
@@ -693,12 +750,16 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                 float totalGST = (disctedTotal * gstPer) / 100;
                 float cgstAmt = (disctedTotal * cgstPer) / 100;
                 float sgstAmt = (disctedTotal * sgstPer) / 100;
-                float netAmt = billDiscAmnt + cgstAmt + sgstAmt;
-                totAmnt = totAmnt + total;
+                float netAmt = disctedTotal + cgstAmt + sgstAmt;
+                totAmnt = totAmnt + netAmt;
+                addToCart.setRate(roundTwoDecimals(taxableRate));
+                addToCart.setDiscountedTotal(roundTwoDecimals(disctedTotal));
+                addToCart.setTotalGST(roundTwoDecimals(totalGST));
+                addToCart.setNetAmnt(roundTwoDecimals(netAmt));
                 addToCart.setTotal(roundTwoDecimals(total));
                 addToCart.setBillDiscPer(roundTwoDecimals(billdiscPer));
                 addToCart.setBillDiscAmnt(roundTwoDecimals(billDiscAmnt));
-                addToCart.setTaxableRate(roundTwoDecimals(taxableRate));
+                addToCart.setTaxableRate(roundTwoDecimals(disctedTotal));
                 addToCart.setGstPer(roundTwoDecimals(gstPer));
                 addToCart.setCgstAmnt(roundTwoDecimals(cgstAmt));
                 addToCart.setSgstAmnt(roundTwoDecimals(sgstAmt));
@@ -707,12 +768,13 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                 addToCart.setCessAmnt(roundTwoDecimals(0));
                 addToCart.setCessPer(roundTwoDecimals(0));
                 addToCart.setIgstAmnt(roundTwoDecimals(0));
+                addToCart.setGstType(cart.getGstType());
                 cgstPerStr = roundTwoDecimals(cgstPer);
                 sgstPerStr = roundTwoDecimals(sgstPer);
                 totCGSTAmnt = totCGSTAmnt + cgstAmt;
                 totSGSTAmnt = totSGSTAmnt + sgstAmt;
 
-            } else if (_productClass.getGstType().equals("E")) {
+            } else if (cart.getGstType().equals("E")) {
                 float taxableRate = _rate;
                 float total = (taxableRate * qty1);
                 float billdiscPer = stringToFloat(ed_discPer.getText().toString());
@@ -721,12 +783,16 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                 float totalGST = (disctedTotal * gstPer) / 100;
                 float cgstAmt = (disctedTotal * cgstPer) / 100;
                 float sgstAmt = (disctedTotal * sgstPer) / 100;
-                float netAmt = billDiscAmnt + cgstAmt + sgstAmt;
-                totAmnt = totAmnt + total;
+                float netAmt = disctedTotal + cgstAmt + sgstAmt;
+                totAmnt = totAmnt + netAmt;
+                addToCart.setRate(roundTwoDecimals(taxableRate));
+                addToCart.setDiscountedTotal(roundTwoDecimals(disctedTotal));
+                addToCart.setTotalGST(roundTwoDecimals(totalGST));
+                addToCart.setNetAmnt(roundTwoDecimals(netAmt));
                 addToCart.setTotal(roundTwoDecimals(total));
                 addToCart.setBillDiscPer(roundTwoDecimals(billdiscPer));
                 addToCart.setBillDiscAmnt(roundTwoDecimals(billDiscAmnt));
-                addToCart.setTaxableRate(roundTwoDecimals(taxableRate));
+                addToCart.setTaxableRate(roundTwoDecimals(disctedTotal));
                 addToCart.setGstPer(roundTwoDecimals(gstPer));
                 addToCart.setCgstAmnt(roundTwoDecimals(cgstAmt));
                 addToCart.setSgstAmnt(roundTwoDecimals(sgstAmt));
@@ -735,31 +801,30 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                 addToCart.setCessAmnt(roundTwoDecimals(0));
                 addToCart.setCessPer(roundTwoDecimals(0));
                 addToCart.setIgstAmnt(roundTwoDecimals(0));
+                addToCart.setGstType(cart.getGstType());
                 cgstPerStr = roundTwoDecimals(cgstPer);
                 sgstPerStr = roundTwoDecimals(sgstPer);
                 totCGSTAmnt = totCGSTAmnt + cgstAmt;
                 totSGSTAmnt = totSGSTAmnt + sgstAmt;
             }
-            addToCart.setQty(stringToInt(qty));
+            addToCart.setQty(cart.getQty());
             addToCart.setAmnt(roundTwoDecimals(_total));
-            cartList.add(addToCart);
-            if (cartList.size() == 1) {
-                adapter = new AddToCartRecyclerAdapter(getApplicationContext(), cartList);
-                adapter.setOnClickListener1(this);
-                rv_Order.setAdapter(adapter);
-            } else {
-                adapter.notifyDataSetChanged();
-            }
-            rv_Order.scrollToPosition(cartList.size() - 1);
+            cartList.set(i, addToCart);
         }
+
+        rv_Order.setAdapter(null);
+        adapter = new AddToCartRecyclerAdapter(getApplicationContext(), cartList);
+        adapter.setOnClickListener1(this);
+        rv_Order.setAdapter(adapter);
+        rv_Order.scrollToPosition(cartList.size() - 1);
     }
 
     private void saveBill() {
-        int jobCardId = 0, creadtedBy = 1, modifiedBy=0, bankID = 0, printno = 1,
+        int branchId, jobCardId = 0, creadtedBy = 1, modifiedBy=0, bankID = 0, printno = 1,
                 GVoucher=0, agentid = 0, GVSchemeId = 0, CancelledBy=0, Deliveredby=0, Currencyid = 0, Type = 1,
                 BothId = 0, NewDCNo = 0;
 
-        float totalQty=0, totalAmnt=0, creditAmnt=0, cashAmnt=0, paidAmnt=0, balAmnt = 0, vat12 = 0, vat4 = 0, labour=0, cheqAmnt = 0,
+        float totalQty=0, totalAmnt=0, returnamnt = 0, creditAmnt=0, cashAmnt=0, paidAmnt=0, balAmnt = 0, vat12 = 0, vat4 = 0, labour=0, cheqAmnt = 0,
                 advanceamt=0, netamt=0, commInPer = 0, commInRs = 0, disper = 0, disamt = 0, piamt = 0, GVoucherAmt=0,
                 GVAmt = 0, GrossAmount=0, Alteration = 0, CashBack = 0, SchemeAmt = 0, GoodsReturn = 0, RemainAmt=0,
                 TRetQty = 0, TotalCurrency = 0, CGSTAMT=0, SGSTAMT=0, IGSTAMT = 0;
@@ -773,33 +838,28 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                 CardTyp="", SwipReceiptNo="", Reference="", Repl_Column = "Normal",Through="", Authorised="",
                 Remark="", TheirRemark="", IGSTAPP = "N", NewAgainstDC = "N";
 
-        float rate=0, qty=0, total=0, incentamt=0, vat = 0, vatamt = 0, amtWithoutDisc=0, detdisper = 0, detdisamt = 0,
-                ratewithtax=0,purchaseQty = 0, freeqty = 0, Mandalper = 0, Mandal = 0, MRP=0,
-                billdisper = 0, billdisamt = 0, RetQty = 0,ActRate=0, ActMRP=0, SchmBenefit = 0, DetGSTPER=0,
-                DetCGSTAMT = 0, DetSGSTAMT = 0, DetCGSTPER = 0, DetSGSTPER = 0,
-                DetCESSPER = 0, DetCESSAMT = 0, DetIGSTAMT = 0, TaxableAmt = 0, RetAmt = 0;
+        int detAuto, detId, billID, detbranchID, itemId, empID, autoBillId, detDeliveredby, Allotid,
+                Schemeid, dcmastauto, detType, seqno,detqty = 0;
 
-        int branchID = 1, empID=1, DetDeliveredby = 0, Allotid = 0, Schemeid = 0, dcmastauto = 0,
-                DetType = 1, seqno = 0;
+        float  detrate = 0, dettotal = 0, detincentamt = 0, detvat = 0, detvatamt = 0,
+                detamtWithoutDisc = 0, detdisper = 0, detdisamt = 0, detratewithtax = 0,
+                detpurchaseQty = 0, detfreeqty = 0, detMandalper = 0, detMandal = 0, detMRP = 0,
+                detbilldisper = 0, detbilldisamt = 0,detRetQty = 0, detActRate = 0, detActMRP = 0,
+                GSTPER = 0, detCGSTAMT = 0,detSGSTAMT = 0, CGSTPER = 0, SGSTPER = 0,
+                CESSPER = 0, CESSAMT = 0,detIGSTAMT = 0, detTaxableAmt = 0;
 
-        String finYr, barcode="", fatherSKU="", detMon, AlteredStat = "N", DetDelivered = "Y",
-                DetDelivereddate="",nonBar = "0",BGType = "N", SchemeApp = "N", DispFSKU="", DesignNo="";
+        String detfinYr, barcode, fatherSKU, detmon, nonBar, AlteredStat, detDelivered, detDelivereddate, BGType,
+                SchemeApp, DispFSKU, DesignNo, detSchmBenefit;
 
-        float totcgstAmt = 0;
-        float totsgstAmt = 0;
-
-        String date1 = new Constant(getApplicationContext()).getDate();
         String billDate = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(Calendar.getInstance().getTime());
         Billingtime = new SimpleDateFormat("HH:mm", Locale.ENGLISH).format(Calendar.getInstance().getTime());
         String crDate = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(Calendar.getInstance().getTime());
-        String[] dateArr = date1.split("/");
-        String year = dateArr[2];
-        int y = Integer.parseInt(year.substring(2, 4));
-        finyr = finYr = y + "-" + String.valueOf(y + 1);
+
+        finyr = detfinYr = new Constant(getApplicationContext()).getFinYr();
         DateFormat dateFormat = new SimpleDateFormat("MMM", Locale.ENGLISH);
         Date date = new Date();
         mon = dateFormat.format(date);
-        detMon = dateFormat.format(date);
+        detmon = dateFormat.format(date);
         Constant.showLog(mon);
 
         int mastAuto = db.getMaxAuto();
@@ -842,11 +902,18 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
             GVAmt = Float.parseFloat(ed_cash.getText().toString());
         }
 
+        disper = stringToFloat(ed_discPer.getText().toString());
+        disamt = stringToFloat(ed_discAmnt.getText().toString());
+
+        CGSTAMT = totCGSTAmnt;
+        SGSTAMT = totSGSTAmnt;
+        branchId = 1;
+
         BillMasterClass mast = new BillMasterClass();
         mast.setAutoNo(mastAuto);
         mast.setId(mastId);
-        mast.setBranchID(branchID);
-        mast.setFinYr(finYr);
+        mast.setBranchID(branchId);
+        mast.setFinYr(finyr);
         mast.setBillNo(billNo);
         mast.setCustID(custId);
         mast.setJobCardID(jobCardId);
@@ -854,7 +921,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
         mast.setTotalQty(roundTwoDecimals(totalQty));
         mast.setTotalAmt(roundTwoDecimals(totalAmnt));
         mast.setRetMemoNo(retMemoNo);
-        mast.setReturnAmt(roundTwoDecimals(RetAmt));
+        mast.setReturnAmt(roundTwoDecimals(returnamnt));
         mast.setCreditAmt(roundTwoDecimals(creditAmnt));
         mast.setCashAmt(roundTwoDecimals(cashAmnt));
         mast.setPaidAmt(roundTwoDecimals(paidAmnt));
@@ -933,8 +1000,8 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
         mast.setAuthorised(Authorised);
         mast.setRemark(Remark);
         mast.setTheirRemark(TheirRemark);
-        mast.setCGSTAMT(roundTwoDecimals(totCGSTAmnt));
-        mast.setSGSTAMT(roundTwoDecimals(totSGSTAmnt));
+        mast.setCGSTAMT(roundTwoDecimals(CGSTAMT));
+        mast.setSGSTAMT(roundTwoDecimals(SGSTAMT));
         mast.setIGSTAPP(IGSTAPP);
         mast.setIGSTAMT(roundTwoDecimals(IGSTAMT));
         mast.setType(Type);
@@ -944,67 +1011,118 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
         db.saveBillMaster(mast);
 
         for (AddToCartClass cart : cartList) {
+            detAuto = db.getMaxDetAuto();
+            detId = db.getMaxDetId(mastAuto);
+            billID = mastId;
+            detbranchID = 1;
+            itemId = cart.getItemId();
+            detrate = stringToFloat(cart.getRate());
+            detqty = cart.getQty();
+            dettotal = stringToFloat(cart.getTotal());
+            barcode = cart.getBarcode();
+            fatherSKU = cart.getFatherSKU();
+            empID = 1;
+            detincentamt = 0;
+            autoBillId = mastId;
+            detvat = 0;
+            detvatamt = 0;
+            detamtWithoutDisc = stringToFloat(cart.getAmnt());
+            detdisper = 0;
+            detdisamt = 0;
+            nonBar = "";
+            detratewithtax = stringToFloat(cart.getRate());
+            detpurchaseQty = cart.getQty();
+            detfreeqty = 0;
+            AlteredStat = "N";
+            detMandalper = 0;
+            detDelivered = "Y";
+            detDeliveredby = 0;
+            detDelivereddate = "";
+            BGType = "N";
+            Allotid = 0;
+            SchemeApp = "N";
+            Schemeid = 0;
+            DispFSKU = cart.getDispFSKU();
+            detMRP = stringToFloat(cart.getMrp());
+            detbilldisper = stringToFloat(cart.getBillDiscPer());
+            detbilldisamt = stringToFloat(cart.getBillDiscAmnt());
+            dcmastauto = 0;
+            DesignNo = "";
+            detRetQty = 0;
+            detActRate = stringToFloat(cart.getActRate());
+            detActMRP = stringToFloat(cart.getActMRP());
+            detSchmBenefit = "0";
+            GSTPER = stringToFloat(cart.getGstPer());
+            detCGSTAMT = stringToFloat(cart.getCgstAmnt());
+            detSGSTAMT = stringToFloat(cart.getSgstAmnt());
+            CGSTPER = stringToFloat(cart.getCgstPer());
+            SGSTPER = stringToFloat(cart.getSgstPer());
+            CESSPER = stringToFloat(cart.getCessPer());
+            CESSAMT = stringToFloat(cart.getCessAmnt());
+            detIGSTAMT = stringToFloat(cart.getIgstAmnt());
+            detTaxableAmt = stringToFloat(cart.getTaxableRate());
+            detType = 1;
+            seqno = 0;
+
             BillDetailClass det = new BillDetailClass();
-            int detAuto = db.getMaxDetAuto();
-            int detId = db.getMaxDetId(mastAuto);
             det.setAuto(detAuto);
             det.setId(detId);
-            det.setBillID(mastId);
-            det.setBranchID(branchID);
-            det.setFinYr(finYr);
-            det.setItemId(cart.getItemId());
-            det.setRate(cart.getRate());
-            det.setQty(String.valueOf(cart.getQty()));
-            det.setTotal(cart.getTotal());
-            det.setBarcode(String.valueOf(cart.getItemId()));
+            det.setBillID(billID);
+            det.setBranchID(detbranchID);
+            det.setFinYr(detfinYr);
+            det.setItemId(itemId);
+            det.setRate(roundTwoDecimals(detrate));
+            det.setQty(String.valueOf(detqty));
+            det.setTotal(roundTwoDecimals(dettotal));
+            det.setBarcode(barcode);
             det.setEmpID(empID);
-            det.setIncentamt(roundTwoDecimals(incentamt));
-            det.setFatherSKU(cart.getFatherSKU());
-            det.setAutoBillId(mastAuto);
-            det.setVat(roundTwoDecimals(vat));
-            det.setVatamt(roundTwoDecimals(vatamt));
-            det.setAmtWithoutDisc(cart.getAmnt());
+            det.setIncentamt(roundTwoDecimals(detincentamt));
+            det.setFatherSKU(fatherSKU);
+            det.setAutoBillId(autoBillId);
+            det.setVat(roundTwoDecimals(detvat));
+            det.setVatamt(roundTwoDecimals(detvatamt));
+            det.setAmtWithoutDisc(roundTwoDecimals(detamtWithoutDisc));
             det.setDisper(roundTwoDecimals(detdisper));
             det.setDisamt(roundTwoDecimals(detdisamt));
             det.setNonBar(nonBar);
-            det.setMon(detMon);
-            det.setRatewithtax(cart.getRate());
-            det.setPurchaseQty(String.valueOf(cart.getQty()));
-            det.setFreeqty(roundTwoDecimals(freeqty));
+            det.setMon(detmon);
+            det.setRatewithtax(roundTwoDecimals(detratewithtax));
+            det.setPurchaseQty(String.valueOf(detpurchaseQty));
+            det.setFreeqty(roundTwoDecimals(detfreeqty));
             det.setAlteredStat(AlteredStat);
-            det.setMandalper(roundTwoDecimals(Mandalper));
-            det.setMandal(roundTwoDecimals(Mandal));
-            det.setDelivered(Delivered);
-            det.setDeliveredby(DetDeliveredby);
-            det.setDelivereddate(DeliveredDate);
+            det.setMandalper(roundTwoDecimals(detMandalper));
+            det.setMandal(roundTwoDecimals(detMandal));
+            det.setDelivered(detDelivered);
+            det.setDeliveredby(detDeliveredby);
+            det.setDelivereddate(detDelivereddate);
             det.setBGType(BGType);
             det.setAllotid(Allotid);
             det.setSchemeApp(SchemeApp);
             det.setSchemeid(Schemeid);
-            det.setDispFSKU(cart.getDispFSKU());
-            det.setMRP(cart.getMrp());
-            det.setBilldisper(cart.getBillDiscPer());
-            det.setBilldisamt(cart.getBillDiscAmnt());
+            det.setDispFSKU(DispFSKU);
+            det.setMRP(roundTwoDecimals(detMRP));
+            det.setBilldisper(roundTwoDecimals(detbilldisper));
+            det.setBilldisamt(roundTwoDecimals(detbilldisamt));
             det.setDcmastauto(dcmastauto);
-            det.setDesignNo(cart.getDesignNo());
-            det.setRetQty(String.valueOf(RetQty));
-            det.setActRate(cart.getActRate());
-            det.setActMRP(cart.getActMRP());
-            det.setSchmBenefit(roundTwoDecimals(SchmBenefit));
-            det.setGSTPER(cart.getGstPer());
-            det.setCGSTAMT(cart.getCgstAmnt());
-            det.setSGSTAMT(cart.getSgstAmnt());
-            det.setCGSTPER(cart.getCgstPer());
-            det.setSGSTPER(cart.getSgstPer());
-            det.setCESSPER(cart.getCessPer());
-            det.setCESSAMT(cart.getCessAmnt());
-            det.setIGSTAMT(cart.getIgstAmnt());
-            det.setTaxableAmt(cart.getTaxableRate());
-            det.setType(Type);
+            det.setDesignNo(DesignNo);
+            det.setRetQty(roundTwoDecimals(detRetQty));
+            det.setActRate(roundTwoDecimals(detActRate));
+            det.setActMRP(roundTwoDecimals(detActMRP));
+            det.setSchmBenefit(roundTwoDecimals(detSchmBenefit));
+            det.setGSTPER(roundTwoDecimals(GSTPER));
+            det.setCGSTAMT(roundTwoDecimals(detCGSTAMT));
+            det.setSGSTAMT(roundTwoDecimals(detSGSTAMT));
+            det.setCGSTPER(roundTwoDecimals(CGSTPER));
+            det.setSGSTPER(roundTwoDecimals(SGSTPER));
+            det.setCESSPER(roundTwoDecimals(CESSPER));
+            det.setCESSAMT(roundTwoDecimals(CESSAMT));
+            det.setIGSTAMT(roundTwoDecimals(detIGSTAMT));
+            det.setTaxableAmt(roundTwoDecimals(detTaxableAmt));
+            det.setType(detType);
             det.setSeqno(seqno);
             db.saveBillDetail(det);
+            db.updateProductQty(cart.getItemId(),cart.getQty());
         }
-
         showDia(2);
     }
 
@@ -1103,6 +1221,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
         ed_cash.setText("0");
         ed_cardNo.setText(null);
         ed_custName.setText(null);
+        auto_CustName.setText(null);
         ed_custMobNo.setText(null);
         tv_retAmnt.setText("0");
         tv_netAmnt.setText("0");

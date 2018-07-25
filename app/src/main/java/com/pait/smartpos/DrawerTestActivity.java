@@ -445,7 +445,7 @@ public class DrawerTestActivity extends AppCompatActivity implements View.OnClic
             case 0:
                 fragment = new MainOptionFragment();
                 //mainFragment = (MainOptionFragment) fragment;
-                menuflag = 0;
+                menuflag = -1;
                 if(flag!=0) {
                     invalidateOptionsMenu();
                     onCreateOptionsMenu(mMenu);

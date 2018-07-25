@@ -1332,6 +1332,123 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                     cv.put(DBHandler.CSM_Gstno, row.getCell(11, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
                                                     dbAdapter.insert(DBHandler.Table_CustomerMaster, cv);
                                                 }
+                                            }else if(sheetName.equals(XlsxCon.Sheet_EX)) {
+                                                if (count == 1) {
+                                                    String _auto = row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _id = row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _name = row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _expDesc = row.getCell(3, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _active = row.getCell(4, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _costcenter = row.getCell(5, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _remark = row.getCell(6, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+
+                                                    if (_auto.equals(XlsxCon.EX_Auto)) {
+                                                        if (_id.equals(XlsxCon.EX_Id)) {
+                                                            if (_name.equals(XlsxCon.EX_Name)) {
+                                                                if (_expDesc.equals(XlsxCon.EX_Expdesc)) {
+                                                                    if (_active.equals(XlsxCon.EX_Active)) {
+                                                                        if (_costcenter.equals(XlsxCon.EX_Costcentre)) {
+                                                                            if (_remark.equals(XlsxCon.EX_Remark)) {
+                                                                                sequence = true;
+                                                                                dbAdapter.delete(DBHandler.Table_ExpenseHead);
+                                                                            }else {
+                                                                                showColMisMatchToast("Sheet "+XlsxCon.Sheet_EX+" Column "+XlsxCon.EX_Remark);
+                                                                                writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_EX+" Column "+XlsxCon.EX_Remark);
+                                                                                status = null;
+                                                                                break;
+                                                                            }
+                                                                        }else {
+                                                                            showColMisMatchToast("Sheet "+XlsxCon.Sheet_EX+" Column "+XlsxCon.EX_Costcentre);
+                                                                            writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_EX+" Column "+XlsxCon.EX_Costcentre);
+                                                                            status = null;
+                                                                            break;
+                                                                        }
+                                                                    }else {
+                                                                        showColMisMatchToast("Sheet "+XlsxCon.Sheet_EX+" Column "+XlsxCon.EX_Active);
+                                                                        writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_EX+" Column "+XlsxCon.EX_Active);
+                                                                        status = null;
+                                                                        break;
+                                                                    }
+                                                                }else {
+                                                                    showColMisMatchToast("Sheet "+XlsxCon.Sheet_EX+" Column "+XlsxCon.EX_Expdesc);
+                                                                    writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_EX+" Column "+XlsxCon.EX_Expdesc);
+                                                                    status = null;
+                                                                    break;
+                                                                }
+                                                            } else {
+                                                                showColMisMatchToast("Sheet "+XlsxCon.Sheet_EX+" Column "+XlsxCon.EX_Name);
+                                                                writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_EX+" Column "+XlsxCon.EX_Name);
+                                                                status = null;
+                                                                break;
+                                                            }
+                                                        } else {
+                                                            showColMisMatchToast("Sheet "+XlsxCon.Sheet_EX+" Column "+XlsxCon.EX_Id);
+                                                            writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_EX+" Column "+XlsxCon.EX_Id);
+                                                            status = null;
+                                                            break;
+                                                        }
+                                                    } else {
+                                                        showColMisMatchToast("Sheet "+XlsxCon.Sheet_EX+" Column "+XlsxCon.EX_Auto);
+                                                        writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_EX+" Column "+XlsxCon.EX_Auto);
+                                                        status = null;
+                                                        break;
+                                                    }
+                                                } else if (sequence) {
+                                                    row.getCell(0, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(1, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(2, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(3, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(4, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(5, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(6, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+
+                                                    cv.put(DBHandler.EXM_Auto, row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.EXM_Id, row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.EXM_Name, row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.EXM_Expdesc, row.getCell(3, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.EXM_Active, row.getCell(4, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.EXM_Costcentre, row.getCell(5, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.EXM_Remark, row.getCell(6, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    dbAdapter.insert(DBHandler.Table_ExpenseHead, cv);
+                                                }
+                                            }else if(sheetName.equals(XlsxCon.Sheet_RM)) {
+                                                if (count == 1) {
+                                                    String _auto = row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _rate = row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    String _active = row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                    if (_auto.equals(XlsxCon.RTM_Auto)) {
+                                                        if (_rate.equals(XlsxCon.RTM_Rates)) {
+                                                            if (_active.equals(XlsxCon.RTM_Active)) {
+                                                                sequence = true;
+                                                                dbAdapter.delete(DBHandler.Table_RateMaster);
+                                                            } else {
+                                                                showColMisMatchToast("Sheet "+XlsxCon.Sheet_RM+" Column "+XlsxCon.RTM_Active);
+                                                                writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_RM+" Column "+XlsxCon.RTM_Active);
+                                                                status = null;
+                                                                break;
+                                                            }
+                                                        } else {
+                                                            showColMisMatchToast("Sheet "+XlsxCon.Sheet_RM+" Column "+XlsxCon.RTM_Rates);
+                                                            writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_RM+" Column "+XlsxCon.RTM_Rates);
+                                                            status = null;
+                                                            break;
+                                                        }
+                                                    } else {
+                                                        showColMisMatchToast("Sheet "+XlsxCon.Sheet_RM+" Column "+XlsxCon.RTM_Auto);
+                                                        writeLog("readFile_Column_Not_Matched_Sheet "+XlsxCon.Sheet_RM+" Column "+XlsxCon.RTM_Auto);
+                                                        status = null;
+                                                        break;
+                                                    }
+                                                } else if (sequence) {
+                                                    row.getCell(0, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(1, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+                                                    row.getCell(2, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
+
+                                                    cv.put(DBHandler.RTM_Auto, row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.RTM_Rates, row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    cv.put(DBHandler.RTM_Active, row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                    dbAdapter.insert(DBHandler.Table_RateMaster, cv);
+                                                }
                                             }
                                             pd1.setProgress(count);
                                         }

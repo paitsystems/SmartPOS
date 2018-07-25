@@ -2,162 +2,209 @@ package com.pait.smartpos.model;
 
 public class ReturnMemoDetailClass {
 
-    private float qty,rate,amt,disper,disamt,vatper,vatamt,MRP,billdisper,billdisamt,GSTPER,
+    private String rMemoNo,barcode,financialyr,counterNo,nonbarst,itemName,
+            qty,rate,amt,disper,disamt,vatper,vatamt,MRP,billdisper,billdisamt,GSTPER,
             CGSTAMT,SGSTAMT,CGSTPER,SGSTPER,CESSPER,CESSAMT,IGSTAMT,TaxableAmt;
 
     private int id, itemcode, returnID, branchID, autoID, empid, mastid, BillDetAuto, dtlid;
 
-    private String rMemoNo,barcode,financialyr,counterNo,nonbarst,itemName;
+    public String getrMemoNo() {
+        return rMemoNo;
+    }
 
-    public float getQty() {
+    public void setrMemoNo(String rMemoNo) {
+        this.rMemoNo = rMemoNo;
+    }
+
+    public String getBarcode() {
+        return barcode;
+    }
+
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
+    }
+
+    public String getFinancialyr() {
+        return financialyr;
+    }
+
+    public void setFinancialyr(String financialyr) {
+        this.financialyr = financialyr;
+    }
+
+    public String getCounterNo() {
+        return counterNo;
+    }
+
+    public void setCounterNo(String counterNo) {
+        this.counterNo = counterNo;
+    }
+
+    public String getNonbarst() {
+        return nonbarst;
+    }
+
+    public void setNonbarst(String nonbarst) {
+        this.nonbarst = nonbarst;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public String getQty() {
         return qty;
     }
 
-    public void setQty(float qty) {
+    public void setQty(String qty) {
         this.qty = qty;
     }
 
-    public float getRate() {
+    public String getRate() {
         return rate;
     }
 
-    public void setRate(float rate) {
+    public void setRate(String rate) {
         this.rate = rate;
     }
 
-    public float getAmt() {
+    public String getAmt() {
         return amt;
     }
 
-    public void setAmt(float amt) {
+    public void setAmt(String amt) {
         this.amt = amt;
     }
 
-    public float getDisper() {
+    public String getDisper() {
         return disper;
     }
 
-    public void setDisper(float disper) {
+    public void setDisper(String disper) {
         this.disper = disper;
     }
 
-    public float getDisamt() {
+    public String getDisamt() {
         return disamt;
     }
 
-    public void setDisamt(float disamt) {
+    public void setDisamt(String disamt) {
         this.disamt = disamt;
     }
 
-    public float getVatper() {
+    public String getVatper() {
         return vatper;
     }
 
-    public void setVatper(float vatper) {
+    public void setVatper(String vatper) {
         this.vatper = vatper;
     }
 
-    public float getVatamt() {
+    public String getVatamt() {
         return vatamt;
     }
 
-    public void setVatamt(float vatamt) {
+    public void setVatamt(String vatamt) {
         this.vatamt = vatamt;
     }
 
-    public float getMRP() {
+    public String getMRP() {
         return MRP;
     }
 
-    public void setMRP(float MRP) {
+    public void setMRP(String MRP) {
         this.MRP = MRP;
     }
 
-    public float getBilldisper() {
+    public String getBilldisper() {
         return billdisper;
     }
 
-    public void setBilldisper(float billdisper) {
+    public void setBilldisper(String billdisper) {
         this.billdisper = billdisper;
     }
 
-    public float getBilldisamt() {
+    public String getBilldisamt() {
         return billdisamt;
     }
 
-    public void setBilldisamt(float billdisamt) {
+    public void setBilldisamt(String billdisamt) {
         this.billdisamt = billdisamt;
     }
 
-    public float getGSTPER() {
+    public String getGSTPER() {
         return GSTPER;
     }
 
-    public void setGSTPER(float GSTPER) {
+    public void setGSTPER(String GSTPER) {
         this.GSTPER = GSTPER;
     }
 
-    public float getCGSTAMT() {
+    public String getCGSTAMT() {
         return CGSTAMT;
     }
 
-    public void setCGSTAMT(float CGSTAMT) {
+    public void setCGSTAMT(String CGSTAMT) {
         this.CGSTAMT = CGSTAMT;
     }
 
-    public float getSGSTAMT() {
+    public String getSGSTAMT() {
         return SGSTAMT;
     }
 
-    public void setSGSTAMT(float SGSTAMT) {
+    public void setSGSTAMT(String SGSTAMT) {
         this.SGSTAMT = SGSTAMT;
     }
 
-    public float getCGSTPER() {
+    public String getCGSTPER() {
         return CGSTPER;
     }
 
-    public void setCGSTPER(float CGSTPER) {
+    public void setCGSTPER(String CGSTPER) {
         this.CGSTPER = CGSTPER;
     }
 
-    public float getSGSTPER() {
+    public String getSGSTPER() {
         return SGSTPER;
     }
 
-    public void setSGSTPER(float SGSTPER) {
+    public void setSGSTPER(String SGSTPER) {
         this.SGSTPER = SGSTPER;
     }
 
-    public float getCESSPER() {
+    public String getCESSPER() {
         return CESSPER;
     }
 
-    public void setCESSPER(float CESSPER) {
+    public void setCESSPER(String CESSPER) {
         this.CESSPER = CESSPER;
     }
 
-    public float getCESSAMT() {
+    public String getCESSAMT() {
         return CESSAMT;
     }
 
-    public void setCESSAMT(float CESSAMT) {
+    public void setCESSAMT(String CESSAMT) {
         this.CESSAMT = CESSAMT;
     }
 
-    public float getIGSTAMT() {
+    public String getIGSTAMT() {
         return IGSTAMT;
     }
 
-    public void setIGSTAMT(float IGSTAMT) {
+    public void setIGSTAMT(String IGSTAMT) {
         this.IGSTAMT = IGSTAMT;
     }
 
-    public float getTaxableAmt() {
+    public String getTaxableAmt() {
         return TaxableAmt;
     }
 
-    public void setTaxableAmt(float taxableAmt) {
+    public void setTaxableAmt(String taxableAmt) {
         TaxableAmt = taxableAmt;
     }
 
@@ -231,53 +278,5 @@ public class ReturnMemoDetailClass {
 
     public void setDtlid(int dtlid) {
         this.dtlid = dtlid;
-    }
-
-    public String getrMemoNo() {
-        return rMemoNo;
-    }
-
-    public void setrMemoNo(String rMemoNo) {
-        this.rMemoNo = rMemoNo;
-    }
-
-    public String getBarcode() {
-        return barcode;
-    }
-
-    public void setBarcode(String barcode) {
-        this.barcode = barcode;
-    }
-
-    public String getFinancialyr() {
-        return financialyr;
-    }
-
-    public void setFinancialyr(String financialyr) {
-        this.financialyr = financialyr;
-    }
-
-    public String getCounterNo() {
-        return counterNo;
-    }
-
-    public void setCounterNo(String counterNo) {
-        this.counterNo = counterNo;
-    }
-
-    public String getNonbarst() {
-        return nonbarst;
-    }
-
-    public void setNonbarst(String nonbarst) {
-        this.nonbarst = nonbarst;
-    }
-
-    public String getItemName() {
-        return itemName;
-    }
-
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
     }
 }

@@ -22,7 +22,7 @@ import android.view.Gravity;
 import com.pait.smartpos.adpaters.MasterUpdationRecyclerAdapter;
 import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.db.DBHandlerR;
-import com.pait.smartpos.interfaces.OnItemClickListener;
+import com.pait.smartpos.interfaces.OnItemClickListenerCustom;
 import com.pait.smartpos.log.WriteLog;
 import com.pait.smartpos.model.MasterUpdationClass;
 
@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MasterUpdationActivity extends AppCompatActivity
-        implements View.OnClickListener,RecyclerItemTouchHelper.RecyclerItemTouchHelperListener,OnItemClickListener {
+        implements View.OnClickListener,RecyclerItemTouchHelper.RecyclerItemTouchHelperListener,OnItemClickListenerCustom {
 
     private Constant constant, constant1;
     private Toast toast;

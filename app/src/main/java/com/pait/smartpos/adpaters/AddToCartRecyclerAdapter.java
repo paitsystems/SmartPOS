@@ -40,11 +40,10 @@ public class AddToCartRecyclerAdapter extends RecyclerView.Adapter<AddToCartRecy
         //holder.tv_rate.setText(String.valueOf(cart.getRate()));
         //holder.tv_amnt.setText(String.valueOf(cart.getAmnt()));
         holder.tv_rate.setText(String.valueOf(cart.getTaxableRate()));
-        holder.tv_amnt.setText(String.valueOf(cart.getTotal()));
+        holder.tv_amnt.setText(String.valueOf(cart.getNetAmnt()));
         if(position == cartList.size()-1){
             listener.calculation(0,0);
         }
-
     }
 
     @Override

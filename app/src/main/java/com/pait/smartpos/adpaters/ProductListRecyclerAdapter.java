@@ -7,10 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.pait.smartpos.R;
-import com.pait.smartpos.interfaces.OnItemClickListener;
 import com.pait.smartpos.interfaces.RecyclerViewToActivityInterface;
 import com.pait.smartpos.model.ProductClass;
 

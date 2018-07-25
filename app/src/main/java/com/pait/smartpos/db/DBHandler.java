@@ -13,6 +13,9 @@ import com.pait.smartpos.model.BillDetailClassR;
 import com.pait.smartpos.model.BillMasterClass;
 import com.pait.smartpos.model.DailyPettyExpClass;
 import com.pait.smartpos.model.ExpenseDetail;
+import com.pait.smartpos.model.ProductClass;
+import com.pait.smartpos.model.ReturnMemoDetailClass;
+import com.pait.smartpos.model.ReturnMemoMasterClass;
 import com.pait.smartpos.parse.BillReprintCancelClass;
 
 import java.util.ArrayList;
@@ -878,6 +881,11 @@ public class DBHandler extends SQLiteOpenHelper {
 
     public static final String VIEW_BillCash = "VIEW_BillCash";
 
+    public static final String Table_RateMaster = "RateMaster";
+    public static final String RTM_Auto = "Auto";
+    public static final String RTM_Rates = "Rates";
+    public static final String RTM_Active = "Active";
+
 
     String table_company_master = "create table if not exists " + Table_CompanyMaster + "(" +
             CPM_Auto + " int not null," + CPM_Id + " int," + CPM_CompanyName + " text," + CPM_Mgrname + " int," +
@@ -941,7 +949,7 @@ public class DBHandler extends SQLiteOpenHelper {
             PM_Loyaltycardno + " text," + PM_Cs_Type + " text," + PM_Lbtper + " float," + PM_Considerlength + " text," +
             PM_Cat7 + " text," + PM_Cat8 + " text," + PM_Cat9 + " text," + PM_Cat10 + " text," +
             PM_Cat11 + " text," + PM_Cat12 + " text," + PM_Ssp + " float," + PM_Gstgroup + " text," +
-            PM_Hsncode + " text," +PM_Btype + " text,"+PM_GSTType + " text,"+PM_StockQty + " float, primary key(" + PM_Id + "))";
+            PM_Hsncode + " text," +PM_Btype + " text,"+PM_GSTType + " text,"+PM_StockQty + " int, primary key(" + PM_Id + "))";
 
     String table_supplier_master = "create table if not exists " + Table_SupplierMaster + "(" +
             SM_Auto + " int not null," + SM_Id + " int," + SM_Name + " text," + SM_Address + " text," +
@@ -1405,6 +1413,7 @@ public class DBHandler extends SQLiteOpenHelper {
             +Table_BillMaster+"."+BM_Disamt+", "+Table_BillMaster+"."+ BM_Vat4 +", "+Table_BillMaster+"."+BM_Vat12+
             ", 0) AS GrossSale,"+Table_CustomerMaster+"."+ CSM_Name +", "+Table_BillMaster+"."+ BM_CardBank+
             " FROM  "+Table_BillMaster+" INNER JOIN "+Table_CustomerMaster+" ON "+Table_BillMaster+"."+BM_Custid+" = "+Table_CustomerMaster+"."+CSM_Id;*/
+
     private String view_b = "CREATE VIEW if not exists  viewBill as SELECT " +Table_BillMaster + "." + BM_Disamt + ", " + Table_BillMaster + "." + BM_Vat4 + ", " + Table_BillMaster + "." + BM_Vat12 +
             "," + Table_CustomerMaster + "." + CSM_Name + ", " + Table_BillMaster + "." + BM_CardBank +
             " FROM  " + Table_BillMaster + " INNER JOIN " + Table_CustomerMaster + " ON " + Table_BillMaster + "." + BM_Custid + " = " + Table_CustomerMaster + "." + CSM_Id;
@@ -1427,6 +1436,11 @@ public class DBHandler extends SQLiteOpenHelper {
             + Table_BillMaster + "." + BM_Disamt + ", " + Table_BillMaster + "." + BM_Vat4 + ", " + Table_BillMaster + "." + BM_Vat12 +
             ", 0) AS GrossSale," + Table_CustomerMaster + "." + CSM_Name + ", " + Table_BillMaster + "." + BM_CardBank +
             " FROM  " + Table_BillMaster + " INNER JOIN " + Table_CustomerMaster + " ON " + Table_BillMaster + "." + BM_Custid + " = " + Table_CustomerMaster + "." + CSM_Id;
+
+    private String table_ratemaster = "create table if not exists " + Table_RateMaster + "(" +
+            RTM_Auto + " int not null," +
+            RTM_Rates + " text," +
+            RTM_Active + " text, primary key(" + RTM_Auto + "))";
 
     public DBHandler(Context context) {
         super(context, Database_Name, null, Database_Version);
@@ -1453,7 +1467,8 @@ public class DBHandler extends SQLiteOpenHelper {
         db.execSQL(table_returnmemo_master);
         db.execSQL(table_returnmemo_detail);
         db.execSQL(table_dailypatyexp);
-       // db.execSQL(view_billcash);
+        db.execSQL(table_ratemaster);
+        // db.execSQL(view_billcash);
         //db.execSQL(view_b);
         Constant.showLog("onCreate");
     }
@@ -1464,7 +1479,8 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     public Cursor getPaymentType() {
-        return getWritableDatabase().rawQuery("select * from " + Table_Payment + " where " + PY_Status + " in ('Y','A') order by " + PY_TYPE, null);
+        return getWritableDatabase().rawQuery("select * from " + Table_Payment +
+                " where " + PY_Status + " in ('Y','A') order by " + PY_Auto, null);
     }
 
     public int getMaxAuto() {
@@ -2023,4 +2039,281 @@ public class DBHandler extends SQLiteOpenHelper {
         return getWritableDatabase().rawQuery(str, null);
     }
 
+    private int getProdQty(int prodId){
+        int qty = 0;
+        String str = "Select "+PM_StockQty+" from "+Table_ProductMaster+" where "+PM_Id+"="+prodId;
+        Constant.showLog(str);
+        Cursor res = getWritableDatabase().rawQuery(str,null);
+        if (res.moveToFirst()) {
+            do {
+                qty = res.getInt(0);
+            } while (res.moveToNext());
+        }
+        res.close();
+        return qty;
+    }
+
+    public void updateProductQty(int prodId, int purQty){
+        ContentValues cv = new ContentValues();
+        int qty = getProdQty(prodId) - purQty;
+        cv.put(PM_StockQty,qty);
+        getWritableDatabase().update(Table_ProductMaster,cv,PM_Id+"=?",new String[]{String.valueOf(prodId)});
+    }
+
+    public ArrayList<BillMasterClass> getBillNo(String fromDate, String date){
+        ArrayList<BillMasterClass> list = new ArrayList<>();
+        String str = "select * from "+Table_BillMaster +" where "+BM_Billst + " in ('Y','A')";
+        Constant.showLog(str);
+        Cursor res = getWritableDatabase().rawQuery(str,null);
+        if(res.moveToFirst()){
+            do{
+                BillMasterClass master = new BillMasterClass();
+                master.setAutoNo(res.getInt(res.getColumnIndex(BM_Autono)));
+                master.setId(res.getInt(res.getColumnIndex(BM_Id)));
+                master.setCustID(res.getString(res.getColumnIndex(BM_Custid)));
+                master.setBillNo(res.getString(res.getColumnIndex(BM_Billno)));
+                master.setTotalAmt(res.getString(res.getColumnIndex(BM_Totalamt)));
+                master.setPaidAmt(res.getString(res.getColumnIndex(BM_Paidamt)));
+                list.add(master);
+            }while (res.moveToNext());
+        }
+        res.close();
+        return list;
+    }
+
+    public ArrayList<BillDetailClass> getBillDet(int mastId){
+        ArrayList<BillDetailClass> list = new ArrayList<>();
+        String str = "select * from "+Table_BillDetails +
+                        " where "+BD_Billid + "="+mastId;//+" and "+BD_Id+"="+detId+" and "+BD_Itemid+"="+itemId;
+        Constant.showLog(str);
+        Cursor res = getWritableDatabase().rawQuery(str,null);
+        if(res.moveToFirst()){
+            do{
+                BillDetailClass det = new BillDetailClass();
+                det.setFatherSKU(res.getString(res.getColumnIndex(BD_Fathersku)));
+                det.setQty(res.getString(res.getColumnIndex(BD_Qty)));
+                det.setItemId(res.getInt(res.getColumnIndex(BD_Itemid)));
+                det.setBarcode(res.getString(res.getColumnIndex(BD_Barcode)));
+                det.setRate(res.getString(res.getColumnIndex(BD_Rate)));
+                det.setTotal(res.getString(res.getColumnIndex(BD_Total)));
+                det.setDisper(res.getString(res.getColumnIndex(BD_Disper)));
+                det.setDisamt(res.getString(res.getColumnIndex(BD_Disamt)));
+                det.setMRP(res.getString(res.getColumnIndex(BD_Mrp)));
+                det.setBilldisper(res.getString(res.getColumnIndex(BD_Billdisper)));
+                det.setBilldisamt(res.getString(res.getColumnIndex(BD_Billdisamt)));
+                det.setCGSTAMT(res.getString(res.getColumnIndex(BD_Cgstamt)));
+                det.setSGSTAMT(res.getString(res.getColumnIndex(BD_Sgstamt)));
+                det.setAuto(res.getInt(res.getColumnIndex(BD_Auto)));
+                det.setId(res.getInt(res.getColumnIndex(BD_Id)));
+                det.setBillID(res.getInt(res.getColumnIndex(BD_Billid)));
+                list.add(det);
+            }while (res.moveToNext());
+        }
+        res.close();
+        return list;
+    }
+
+    public String getCustName(String custId){
+        String name = "NA";
+        String str =  "select "+CSM_Name+","+CSM_Mobno+" from "+Table_CustomerMaster+" where "+CSM_Id+"='"+custId+"'";
+        Constant.showLog(str);
+        Cursor res = getWritableDatabase().rawQuery(str,null);
+        if(res.moveToFirst()){
+            do{
+                name = res.getString(0) + "-" + res.getString(1);
+            }while (res.moveToNext());
+        }
+        res.close();
+        return name;
+    }
+
+    public int getMaxRMAuto() {
+        int id = 0;
+        Cursor res = getWritableDatabase().rawQuery("select max(" + RMM_Auto+ ") from " + Table_ReturnMemoMaster, null);
+        if (res.moveToFirst()) {
+            do {
+                id = res.getInt(0);
+            } while (res.moveToNext());
+        }
+        res.close();
+        return ++id;
+    }
+
+    public int getMaxRMMastId(String finYR) {
+        int id = 0;
+        Cursor res = getWritableDatabase().rawQuery("select max(" + RMM_Id + ") from " + Table_ReturnMemoMaster + " where " + RMM_Financialyr + "='" + finYR + "'", null);
+        if (res.moveToFirst()) {
+            do {
+                id = res.getInt(0);
+            } while (res.moveToNext());
+        }
+        res.close();
+        return ++id;
+    }
+
+    public int getMaxRMDetAuto() {
+        int id = 0;
+        Cursor res = getWritableDatabase().rawQuery("select max(" + RMD_Id + ") from " + Table_ReturnMemoDetails, null);
+        if (res.moveToFirst()) {
+            do {
+                id = res.getInt(0);
+            } while (res.moveToNext());
+        }
+        res.close();
+        return ++id;
+    }
+
+    public int getMaxRMDetId(int mastAuto) {
+        int id = 0;
+        Cursor res = getWritableDatabase().rawQuery("select max(" + RMD_Dtlid + ") from " + Table_ReturnMemoDetails + " where " + RMD_Id + "=" + mastAuto, null);
+        if (res.moveToFirst()) {
+            do {
+                id = res.getInt(0);
+            } while (res.moveToNext());
+        }
+        res.close();
+        return ++id;
+    }
+
+    public String getGstGroupFromProdId(int prodId){
+        String name = "NA";
+        String str =  "select "+PM_Gstgroup+","+PM_GSTType+" from "+Table_ProductMaster
+                            +" where "+PM_Id+"="+prodId;
+        Constant.showLog(str);
+        Cursor res = getWritableDatabase().rawQuery(str,null);
+        if(res.moveToFirst()){
+            do{
+                name = res.getString(0) + "-" + res.getString(1);
+            }while (res.moveToNext());
+        }
+        res.close();
+        return name;
+    }
+
+    public void saveReturnMemoMaster(ReturnMemoMasterClass master){
+        ContentValues cv = new ContentValues();
+        cv.put(RMM_Auto,master.getAuto());
+        cv.put(RMM_Id,master.getId());
+        cv.put(RMM_Machinename,master.getMachineName());
+        cv.put(RMM_Counterno,master.getCounterNo());
+        cv.put(RMM_Rmemono,master.getrMemoNo());
+        cv.put(RMM_Billno,master.getBillNo());
+        cv.put(RMM_Custcode,master.getCustcode());
+        cv.put(RMM_Netbillamt,master.getNetbillamt());
+        cv.put(RMM_Returnqty,master.getReturnqty());
+        cv.put(RMM_Returnamt,master.getReturnamt());
+        cv.put(RMM_Dis,master.getDis());
+        cv.put(RMM_Tax,master.getTax());
+        cv.put(RMM_Netamt,master.getNetamt());
+        cv.put(RMM_Grossamt,master.getGrossamt());
+        cv.put(RMM_Remark,master.getRemark());
+        cv.put(RMM_Empname,master.getEmpname());
+        cv.put(RMM_Createby,master.getCreateby());
+        cv.put(RMM_Createdt,master.getCreatedt());
+        cv.put(RMM_Modifiedby,master.getModifiedby());
+        cv.put(RMM_Modifieddt,master.getModifieddt());
+        cv.put(RMM_Deletedby,master.getDeletedby());
+        cv.put(RMM_Deleteddt,master.getDeleteddt());
+        cv.put(RMM_Financialyr,master.getFinancialyr());
+        cv.put(RMM_Maxno,master.getMaxno());
+        cv.put(RMM_Branchid,master.getBranchID());
+        cv.put(RMM_Inwrds,master.getInwrds());
+        cv.put(RMM_Redeemst,master.getRedeemst());
+        cv.put(RMM_Status,master.getStatus());
+        cv.put(RMM_Actualcreatedate,master.getActualCreateDate());
+        cv.put(RMM_Createtime,master.getCreatetime());
+        cv.put(RMM_Type,master.getType());
+        cv.put(RMM_Redeemtype,master.getRedeemtype());
+        cv.put(RMM_Specialright,master.getSpecialRight());
+        cv.put(RMM_Balredeem,master.getBalRedeem());
+        cv.put(RMM_Msreplclm,master.getMsreplclm());
+        cv.put(RMM_Billknockamt,master.getBillKnockAmt());
+        cv.put(RMM_Openst,master.getOpenSt());
+        cv.put(RMM_Openby,master.getOpenBy());
+        cv.put(RMM_Opendate,master.getOpenDate());
+        cv.put(RMM_Openreason,master.getOpenReason());
+        cv.put(RMM_Returnreason,master.getReturnReason());
+        cv.put(RMM_Gatepassno,master.getGatePassNo());
+        cv.put(RMM_Cntype,master.getCNType());
+        cv.put(RMM_Createdfrom,master.getCreatedFrom());
+        cv.put(RMM_Revgainpts,master.getRevGainPts());
+        cv.put(RMM_Revrdmpts,master.getRevRdmPts());
+        cv.put(RMM_Cgstamt,master.getCGSTAMT());
+        cv.put(RMM_Sgstamt,master.getSGSTAMT());
+        cv.put(RMM_Igstamt,master.getIGSTAPP());
+        cv.put(RMM_Igstapp,master.getIGSTAPP());
+        getWritableDatabase().insert(Table_ReturnMemoMaster, null, cv);
+
+    }
+
+    public void saveReturnMemoDetail(ReturnMemoDetailClass retDet){
+        ContentValues cv = new ContentValues();
+        cv.put(RMD_Id,retDet.getId());
+        cv.put(RMD_Mastid,retDet.getMastid());
+        cv.put(RMD_Rmemono,retDet.getrMemoNo());
+        cv.put(RMD_Itemcode,retDet.getItemcode());
+        cv.put(RMD_Barcode,retDet.getBarcode());
+        cv.put(RMD_Qty,retDet.getQty());
+        cv.put(RMD_Rate,retDet.getRate());
+        cv.put(RMD_Amt,retDet.getAmt());
+        cv.put(RMD_Returnid,retDet.getReturnID());
+        cv.put(RMD_Branchid,retDet.getBranchID());
+        cv.put(RMD_Financialyr,retDet.getFinancialyr());
+        cv.put(RMD_Counterno,retDet.getCounterNo());
+        cv.put(RMD_Autoid,retDet.getAutoID());
+        cv.put(RMD_Disper,retDet.getDisper());
+        cv.put(RMD_Disamt,retDet.getDisamt());
+        cv.put(RMD_Vatper,retDet.getVatper());
+        cv.put(RMD_Vatamt,retDet.getVatamt());
+        cv.put(RMD_Nonbarst,retDet.getNonbarst());
+        cv.put(RMD_Itemname,retDet.getItemName());
+        cv.put(RMD_Empid,retDet.getEmpid());
+        cv.put(RMD_Mrp,retDet.getMRP());
+        cv.put(RMD_Mastid,retDet.getMastid());
+        cv.put(RMD_Billdetauto,retDet.getBillDetAuto());
+        cv.put(RMD_Dtlid,retDet.getDtlid());
+        cv.put(RMD_Billdisper,retDet.getBilldisper());
+        cv.put(RMD_Billdisamt,retDet.getBilldisamt());
+        cv.put(RMD_Gstper,retDet.getGSTPER());
+        cv.put(RMD_Cgstamt,retDet.getCGSTAMT());
+        cv.put(RMD_Sgstamt,retDet.getSGSTAMT());
+        cv.put(RMD_Cgstper,retDet.getCGSTPER());
+        cv.put(RMD_Sgstper,retDet.getSGSTPER());
+        cv.put(RMD_Cessper,retDet.getCESSPER());
+        cv.put(RMD_Cessamt,retDet.getCESSAMT());
+        cv.put(RMD_Igstamt,retDet.getIGSTAMT());
+        cv.put(RMD_Taxableamt,retDet.getTaxableAmt());
+        getWritableDatabase().insert(Table_ReturnMemoDetails, null, cv);
+    }
+
+    public void updateRetQty(String retQty, BillDetailClass det){
+        ContentValues cv = new ContentValues();
+        cv.put(BD_Retqty,retQty);
+        String str = "update "+Table_BillDetails+" set "+BD_Retqty+"="+retQty+
+                " where "+BD_Auto+"="+det.getAuto()+" and "+BD_Id+"="+det.getId()+
+                " and "+BD_Billid+"="+det.getBillID()+" and "+BD_Itemid+"="+det.getItemId();
+        Constant.showLog(str);
+        getWritableDatabase().update(Table_BillDetails,cv,
+                BD_Auto+"=? and "+BD_Id+"=? and "+BD_Billid+"=? and "+BD_Itemid +"=?",
+                new String[]{String.valueOf(det.getAuto()),String.valueOf(det.getId()),
+                        String.valueOf(det.getBillID()),String.valueOf(det.getItemId())});
+    }
+
+    public void updateTRetQty(String TRetQty, BillMasterClass mast){
+        ContentValues cv = new ContentValues();
+        cv.put(BM_TRetQty,TRetQty);
+        String str = "update "+Table_BillMaster+" set "+BM_TRetQty+"="+TRetQty+
+                " where "+BM_Autono+"="+mast.getAutoNo()+" and "+BM_Id+"="+mast.getId()+
+                " and "+BM_Billno+"='"+mast.getBillNo()+"'";
+        Constant.showLog(str);
+        getWritableDatabase().update(Table_BillMaster,cv,
+                BM_Autono+"=? and "+BM_Id+"=? and "+BM_Billno+"=?",
+                new String[]{String.valueOf(mast.getAutoNo()),String.valueOf(mast.getId()),
+                        mast.getBillNo(),});
+    }
+
+    public Cursor getRateMaster() {
+        return getWritableDatabase().rawQuery("select * from " + Table_RateMaster
+                + " where " + RTM_Active + " in('Y','A') order by " + RTM_Auto, null);
+    }
 }

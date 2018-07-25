@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.db.DBHandler;
-import com.pait.smartpos.db.DBHandlerR;
+import com.pait.smartpos.db.DBHandler;
 import com.pait.smartpos.interfaces.ServerCallback;
 import com.pait.smartpos.log.WriteLog;
 import com.pait.smartpos.model.UserProfileClass;
@@ -213,8 +213,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
             PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
             dbpath = pInfo.applicationInfo.dataDir+"/databases";
             Constant.showLog(dbpath);
-            new DBHandler(getApplicationContext()).getReadableDatabase();
-            //CopyDb();
+            CopyDb();
         } catch (Exception e) {
             e.printStackTrace();
             writeLog("doThis_"+e.getMessage());
@@ -225,7 +224,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
 
     private void CopyDb() throws IOException {
         if(!checkDB()){
-            InputStream is = getApplicationContext().getAssets().open(DBHandlerR.Database_Name);
+            InputStream is = getApplicationContext().getAssets().open(DBHandler.Database_Name);
             File file = new File(dbpath);
             if(!file.exists()) {
                 if (file.mkdir()) {
@@ -233,7 +232,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
                     writeLog("CopyDb_Database_Created");
                 }
             }
-            OutputStream os = new FileOutputStream(dbpath+"/"+ DBHandlerR.Database_Name);
+            OutputStream os = new FileOutputStream(dbpath+"/"+ DBHandler.Database_Name);
             byte[] buffer = new byte[2014];
             while (is.read(buffer)>0){
                 os.write(buffer);
@@ -245,7 +244,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private boolean checkDB(){
-        File file = getApplicationContext().getDatabasePath(DBHandlerR.Database_Name);
+        File file = getApplicationContext().getDatabasePath(DBHandler.Database_Name);
         return file.exists();
     }
 
