@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:sothree="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
     android:id="@+id/sliding_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -129,7 +129,7 @@
                     android:background="@color/lightgray" />
 
                 <EditText
-                    android:id="@+id/ed_ssp"
+                    android:id="@+id/ed_rate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.4"
@@ -218,7 +218,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ffffff"
-        android:clickable="true"
+        android:clickable="false"
         android:focusable="false"
         android:orientation="vertical">
 
@@ -362,7 +362,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6"
-                android:text="Disc %" />
+                android:text="Disc %"
+                android:visibility="gone"/>
 
             <EditText
                 android:id="@+id/ed_discPer"
@@ -370,9 +371,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
                 android:ems="10"
+                android:hint="Enter Disc%"
                 android:inputType="number"
                 android:selectAllOnFocus="true"
-                android:text="0" />
+                android:text="" />
         </LinearLayout>
 
         <LinearLayout
@@ -386,7 +388,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6"
-                android:text="Disc Amnt" />
+                android:text="Disc Amnt"
+                android:visibility="gone"/>
 
             <EditText
                 android:id="@+id/ed_discAmnt"
@@ -396,8 +399,46 @@
                 android:clickable="false"
                 android:editable="false"
                 android:ems="10"
+                android:hint="Discount Amount"
                 android:focusable="false"
                 android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/mobpadding5">
+
+            <TextView
+                style="@style/textViewMob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="CGST : "/>
+
+            <TextView
+                android:id="@+id/tv_cgstamnt"
+                style="@style/textViewMob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="0"/>
+
+            <TextView
+                style="@style/textViewMob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="SGST : "/>
+
+            <TextView
+                android:id="@+id/tv_sgstamnt"
+                style="@style/textViewMob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="0"/>
         </LinearLayout>
 
         <LinearLayout
@@ -424,7 +465,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
+                android:clickable="false"
+                android:editable="false"
                 android:ems="10"
+                android:focusable="false"
                 android:inputType="number"
                 android:selectAllOnFocus="true" />
         </LinearLayout>
@@ -432,8 +476,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:visibility="gone">
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -451,7 +494,7 @@
 
             <EditText
                 android:id="@+id/ed_retMemo"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
                 android:ems="10"
@@ -464,6 +507,19 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Enter Card Number"
+            android:imeActionId="@integer/ed_custName"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/ed_chequeNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Cheque Number"
             android:imeActionId="@integer/ed_custName"
             android:imeOptions="actionNext"
             android:inputType="number"
@@ -528,7 +584,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:gravity="center"
-                android:text="@string/return_amnt" />
+                android:text="@string/tender" />
+
+            <TextView
+                style="@style/textViewMob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="Tender Ret Amnt" />
 
             <TextView
                 style="@style/textViewMob"
@@ -545,6 +609,24 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="@dimen/mobpadding2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/cashmwmo_ed_draw"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/ed_tenderAmnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:selectAllOnFocus="true"
+                    android:text="0" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/tv_returnamnt"
@@ -615,4 +697,5 @@
         </LinearLayout>
 
     </LinearLayout>
-]</com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

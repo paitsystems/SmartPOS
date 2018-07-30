@@ -59,7 +59,7 @@ public class BillReprintCancelAdapter extends BaseAdapter{
 
         BillReprintCancelClass bill = (BillReprintCancelClass) getItem(i);
         holder.tv_billNo.setText(bill.getBillNo());
-        holder.tv_tableNo.setText(bill.getTableNo());
+        holder.tv_tableNo.setText(String.valueOf(bill.getQty()));
         holder.tv_amnt.setText(bill.getNetAmt());
         if(bill.getStatus().equals("Y")|| bill.getStatus().equals("A")){
             holder.tv_status.setBackground(ContextCompat.getDrawable(context,R.drawable.active_draw));

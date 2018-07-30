@@ -1,44 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\sneha_android_project\\SmartPOS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
+            "outputFile": "D:\\android_project\\SmartPOS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Sneha\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\33dc76c6462636cb5830abab43339dca\\res\\values-si\\values-si.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,215,322,429,517,622,738,827,914,998,1107,1212,1310,1420,1519,1625,1784,1883",
-                        "endColumns": "109,106,106,87,104,115,88,86,83,108,104,97,109,98,105,158,98,81",
-                        "endOffsets": "210,317,424,512,617,733,822,909,993,1102,1207,1305,1415,1514,1620,1779,1878,1960"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,37",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,215,322,429,517,622,738,827,914,998,1107,1212,1310,1420,1519,1625,1784,4562",
-                        "endColumns": "109,106,106,87,104,115,88,86,83,108,104,97,109,98,105,158,98,81",
-                        "endOffsets": "210,317,424,512,617,733,822,909,993,1102,1207,1305,1415,1514,1620,1779,1878,4639"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Sneha\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5a53c5e03d84d3086d35a5ed37d8cd34\\res\\values-si\\values-si.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "38",
-                        "startColumns": "4",
-                        "startOffsets": "4644",
-                        "endColumns": "100",
-                        "endOffsets": "4740"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Sneha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\b003cf73860436da23e6759e4d0c0b7a\\res\\values-si\\values.xml",
+                    "source": "C:\\Users\\Anup\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\a1e6338af8162e4f9eb7df240088d09a\\res\\values-si\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -55,7 +21,41 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Sneha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\27ed19a1b7a5e824a0f3c66129ecb96f\\res\\values-si\\values.xml",
+                    "source": "C:\\Users\\Anup\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\3ad3ecabd52cf4aa90562c721fc2d2ee\\res\\values-si\\values-si.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "38",
+                        "startColumns": "4",
+                        "startOffsets": "4644",
+                        "endColumns": "100",
+                        "endOffsets": "4740"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Anup\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\2f1723a30b21833b2fefb46e4502bbfb\\res\\values-si\\values-si.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,215,322,429,517,622,738,827,914,998,1107,1212,1310,1420,1519,1625,1784,1883",
+                        "endColumns": "109,106,106,87,104,115,88,86,83,108,104,97,109,98,105,158,98,81",
+                        "endOffsets": "210,317,424,512,617,733,822,909,993,1102,1207,1305,1415,1514,1620,1779,1878,1960"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,37",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,215,322,429,517,622,738,827,914,998,1107,1212,1310,1420,1519,1625,1784,4562",
+                        "endColumns": "109,106,106,87,104,115,88,86,83,108,104,97,109,98,105,158,98,81",
+                        "endOffsets": "210,317,424,512,617,733,822,909,993,1102,1207,1305,1415,1514,1620,1779,1878,4639"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Anup\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\056536ad8395229cfaad7b1df409ad56\\res\\values-si\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

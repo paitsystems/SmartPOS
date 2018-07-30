@@ -1,27 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\sneha_android_project\\SmartPOS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de\\values-de.xml",
+            "outputFile": "D:\\android_project\\SmartPOS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de\\values-de.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Sneha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\27ed19a1b7a5e824a0f3c66129ecb96f\\res\\values-de\\values.xml",
+                    "source": "C:\\Users\\Anup\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\2f1723a30b21833b2fefb46e4502bbfb\\res\\values-de\\values-de.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "203",
-                        "endOffsets": "450"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,210,308,420,506,611,726,803,879,961,1072,1175,1274,1385,1487,1594,1750,1852",
+                        "endColumns": "104,97,111,85,104,114,76,75,81,110,102,98,110,101,106,155,101,81",
+                        "endOffsets": "205,303,415,501,606,721,798,874,956,1067,1170,1269,1380,1482,1589,1745,1847,1929"
                     },
                     "to": {
-                        "startLines": "27",
-                        "startColumns": "4",
-                        "startOffsets": "3072",
-                        "endColumns": "203",
-                        "endOffsets": "3271"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,37",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,210,308,420,506,611,726,803,879,961,1072,1175,1274,1385,1487,1594,1750,4692",
+                        "endColumns": "104,97,111,85,104,114,76,75,81,110,102,98,110,101,106,155,101,81",
+                        "endOffsets": "205,303,415,501,606,721,798,874,956,1067,1170,1269,1380,1482,1589,1745,1847,4769"
                     }
                 },
                 {
-                    "source": "C:\\Users\\Sneha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\b003cf73860436da23e6759e4d0c0b7a\\res\\values-de\\values.xml",
+                    "source": "C:\\Users\\Anup\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\a1e6338af8162e4f9eb7df240088d09a\\res\\values-de\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Sneha\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5a53c5e03d84d3086d35a5ed37d8cd34\\res\\values-de\\values-de.xml",
+                    "source": "C:\\Users\\Anup\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\3ad3ecabd52cf4aa90562c721fc2d2ee\\res\\values-de\\values-de.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -55,20 +55,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Sneha\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\33dc76c6462636cb5830abab43339dca\\res\\values-de\\values-de.xml",
+                    "source": "C:\\Users\\Anup\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\056536ad8395229cfaad7b1df409ad56\\res\\values-de\\values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,210,308,420,506,611,726,803,879,961,1072,1175,1274,1385,1487,1594,1750,1852",
-                        "endColumns": "104,97,111,85,104,114,76,75,81,110,102,98,110,101,106,155,101,81",
-                        "endOffsets": "205,303,415,501,606,721,798,874,956,1067,1170,1269,1380,1482,1589,1745,1847,1929"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "203",
+                        "endOffsets": "450"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,37",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,210,308,420,506,611,726,803,879,961,1072,1175,1274,1385,1487,1594,1750,4692",
-                        "endColumns": "104,97,111,85,104,114,76,75,81,110,102,98,110,101,106,155,101,81",
-                        "endOffsets": "205,303,415,501,606,721,798,874,956,1067,1170,1269,1380,1482,1589,1745,1847,4769"
+                        "startLines": "27",
+                        "startColumns": "4",
+                        "startOffsets": "3072",
+                        "endColumns": "203",
+                        "endOffsets": "3271"
                     }
                 }
             ]

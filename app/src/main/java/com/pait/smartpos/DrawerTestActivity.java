@@ -338,21 +338,21 @@ public class DrawerTestActivity extends AppCompatActivity implements View.OnClic
                 /*case R.id.table:
                     navItemIndex = 1;
                     CURRENT_TAG = TAG_TABLE;
-                    break;*/
+                    break;
                 case R.id.product:
                     navItemIndex = 1;
                     CURRENT_TAG = TAG_PRODUCT;
                     break;
-               /* case R.id.category:
+                case R.id.category:
                     navItemIndex = 3;
                     CURRENT_TAG = TAG_CAT;
-                    break;*/
+                    break;
                /* case R.id.gst:
                     navItemIndex = 4;
                     CURRENT_TAG = TAG_GST;
                     break;*/
                 case R.id.printer:
-                    navItemIndex = 2;
+                    navItemIndex = 1;
                     CURRENT_TAG = TAG_PRINTER;
                     break;
                 /*case R.id.report:
@@ -360,13 +360,13 @@ public class DrawerTestActivity extends AppCompatActivity implements View.OnClic
                     CURRENT_TAG = TAG_REPORT;
                     break;*/
                 case R.id.billreprint:
-                    navItemIndex = 3;
+                    navItemIndex = 2;
                     CURRENT_TAG = TAG_BILL;
                     break;
-                case R.id.billupdate:
-                    navItemIndex = 4;
+                /*case R.id.billupdate:
+                    navItemIndex = 3;
                     CURRENT_TAG = TAG_UB;
-                    break;
+                    break;*/
                 case R.id.logout:
                     drawer.closeDrawers();
                     showDia(2);
@@ -461,7 +461,7 @@ public class DrawerTestActivity extends AppCompatActivity implements View.OnClic
                 invalidateOptionsMenu();
                 flag = 1;
                 break;
-            case 1:
+            case 4:
                 Bundle bundle2 = new Bundle();
                 bundle2.putString("master","cat3");
                 fragment = new MasterUpdationFragment();
@@ -486,7 +486,7 @@ public class DrawerTestActivity extends AppCompatActivity implements View.OnClic
                 menuflag = 3;
                 flag = 1;
                 break;
-            case 2:
+            case 1:
                 fragment = new PairedDeviceFragment();
                 invalidateOptionsMenu();
                 menuflag = -1;
@@ -498,13 +498,13 @@ public class DrawerTestActivity extends AppCompatActivity implements View.OnClic
                 menuflag = -1;
                 flag = 1;
                 break;
-            case 4:
+            case 3:
                 fragment = new UpdateBillReportFragment();
                 invalidateOptionsMenu();
                 menuflag = -1;
                 flag = 1;
                 break;
-            case 3:
+            case 2:
                 fragment = new BillReprintCancelFragment();
                 invalidateOptionsMenu();
                 menuflag = -1;
@@ -542,7 +542,7 @@ public class DrawerTestActivity extends AppCompatActivity implements View.OnClic
         AlertDialog.Builder builder = new AlertDialog.Builder(DrawerTestActivity.this);
         builder.setCancelable(false);
         if (i == -1) {
-            builder.setMessage("Recoonect Printer");
+            builder.setMessage("Reconnect Printer");
             builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {

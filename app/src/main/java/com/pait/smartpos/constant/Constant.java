@@ -27,8 +27,8 @@ public class Constant {
     public static String folder_name = "PAIT";
     public static String log_file_name = "RestoLog";
     public static String default_gst_name = "GST5";
-    public static final String ipaddress = "http://172.30.1.209/PAITSP/service.svc";
-    //public static final String ipaddress = "http://license.lnbinfotech.com/PAITSP/service.svc";
+    //public static final String ipaddress = "http://172.30.1.209/PAITSP/service.svc";
+    public static final String ipaddress = "http://license.lnbinfotech.com/PAITSP/service.svc";
     //TODO: Check CustImage Url
     public static final String imgIpaddress = "http://license.lnbinfotech.com/PAIT/Aditya_Wawse.jpg";
     public static final String bgImgIPAddress = "https://api.androidhive.info/images/nav-menu-header-bg.jpg";

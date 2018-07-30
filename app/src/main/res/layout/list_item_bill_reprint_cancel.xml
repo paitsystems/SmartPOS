@@ -28,7 +28,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="0.3"
+                    android:layout_weight="0.5"
                     android:gravity="center_vertical"
                     android:minHeight="?android:attr/listPreferredItemHeightSmall"
                     android:text="Bill No"
@@ -40,10 +40,11 @@
                     android:id="@+id/tv_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.6"
-                    android:text="TextView"
                     android:layout_gravity="center"
-                    android:gravity="center_vertical" />
+                    android:layout_weight="0.5"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:text="TextView" />
             </LinearLayout>
 
             <LinearLayout
@@ -55,19 +56,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Qty" />
+                    android:textColor="@color/black"
+                    android:text="Qty : " />
 
                 <TextView
                     android:id="@+id/tv_tableNo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textColor="@color/black"
                     android:text="2" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textColor="@color/black"
                     android:text="Amnt : " />
 
                 <TextView
@@ -75,6 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textColor="@color/black"
                     android:text="1000" />
             </LinearLayout>
         </LinearLayout>

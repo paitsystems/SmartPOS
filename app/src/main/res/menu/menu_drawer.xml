@@ -9,10 +9,10 @@
             android:id="@+id/table"
             android:icon="@drawable/ic_table_icon_black"
             android:title="@string/table_master" />-->
-        <item
+       <!-- <item
             android:id="@+id/product"
             android:icon="@drawable/ic_restaurant_menu_black_24dp"
-            android:title="@string/product_master" />
+            android:title="@string/product_master" />-->
         <!--<item
             android:id="@+id/category"
             android:icon="@drawable/ic_four_black_squares"
@@ -33,10 +33,10 @@
             android:id="@+id/billreprint"
             android:icon="@drawable/ic_pay"
             android:title="@string/bill" />
-        <item
+       <!-- <item
             android:id="@+id/billupdate"
             android:icon="@drawable/ic_exchange"
-            android:title="@string/updatedbills" />
+            android:title="@string/updatedbills" />-->
         <item
             android:id="@+id/logout"
             android:icon="@drawable/ic_logout"

@@ -13,7 +13,7 @@ import com.google.android.gms.drive.DriveResource;
 import com.google.android.gms.drive.MetadataChangeSet;
 import com.pait.smartpos.DriveBaseActivity;
 import com.pait.smartpos.R;
-import com.pait.smartpos.db.DBHandlerR;
+import com.pait.smartpos.db.DBHandler;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,10 +26,10 @@ public class CreateFolderActivity extends DriveBaseActivity {
     @Override
     protected void onDriveClientReady() {
         //createFolder();
-        String dbpath = "//data//" + getApplicationContext().getPackageName() + "//databases//"+ DBHandlerR.Database_Name;
+        String dbpath = "//data//" + getApplicationContext().getPackageName() + "//databases//"+ DBHandler.Database_Name;
         saveToDrive(
                 Drive.DriveApi.getAppFolder(getDriveResourceClient().asGoogleApiClient()),
-                DBHandlerR.Database_Name,
+                DBHandler.Database_Name,
                 "application/x-sqlite3",
                 new File(dbpath)
         );

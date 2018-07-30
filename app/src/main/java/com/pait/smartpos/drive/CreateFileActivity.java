@@ -22,7 +22,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
 import com.pait.smartpos.DriveBaseActivity;
 import com.pait.smartpos.R;
-import com.pait.smartpos.db.DBHandlerR;
+import com.pait.smartpos.db.DBHandler;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -39,7 +39,7 @@ public class CreateFileActivity extends DriveBaseActivity {
 
         constant = new Constant(CreateFileActivity.this);
         constant.showPD();
-        dbpath = "//data//" + "//data//" + getApplicationContext().getPackageName() + "//databases//" + DBHandlerR.Database_Name;
+        dbpath = "//data//" + "//data//" + getApplicationContext().getPackageName() + "//databases//" + DBHandler.Database_Name;
 
         Query query = new Query.Builder()
                         .addFilter(Filters.and(Filters.eq(SearchableField.MIME_TYPE, "application/x-sqlite3"),
@@ -53,10 +53,10 @@ public class CreateFileActivity extends DriveBaseActivity {
                     public void onSuccess(MetadataBuffer metadataBuffer) {
                         for (Metadata m : metadataBuffer) {
                             DriveResource driveResource = m.getDriveId().asDriveResource();
-                            Log.i(TAG, "Deleting file: " + DBHandlerR.Database_Name + "  DriveId:(" + m.getDriveId() + ")");
+                            Log.i(TAG, "Deleting file: " + DBHandler.Database_Name + "  DriveId:(" + m.getDriveId() + ")");
                             getDriveResourceClient().delete(driveResource);
                         }
-                        createFile(DBHandlerR.Database_Name,
+                        createFile(DBHandler.Database_Name,
                                 "application/x-sqlite3",
                                 new File(dbpath)
                         );
@@ -66,8 +66,8 @@ public class CreateFileActivity extends DriveBaseActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         constant.showPD();
-                        Log.i(TAG, "ERROR: File not found: " + DBHandlerR.Database_Name);
-                        createFile(DBHandlerR.Database_Name, "application/x-sqlite3", new File(dbpath)
+                        Log.i(TAG, "ERROR: File not found: " + DBHandler.Database_Name);
+                        createFile(DBHandler.Database_Name, "application/x-sqlite3", new File(dbpath)
                         );
                     }
                 });

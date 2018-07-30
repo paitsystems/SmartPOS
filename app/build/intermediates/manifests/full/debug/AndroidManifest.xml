@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="17"
+        android:minSdkVersion="19"
         android:targetSdkVersion="27" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -199,21 +199,41 @@
             android:name="com.pait.smartpos.drive.RetrieveContentsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name="com.pait.smartpos.BillReprintCancelActivity" />
-        <activity android:name="com.pait.smartpos.UpdatedBillReportActivity" />
-        <activity android:name="com.pait.smartpos.CashMemoActivity" />
+        <activity
+            android:name="com.pait.smartpos.BillReprintCancelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pait.smartpos.UpdatedBillReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pait.smartpos.CashMemoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name="com.pait.smartpos.InwardActivity"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustNothing" />
-        <activity android:name="com.pait.smartpos.ExpenseActivity" />
-        <activity android:name="com.pait.smartpos.ReportMenuActivity" />
-        <activity android:name="com.pait.smartpos.ExpenseReportActivity" />
-        <activity android:name="com.pait.smartpos.ReturnMemoActivity" />
-        <activity android:name="com.pait.smartpos.CollectionSumReportActivity" />
-        <activity android:name="com.pait.smartpos.ProductwiseStockReportActivity" />
-        <activity android:name="com.pait.smartpos.InwardFirstScreenActivity" />
-        <activity android:name="com.pait.smartpos.InwardReportActivity" />
-        <activity android:name="com.pait.smartpos.InwardDetailActivity" />
+        <activity
+            android:name="com.pait.smartpos.ExpenseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pait.smartpos.ReportMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pait.smartpos.ExpenseReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pait.smartpos.ReturnMemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pait.smartpos.CollectionSumReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pait.smartpos.ProductwiseStockReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.pait.smartpos.ExportOthersActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
             android:excludeFromRecents="true"

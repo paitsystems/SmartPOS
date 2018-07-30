@@ -1,872 +1,888 @@
 -- Merging decision tree log ---
 provider#android.support.v4.content.FileProvider
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:23:9-31:20
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:23:9-31:20
 	android:grantUriPermissions
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:27:13-47
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:27:13-47
 	android:authorities
-		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:25:13-60
+		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:25:13-60
 	android:exported
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:26:13-37
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:24:13-67
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:24:13-67
 manifest
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
-MERGED from [com.android.support:multidex:1.0.2] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\f3a5f28ab3eabb9774082dc35ee710d8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:design:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\d0431b13b1faa367af4ff28c231c2ec3\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\33dc76c6462636cb5830abab43339dca\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\37a7273fce45dc6bdf4a0a15b43a305c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.sothree.slidinguppanel:library:3.4.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\library-3.4.0.aar\92f46bdbc3cfc8c3ea5ac828bc229b8c\AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\81da30682c3c5313a6863d97c44842fb\AndroidManifest.xml:17:1-27:12
-MERGED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\8ae3100f3340e691ee0dd1ecf362468c\AndroidManifest.xml:17:1-39:12
-MERGED from [com.google.android.gms:play-services-drive:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-drive-15.0.1.aar\5d5f17a2c1b6ab1a6ac86f25feb8d849\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-flags:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-flags-15.0.1.aar\7e3b04cae11ddbec6a2df7dfac3298fd\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.firebase:firebase-core:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.1.aar\2572cde171f80274c9ebda1e47aee8c0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\ec25409a57cd3bdf8cf39c4e8751e48f\AndroidManifest.xml:17:1-34:12
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:17:1-55:12
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\de5bac536b2d28ad13e8ace6412e918b\AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:17:1-65:12
-MERGED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\2260d75a7188cd2359d4a28593556ff9\AndroidManifest.xml:2:1-16:12
-MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-15.0.1.aar\ffea550b4d88194200d441371f0dbb45\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-auth-base:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-15.0.1.aar\e0b6567553d2835d720f64d22e2235ab\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.0.aar\04ad293999d476d03c8f789174791422\AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\b003cf73860436da23e6759e4d0c0b7a\AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\808c33955c1e34fc0a4261a752319e2f\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-15.0.1.aar\c73e927f15fdc51be8cb4e85c90b4564\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-stats:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-stats-15.0.1.aar\a010ca0740a6020138b55bd5c66d29cf\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-16.0.0.aar\162d0c1e23a57d446be887a0f17cc373\AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\27ed19a1b7a5e824a0f3c66129ecb96f\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\177feee0fa0a8bc6c6130840d5ddfc9b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\849794ac96732eedcb3bd8abf311876a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\b4f10fb3cae25b9a6f1c68e848d24ea4\AndroidManifest.xml:2:1-19:12
-MERGED from [com.github.erd:android-volley:1.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\android-volley-1.0.0.aar\10af8d8c79d9a0ecbab852fb7a14c359\AndroidManifest.xml:1:85-7:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\86d8ba47534e6a57a52ea020614b8b3f\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\491c8648b5866bf30bfb0bc0e6b0a5ce\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\f0e6810719245382e42f14df93f6a007\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\d615cfe9ddf8822e061dee58e49764b4\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\6166c8d5a55c40e8571563a930ed6b1c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\a87b79402e1833975a89478c9fc76537\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\8215f28481214d0b194f737b6538f9e6\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\b092b58277a027f7808eae4292a33fee\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\5a53c5e03d84d3086d35a5ed37d8cd34\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\5488bf0e6cce5cabcfd7c38bc3412345\AndroidManifest.xml:17:1-24:12
-MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.6.3.aar\a97201dea567c765f536317a8349b10b\AndroidManifest.xml:45:1-56:12
-MERGED from [com.crashlytics.sdk.android:beta:1.2.9] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\beta-1.2.9.aar\27d912e054a5ec9bd755dab4836f2f0d\AndroidManifest.xml:2:1-13:12
-MERGED from [com.crashlytics.sdk.android:answers:1.4.2] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\answers-1.4.2.aar\7002b6347da3e0aa669cc7ab98e36d98\AndroidManifest.xml:2:1-13:12
-MERGED from [io.fabric.sdk.android:fabric:1.4.3] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\fabric-1.4.3.aar\104d797bf2640f6cbf0846b5a44c3379\AndroidManifest.xml:22:1-33:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\fda352152ee861f13da9a2fdc3d5ae2d\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\9506ddb4d76c75ca9f09ecdb39f9399f\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\54b9c19d7c05a99d689405d75ff9efa1\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\ae54407185b4d85fed8f728e6cad8fcf\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\fe194bbf7495e250d9319c54267eef16\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:design:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\bf796e9bee93599565fa580dc160a21d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\2f1723a30b21833b2fefb46e4502bbfb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\6c9c21f1269e91a7d0d8f19f93269cc9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.sothree.slidinguppanel:library:3.4.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\library-3.4.0.aar\68c601005328842a86fdc90398a13e0d\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\0f493ae268f6deab548a642aba1b59f5\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\445c20e7b326f3ceb6bde08115cd058e\AndroidManifest.xml:17:1-39:12
+MERGED from [com.google.android.gms:play-services-drive:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-drive-15.0.1.aar\7721ac32c166bddf9fb3a6e4de120167\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-flags:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-flags-15.0.1.aar\bde56f0d48fce1d6f3e13b780166ad5c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-core:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.1.aar\5f56161041a68f4190bdf256d4c0a742\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\7dcfe42b2a6edd98c77517161cdaee23\AndroidManifest.xml:17:1-34:12
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:17:1-55:12
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\39d50471d80f5aeebb6eaca1557496dd\AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:17:1-65:12
+MERGED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\0e27efb324fa6177cdf9879510a4544c\AndroidManifest.xml:2:1-16:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-15.0.1.aar\a055fe7cfb033fd0ef20f0428a1609b2\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-15.0.1.aar\565f43891f294fee305fd2592d471ec9\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.0.aar\a2d52354fe9f28ac573884d75e564f5f\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a1e6338af8162e4f9eb7df240088d09a\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\af998611d8fdcd129900f49f800b93c7\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-15.0.1.aar\1719ec8c87ca88224dad48e7e4129fdd\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-stats:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-stats-15.0.1.aar\886dd21e9d988c615ff3f8bdea302ee4\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-16.0.0.aar\8297b3a8c198d3f346e0558064b7eb69\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\056536ad8395229cfaad7b1df409ad56\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\1fd20e4219f05679ff4b7b2fae07a1be\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\758da7265c4c9f03a0e26a57b12f8bc9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\ac42a17c6e4b5fce75824855243b7fd4\AndroidManifest.xml:2:1-19:12
+MERGED from [com.github.erd:android-volley:1.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\android-volley-1.0.0.aar\c73307b89a2dcfde02fad9e635bacee0\AndroidManifest.xml:1:85-7:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\e1a318e39e93a863b5e605514c6c6f48\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\58a6c8ce559966cdf074dab5635103ea\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\e01d915fb31506c0c0afa28e9f2ccc7d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\93bdb884dcfa6169fd79bd252afef14a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\baadbb0bec4f0baf508dc21d671c20b5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\5c74699d3bec2cc385e6cf96e81723d5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\141c76129ca50c6c1bffaa295ac303c0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\09e7914e7b20bd82114df5ae3372b7dd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\3ad3ecabd52cf4aa90562c721fc2d2ee\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\1ffe9c60a1558850745da508a5d84994\AndroidManifest.xml:17:1-24:12
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.6.3.aar\3559c895cc70eaed4181375ef9692545\AndroidManifest.xml:45:1-56:12
+MERGED from [com.crashlytics.sdk.android:beta:1.2.9] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\beta-1.2.9.aar\5e412895d4a22d4b1306202a95934cd1\AndroidManifest.xml:2:1-13:12
+MERGED from [com.crashlytics.sdk.android:answers:1.4.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\answers-1.4.2.aar\13bf225185931b4a2cb029bc25b90361\AndroidManifest.xml:2:1-13:12
+MERGED from [io.fabric.sdk.android:fabric:1.4.3] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\fabric-1.4.3.aar\462b044cfa46260b13b8803575487eb3\AndroidManifest.xml:22:1-33:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\9b61590bf6e198e275156be3e4a79dbf\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\38f7758451f7e041969c2e7afdfa2cf7\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\7a451036bfbcea1f37fe2672a2dbf238\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f35b07a0e6349945f69e65927044f97e\AndroidManifest.xml:17:1-22:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
 	package
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:3:5-32
-		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
-		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:3:5-32
+		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
+		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
-		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
+		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
+		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
-		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
+		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
+		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:5:5-79
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\ec25409a57cd3bdf8cf39c4e8751e48f\AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\ec25409a57cd3bdf8cf39c4e8751e48f\AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\de5bac536b2d28ad13e8ace6412e918b\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\de5bac536b2d28ad13e8ace6412e918b\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:22:5-79
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:5:5-79
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\7dcfe42b2a6edd98c77517161cdaee23\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\7dcfe42b2a6edd98c77517161cdaee23\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\39d50471d80f5aeebb6eaca1557496dd\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\39d50471d80f5aeebb6eaca1557496dd\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:22:5-79
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:5:22-76
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:5:22-76
 uses-permission#android.permission.INTERNET
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:6:5-67
-MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\81da30682c3c5313a6863d97c44842fb\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\81da30682c3c5313a6863d97c44842fb\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\ec25409a57cd3bdf8cf39c4e8751e48f\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\ec25409a57cd3bdf8cf39c4e8751e48f\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\de5bac536b2d28ad13e8ace6412e918b\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\de5bac536b2d28ad13e8ace6412e918b\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:23:5-67
-MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\b4f10fb3cae25b9a6f1c68e848d24ea4\AndroidManifest.xml:9:5-67
-MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\b4f10fb3cae25b9a6f1c68e848d24ea4\AndroidManifest.xml:9:5-67
-MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.6.3.aar\a97201dea567c765f536317a8349b10b\AndroidManifest.xml:52:5-67
-MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.6.3.aar\a97201dea567c765f536317a8349b10b\AndroidManifest.xml:52:5-67
-MERGED from [com.crashlytics.sdk.android:beta:1.2.9] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\beta-1.2.9.aar\27d912e054a5ec9bd755dab4836f2f0d\AndroidManifest.xml:9:5-67
-MERGED from [com.crashlytics.sdk.android:beta:1.2.9] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\beta-1.2.9.aar\27d912e054a5ec9bd755dab4836f2f0d\AndroidManifest.xml:9:5-67
-MERGED from [com.crashlytics.sdk.android:answers:1.4.2] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\answers-1.4.2.aar\7002b6347da3e0aa669cc7ab98e36d98\AndroidManifest.xml:9:5-67
-MERGED from [com.crashlytics.sdk.android:answers:1.4.2] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\answers-1.4.2.aar\7002b6347da3e0aa669cc7ab98e36d98\AndroidManifest.xml:9:5-67
-MERGED from [io.fabric.sdk.android:fabric:1.4.3] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\fabric-1.4.3.aar\104d797bf2640f6cbf0846b5a44c3379\AndroidManifest.xml:29:5-67
-MERGED from [io.fabric.sdk.android:fabric:1.4.3] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\fabric-1.4.3.aar\104d797bf2640f6cbf0846b5a44c3379\AndroidManifest.xml:29:5-67
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:6:5-67
+MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\0f493ae268f6deab548a642aba1b59f5\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\0f493ae268f6deab548a642aba1b59f5\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\7dcfe42b2a6edd98c77517161cdaee23\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\7dcfe42b2a6edd98c77517161cdaee23\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\39d50471d80f5aeebb6eaca1557496dd\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\39d50471d80f5aeebb6eaca1557496dd\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:23:5-67
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\ac42a17c6e4b5fce75824855243b7fd4\AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\ac42a17c6e4b5fce75824855243b7fd4\AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.6.3.aar\3559c895cc70eaed4181375ef9692545\AndroidManifest.xml:52:5-67
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.6.3.aar\3559c895cc70eaed4181375ef9692545\AndroidManifest.xml:52:5-67
+MERGED from [com.crashlytics.sdk.android:beta:1.2.9] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\beta-1.2.9.aar\5e412895d4a22d4b1306202a95934cd1\AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:beta:1.2.9] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\beta-1.2.9.aar\5e412895d4a22d4b1306202a95934cd1\AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:answers:1.4.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\answers-1.4.2.aar\13bf225185931b4a2cb029bc25b90361\AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:answers:1.4.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\answers-1.4.2.aar\13bf225185931b4a2cb029bc25b90361\AndroidManifest.xml:9:5-67
+MERGED from [io.fabric.sdk.android:fabric:1.4.3] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\fabric-1.4.3.aar\462b044cfa46260b13b8803575487eb3\AndroidManifest.xml:29:5-67
+MERGED from [io.fabric.sdk.android:fabric:1.4.3] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\fabric-1.4.3.aar\462b044cfa46260b13b8803575487eb3\AndroidManifest.xml:29:5-67
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:6:22-64
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:6:22-64
 uses-permission#android.permission.BLUETOOTH
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:7:5-68
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:7:5-68
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:7:22-65
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:7:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:8:5-74
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:8:5-74
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:8:22-71
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:8:22-71
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:9:5-75
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:9:5-75
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:9:22-72
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:9:22-72
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:10:5-81
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:10:5-81
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:10:22-78
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:10:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:11:5-80
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:11:5-80
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:11:22-77
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:11:22-77
 uses-permission#android.permission.RECEIVE_SMS
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:12:5-70
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:12:5-70
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:12:22-67
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:12:22-67
 uses-permission#android.permission.READ_SMS
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:13:5-67
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:13:5-67
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:13:22-64
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:13:22-64
 uses-permission#android.permission.SEND_SMS
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:14:5-67
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:14:5-67
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:14:22-64
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:14:22-64
 uses-permission#android.permission.CAMERA
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:15:5-65
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:15:5-65
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:15:22-62
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:15:22-62
 application
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:17:5-201:19
-MERGED from [com.sothree.slidinguppanel:library:3.4.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\library-3.4.0.aar\92f46bdbc3cfc8c3ea5ac828bc229b8c\AndroidManifest.xml:9:5-20
-MERGED from [com.sothree.slidinguppanel:library:3.4.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\library-3.4.0.aar\92f46bdbc3cfc8c3ea5ac828bc229b8c\AndroidManifest.xml:9:5-20
-MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\81da30682c3c5313a6863d97c44842fb\AndroidManifest.xml:24:5-25:19
-MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\81da30682c3c5313a6863d97c44842fb\AndroidManifest.xml:24:5-25:19
-MERGED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\8ae3100f3340e691ee0dd1ecf362468c\AndroidManifest.xml:22:5-37:19
-MERGED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\8ae3100f3340e691ee0dd1ecf362468c\AndroidManifest.xml:22:5-37:19
-MERGED from [com.google.android.gms:play-services-drive:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-drive-15.0.1.aar\5d5f17a2c1b6ab1a6ac86f25feb8d849\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-drive:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-drive-15.0.1.aar\5d5f17a2c1b6ab1a6ac86f25feb8d849\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-core:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.1.aar\2572cde171f80274c9ebda1e47aee8c0\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-core:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.1.aar\2572cde171f80274c9ebda1e47aee8c0\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\ec25409a57cd3bdf8cf39c4e8751e48f\AndroidManifest.xml:26:5-32:19
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\ec25409a57cd3bdf8cf39c4e8751e48f\AndroidManifest.xml:26:5-32:19
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:28:5-53:19
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:28:5-53:19
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\de5bac536b2d28ad13e8ace6412e918b\AndroidManifest.xml:28:5-38:19
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\de5bac536b2d28ad13e8ace6412e918b\AndroidManifest.xml:28:5-38:19
-MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:34:5-63:19
-MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:34:5-63:19
-MERGED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\2260d75a7188cd2359d4a28593556ff9\AndroidManifest.xml:8:5-14:19
-MERGED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\2260d75a7188cd2359d4a28593556ff9\AndroidManifest.xml:8:5-14:19
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.0.aar\04ad293999d476d03c8f789174791422\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.0.aar\04ad293999d476d03c8f789174791422\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\b003cf73860436da23e6759e4d0c0b7a\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\b003cf73860436da23e6759e4d0c0b7a\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\808c33955c1e34fc0a4261a752319e2f\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\808c33955c1e34fc0a4261a752319e2f\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-15.0.1.aar\c73e927f15fdc51be8cb4e85c90b4564\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-15.0.1.aar\c73e927f15fdc51be8cb4e85c90b4564\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-stats:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-stats-15.0.1.aar\a010ca0740a6020138b55bd5c66d29cf\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-stats:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-stats-15.0.1.aar\a010ca0740a6020138b55bd5c66d29cf\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-16.0.0.aar\162d0c1e23a57d446be887a0f17cc373\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-16.0.0.aar\162d0c1e23a57d446be887a0f17cc373\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\27ed19a1b7a5e824a0f3c66129ecb96f\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\27ed19a1b7a5e824a0f3c66129ecb96f\AndroidManifest.xml:22:5-26:19
-MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\b4f10fb3cae25b9a6f1c68e848d24ea4\AndroidManifest.xml:11:5-17:19
-MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\b4f10fb3cae25b9a6f1c68e848d24ea4\AndroidManifest.xml:11:5-17:19
-MERGED from [com.github.erd:android-volley:1.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\android-volley-1.0.0.aar\10af8d8c79d9a0ecbab852fb7a14c359\AndroidManifest.xml:5:5-19
-MERGED from [com.github.erd:android-volley:1.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\android-volley-1.0.0.aar\10af8d8c79d9a0ecbab852fb7a14c359\AndroidManifest.xml:5:5-19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\86d8ba47534e6a57a52ea020614b8b3f\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\86d8ba47534e6a57a52ea020614b8b3f\AndroidManifest.xml:9:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\5488bf0e6cce5cabcfd7c38bc3412345\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\5488bf0e6cce5cabcfd7c38bc3412345\AndroidManifest.xml:22:5-20
-MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.6.3.aar\a97201dea567c765f536317a8349b10b\AndroidManifest.xml:54:5-20
-MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.6.3.aar\a97201dea567c765f536317a8349b10b\AndroidManifest.xml:54:5-20
-MERGED from [com.crashlytics.sdk.android:beta:1.2.9] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\beta-1.2.9.aar\27d912e054a5ec9bd755dab4836f2f0d\AndroidManifest.xml:11:5-20
-MERGED from [com.crashlytics.sdk.android:beta:1.2.9] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\beta-1.2.9.aar\27d912e054a5ec9bd755dab4836f2f0d\AndroidManifest.xml:11:5-20
-MERGED from [com.crashlytics.sdk.android:answers:1.4.2] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\answers-1.4.2.aar\7002b6347da3e0aa669cc7ab98e36d98\AndroidManifest.xml:11:5-20
-MERGED from [com.crashlytics.sdk.android:answers:1.4.2] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\answers-1.4.2.aar\7002b6347da3e0aa669cc7ab98e36d98\AndroidManifest.xml:11:5-20
-MERGED from [io.fabric.sdk.android:fabric:1.4.3] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\fabric-1.4.3.aar\104d797bf2640f6cbf0846b5a44c3379\AndroidManifest.xml:31:5-20
-MERGED from [io.fabric.sdk.android:fabric:1.4.3] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\fabric-1.4.3.aar\104d797bf2640f6cbf0846b5a44c3379\AndroidManifest.xml:31:5-20
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:17:5-210:19
+MERGED from [com.sothree.slidinguppanel:library:3.4.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\library-3.4.0.aar\68c601005328842a86fdc90398a13e0d\AndroidManifest.xml:9:5-20
+MERGED from [com.sothree.slidinguppanel:library:3.4.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\library-3.4.0.aar\68c601005328842a86fdc90398a13e0d\AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\0f493ae268f6deab548a642aba1b59f5\AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\0f493ae268f6deab548a642aba1b59f5\AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\445c20e7b326f3ceb6bde08115cd058e\AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\445c20e7b326f3ceb6bde08115cd058e\AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-drive:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-drive-15.0.1.aar\7721ac32c166bddf9fb3a6e4de120167\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-drive:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-drive-15.0.1.aar\7721ac32c166bddf9fb3a6e4de120167\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-core:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.1.aar\5f56161041a68f4190bdf256d4c0a742\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-core:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.1.aar\5f56161041a68f4190bdf256d4c0a742\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\7dcfe42b2a6edd98c77517161cdaee23\AndroidManifest.xml:26:5-32:19
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\7dcfe42b2a6edd98c77517161cdaee23\AndroidManifest.xml:26:5-32:19
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\39d50471d80f5aeebb6eaca1557496dd\AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\39d50471d80f5aeebb6eaca1557496dd\AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:34:5-63:19
+MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:34:5-63:19
+MERGED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\0e27efb324fa6177cdf9879510a4544c\AndroidManifest.xml:8:5-14:19
+MERGED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\0e27efb324fa6177cdf9879510a4544c\AndroidManifest.xml:8:5-14:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.0.aar\a2d52354fe9f28ac573884d75e564f5f\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.0.aar\a2d52354fe9f28ac573884d75e564f5f\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a1e6338af8162e4f9eb7df240088d09a\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a1e6338af8162e4f9eb7df240088d09a\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\af998611d8fdcd129900f49f800b93c7\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\af998611d8fdcd129900f49f800b93c7\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-15.0.1.aar\1719ec8c87ca88224dad48e7e4129fdd\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-15.0.1.aar\1719ec8c87ca88224dad48e7e4129fdd\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-stats:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-stats-15.0.1.aar\886dd21e9d988c615ff3f8bdea302ee4\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-stats-15.0.1.aar\886dd21e9d988c615ff3f8bdea302ee4\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-16.0.0.aar\8297b3a8c198d3f346e0558064b7eb69\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-16.0.0.aar\8297b3a8c198d3f346e0558064b7eb69\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\056536ad8395229cfaad7b1df409ad56\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\056536ad8395229cfaad7b1df409ad56\AndroidManifest.xml:22:5-26:19
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\ac42a17c6e4b5fce75824855243b7fd4\AndroidManifest.xml:11:5-17:19
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\ac42a17c6e4b5fce75824855243b7fd4\AndroidManifest.xml:11:5-17:19
+MERGED from [com.github.erd:android-volley:1.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\android-volley-1.0.0.aar\c73307b89a2dcfde02fad9e635bacee0\AndroidManifest.xml:5:5-19
+MERGED from [com.github.erd:android-volley:1.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\android-volley-1.0.0.aar\c73307b89a2dcfde02fad9e635bacee0\AndroidManifest.xml:5:5-19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\e1a318e39e93a863b5e605514c6c6f48\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\e1a318e39e93a863b5e605514c6c6f48\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\1ffe9c60a1558850745da508a5d84994\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\1ffe9c60a1558850745da508a5d84994\AndroidManifest.xml:22:5-20
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.6.3.aar\3559c895cc70eaed4181375ef9692545\AndroidManifest.xml:54:5-20
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.6.3.aar\3559c895cc70eaed4181375ef9692545\AndroidManifest.xml:54:5-20
+MERGED from [com.crashlytics.sdk.android:beta:1.2.9] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\beta-1.2.9.aar\5e412895d4a22d4b1306202a95934cd1\AndroidManifest.xml:11:5-20
+MERGED from [com.crashlytics.sdk.android:beta:1.2.9] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\beta-1.2.9.aar\5e412895d4a22d4b1306202a95934cd1\AndroidManifest.xml:11:5-20
+MERGED from [com.crashlytics.sdk.android:answers:1.4.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\answers-1.4.2.aar\13bf225185931b4a2cb029bc25b90361\AndroidManifest.xml:11:5-20
+MERGED from [com.crashlytics.sdk.android:answers:1.4.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\answers-1.4.2.aar\13bf225185931b4a2cb029bc25b90361\AndroidManifest.xml:11:5-20
+MERGED from [io.fabric.sdk.android:fabric:1.4.3] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\fabric-1.4.3.aar\462b044cfa46260b13b8803575487eb3\AndroidManifest.xml:31:5-20
+MERGED from [io.fabric.sdk.android:fabric:1.4.3] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\fabric-1.4.3.aar\462b044cfa46260b13b8803575487eb3\AndroidManifest.xml:31:5-20
 	android:label
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:21:9-41
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:21:9-41
 	android:icon
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:20:9-43
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:20:9-43
 	android:allowBackup
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:19:9-35
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:19:9-35
 	android:theme
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:22:9-40
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:22:9-40
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:18:9-28
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:18:9-28
 activity#com.pait.smartpos.FirstActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:33:9-43:20
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:33:9-43:20
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:36:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:36:13-49
 	android:label
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:35:13-57
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:35:13-57
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:37:13-67
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:37:13-67
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:34:13-42
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:34:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:38:13-42:29
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:38:13-42:29
 action#android.intent.action.MAIN
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:39:17-69
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:39:17-69
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:39:25-66
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:39:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:41:17-77
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:41:17-77
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:41:27-74
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:41:27-74
 activity#com.pait.smartpos.bluetooth_printer.PrinterOptions
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:44:9-46:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:44:9-46:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:46:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:46:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:45:13-61
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:45:13-61
 activity#com.pait.smartpos.bluetooth_printer.SearchNewDevice
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:47:9-49:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:47:9-49:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:49:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:49:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:48:13-62
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:48:13-62
 activity#com.pait.smartpos.CashMemoActivityR
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:50:9-53:80
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:50:9-53:80
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:52:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:52:13-49
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:53:13-77
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:53:13-77
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:51:13-46
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:51:13-46
 activity#com.pait.smartpos.LoginActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:54:9-57:70
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:54:9-57:70
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:56:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:56:13-49
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:57:13-67
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:57:13-67
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:55:13-42
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:55:13-42
 activity#com.pait.smartpos.RegistrationActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:58:9-61:70
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:58:9-61:70
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:60:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:60:13-49
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:61:13-67
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:61:13-67
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:59:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:59:13-49
 activity#com.pait.smartpos.AddTableMasterActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:62:9-65:70
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:62:9-65:70
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:64:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:64:13-49
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:65:13-67
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:65:13-67
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:63:13-51
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:63:13-51
 activity#com.pait.smartpos.AddProductMasterActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:66:9-69:80
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:66:9-69:80
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:68:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:68:13-49
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:69:13-77
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:69:13-77
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:67:13-53
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:67:13-53
 activity#com.pait.smartpos.MainActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:70:9-73:80
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:70:9-73:80
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:72:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:72:13-49
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:73:13-77
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:73:13-77
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:71:13-41
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:71:13-41
 activity#com.pait.smartpos.SettingsOptionsActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:74:9-77:70
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:74:9-77:70
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:76:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:76:13-49
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:77:13-67
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:77:13-67
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:75:13-52
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:75:13-52
 activity#com.pait.smartpos.UpdateProductMasterActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:78:9-80:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:78:9-80:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:80:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:80:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:79:13-56
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:79:13-56
 activity#com.pait.smartpos.UpdateCategoryActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:81:9-83:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:81:9-83:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:83:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:83:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:82:13-51
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:82:13-51
 activity#com.pait.smartpos.DrawerTestActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:84:9-87:50
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:84:9-87:50
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:86:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:86:13-49
 	android:theme
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:87:13-47
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:87:13-47
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:85:13-47
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:85:13-47
 receiver#com.pait.smartpos.broadcastreceivers.DateChangeBroadcastReceiver
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:89:9-84
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:89:9-84
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:89:19-81
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:89:19-81
 receiver#com.pait.smartpos.CheckOTPActivity$MySMSReceiver
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:90:9-97:20
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:90:9-97:20
 	android:enabled
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:92:13-35
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:92:13-35
 	android:exported
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:93:13-36
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:93:13-36
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:91:13-59
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:91:13-59
 intent-filter#action:name:android.provider.Telephony.SMS_RECEIVED
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:94:13-96:29
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:94:13-96:29
 action#android.provider.Telephony.SMS_RECEIVED
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:95:17-82
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:95:17-82
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:95:25-79
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:95:25-79
 activity#com.pait.smartpos.TaxMasterActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:99:9-101:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:99:9-101:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:101:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:101:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:100:13-46
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:100:13-46
 activity#com.pait.smartpos.Change_TaxActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:102:9-104:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:102:9-104:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:104:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:104:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:103:13-47
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:103:13-47
 activity#com.pait.smartpos.AddNewTaxActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:105:9-107:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:105:9-107:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:107:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:107:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:106:13-46
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:106:13-46
 activity#com.pait.smartpos.ReportListActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:108:9-110:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:108:9-110:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:110:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:110:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:109:13-47
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:109:13-47
 activity#com.pait.smartpos.Repo_Collection_Activity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:111:9-113:53
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:111:9-113:53
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:113:13-50
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:113:13-50
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:112:13-53
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:112:13-53
 activity#com.pait.smartpos.Repo_Itemwise_SaleActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:114:9-116:53
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:114:9-116:53
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:116:13-50
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:116:13-50
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:115:13-55
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:115:13-55
 activity#com.pait.smartpos.Repo_Todays_SaleActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:117:9-119:53
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:117:9-119:53
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:119:13-50
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:119:13-50
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:118:13-53
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:118:13-53
 activity#com.pait.smartpos.UpdateTableMasterActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:120:9-122:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:120:9-122:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:122:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:122:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:121:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:121:13-54
 activity#com.pait.smartpos.UpdateTableGSTActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:123:9-125:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:123:9-125:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:125:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:125:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:124:13-51
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:124:13-51
 activity#com.pait.smartpos.UpdateGSTDetailActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:126:9-128:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:126:9-128:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:128:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:128:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:127:13-52
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:127:13-52
 activity#com.pait.smartpos.AddGSTActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:129:9-131:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:129:9-131:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:131:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:131:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:130:13-43
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:130:13-43
 activity#com.pait.smartpos.UpdateTableNameGSTActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:132:9-134:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:132:9-134:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:134:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:134:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:133:13-55
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:133:13-55
 activity#com.pait.smartpos.VerificationActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:135:9-137:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:135:9-137:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:137:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:137:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:136:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:136:13-49
 activity#com.pait.smartpos.NavigationActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:138:9-141:59
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:138:9-141:59
 	android:label
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:140:13-62
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:140:13-62
 	android:theme
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:141:13-56
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:141:13-56
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:139:13-47
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:139:13-47
 activity#com.pait.smartpos.ImportMasterActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:142:9-144:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:142:9-144:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:144:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:144:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:143:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:143:13-49
 activity#com.pait.smartpos.MasterUpdationActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:145:9-147:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:145:9-147:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:147:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:147:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:146:13-51
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:146:13-51
 activity#com.pait.smartpos.AddCategoryMasterActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:148:9-150:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:148:9-150:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:150:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:150:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:149:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:149:13-54
 activity#com.pait.smartpos.UserProfileActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:151:9-153:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:151:9-153:52
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:153:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:153:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:152:13-48
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:152:13-48
 activity#com.pait.smartpos.CheckOTPActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:154:9-157:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:154:9-157:57
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:156:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:156:13-49
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:157:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:157:13-54
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:155:13-45
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:155:13-45
 activity#com.pait.smartpos.ContactUsActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:158:9-161:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:158:9-161:57
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:160:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:160:13-49
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:161:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:161:13-54
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:159:13-46
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:159:13-46
 activity#com.pait.smartpos.AboutUsActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:162:9-165:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:162:9-165:57
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:164:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:164:13-49
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:165:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:165:13-54
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:163:13-44
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:163:13-44
 activity#com.pait.smartpos.DataBackupActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:166:9-169:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:166:9-169:57
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:168:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:168:13-49
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:169:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:169:13-54
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:167:13-47
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:167:13-47
 activity#com.pait.smartpos.drive.CreateFileActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:170:9-173:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:170:9-173:57
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:172:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:172:13-49
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:173:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:173:13-54
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:171:13-53
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:171:13-53
 activity#com.pait.smartpos.drive.CreateFolderActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:174:9-177:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:174:9-177:57
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:176:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:176:13-49
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:177:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:177:13-54
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:175:13-55
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:175:13-55
 activity#com.pait.smartpos.drive.DeleteFileActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:178:9-181:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:178:9-181:57
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:180:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:180:13-49
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:181:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:181:13-54
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:179:13-53
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:179:13-53
 activity#com.pait.smartpos.drive.RetrieveContentsActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:182:9-185:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:182:9-185:57
 	android:screenOrientation
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:184:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:184:13-49
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:185:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:185:13-54
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:183:13-59
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:183:13-59
 activity#com.pait.smartpos.BillReprintCancelActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:186:9-63
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:186:9-187:52
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:187:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:186:19-60
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:186:19-60
 activity#com.pait.smartpos.UpdatedBillReportActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:187:9-63
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:188:9-189:52
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:189:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:187:19-60
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:188:19-60
 activity#com.pait.smartpos.CashMemoActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:188:9-54
-	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:188:19-51
-activity#com.pait.smartpos.InwardActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:189:9-191:59
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:190:9-192:56
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:191:13-49
 	android:windowSoftInputMode
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:191:13-56
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:192:13-54
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:190:13-43
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:190:19-51
+activity#com.pait.smartpos.InwardActivity
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:193:9-195:59
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:194:13-49
+	android:windowSoftInputMode
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:195:13-56
+	android:name
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:193:19-49
 activity#com.pait.smartpos.ExpenseActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:192:9-53
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:196:9-197:52
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:197:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:192:19-50
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:196:19-50
 activity#com.pait.smartpos.ReportMenuActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:193:9-56
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:198:9-199:52
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:199:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:193:19-53
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:198:19-53
 activity#com.pait.smartpos.ExpenseReportActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:194:9-59
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:200:9-201:51
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:201:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:194:19-56
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:200:19-56
 activity#com.pait.smartpos.ReturnMemoActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:195:9-56
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:202:9-203:52
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:203:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:195:19-53
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:202:19-53
 activity#com.pait.smartpos.CollectionSumReportActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:196:9-65
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:204:9-205:52
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:205:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:196:19-62
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:204:19-62
 activity#com.pait.smartpos.ProductwiseStockReportActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:197:9-68
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:206:9-207:51
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:207:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:197:19-65
-activity#com.pait.smartpos.InwardFirstScreenActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:198:9-63
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:206:19-65
+activity#com.pait.smartpos.ExportOthersActivity
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:208:9-209:51
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:209:13-49
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:198:19-60
-activity#com.pait.smartpos.InwardReportActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:199:9-58
-	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:199:19-55
-activity#com.pait.smartpos.InwardDetailActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:200:9-67
-	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:200:19-55
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:208:19-55
 uses-sdk
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:multidex:1.0.2] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\f3a5f28ab3eabb9774082dc35ee710d8\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:multidex:1.0.2] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\f3a5f28ab3eabb9774082dc35ee710d8\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:design:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\d0431b13b1faa367af4ff28c231c2ec3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\d0431b13b1faa367af4ff28c231c2ec3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\33dc76c6462636cb5830abab43339dca\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\33dc76c6462636cb5830abab43339dca\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\37a7273fce45dc6bdf4a0a15b43a305c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\37a7273fce45dc6bdf4a0a15b43a305c\AndroidManifest.xml:20:5-44
-MERGED from [com.sothree.slidinguppanel:library:3.4.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\library-3.4.0.aar\92f46bdbc3cfc8c3ea5ac828bc229b8c\AndroidManifest.xml:7:5-44
-MERGED from [com.sothree.slidinguppanel:library:3.4.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\library-3.4.0.aar\92f46bdbc3cfc8c3ea5ac828bc229b8c\AndroidManifest.xml:7:5-44
-MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\81da30682c3c5313a6863d97c44842fb\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\81da30682c3c5313a6863d97c44842fb\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\8ae3100f3340e691ee0dd1ecf362468c\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\8ae3100f3340e691ee0dd1ecf362468c\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-drive:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-drive-15.0.1.aar\5d5f17a2c1b6ab1a6ac86f25feb8d849\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-drive:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-drive-15.0.1.aar\5d5f17a2c1b6ab1a6ac86f25feb8d849\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-flags:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-flags-15.0.1.aar\7e3b04cae11ddbec6a2df7dfac3298fd\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-flags:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-flags-15.0.1.aar\7e3b04cae11ddbec6a2df7dfac3298fd\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-core:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.1.aar\2572cde171f80274c9ebda1e47aee8c0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-core:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.1.aar\2572cde171f80274c9ebda1e47aee8c0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\ec25409a57cd3bdf8cf39c4e8751e48f\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\ec25409a57cd3bdf8cf39c4e8751e48f\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\de5bac536b2d28ad13e8ace6412e918b\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\de5bac536b2d28ad13e8ace6412e918b\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\2260d75a7188cd2359d4a28593556ff9\AndroidManifest.xml:5:5-6:37
-MERGED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\2260d75a7188cd2359d4a28593556ff9\AndroidManifest.xml:5:5-6:37
-MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-15.0.1.aar\ffea550b4d88194200d441371f0dbb45\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-15.0.1.aar\ffea550b4d88194200d441371f0dbb45\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-15.0.1.aar\e0b6567553d2835d720f64d22e2235ab\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-15.0.1.aar\e0b6567553d2835d720f64d22e2235ab\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.0.aar\04ad293999d476d03c8f789174791422\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.0.aar\04ad293999d476d03c8f789174791422\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\b003cf73860436da23e6759e4d0c0b7a\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\b003cf73860436da23e6759e4d0c0b7a\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\808c33955c1e34fc0a4261a752319e2f\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\808c33955c1e34fc0a4261a752319e2f\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-15.0.1.aar\c73e927f15fdc51be8cb4e85c90b4564\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-15.0.1.aar\c73e927f15fdc51be8cb4e85c90b4564\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-stats:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-stats-15.0.1.aar\a010ca0740a6020138b55bd5c66d29cf\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-stats:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-stats-15.0.1.aar\a010ca0740a6020138b55bd5c66d29cf\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-16.0.0.aar\162d0c1e23a57d446be887a0f17cc373\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-16.0.0.aar\162d0c1e23a57d446be887a0f17cc373\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\27ed19a1b7a5e824a0f3c66129ecb96f\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\27ed19a1b7a5e824a0f3c66129ecb96f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\177feee0fa0a8bc6c6130840d5ddfc9b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\177feee0fa0a8bc6c6130840d5ddfc9b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\849794ac96732eedcb3bd8abf311876a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\849794ac96732eedcb3bd8abf311876a\AndroidManifest.xml:20:5-44
-MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\b4f10fb3cae25b9a6f1c68e848d24ea4\AndroidManifest.xml:7:5-43
-MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\b4f10fb3cae25b9a6f1c68e848d24ea4\AndroidManifest.xml:7:5-43
-MERGED from [com.github.erd:android-volley:1.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\android-volley-1.0.0.aar\10af8d8c79d9a0ecbab852fb7a14c359\AndroidManifest.xml:3:5-42
-MERGED from [com.github.erd:android-volley:1.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\android-volley-1.0.0.aar\10af8d8c79d9a0ecbab852fb7a14c359\AndroidManifest.xml:3:5-42
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\86d8ba47534e6a57a52ea020614b8b3f\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\86d8ba47534e6a57a52ea020614b8b3f\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\491c8648b5866bf30bfb0bc0e6b0a5ce\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\491c8648b5866bf30bfb0bc0e6b0a5ce\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\f0e6810719245382e42f14df93f6a007\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\f0e6810719245382e42f14df93f6a007\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\d615cfe9ddf8822e061dee58e49764b4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\d615cfe9ddf8822e061dee58e49764b4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\6166c8d5a55c40e8571563a930ed6b1c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\6166c8d5a55c40e8571563a930ed6b1c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\a87b79402e1833975a89478c9fc76537\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\a87b79402e1833975a89478c9fc76537\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\8215f28481214d0b194f737b6538f9e6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\8215f28481214d0b194f737b6538f9e6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\b092b58277a027f7808eae4292a33fee\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\b092b58277a027f7808eae4292a33fee\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\5a53c5e03d84d3086d35a5ed37d8cd34\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\5a53c5e03d84d3086d35a5ed37d8cd34\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\5488bf0e6cce5cabcfd7c38bc3412345\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\5488bf0e6cce5cabcfd7c38bc3412345\AndroidManifest.xml:20:5-44
-MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.6.3.aar\a97201dea567c765f536317a8349b10b\AndroidManifest.xml:50:5-43
-MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.6.3.aar\a97201dea567c765f536317a8349b10b\AndroidManifest.xml:50:5-43
-MERGED from [com.crashlytics.sdk.android:beta:1.2.9] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\beta-1.2.9.aar\27d912e054a5ec9bd755dab4836f2f0d\AndroidManifest.xml:7:5-43
-MERGED from [com.crashlytics.sdk.android:beta:1.2.9] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\beta-1.2.9.aar\27d912e054a5ec9bd755dab4836f2f0d\AndroidManifest.xml:7:5-43
-MERGED from [com.crashlytics.sdk.android:answers:1.4.2] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\answers-1.4.2.aar\7002b6347da3e0aa669cc7ab98e36d98\AndroidManifest.xml:7:5-43
-MERGED from [com.crashlytics.sdk.android:answers:1.4.2] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\answers-1.4.2.aar\7002b6347da3e0aa669cc7ab98e36d98\AndroidManifest.xml:7:5-43
-MERGED from [io.fabric.sdk.android:fabric:1.4.3] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\fabric-1.4.3.aar\104d797bf2640f6cbf0846b5a44c3379\AndroidManifest.xml:27:5-43
-MERGED from [io.fabric.sdk.android:fabric:1.4.3] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\fabric-1.4.3.aar\104d797bf2640f6cbf0846b5a44c3379\AndroidManifest.xml:27:5-43
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\fda352152ee861f13da9a2fdc3d5ae2d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\fda352152ee861f13da9a2fdc3d5ae2d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\9506ddb4d76c75ca9f09ecdb39f9399f\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\9506ddb4d76c75ca9f09ecdb39f9399f\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\54b9c19d7c05a99d689405d75ff9efa1\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\54b9c19d7c05a99d689405d75ff9efa1\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\ae54407185b4d85fed8f728e6cad8fcf\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\ae54407185b4d85fed8f728e6cad8fcf\AndroidManifest.xml:20:5-44
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\fe194bbf7495e250d9319c54267eef16\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\fe194bbf7495e250d9319c54267eef16\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\bf796e9bee93599565fa580dc160a21d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\bf796e9bee93599565fa580dc160a21d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\2f1723a30b21833b2fefb46e4502bbfb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\2f1723a30b21833b2fefb46e4502bbfb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\6c9c21f1269e91a7d0d8f19f93269cc9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.1.aar\6c9c21f1269e91a7d0d8f19f93269cc9\AndroidManifest.xml:20:5-44
+MERGED from [com.sothree.slidinguppanel:library:3.4.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\library-3.4.0.aar\68c601005328842a86fdc90398a13e0d\AndroidManifest.xml:7:5-44
+MERGED from [com.sothree.slidinguppanel:library:3.4.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\library-3.4.0.aar\68c601005328842a86fdc90398a13e0d\AndroidManifest.xml:7:5-44
+MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\0f493ae268f6deab548a642aba1b59f5\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\0f493ae268f6deab548a642aba1b59f5\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\445c20e7b326f3ceb6bde08115cd058e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\445c20e7b326f3ceb6bde08115cd058e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-drive:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-drive-15.0.1.aar\7721ac32c166bddf9fb3a6e4de120167\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-drive:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-drive-15.0.1.aar\7721ac32c166bddf9fb3a6e4de120167\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-flags-15.0.1.aar\bde56f0d48fce1d6f3e13b780166ad5c\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-flags-15.0.1.aar\bde56f0d48fce1d6f3e13b780166ad5c\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-core:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.1.aar\5f56161041a68f4190bdf256d4c0a742\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.1.aar\5f56161041a68f4190bdf256d4c0a742\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\7dcfe42b2a6edd98c77517161cdaee23\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\7dcfe42b2a6edd98c77517161cdaee23\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\39d50471d80f5aeebb6eaca1557496dd\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\39d50471d80f5aeebb6eaca1557496dd\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\0e27efb324fa6177cdf9879510a4544c\AndroidManifest.xml:5:5-6:37
+MERGED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\0e27efb324fa6177cdf9879510a4544c\AndroidManifest.xml:5:5-6:37
+MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-15.0.1.aar\a055fe7cfb033fd0ef20f0428a1609b2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-15.0.1.aar\a055fe7cfb033fd0ef20f0428a1609b2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-15.0.1.aar\565f43891f294fee305fd2592d471ec9\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-15.0.1.aar\565f43891f294fee305fd2592d471ec9\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.0.aar\a2d52354fe9f28ac573884d75e564f5f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.0.aar\a2d52354fe9f28ac573884d75e564f5f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a1e6338af8162e4f9eb7df240088d09a\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a1e6338af8162e4f9eb7df240088d09a\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\af998611d8fdcd129900f49f800b93c7\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-tasks-15.0.1.aar\af998611d8fdcd129900f49f800b93c7\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-15.0.1.aar\1719ec8c87ca88224dad48e7e4129fdd\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-ads-identifier-15.0.1.aar\1719ec8c87ca88224dad48e7e4129fdd\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-stats:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-stats-15.0.1.aar\886dd21e9d988c615ff3f8bdea302ee4\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-stats-15.0.1.aar\886dd21e9d988c615ff3f8bdea302ee4\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-16.0.0.aar\8297b3a8c198d3f346e0558064b7eb69\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-16.0.0.aar\8297b3a8c198d3f346e0558064b7eb69\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\056536ad8395229cfaad7b1df409ad56\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\056536ad8395229cfaad7b1df409ad56\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\1fd20e4219f05679ff4b7b2fae07a1be\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\1fd20e4219f05679ff4b7b2fae07a1be\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\758da7265c4c9f03a0e26a57b12f8bc9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\758da7265c4c9f03a0e26a57b12f8bc9\AndroidManifest.xml:20:5-44
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\ac42a17c6e4b5fce75824855243b7fd4\AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\ac42a17c6e4b5fce75824855243b7fd4\AndroidManifest.xml:7:5-43
+MERGED from [com.github.erd:android-volley:1.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\android-volley-1.0.0.aar\c73307b89a2dcfde02fad9e635bacee0\AndroidManifest.xml:3:5-42
+MERGED from [com.github.erd:android-volley:1.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\android-volley-1.0.0.aar\c73307b89a2dcfde02fad9e635bacee0\AndroidManifest.xml:3:5-42
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\e1a318e39e93a863b5e605514c6c6f48\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\e1a318e39e93a863b5e605514c6c6f48\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\58a6c8ce559966cdf074dab5635103ea\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\58a6c8ce559966cdf074dab5635103ea\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\e01d915fb31506c0c0afa28e9f2ccc7d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\e01d915fb31506c0c0afa28e9f2ccc7d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\93bdb884dcfa6169fd79bd252afef14a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\93bdb884dcfa6169fd79bd252afef14a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\baadbb0bec4f0baf508dc21d671c20b5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\baadbb0bec4f0baf508dc21d671c20b5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\5c74699d3bec2cc385e6cf96e81723d5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\5c74699d3bec2cc385e6cf96e81723d5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\141c76129ca50c6c1bffaa295ac303c0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\141c76129ca50c6c1bffaa295ac303c0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\09e7914e7b20bd82114df5ae3372b7dd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\09e7914e7b20bd82114df5ae3372b7dd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\3ad3ecabd52cf4aa90562c721fc2d2ee\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\3ad3ecabd52cf4aa90562c721fc2d2ee\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\1ffe9c60a1558850745da508a5d84994\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\1ffe9c60a1558850745da508a5d84994\AndroidManifest.xml:20:5-44
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.6.3.aar\3559c895cc70eaed4181375ef9692545\AndroidManifest.xml:50:5-43
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.6.3] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.6.3.aar\3559c895cc70eaed4181375ef9692545\AndroidManifest.xml:50:5-43
+MERGED from [com.crashlytics.sdk.android:beta:1.2.9] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\beta-1.2.9.aar\5e412895d4a22d4b1306202a95934cd1\AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:beta:1.2.9] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\beta-1.2.9.aar\5e412895d4a22d4b1306202a95934cd1\AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:answers:1.4.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\answers-1.4.2.aar\13bf225185931b4a2cb029bc25b90361\AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:answers:1.4.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\answers-1.4.2.aar\13bf225185931b4a2cb029bc25b90361\AndroidManifest.xml:7:5-43
+MERGED from [io.fabric.sdk.android:fabric:1.4.3] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\fabric-1.4.3.aar\462b044cfa46260b13b8803575487eb3\AndroidManifest.xml:27:5-43
+MERGED from [io.fabric.sdk.android:fabric:1.4.3] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\fabric-1.4.3.aar\462b044cfa46260b13b8803575487eb3\AndroidManifest.xml:27:5-43
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\9b61590bf6e198e275156be3e4a79dbf\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\9b61590bf6e198e275156be3e4a79dbf\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\38f7758451f7e041969c2e7afdfa2cf7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\38f7758451f7e041969c2e7afdfa2cf7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\7a451036bfbcea1f37fe2672a2dbf238\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\7a451036bfbcea1f37fe2672a2dbf238\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f35b07a0e6349945f69e65927044f97e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f35b07a0e6349945f69e65927044f97e\AndroidManifest.xml:20:5-44
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
-		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
+		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
+		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
-		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
+		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
+		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:28:13-30:58
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:28:13-30:58
 	android:resource
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:30:17-55
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:30:17-55
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:29:17-67
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:29:17-67
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
-ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\8ae3100f3340e691ee0dd1ecf362468c\AndroidManifest.xml:23:9-27:75
+ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\445c20e7b326f3ceb6bde08115cd058e\AndroidManifest.xml:23:9-27:75
 	android:excludeFromRecents
-		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\8ae3100f3340e691ee0dd1ecf362468c\AndroidManifest.xml:25:13-46
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\445c20e7b326f3ceb6bde08115cd058e\AndroidManifest.xml:25:13-46
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\8ae3100f3340e691ee0dd1ecf362468c\AndroidManifest.xml:26:13-37
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\445c20e7b326f3ceb6bde08115cd058e\AndroidManifest.xml:26:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\8ae3100f3340e691ee0dd1ecf362468c\AndroidManifest.xml:27:13-72
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\445c20e7b326f3ceb6bde08115cd058e\AndroidManifest.xml:27:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\8ae3100f3340e691ee0dd1ecf362468c\AndroidManifest.xml:24:13-93
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\445c20e7b326f3ceb6bde08115cd058e\AndroidManifest.xml:24:13-93
 service#com.google.android.gms.auth.api.signin.RevocationBoundService
-ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\8ae3100f3340e691ee0dd1ecf362468c\AndroidManifest.xml:33:9-36:110
+ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\445c20e7b326f3ceb6bde08115cd058e\AndroidManifest.xml:33:9-36:110
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\8ae3100f3340e691ee0dd1ecf362468c\AndroidManifest.xml:35:13-36
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\445c20e7b326f3ceb6bde08115cd058e\AndroidManifest.xml:35:13-36
 	android:permission
-		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\8ae3100f3340e691ee0dd1ecf362468c\AndroidManifest.xml:36:13-107
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\445c20e7b326f3ceb6bde08115cd058e\AndroidManifest.xml:36:13-107
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\8ae3100f3340e691ee0dd1ecf362468c\AndroidManifest.xml:34:13-89
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-auth-15.0.1.aar\445c20e7b326f3ceb6bde08115cd058e\AndroidManifest.xml:34:13-89
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\ec25409a57cd3bdf8cf39c4e8751e48f\AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\de5bac536b2d28ad13e8ace6412e918b\AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\de5bac536b2d28ad13e8ace6412e918b\AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:24:5-68
+ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\7dcfe42b2a6edd98c77517161cdaee23\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\39d50471d80f5aeebb6eaca1557496dd\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\39d50471d80f5aeebb6eaca1557496dd\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:24:5-68
 	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\ec25409a57cd3bdf8cf39c4e8751e48f\AndroidManifest.xml:24:22-65
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\7dcfe42b2a6edd98c77517161cdaee23\AndroidManifest.xml:24:22-65
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\ec25409a57cd3bdf8cf39c4e8751e48f\AndroidManifest.xml:27:9-31:19
-MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:35:9-39:19
-MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:35:9-39:19
+ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\7dcfe42b2a6edd98c77517161cdaee23\AndroidManifest.xml:27:9-31:19
+MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:35:9-39:19
+MERGED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:35:9-39:19
 	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\ec25409a57cd3bdf8cf39c4e8751e48f\AndroidManifest.xml:27:18-89
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\7dcfe42b2a6edd98c77517161cdaee23\AndroidManifest.xml:27:18-89
 meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\ec25409a57cd3bdf8cf39c4e8751e48f\AndroidManifest.xml:28:13-30:85
+ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\7dcfe42b2a6edd98c77517161cdaee23\AndroidManifest.xml:28:13-30:85
 	android:value
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\ec25409a57cd3bdf8cf39c4e8751e48f\AndroidManifest.xml:30:17-82
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\7dcfe42b2a6edd98c77517161cdaee23\AndroidManifest.xml:30:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\ec25409a57cd3bdf8cf39c4e8751e48f\AndroidManifest.xml:29:17-139
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-16.0.1.aar\7dcfe42b2a6edd98c77517161cdaee23\AndroidManifest.xml:29:17-139
 uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:26:5-110
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\de5bac536b2d28ad13e8ace6412e918b\AndroidManifest.xml:26:5-110
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\de5bac536b2d28ad13e8ace6412e918b\AndroidManifest.xml:26:5-110
+ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:26:5-110
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\39d50471d80f5aeebb6eaca1557496dd\AndroidManifest.xml:26:5-110
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\39d50471d80f5aeebb6eaca1557496dd\AndroidManifest.xml:26:5-110
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:26:22-107
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:26:22-107
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:29:9-33:20
+ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:29:9-33:20
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:31:13-35
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:31:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:32:13-37
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:30:13-85
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:30:13-85
 receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
-ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:34:9-42:20
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\de5bac536b2d28ad13e8ace6412e918b\AndroidManifest.xml:29:9-37:20
-MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\de5bac536b2d28ad13e8ace6412e918b\AndroidManifest.xml:29:9-37:20
+ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:34:9-42:20
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\39d50471d80f5aeebb6eaca1557496dd\AndroidManifest.xml:29:9-37:20
+MERGED from [com.google.firebase:firebase-analytics-impl:16.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-16.1.1.aar\39d50471d80f5aeebb6eaca1557496dd\AndroidManifest.xml:29:9-37:20
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:36:13-35
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:36:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:37:13-36
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:37:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:38:13-69
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:38:13-69
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:35:13-100
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:35:13-100
 intent-filter#action:name:com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:39:13-41:29
+ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:39:13-41:29
 action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:40:17-79
+ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:40:17-79
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:40:25-76
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:40:25-76
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:44:9-47:40
+ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:44:9-47:40
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:46:13-35
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:46:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:47:13-37
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:47:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:45:13-84
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:45:13-84
 service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:48:9-52:72
+ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:48:9-52:72
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:50:13-35
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:50:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:51:13-37
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:51:13-37
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:52:13-69
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:52:13-69
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\79abe0df2ef2e2a0af06552b7ebed4c3\AndroidManifest.xml:49:13-87
+		ADDED from [com.google.firebase:firebase-analytics:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.0.1.aar\49292fe3b31609d78b73d0ad7ac518da\AndroidManifest.xml:49:13-87
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:26:5-82
+ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:26:5-82
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:26:22-79
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:26:22-79
 permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:28:5-30:47
+ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:28:5-30:47
 	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:30:9-44
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:30:9-44
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:29:9-63
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:29:9-63
 permission#com.pait.smartpos.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:28:5-30:47
+ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:28:5-30:47
 	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:30:9-44
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:30:9-44
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:29:9-63
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:29:9-63
 uses-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:32:5-79
+ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:32:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:32:22-76
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:32:22-76
 uses-permission#com.pait.smartpos.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:32:5-79
+ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:32:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:32:22-76
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:32:22-76
 meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
-ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:36:13-38:85
+ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:36:13-38:85
 	android:value
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:38:17-82
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:38:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:37:17-96
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:37:17-96
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:41:9-50:20
+ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:41:9-50:20
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:43:13-36
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:43:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:44:13-73
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:44:13-73
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:42:13-78
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:42:13-78
 intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+category:name:${applicationId}
-ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:45:13-49:29
+ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:45:13-49:29
 intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+category:name:com.pait.smartpos
-ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:45:13-49:29
+ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:45:13-49:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:46:17-81
+ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:46:17-81
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:46:25-78
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:46:25-78
 category#${applicationId}
-ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:48:17-61
+ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:48:17-61
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:48:27-58
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:48:27-58
 category#com.pait.smartpos
-ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:48:17-61
+ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:48:17-61
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:48:27-58
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:48:27-58
 service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:56:9-62:19
+ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:56:9-62:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:58:13-36
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:58:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:57:13-77
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:57:13-77
 intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:59:13-61:29
+ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:59:13-61:29
 	android:priority
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:59:28-51
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:59:28-51
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:60:17-80
+ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:60:17-80
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\914522dd467c93a036900e805beb1db5\AndroidManifest.xml:60:25-77
+		ADDED from [com.google.firebase:firebase-iid:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-iid-16.0.0.aar\0f306b89aeb4c8eea0d54e8992af4814\AndroidManifest.xml:60:25-77
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\2260d75a7188cd2359d4a28593556ff9\AndroidManifest.xml:9:9-13:39
+ADDED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\0e27efb324fa6177cdf9879510a4544c\AndroidManifest.xml:9:9-13:39
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\2260d75a7188cd2359d4a28593556ff9\AndroidManifest.xml:11:13-72
+		ADDED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\0e27efb324fa6177cdf9879510a4544c\AndroidManifest.xml:11:13-72
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\2260d75a7188cd2359d4a28593556ff9\AndroidManifest.xml:12:13-37
+		ADDED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\0e27efb324fa6177cdf9879510a4544c\AndroidManifest.xml:12:13-37
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\2260d75a7188cd2359d4a28593556ff9\AndroidManifest.xml:13:13-36
+		ADDED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\0e27efb324fa6177cdf9879510a4544c\AndroidManifest.xml:13:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\2260d75a7188cd2359d4a28593556ff9\AndroidManifest.xml:10:13-77
+		ADDED from [com.google.firebase:firebase-common:16.0.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-common-16.0.0.aar\0e27efb324fa6177cdf9879510a4544c\AndroidManifest.xml:10:13-77
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\b003cf73860436da23e6759e4d0c0b7a\AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a1e6338af8162e4f9eb7df240088d09a\AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\b003cf73860436da23e6759e4d0c0b7a\AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a1e6338af8162e4f9eb7df240088d09a\AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\b003cf73860436da23e6759e4d0c0b7a\AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a1e6338af8162e4f9eb7df240088d09a\AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\b003cf73860436da23e6759e4d0c0b7a\AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-base-15.0.1.aar\a1e6338af8162e4f9eb7df240088d09a\AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\27ed19a1b7a5e824a0f3c66129ecb96f\AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\056536ad8395229cfaad7b1df409ad56\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\27ed19a1b7a5e824a0f3c66129ecb96f\AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\056536ad8395229cfaad7b1df409ad56\AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\27ed19a1b7a5e824a0f3c66129ecb96f\AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\play-services-basement-15.0.1.aar\056536ad8395229cfaad7b1df409ad56\AndroidManifest.xml:24:13-58
 provider#com.crashlytics.android.CrashlyticsInitProvider
-ADDED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\b4f10fb3cae25b9a6f1c68e848d24ea4\AndroidManifest.xml:12:9-16:39
+ADDED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\ac42a17c6e4b5fce75824855243b7fd4\AndroidManifest.xml:12:9-16:39
 	android:authorities
-		ADDED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\b4f10fb3cae25b9a6f1c68e848d24ea4\AndroidManifest.xml:14:13-75
+		ADDED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\ac42a17c6e4b5fce75824855243b7fd4\AndroidManifest.xml:14:13-75
 	android:exported
-		ADDED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\b4f10fb3cae25b9a6f1c68e848d24ea4\AndroidManifest.xml:15:13-37
+		ADDED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\ac42a17c6e4b5fce75824855243b7fd4\AndroidManifest.xml:15:13-37
 	android:initOrder
-		ADDED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\b4f10fb3cae25b9a6f1c68e848d24ea4\AndroidManifest.xml:16:13-36
+		ADDED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\ac42a17c6e4b5fce75824855243b7fd4\AndroidManifest.xml:16:13-36
 	android:name
-		ADDED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\b4f10fb3cae25b9a6f1c68e848d24ea4\AndroidManifest.xml:13:13-75
+		ADDED from [com.crashlytics.sdk.android:crashlytics:2.9.4] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\crashlytics-2.9.4.aar\ac42a17c6e4b5fce75824855243b7fd4\AndroidManifest.xml:13:13-75

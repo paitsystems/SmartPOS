@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Smart POS</string>
-    <string name="title_activity_login">Smart POS</string>
+    <string name="app_name">SmartPOS</string>
+    <string name="title_activity_login">SmartPOS</string>
 
     <string name="error_invalid_password">This field is required</string>
     <string name="error_field_required">This field is required</string>
@@ -113,10 +113,10 @@
 
     <string-array name="navigationName">
         <item>Home</item>
-        <item>Product Master</item>
+        <!--<item>Product Master</item>-->
         <item>Printer Options</item>
         <item>Bills Report</item>
-        <item>Updated Bills</item>
+        <!--<item>Updated Bills</item>-->
         <item>Logout</item>
     </string-array>
 

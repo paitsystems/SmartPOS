@@ -5,7 +5,7 @@ public class AddToCartClass {
     private String prodName, barcode, fatherSKU, dispFSKU, designNo, gstGroup, hsnCode,
             rate, total, amnt, mrp, actRate, actMRP, taxableRate, billDiscPer, billDiscAmnt,
             gstPer, cgstAmnt,sgstAmnt, cgstPer, sgstPer, cessPer, cessAmnt, igstAmnt, gstType,
-            discountedTotal, totalGST, netAmnt;
+            discountedTotal, totalGST, netAmnt, enteredRate, totAmnt, totRate;
     private int qty, itemId;
 
     public String getProdName() {
@@ -246,5 +246,29 @@ public class AddToCartClass {
 
     public void setNetAmnt(String netAmnt) {
         this.netAmnt = netAmnt;
+    }
+
+    public String getEnteredRate() {
+        return enteredRate;
+    }
+
+    public void setEnteredRate(String enteredRate) {
+        this.enteredRate = enteredRate;
+    }
+
+    public String getTotAmnt() {
+        return totAmnt;
+    }
+
+    public void setTotAmnt(String totAmnt) {
+        this.totAmnt = totAmnt;
+    }
+
+    public String getTotRate() {
+        return totRate;
+    }
+
+    public void setTotRate(String totRate) {
+        this.totRate = totRate;
     }
 }

@@ -5,9 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Filter;
 import android.widget.TextView;
 
+import com.pait.smartpos.R;
 import com.pait.smartpos.model.ProductClass;
 import java.util.ArrayList;
 
@@ -38,7 +40,14 @@ public class AllProductDialogAdapter extends ArrayAdapter<ProductClass> {
             TextView productLabel = v.findViewById(android.R.id.text1);
             if (productLabel != null) {
                 productLabel.setText(det.getCat3());
+               /* if(det.isSelected()){
+                    productLabel.setTextColor(parent.getContext().getResources().getColor(R.color.red));
+                }*/
             }
+            /*Button productLabel = v.findViewById(R.id.btn_id);
+            if (productLabel != null) {
+                productLabel.setText(det.getCat3());
+            }*/
         }
         return v;
     }

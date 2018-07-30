@@ -38,6 +38,7 @@ public class ProductRateRecyclerAdapter extends RecyclerView.Adapter<ProductRate
         RateMasterClass rate = prodList.get(position);
         holder.btn_rate.setText(String.valueOf(rate.getRate()));
         if(rate.isSelected()){
+            prevSelected = position;
             holder.btn_rate.setBackground(context.getResources().getDrawable(R.drawable.table_occu_draw));
         }else{
             holder.btn_rate.setBackground(context.getResources().getDrawable(R.drawable.table_release_draw));

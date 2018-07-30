@@ -5,7 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--<GridView
+    <EditText
+        android:id="@+id/ed_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:hint="Search Here..."
+        android:maxLines="1"/>
+
+    <GridView
         android:id="@+id/gridview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -14,17 +22,11 @@
         android:verticalSpacing="10dp"
         android:horizontalSpacing="10dp"
         android:stretchMode="columnWidth"
-        android:gravity="center"/>-->
-    <EditText
-        android:id="@+id/ed_search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="left"
-        android:hint="Search Product"
-        android:maxLines="1"/>
-    <ListView
+        android:gravity="center"/>
+
+    <!--<ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        />-->
 </LinearLayout>

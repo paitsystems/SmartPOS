@@ -6,12 +6,16 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.pait.smartpos.R;
 import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.interfaces.RecyclerViewToActivityInterface;
 import com.pait.smartpos.model.AddToCartClass;
+import com.pait.smartpos.model.MasterUpdationClass;
+import com.pait.smartpos.model.ProductClass;
+
 import java.util.List;
 
 public class AddToCartRecyclerAdapter extends RecyclerView.Adapter<AddToCartRecyclerAdapter.AddToCartViewHolder>{
@@ -39,8 +43,8 @@ public class AddToCartRecyclerAdapter extends RecyclerView.Adapter<AddToCartRecy
         holder.tv_qty.setText(String.valueOf(cart.getQty()));
         //holder.tv_rate.setText(String.valueOf(cart.getRate()));
         //holder.tv_amnt.setText(String.valueOf(cart.getAmnt()));
-        holder.tv_rate.setText(String.valueOf(cart.getTaxableRate()));
-        holder.tv_amnt.setText(String.valueOf(cart.getNetAmnt()));
+        holder.tv_rate.setText(cart.getRate());
+        holder.tv_amnt.setText(cart.getTotal());
         if(position == cartList.size()-1){
             listener.calculation(0,0);
         }
@@ -55,9 +59,20 @@ public class AddToCartRecyclerAdapter extends RecyclerView.Adapter<AddToCartRecy
         this.listener = _listener;
     }
 
+    public void removeItem(int position) {
+        cartList.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public void restoreItem(AddToCartClass item, int position) {
+        cartList.add(position, item);
+        notifyItemInserted(position);
+    }
+
     public class AddToCartViewHolder extends RecyclerView.ViewHolder {
 
         private TextView tv_prodName, tv_qty, tv_rate, tv_amnt;
+        public RelativeLayout viewBackground, viewForeground;
 
         public AddToCartViewHolder(View itemView) {
             super(itemView);
@@ -65,6 +80,8 @@ public class AddToCartRecyclerAdapter extends RecyclerView.Adapter<AddToCartRecy
             tv_qty = itemView.findViewById(R.id.tv_qty);
             tv_rate = itemView.findViewById(R.id.tv_rate);
             tv_amnt = itemView.findViewById(R.id.tv_amnt);
+            viewBackground = itemView.findViewById(R.id.view_background);
+            viewForeground = itemView.findViewById(R.id.view_foreground);
         }
     }
 }

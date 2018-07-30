@@ -28,7 +28,7 @@ public class MainOptionFragment extends Fragment implements View.OnClickListener
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //View view = inflater.inflate(R.layout.fragment_main_option,null);
-        View view = inflater.inflate(R.layout.option,null);
+        View view = inflater.inflate(R.layout.test_option_1,null);
         init(view);
         /*btn_cashMemo.setOnClickListener(this);
         btn_inward.setOnClickListener(this);

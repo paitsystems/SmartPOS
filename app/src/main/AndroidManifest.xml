@@ -183,21 +183,30 @@
             android:name=".drive.RetrieveContentsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".BillReprintCancelActivity" />
-        <activity android:name=".UpdatedBillReportActivity" />
-        <activity android:name=".CashMemoActivity" />
-        <activity
-            android:name=".InwardActivity"
+        <activity android:name=".BillReprintCancelActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".UpdatedBillReportActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".CashMemoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".InwardActivity"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustNothing" />
-        <activity android:name=".ExpenseActivity" />
-        <activity android:name=".ReportMenuActivity" />
-        <activity android:name=".ExpenseReportActivity" />
-        <activity android:name=".ReturnMemoActivity" />
-        <activity android:name=".CollectionSumReportActivity" />
-        <activity android:name=".ProductwiseStockReportActivity" />
-        <activity android:name=".InwardFirstScreenActivity" />
-        <activity android:name=".InwardReportActivity" />
-        <activity android:name=".InwardDetailActivity"></activity>
+        <activity android:name=".ExpenseActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ReportMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ExpenseReportActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ReturnMemoActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".CollectionSumReportActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ProductwiseStockReportActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ExportOthersActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

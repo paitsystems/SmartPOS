@@ -31,20 +31,20 @@ public class ReportMenuActivity extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View view) {
-      switch (view.getId()){
-          case R.id.lay_collection:
-              startActivity(new Intent(ReportMenuActivity.this,CollectionSumReportActivity.class));
-              break;
-          case R.id.lay_inward:
-              startActivity(new Intent(ReportMenuActivity.this,InwardReportActivity.class));
-              break;
-          case R.id.lay_prod_stock:
-              startActivity(new Intent(ReportMenuActivity.this,ProductwiseStockReportActivity.class));
-              break;
-          case R.id.lay_expense:
-              startActivity(new Intent(ReportMenuActivity.this,ExpenseReportActivity.class));
-              break;
-      }
+        switch (view.getId()) {
+            case R.id.lay_collection:
+                startActivity(new Intent(ReportMenuActivity.this, CollectionSumReportActivity.class));
+                break;
+            case R.id.lay_inward:
+                startActivity(new Intent(ReportMenuActivity.this, ExportOthersActivity.class));
+                break;
+            case R.id.lay_prod_stock:
+                startActivity(new Intent(ReportMenuActivity.this, ProductwiseStockReportActivity.class));
+                break;
+            case R.id.lay_expense:
+                startActivity(new Intent(ReportMenuActivity.this, ExpenseReportActivity.class));
+                break;
+        }
     }
 
     @Override

@@ -38,6 +38,7 @@ public class ProductListRecyclerAdapter extends RecyclerView.Adapter<ProductList
         ProductClass prod = prodList.get(position);
         holder.btn_prodName.setText(prod.getProduct_Name());
         if(prod.isSelected()){
+            prevSelected = position;
             holder.btn_prodName.setBackground(context.getResources().getDrawable(R.drawable.table_occu_draw));
         }else{
             holder.btn_prodName.setBackground(context.getResources().getDrawable(R.drawable.table_release_draw));

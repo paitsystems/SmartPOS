@@ -23,7 +23,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.pait.smartpos.R;
 import com.pait.smartpos.constant.Constant;
-import com.pait.smartpos.db.DBHandlerR;
+import com.pait.smartpos.db.DBHandler;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -53,7 +53,7 @@ public class RetrieveContentsActivity extends DriveBaseActivity {
     protected void onDriveClientReady() {
         constant = new Constant(RetrieveContentsActivity.this);
         constant.showPD();
-        dbpath = "//data//" + "//data//" + getApplicationContext().getPackageName() + "//databases//" + DBHandlerR.Database_Name;
+        dbpath = "//data//" + "//data//" + getApplicationContext().getPackageName() + "//databases//" + DBHandler.Database_Name;
 
         Query query = new Query.Builder()
                 .addFilter(Filters.and(Filters.eq(SearchableField.MIME_TYPE, "application/x-sqlite3"),
@@ -68,14 +68,14 @@ public class RetrieveContentsActivity extends DriveBaseActivity {
                     public void onSuccess(MetadataBuffer metadataBuffer) {
                         for (Metadata m : metadataBuffer) {
                             retrieveContents(m.getDriveId().asDriveFile());
-                            Log.i(TAG, "Created file: " + DBHandlerR.Database_Name + "  DriveId:(" + m.getDriveId() + ")");
+                            Log.i(TAG, "Created file: " + DBHandler.Database_Name + "  DriveId:(" + m.getDriveId() + ")");
                         }
                     }
                 })
                 .addOnFailureListener(this, new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Log.i(TAG, "ERROR: File not found: " + DBHandlerR.Database_Name);
+                        Log.i(TAG, "ERROR: File not found: " + DBHandler.Database_Name);
                         constant.showPD();
                     }
                 });
@@ -98,7 +98,7 @@ public class RetrieveContentsActivity extends DriveBaseActivity {
 
             InputStream inputStream = driveContents.getInputStream();
 
-            String dbDir = getDatabasePath(DBHandlerR.Database_Name).getParent();
+            String dbDir = getDatabasePath(DBHandler.Database_Name).getParent();
             String newFileName = "NewDB.db";
 
             Log.i(TAG, "dbDir = " + dbDir);
@@ -147,7 +147,7 @@ public class RetrieveContentsActivity extends DriveBaseActivity {
                     FileChannel source=null;
                     FileChannel destination=null;
                     String currentDBPath = "/"+Constant.folder_name+"/"+newFileName;
-                    String backupDBPath = "/data/"+ getPackageName() +"/databases/"+ DBHandlerR.Database_Name;
+                    String backupDBPath = "/data/"+ getPackageName() +"/databases/"+ DBHandler.Database_Name;
                     File currentDB = new File(sd, currentDBPath);
                     File backupDB = new File(data, backupDBPath);
                     try {

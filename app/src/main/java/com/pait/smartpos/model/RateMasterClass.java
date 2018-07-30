@@ -2,9 +2,10 @@ package com.pait.smartpos.model;
 
 public class RateMasterClass {
 
-    private String rateStr;
+    private String rateStr, active;
     private boolean isSelected;
     private float rate;
+    private int auto;
 
     public boolean isSelected() {
         return isSelected;
@@ -28,5 +29,21 @@ public class RateMasterClass {
 
     public void setRate(float rate) {
         this.rate = rate;
+    }
+
+    public String getActive() {
+        return active;
+    }
+
+    public void setActive(String active) {
+        this.active = active;
+    }
+
+    public int getAuto() {
+        return auto;
+    }
+
+    public void setAuto(int auto) {
+        this.auto = auto;
     }
 }
