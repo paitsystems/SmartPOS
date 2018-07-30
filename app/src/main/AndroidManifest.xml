@@ -186,13 +186,18 @@
         <activity android:name=".BillReprintCancelActivity" />
         <activity android:name=".UpdatedBillReportActivity" />
         <activity android:name=".CashMemoActivity" />
-        <activity android:name=".InwardActivity" />
+        <activity
+            android:name=".InwardActivity"
+            android:windowSoftInputMode="adjustNothing" />
         <activity android:name=".ExpenseActivity" />
         <activity android:name=".ReportMenuActivity" />
         <activity android:name=".ExpenseReportActivity" />
         <activity android:name=".ReturnMemoActivity" />
         <activity android:name=".CollectionSumReportActivity" />
-        <activity android:name=".ProductwiseStockReportActivity"></activity>
+        <activity android:name=".ProductwiseStockReportActivity" />
+        <activity android:name=".InwardFirstScreenActivity" />
+        <activity android:name=".InwardReportActivity" />
+        <activity android:name=".InwardDetailActivity"></activity>
     </application>
 
 </manifest>

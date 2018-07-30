@@ -11,10 +11,10 @@ INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
 	android:name
 		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:24:13-67
 manifest
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-198:12
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-198:12
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-198:12
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-198:12
+ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
+INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
+INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
+INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\f3a5f28ab3eabb9774082dc35ee710d8\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\d0431b13b1faa367af4ff28c231c2ec3\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\33dc76c6462636cb5830abab43339dca\AndroidManifest.xml:17:1-22:12
@@ -61,20 +61,20 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Sneha\.gradle\
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\9506ddb4d76c75ca9f09ecdb39f9399f\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\54b9c19d7c05a99d689405d75ff9efa1\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\ae54407185b4d85fed8f728e6cad8fcf\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-198:12
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-198:12
-INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-198:12
+INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
+INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
+INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
 	package
 		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:3:5-32
 		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
 		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-198:12
+		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
 		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-198:12
+		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-203:12
 		INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:11-69
@@ -151,7 +151,7 @@ ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:15
 	android:name
 		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:15:22-62
 application
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:17:5-196:19
+ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:17:5-201:19
 MERGED from [com.sothree.slidinguppanel:library:3.4.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\library-3.4.0.aar\92f46bdbc3cfc8c3ea5ac828bc229b8c\AndroidManifest.xml:9:5-20
 MERGED from [com.sothree.slidinguppanel:library:3.4.0] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\library-3.4.0.aar\92f46bdbc3cfc8c3ea5ac828bc229b8c\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Sneha\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\81da30682c3c5313a6863d97c44842fb\AndroidManifest.xml:24:5-25:19
@@ -525,33 +525,47 @@ ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:18
 	android:name
 		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:188:19-51
 activity#com.pait.smartpos.InwardActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:189:9-52
+ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:189:9-191:59
+	android:windowSoftInputMode
+		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:191:13-56
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:189:19-49
+		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:190:13-43
 activity#com.pait.smartpos.ExpenseActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:190:9-53
+ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:192:9-53
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:190:19-50
+		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:192:19-50
 activity#com.pait.smartpos.ReportMenuActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:191:9-56
-	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:191:19-53
-activity#com.pait.smartpos.ExpenseReportActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:192:9-59
-	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:192:19-56
-activity#com.pait.smartpos.ReturnMemoActivity
 ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:193:9-56
 	android:name
 		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:193:19-53
+activity#com.pait.smartpos.ExpenseReportActivity
+ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:194:9-59
+	android:name
+		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:194:19-56
+activity#com.pait.smartpos.ReturnMemoActivity
+ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:195:9-56
+	android:name
+		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:195:19-53
 activity#com.pait.smartpos.CollectionSumReportActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:194:9-65
+ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:196:9-65
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:194:19-62
+		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:196:19-62
 activity#com.pait.smartpos.ProductwiseStockReportActivity
-ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:195:9-77
+ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:197:9-68
 	android:name
-		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:195:19-65
+		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:197:19-65
+activity#com.pait.smartpos.InwardFirstScreenActivity
+ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:198:9-63
+	android:name
+		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:198:19-60
+activity#com.pait.smartpos.InwardReportActivity
+ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:199:9-58
+	android:name
+		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:199:19-55
+activity#com.pait.smartpos.InwardDetailActivity
+ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:200:9-67
+	android:name
+		ADDED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml:200:19-55
 uses-sdk
 INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\sneha_android_project\SmartPOS\app\src\main\AndroidManifest.xml

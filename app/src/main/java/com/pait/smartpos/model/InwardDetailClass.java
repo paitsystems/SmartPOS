@@ -8,11 +8,11 @@ public class InwardDetailClass {
             WSP,NetRate,GSTPER,CGSTAMT,SGSTAMT,IGSTAMT,CGSTPER,SGSTPER,CESSPER,
             CESSAMT,SuppDisPer1,SuppDisAmt1;
 
-    private int autoNo,id,inwardID,rebarCnt,refInwId,branchId,podetauto,HOCode;
+    private int autoNo,id,inwardID,rebarCnt,refInwId,branchId,podetauto,HOCode,suppid;
 
     private String productID,fatherSKU,barcode,itemName,rebarcodeSt,designno,color,itmImage,ImagePath,ItemSize,JobWorkTyp,
             OldBarcode,repColumn,GVApp,Scheme1,Scheme2,TxIncExTyp,HSNCode,Attr1,Attr2,
-            Atrr3,Attr4,Atrr5;
+            Atrr3,Attr4,Atrr5,inwno;
 
     public float getRecQty() {
         return recQty;
@@ -556,5 +556,21 @@ public class InwardDetailClass {
 
     public void setAtrr5(String atrr5) {
         Atrr5 = atrr5;
+    }
+
+    public int getSuppid() {
+        return suppid;
+    }
+
+    public void setSuppid(int suppid) {
+        this.suppid = suppid;
+    }
+
+    public String getInwno() {
+        return inwno;
+    }
+
+    public void setInwno(String inwno) {
+        this.inwno = inwno;
     }
 }

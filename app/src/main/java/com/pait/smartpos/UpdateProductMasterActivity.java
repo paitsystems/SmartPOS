@@ -142,7 +142,7 @@ public class UpdateProductMasterActivity extends AppCompatActivity implements Vi
     private void init(){
         tv_cat1 = (TextView) findViewById(R.id.tv_cat1);
         ed_cat2 = (EditText) findViewById(R.id.ed_cat2);
-        ed_rate = (EditText) findViewById(R.id.ed_rate);
+        ed_rate = (EditText) findViewById(R.id.ed_ssp);
         btn_add = (Button) findViewById(R.id.btn_add);
         btn_add.setOnClickListener(this);
         toast = Toast.makeText(getApplicationContext(),"",Toast.LENGTH_LONG);

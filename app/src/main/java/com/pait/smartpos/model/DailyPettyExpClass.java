@@ -2,7 +2,7 @@ package com.pait.smartpos.model;
 
 public class DailyPettyExpClass {
 
-    private int Autoid,Branchid,ExpHead,AuthoBy,CreatedBy,cancleBy,AgainstRef,Id,CSType;
+    private int Autoid,Branchid,AuthoBy,CreatedBy,cancleBy,AgainstRef,Id,CSType,ExpHead;
 
     private float Amount;
 

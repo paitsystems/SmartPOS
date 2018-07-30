@@ -89,7 +89,7 @@
                 android:text="@string/rate" />
 
             <EditText
-                android:id="@+id/ed_rate"
+                android:id="@+id/ed_ssp"
                 style="@style/textViewMob"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/mob_ED_size"

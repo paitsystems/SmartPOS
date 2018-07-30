@@ -32,7 +32,6 @@ import java.util.List;
 import java.util.Locale;
 
 public class ExpenseReportActivity extends AppCompatActivity implements View.OnClickListener{
-
     private ListView listView;
     private TextView tv_total_amt;
     private DBHandler db;
@@ -49,17 +48,17 @@ public class ExpenseReportActivity extends AppCompatActivity implements View.OnC
     private int flag = 0;
     private Toast toast;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expense_report);
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            //getSupportActionBar().setTitle();
+            getSupportActionBar().setTitle("Expense Report");
         }
 
         init();
+
         try {
             currentdate = sdf.format(sdf1.parse(constant.getDate()));
             tv_fromdate.setText(currentdate);
@@ -109,7 +108,6 @@ public class ExpenseReportActivity extends AppCompatActivity implements View.OnC
             e.printStackTrace();
         }
         btn_show.setOnClickListener(this);
-
     }
 
     @Override
@@ -127,6 +125,7 @@ public class ExpenseReportActivity extends AppCompatActivity implements View.OnC
         }
 
     }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -178,6 +177,7 @@ public class ExpenseReportActivity extends AppCompatActivity implements View.OnC
                     exp.setRemark(c.getString(c.getColumnIndex(DBHandler.DPE_Remark)));
                     exp.setAmount(c.getFloat(c.getColumnIndex(DBHandler.DPE_Amount)));
                     exp.setDate(c.getString(c.getColumnIndex(DBHandler.DPE_Date)));
+                    exp.setExpHead(c.getInt(c.getColumnIndex(DBHandler.DPE_Exphead)));
                     // exp.setTime(c.getString(c.getColumnIndex(DBHandler.EXM_Remark)));
                     list.add(exp);
                 } while (c.moveToNext());
@@ -193,7 +193,6 @@ public class ExpenseReportActivity extends AppCompatActivity implements View.OnC
             db.close();
             c.close();
             //setTotal(list);
-
     }
 
     private void setTotal(List<DailyPettyExpClass> list) {

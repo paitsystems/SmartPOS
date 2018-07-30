@@ -55,7 +55,7 @@ public class ProductwiseStockReportActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_productwise_stock_report);
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            //getSupportActionBar().setTitle();
+            getSupportActionBar().setTitle("Productwise Stock Report");
         }
 
         init();

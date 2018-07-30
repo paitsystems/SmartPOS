@@ -227,7 +227,7 @@ public class CategoryFragment extends Fragment implements View.OnClickListener{
         aSwitch = (Switch) view.findViewById(R.id.switch1);
         auto_cat1 = (AutoCompleteTextView) view.findViewById(R.id.auto_cat1);
         ed_cat2 = (EditText) view.findViewById(R.id.ed_cat2);
-        ed_rate = (EditText) view.findViewById(R.id.ed_rate);
+        ed_rate = (EditText) view.findViewById(R.id.ed_ssp);
         btn_change_cat1 = (Button) view.findViewById(R.id.btn_change_cat1);
         btn_add = (Button) view.findViewById(R.id.btn_add);
         btn_proceed = (Button) view.findViewById(R.id.btn_proceed);

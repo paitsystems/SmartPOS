@@ -61,7 +61,7 @@ public class Change_TaxActivity extends AppCompatActivity implements View.OnClic
     void init(){
         tv_perv_tax_name = (TextView) findViewById(R.id.tv_perv_tax_name);
         ed_new_tax_name = (EditText) findViewById(R.id.ed_new_tax_name);
-        ed_rate = (EditText) findViewById(R.id.ed_rate);
+        ed_rate = (EditText) findViewById(R.id.ed_ssp);
         btn_add = (Button) findViewById(R.id.btn_add);
         aSwitch = (Switch) findViewById(R.id.switch1);
         btn_add.setOnClickListener(this);

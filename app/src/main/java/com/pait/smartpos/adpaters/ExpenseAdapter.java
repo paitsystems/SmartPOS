@@ -1,16 +1,13 @@
 package com.pait.smartpos.adpaters;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
 import com.pait.smartpos.R;
 import com.pait.smartpos.db.DBHandler;
 import com.pait.smartpos.model.DailyPettyExpClass;
-import com.pait.smartpos.model.ExpenseDetail;
 import java.util.List;
 
 public class ExpenseAdapter extends BaseAdapter {
@@ -53,15 +50,13 @@ public class ExpenseAdapter extends BaseAdapter {
          }else {
              holder = (ViewHolder) view.getTag();
          }
-
          DailyPettyExpClass detail = (DailyPettyExpClass) getItem(i);
          holder.tv_date.setText(detail.getDate());
          holder.tv_remark.setText(detail.getRemark());
          holder.tv_amt.setText(String.valueOf(detail.getAmount()));
-        /* String head = new DBHandler(context).getExpHeadName(detail.getExpHead());
-         holder.tv_exphed.setText(head);*/
-         holder.tv_exphed.setText(String.valueOf(detail.getExpHead()));   //todo pass here exphead instead of id
-
+         String head = new DBHandler(context).getExpHeadName(detail.getExpHead());
+         holder.tv_exphed.setText(head);
+         //holder.tv_exphed.setText(String.valueOf(detail.getExpHead()));
         return view;
     }
 

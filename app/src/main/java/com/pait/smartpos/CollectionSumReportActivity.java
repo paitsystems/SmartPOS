@@ -57,7 +57,7 @@ public class CollectionSumReportActivity extends AppCompatActivity implements Vi
 
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            //getSupportActionBar().setTitle();
+            getSupportActionBar().setTitle("Collection Summery Report");
         }
 
         init();
@@ -176,6 +176,7 @@ public class CollectionSumReportActivity extends AppCompatActivity implements Vi
         tv_total_expreceipt = (TextView) findViewById(R.id.tv_total_expreceipt);
         tv_total_exppay = (TextView) findViewById(R.id.tv_total_exppay);
     }
+
     private void setData(String fadate,String tadate) {
 
        //Cashier,Net Collection,Sale Cash,CashBack, Net Cash,Cheque,CRRef.Cheque,Card,Other,
@@ -215,6 +216,7 @@ public class CollectionSumReportActivity extends AppCompatActivity implements Vi
         //setTotal(list);
 
     }
+
     private void setTotal(List<CollectionClass> list) {
         totnetcoll=0;
         totsalecash=0;

@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import com.pait.smartpos.CashMemoActivity;
 import com.pait.smartpos.ExpenseActivity;
 import com.pait.smartpos.InwardActivity;
+import com.pait.smartpos.InwardFirstScreenActivity;
 import com.pait.smartpos.R;
 import com.pait.smartpos.ReportMenuActivity;
 import com.pait.smartpos.ReturnMemoActivity;
@@ -50,7 +51,7 @@ public class MainOptionFragment extends Fragment implements View.OnClickListener
         lay_inward = view.findViewById(R.id.lay_inward);
         lay_expense = view.findViewById(R.id.lay_expense);
         lay_report = view.findViewById(R.id.lay_report);
-        lay_returnmemo = view.findViewById(R.id.lay_report);
+        lay_returnmemo = view.findViewById(R.id.lay_returnmemo);
     }
 
     @Override
@@ -72,7 +73,7 @@ public class MainOptionFragment extends Fragment implements View.OnClickListener
                 startActivity(new Intent(getContext(), CashMemoActivity.class));
                 break;
             case R.id.lay_inward:
-                startActivity(new Intent(getContext(), InwardActivity.class));
+                startActivity(new Intent(getContext(), InwardFirstScreenActivity.class));
                 break;
             case R.id.lay_expense:
                 startActivity(new Intent(getContext(), ExpenseActivity.class));
@@ -81,7 +82,7 @@ public class MainOptionFragment extends Fragment implements View.OnClickListener
                 startActivity(new Intent(getContext(), ReportMenuActivity.class));
                 break;
             case R.id.lay_returnmemo:
-                //startActivity(new Intent(getContext(), ReportMenuActivity.class));
+                startActivity(new Intent(getContext(), ReturnMemoActivity.class));
                 break;
         }
     }

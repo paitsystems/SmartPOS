@@ -662,7 +662,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@null"
-                            android:imeActionId="@+id/ed_rate"
+                            android:imeActionId="@+id/ed_ssp"
                             android:imeOptions="actionDone"
                             android:inputType="numberDecimal"
                             android:selectAllOnFocus="true"

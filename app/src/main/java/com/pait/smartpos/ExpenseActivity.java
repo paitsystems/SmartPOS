@@ -5,7 +5,10 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.database.Cursor;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -81,6 +84,7 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
         }
 
         lay_add.setOnClickListener(this);
+
         tv_date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -179,14 +183,15 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
 
     private void moneyMenu() {
         bt_100.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                bt_100.setBackgroundResource(R.color.red);
-                bt_500.setBackgroundResource(R.color.lightblue);
-                bt_1000.setBackgroundResource(R.color.lightblue);
-                bt_2000.setBackgroundResource(R.color.lightblue);
-                bt_5000.setBackgroundResource(R.color.lightblue);
-                bt_10000.setBackgroundResource(R.color.lightblue);
+                bt_100.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.red));
+                bt_500.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_1000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_2000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_5000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_10000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
                 bt_100.setPadding(2, 2, 2, 2);
                 bt_500.setPadding(2, 2, 2, 2);
                 bt_1000.setPadding(2, 2, 2, 2);
@@ -208,15 +213,16 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
         });
 
         bt_500.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
 
-                bt_500.setBackgroundColor(getResources().getColor(R.color.red));
-                bt_100.setBackgroundColor(getResources().getColor(R.color.lightblue));
-                bt_1000.setBackgroundColor(getResources().getColor(R.color.lightblue));
-                bt_2000.setBackgroundColor(getResources().getColor(R.color.lightblue));
-                bt_5000.setBackgroundColor(getResources().getColor(R.color.lightblue));
-                bt_10000.setBackgroundColor(getResources().getColor(R.color.lightblue));
+                bt_500.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.red));
+                bt_100.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_1000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_2000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_5000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_10000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
                 bt_100.setPadding(2, 2, 2, 2);
                 bt_500.setPadding(2, 2, 2, 2);
                 bt_1000.setPadding(2, 2, 2, 2);
@@ -242,15 +248,16 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
         });
 
         bt_1000.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
 
-                bt_1000.setBackgroundResource(R.color.red);
-                bt_100.setBackgroundResource(R.color.lightblue);
-                bt_500.setBackgroundResource(R.color.lightblue);
-                bt_2000.setBackgroundResource(R.color.lightblue);
-                bt_5000.setBackgroundResource(R.color.lightblue);
-                bt_10000.setBackgroundResource(R.color.lightblue);
+                bt_1000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.red));
+                bt_100.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_500.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_2000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_5000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_10000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
                 bt_100.setPadding(2, 2, 2, 2);
                 bt_500.setPadding(2, 2, 2, 2);
                 bt_1000.setPadding(2, 2, 2, 2);
@@ -276,15 +283,16 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
         });
 
         bt_2000.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
 
-                bt_2000.setBackgroundResource(R.color.red);
-                bt_100.setBackgroundResource(R.color.lightblue);
-                bt_500.setBackgroundResource(R.color.lightblue);
-                bt_1000.setBackgroundResource(R.color.lightblue);
-                bt_5000.setBackgroundResource(R.color.lightblue);
-                bt_10000.setBackgroundResource(R.color.lightblue);
+                bt_2000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.red));
+                bt_100.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_500.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_1000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_5000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_10000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
                 bt_100.setPadding(2, 2, 2, 2);
                 bt_500.setPadding(2, 2, 2, 2);
                 bt_1000.setPadding(2, 2, 2, 2);
@@ -310,15 +318,16 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
         });
 
         bt_5000.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
 
-                bt_5000.setBackgroundResource(R.color.red);
-                bt_100.setBackgroundResource(R.color.lightblue);
-                bt_500.setBackgroundResource(R.color.lightblue);
-                bt_1000.setBackgroundResource(R.color.lightblue);
-                bt_2000.setBackgroundResource(R.color.lightblue);
-                bt_10000.setBackgroundResource(R.color.lightblue);
+                bt_5000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.red));
+                bt_100.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_500.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_1000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_2000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_10000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
                 bt_100.setPadding(2, 2, 2, 2);
                 bt_500.setPadding(2, 2, 2, 2);
                 bt_1000.setPadding(2, 2, 2, 2);
@@ -344,15 +353,16 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
         });
 
         bt_10000.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
 
-                bt_10000.setBackgroundResource(R.color.red);
-                bt_100.setBackgroundResource(R.color.lightblue);
-                bt_500.setBackgroundResource(R.color.lightblue);
-                bt_1000.setBackgroundResource(R.color.lightblue);
-                bt_2000.setBackgroundResource(R.color.lightblue);
-                bt_5000.setBackgroundResource(R.color.lightblue);
+                bt_10000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.red));
+                bt_100.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_500.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_1000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_2000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_5000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
                 bt_100.setPadding(2, 2, 2, 2);
                 bt_500.setPadding(2, 2, 2, 2);
                 bt_1000.setPadding(2, 2, 2, 2);
@@ -376,13 +386,14 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
     private void saveData() {
         list.clear();
         int maxauto = 0;
-        if (auto_remark.getText().toString().equals("")) {
+       /* if (auto_remark.getText().toString().equals("")) {
             auto_remark.setError("Please enter remark..");
-        } else if (ed_amount.getText().toString().equals("")) {
+        } else*/
+       if (ed_amount.getText().toString().equals("")) {
             ed_amount.setError("Please enter amount..");
         } else {
             ed_amount.setError(null);
-            auto_remark.setAdapter(null);
+            //auto_remark.setAdapter(null);
 
             DailyPettyExpClass detail = new DailyPettyExpClass();
             detail.setAmount(Float.valueOf(ed_amount.getText().toString()));
@@ -399,12 +410,13 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
             Log.d("Log", "curr_time:" + curr_time);
             //detail.settime(curr_time);
             String expHead = sp_exphead.getSelectedItem().toString();
-            /*int head = db.getExpHeadAuto(expHead);
-            detail.setExpHead(head);*/    //uncomment
+            Constant.showLog("expHead:"+expHead);
+            int head = db.getExpHeadAuto(expHead);
+            Constant.showLog("head:"+head);
+            detail.setExpHead(head);
 
-            detail.setExpHead(1);    //todo find id of expense head function using expHead
+            //detail.setExpHead(1);
             detail.setRemark(auto_remark.getText().toString());
-
             maxauto = db.getExpMaxAuto();
 
             if (maxauto == 0) {
@@ -428,23 +440,26 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
         auto_remark.setAdapter(null);
         List<String> uList = new ArrayList<>();
             Cursor cursor = db.getListExpRemark();
-            while (cursor.moveToNext()) {
-                uList.add(cursor.getString(cursor.getColumnIndex(DBHandler.DPE_Remark)));
+            if(cursor.moveToFirst()) {
+               do {
+                    uList.add(cursor.getString(cursor.getColumnIndex(DBHandler.DPE_Remark)));
+                }while (cursor.moveToNext());
             }
             cursor.close();
 
         adapter = new ArrayAdapter(getApplicationContext(),R.layout.adapter_item,uList);
         auto_remark.setAdapter(adapter);
 
-        List<String> eList = new ArrayList<>();
-       /*
-         Cursor cursor1 = db.getListExpRemark();
-        while (cursor1.moveToNext()) {
-            eList.add(cursor1.getString(cursor1.getColumnIndex(DBHandler.EXM_Expdesc)));
-        }
-        cursor1.close();*/    //TODO UNCOMENT AND ADD VALUE FROM Table
 
-        eList.add("GIFTS");
+        List<String> eList = new ArrayList<>();
+         Cursor cursor1 = db.getListExpHead();
+        if(cursor1.moveToFirst()) {
+            do {
+                eList.add(cursor1.getString(cursor1.getColumnIndex(DBHandler.EXM_Expdesc)));
+            }while (cursor1.moveToNext());
+        }
+        cursor1.close();
+        /*eList.add("GIFTS");
         eList.add("OFFICE");
         eList.add("PETROL");
         eList.add("WORK");
@@ -452,7 +467,7 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
         eList.add("PEN");
         eList.add("BOOK");
         eList.add("NOTE");
-        eList.add("BIRHDAY");
+        eList.add("BIRHDAY");*/
 
         adapter2 = new ArrayAdapter(getApplicationContext(),R.layout.spinner_item,eList);
         sp_exphead.setAdapter(adapter2);

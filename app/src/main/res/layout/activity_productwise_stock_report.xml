@@ -13,16 +13,17 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="vertical">
+
         <TextView
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:background="@drawable/color_back"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/color_back"
+            android:gravity="center"
             android:padding="2dp"
             android:text="Productwise Stock Report"
-            android:visibility="visible" />
+            android:textColor="@color/white"
+            android:visibility="gone" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,7 +50,6 @@
                     android:visibility="visible">
 
                     <TextView
-                        style="@style/textViewMob"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
@@ -60,7 +60,6 @@
                         android:textColor="#000000" />
 
                     <TextView
-                        style="@style/textViewMob"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
@@ -178,8 +177,8 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:textColor="@color/white"
                             android:id="@+id/tv_finalprod"
-                            style="@style/textViewMobW"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -190,7 +189,7 @@
 
                         <TextView
                             android:id="@+id/tv_cat3"
-                            style="@style/textViewMobW"
+                            android:textColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -201,7 +200,7 @@
 
                         <TextView
                             android:id="@+id/tv_price"
-                            style="@style/textViewMobW"
+                            android:textColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -212,7 +211,7 @@
 
                         <TextView
                             android:id="@+id/tv_mrp"
-                            style="@style/textViewMobW"
+                            android:textColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -223,7 +222,7 @@
 
                         <TextView
                             android:id="@+id/tv_wprice"
-                            style="@style/textViewMobW"
+                            android:textColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -234,7 +233,7 @@
 
                         <TextView
                             android:id="@+id/tv_ssp"
-                            style="@style/textViewMobW"
+                            android:textColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -245,7 +244,7 @@
 
                         <TextView
                             android:id="@+id/tv_qty"
-                            style="@style/textViewMobW"
+                            android:textColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -256,7 +255,7 @@
 
                         <TextView
                             android:id="@+id/tv_head_item"
-                            style="@style/textViewMobW"
+                            android:textColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -273,7 +272,8 @@
                     <ListView
                         android:id="@+id/listView"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"

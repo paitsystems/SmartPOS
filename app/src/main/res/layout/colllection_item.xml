@@ -24,7 +24,6 @@
             <TextView
                 android:background="@drawable/lighht_border"
                 android:id="@+id/tv_cashier"
-                style="@style/textViewMobW"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
@@ -36,7 +35,6 @@
             <TextView
                 android:background="@drawable/lighht_border"
                 android:id="@+id/tv_netcoll"
-                style="@style/textViewMobW"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
@@ -48,7 +46,6 @@
             <TextView
                 android:background="@drawable/lighht_border"
                 android:id="@+id/tv_salecash"
-                style="@style/textViewMobW"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
@@ -59,7 +56,6 @@
             <TextView
                 android:background="@drawable/lighht_border"
                 android:id="@+id/tv_cashback"
-                style="@style/textViewMobW"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
@@ -71,7 +67,6 @@
             <TextView
                 android:background="@drawable/lighht_border"
                 android:id="@+id/tv_netcash"
-                style="@style/textViewMobW"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
@@ -83,7 +78,6 @@
             <TextView
                 android:background="@drawable/lighht_border"
                 android:id="@+id/tv_cheque"
-                style="@style/textViewMobW"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
@@ -95,7 +89,6 @@
             <TextView
                 android:background="@drawable/lighht_border"
                 android:id="@+id/tv_card"
-                style="@style/textViewMobW"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
@@ -107,7 +100,6 @@
             <TextView
                 android:background="@drawable/lighht_border"
                 android:id="@+id/tv_opa"
-                style="@style/textViewMobW"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
@@ -119,7 +111,6 @@
             <TextView
                 android:background="@drawable/lighht_border"
                 android:id="@+id/tv_exprec"
-                style="@style/textViewMobW"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
@@ -131,7 +122,6 @@
             <TextView
                 android:background="@drawable/lighht_border"
                 android:id="@+id/tv_exppay"
-                style="@style/textViewMobW"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_gravity="center"

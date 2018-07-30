@@ -18,14 +18,13 @@
         android:layout_width="wrap_content"
         android:padding="4dp"
         android:background="@drawable/color_back"
-        android:visibility="visible" />
+        android:visibility="gone" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
-            style="@style/textViewMob"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/mobpadding2"
@@ -43,7 +42,6 @@
                 android:visibility="visible">
 
                 <TextView
-                    style="@style/textViewMob"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
@@ -55,7 +53,6 @@
 
                 <TextView
                     android:layout_margin="5dp"
-                    style="@style/textViewMob"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
@@ -174,8 +171,8 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:textColor="@color/white"
                     android:id="@+id/tv_cashier"
-                    style="@style/textViewMobW"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -186,7 +183,7 @@
                     android:text="Cashier" />
 
                 <TextView
-                    style="@style/textViewMobW"
+                    android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -198,7 +195,7 @@
 
                 <TextView
                     android:id="@+id/tv_salecash"
-                    style="@style/textViewMobW"
+                    android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -209,7 +206,7 @@
 
                 <TextView
                     android:id="@+id/tv_cashback"
-                    style="@style/textViewMobW"
+                    android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -221,7 +218,7 @@
 
                 <TextView
                     android:id="@+id/tv_netcash"
-                    style="@style/textViewMobW"
+                    android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -233,7 +230,7 @@
 
                 <TextView
                     android:id="@+id/tv_cheque"
-                    style="@style/textViewMobW"
+                    android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -245,7 +242,7 @@
 
                 <TextView
                     android:id="@+id/tv_card"
-                    style="@style/textViewMobW"
+                    android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -257,7 +254,7 @@
 
                 <TextView
                     android:id="@+id/tv_opa"
-                    style="@style/textViewMobW"
+                    android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -269,7 +266,7 @@
 
                 <TextView
                     android:id="@+id/tv_exprec"
-                    style="@style/textViewMobW"
+                    android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -281,7 +278,7 @@
 
                 <TextView
                     android:id="@+id/tv_exppay"
-                    style="@style/textViewMobW"
+                    android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_gravity="center"

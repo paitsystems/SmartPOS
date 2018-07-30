@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_supp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left|center"
+            android:text="Supplier"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_inward_no"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:text="Inward No"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_final_prod"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left|center"
+            android:text="Final Pod"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_qty"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="right|center"
+            android:text="Qty"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_purchase_rate"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="right|center"
+            android:text="Prod Rate"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_sale_rate"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="right|center"
+            android:text="Sale Rate"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/tv_gstper"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|right|center"
+            android:gravity="right|center"
+            android:text="gst%"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_cgst"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="right|center"
+            android:text="CGST"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_sgst"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="right|center"
+            android:text="SGST"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_igst"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="right|center"
+            android:text="IGST"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_hsn_code"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:text="HSNCode"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -35,7 +35,6 @@
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -203,13 +202,18 @@
         <activity android:name="com.pait.smartpos.BillReprintCancelActivity" />
         <activity android:name="com.pait.smartpos.UpdatedBillReportActivity" />
         <activity android:name="com.pait.smartpos.CashMemoActivity" />
-        <activity android:name="com.pait.smartpos.InwardActivity" />
+        <activity
+            android:name="com.pait.smartpos.InwardActivity"
+            android:windowSoftInputMode="adjustNothing" />
         <activity android:name="com.pait.smartpos.ExpenseActivity" />
         <activity android:name="com.pait.smartpos.ReportMenuActivity" />
         <activity android:name="com.pait.smartpos.ExpenseReportActivity" />
         <activity android:name="com.pait.smartpos.ReturnMemoActivity" />
         <activity android:name="com.pait.smartpos.CollectionSumReportActivity" />
         <activity android:name="com.pait.smartpos.ProductwiseStockReportActivity" />
+        <activity android:name="com.pait.smartpos.InwardFirstScreenActivity" />
+        <activity android:name="com.pait.smartpos.InwardReportActivity" />
+        <activity android:name="com.pait.smartpos.InwardDetailActivity" />
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
             android:excludeFromRecents="true"
