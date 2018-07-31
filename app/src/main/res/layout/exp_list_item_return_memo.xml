@@ -89,6 +89,18 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
                 android:gravity="center"
+                android:text="DiscAmnt"
+                android:textColor="@color/black" />
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:gravity="center"
                 android:text="CGST"
                 android:textColor="@color/black" />
             <View
@@ -138,7 +150,20 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
                 android:gravity="center"
-                android:text="Total"
+                android:text="0"
+                android:textColor="@color/black" />
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/tv_discAmnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:text="0"
                 android:textColor="@color/black" />
             <View
                 android:layout_width="2dp"
@@ -151,7 +176,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
                 android:gravity="center"
-                android:text="CGSTAmnt"
+                android:text="0"
                 android:textColor="@color/black" />
 
             <View
@@ -165,7 +190,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
                 android:gravity="center"
-                android:text="SGSTAmnt"
+                android:text="0"
                 android:textColor="@color/black" />
         </LinearLayout>
 

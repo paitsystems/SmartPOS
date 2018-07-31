@@ -131,12 +131,18 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                 tv_billAmnt.setText("0");
                 tv_paidAmnt.setText("0");
                 billMaster = (BillMasterClass) adapterView.getItemAtPosition(j);
-                System.out.println("Position " + j+"-"+billMaster.getBillNo());
-                String custName = db.getCustName(billMaster.getCustID());
-                tv_custName.setText(custName);
-                tv_billAmnt.setText(billMaster.getTotalAmt());
-                tv_paidAmnt.setText(billMaster.getPaidAmt());
-                setBillDet();
+                if(stringToInt(billMaster.getTotalQty())!=stringToInt(billMaster.getTRetQty())) {
+                    System.out.println("Position " + j + "-" + billMaster.getBillNo());
+                    String custName = db.getCustName(billMaster.getCustID());
+                    tv_custName.setText(custName);
+                    tv_billAmnt.setText(billMaster.getTotalAmt());
+                    tv_paidAmnt.setText(billMaster.getPaidAmt());
+                    setBillDet();
+                }else{
+                    toast.setText("All Items Are Returned");
+                    toast.show();
+                    clearFields();
+                }
             }
         });
 
@@ -146,8 +152,9 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                 auto_barcode.setText(null);
                 billDetail = (BillDetailClass) adapterView.getItemAtPosition(j);
                 totQty = totQty + stringToInt(billDetail.getQty());
-                totAmnt = totAmnt + stringToFloat(billDetail.getTotal())+
-                        stringToFloat(billDetail.getCGSTAMT())+
+                totAmnt = totAmnt + stringToFloat(billDetail.getTotal());
+                totAmnt = totAmnt - stringToFloat(billDetail.getBilldisamt());
+                totAmnt = totAmnt + stringToFloat(billDetail.getCGSTAMT())+
                         stringToFloat(billDetail.getSGSTAMT());
                 totDiscAmnt = totDiscAmnt + stringToFloat(billDetail.getBilldisamt());
                 totCGSTAmnt = totCGSTAmnt + stringToFloat(billDetail.getCGSTAMT());
@@ -207,6 +214,14 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (mService != null) {
+            mService.stop();
+        }
+        super.onDestroy();
     }
 
     @SuppressLint("StaticFieldLeak")
@@ -279,6 +294,7 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                 mService.write(nameFontformat);
 
                 int count = 0, totQty = 0;
+                float _totAmnt = 0;
 
                 StringBuilder data = new StringBuilder();
                 for (int i = 0; i < retMemoList.size(); i++) {
@@ -298,6 +314,7 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                         item.append(" ");
                     }
 
+                    totQty = totQty + Integer.parseInt(cart.getQty());
                     String qty = String.valueOf(cart.getQty());
                     if (qty.length() == 1) {
                         qty = "  " + qty;
@@ -320,6 +337,7 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                         rate = " " + rate;
                     }
 
+                    _totAmnt = _totAmnt + stringToFloat(cart.getTotal());
                     String amnt = String.valueOf(cart.getTotal());
                     if (amnt.length() == 1) {
                         amnt = "      " + amnt;
@@ -357,18 +375,18 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                 mService.sendMessage(line_str, "GBK");
                 textData.delete(0, textData.length());
 
-                String  totalamt = String.valueOf(totAmnt);
-                String[] totArr = totalamt.split("\\.");
+                String  totalamt = roundDecimals(tv_totAmnt.getText().toString());
+                /*String[] totArr = totalamt.split("\\.");
                 if (totArr.length > 1) {
                     totalamt = totArr[0];
-                }
+                }*/
                 //textData.append("Total              ").append("  "+count).append("      ").append(totalamt).append("\n");
                 if (_count.length() == 1 && totalamt.length() == 2) {
-                    textData.append("Total          ").append("  ").append(count).append("        ").append(roundTwoDecimals(String.valueOf(totAmnt))).append("\n");
+                    textData.append("Total          ").append("  ").append(totQty).append("        ").append(roundTwoDecimals(_totAmnt)).append("\n");
                 } else if (_count.length() == 1 && totalamt.length() == 3) {
-                    textData.append("Total          ").append("  ").append(count).append("       ").append(roundTwoDecimals(String.valueOf(totAmnt))).append("\n");
+                    textData.append("Total          ").append("  ").append(totQty).append("       ").append(roundTwoDecimals(_totAmnt)).append("\n");
                 } else if (_count.length() == 1 && totalamt.length() == 4) {
-                    textData.append("Total          ").append(count).append("      ").append(roundTwoDecimals(String.valueOf(totAmnt))).append("\n");
+                    textData.append("Total          ").append(count).append("      ").append(roundTwoDecimals(_totAmnt)).append("\n");
                 }
                 nameFontformat = format;
                 nameFontformat[2] = arrayOfByte1[2];
@@ -456,12 +474,12 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
         auto = db.getMaxRMAuto();
         id = db.getMaxRMMastId(financialyr);
         if(rdo_retMemo.isChecked()){
-            rMemoNo = "RM"+financialyr+"/"+db.getCompIni()+"/"+id;
+            memoNo = rMemoNo = "RM"+financialyr+"/"+db.getCompIni()+"/"+id;
             detRMemoNo = rMemoNo;
             type = "R";
             BalRedeem = totAmnt;
         }else{
-            rMemoNo = "CB"+financialyr+"/"+db.getCompIni()+"/"+id;
+            memoNo = rMemoNo = "CB"+financialyr+"/"+db.getCompIni()+"/"+id;
             detRMemoNo = rMemoNo;
             type = "C";
             BalRedeem = 0;
@@ -588,8 +606,8 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                 empid = 1;
                 MRP = stringToFloat(det.getMRP());
                 mastid = det.getAuto();
-                BillDetAuto = det.getId();
-                dtlid = mastid;
+                BillDetAuto = billDetail.getAuto();
+                dtlid = billDetail.getId();
                 billdisper = stringToFloat(det.getBilldisper());
                 billdisamt = stringToFloat(det.getBilldisamt());
 
@@ -655,8 +673,8 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                     totSGSTAmnt = totSGSTAmnt + sgstAmt;
                 }
                 ReturnMemoDetailClass retDet = new ReturnMemoDetailClass();
-                retDet.setId(id);
-                retDet.setMastid(mastid);
+                retDet.setId(detId);
+                retDet.setMastid(auto);
                 retDet.setrMemoNo(detRMemoNo);
                 retDet.setItemcode(itemcode);
                 retDet.setBarcode(barcode);
@@ -698,6 +716,7 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
             }
             db.updateTRetQty(String.valueOf(totQty), billMaster);
             showDia(2);
+            new CashMemoPrint().execute();
         }else{
             toast.setText("Please Select Atleast One Item");
             toast.show();

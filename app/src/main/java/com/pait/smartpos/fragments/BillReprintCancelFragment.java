@@ -70,6 +70,13 @@ public class BillReprintCancelFragment extends Fragment {
         return view1;
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        if (mService != null) {
+            mService.stop();
+        }
+    }
 
     @SuppressLint("ShowToast")
     private void init(View view){
@@ -224,6 +231,9 @@ public class BillReprintCancelFragment extends Fragment {
                     }
 
                     String amnt = cart.getTotal();
+                    totAmnt = totAmnt + Float.parseFloat(amnt);
+
+                    String amnt = cart.getTotal();
                     if (amnt.length() == 1) {
                         amnt = "      " + amnt;
                     }else if (amnt.length() == 2) {
@@ -263,18 +273,18 @@ public class BillReprintCancelFragment extends Fragment {
                 mService.sendMessage(line_str, "GBK");
                 textData.delete(0, textData.length());
 
-                String  totalamt = String.valueOf(totAmnt);
-                String[] totArr = totalamt.split("\\.");
+                String  totalamt = roundDecimals(bill.getNetAmt());
+               /* String[] totArr = totalamt.split("\\.");
                 if (totArr.length > 1) {
                     totalamt = totArr[0];
-                }
+                }*/
                 //textData.append("Total              ").append("  "+count).append("      ").append(totalamt).append("\n");
                 if (_count.length() == 1 && totalamt.length() == 2) {
-                    textData.append("Total          ").append("  ").append(totQty).append("        ").append(roundTwoDecimals(String.valueOf(totAmnt))).append("\n");
+                    textData.append("Total          ").append("  ").append(totQty).append("        ").append(roundDecimals(totAmnt)).append("\n");
                 } else if (_count.length() == 1 && totalamt.length() == 3) {
-                    textData.append("Total          ").append("  ").append(totQty).append("       ").append(roundTwoDecimals(String.valueOf(totAmnt))).append("\n");
+                    textData.append("Total          ").append("  ").append(totQty).append("       ").append(roundDecimals(totAmnt)).append("\n");
                 } else if (_count.length() == 1 && totalamt.length() == 4) {
-                    textData.append("Total          ").append(totQty).append("      ").append(roundTwoDecimals(String.valueOf(totAmnt))).append("\n");
+                    textData.append("Total          ").append(totQty).append("      ").append(roundDecimals(totAmnt)).append("\n");
                 }
                 nameFontformat = format;
                 nameFontformat[2] = arrayOfByte1[2];
@@ -315,6 +325,8 @@ public class BillReprintCancelFragment extends Fragment {
                 return str;
             }
             return "Order Received By Kitchen 3";
+
+
         }
 
         @Override
@@ -347,6 +359,16 @@ public class BillReprintCancelFragment extends Fragment {
     private String roundTwoDecimals(String d) {
         DecimalFormat twoDForm = new DecimalFormat("#.##");
         return twoDForm.format(Double.parseDouble(d));
+    }
+
+    private String roundDecimals(String d) {
+        DecimalFormat twoDForm = new DecimalFormat("#");
+        return twoDForm.format(Double.parseDouble(d));
+    }
+
+    private String roundDecimals(float d) {
+        DecimalFormat twoDForm = new DecimalFormat("#");
+        return twoDForm.format(Double.parseDouble(String.valueOf(d)));
     }
 
     private void connectBT(){

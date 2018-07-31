@@ -1,31 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AndroidLayouts">
-    <shared>
-      <config />
-    </shared>
-  </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2ba87b1-bb59-4425-a997-f1f5c9f2e8c8" name="Default" comment="">
+    <list default="true" id="01595e39-8357-488d-8d4f-85f3374df2c9" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_commons_net_3_3_jar_unspecified_jar.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_ePOS2_jar_unspecified_jar.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_hoinsdk_jar_unspecified_jar.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_poi_3_8_20120326_jar_unspecified_jar.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_universal_image_loader_1_9_5_jar_unspecified_jar.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_android_27.xml" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_commons_net_3_3_jar_unspecified_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_ePOS2_jar_unspecified_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_hoinsdk_jar_unspecified_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_poi_3_8_20120326_jar_unspecified_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__android_project_SmartPOS_app_lib_universal_image_loader_1_9_5_jar_unspecified_jar.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" />
@@ -73,10 +63,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_impl_16_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_impl_16_0_1.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sothree_slidinguppanel_library_3_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sothree_slidinguppanel_library_3_4_0.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_fabric_sdk_android_fabric_1_4_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_fabric_sdk_android_fabric_1_4_3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/fabric/res/debug/values/com_crashlytics_build_id.xml" afterPath="$PROJECT_DIR$/app/build/generated/fabric/res/debug/values/com_crashlytics_build_id.xml" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/compat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/compat/R.java" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/constraint/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/constraint/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/coreui/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/coreui/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/coreutils/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/coreutils/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" />
@@ -88,6 +80,8 @@
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v4/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v4/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/recyclerview/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/recyclerview/R.java" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/auth/api/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/auth/api/R.java" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/base/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/base/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/firebase/firebase_common/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/firebase/firebase_common/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/pait/smartpos/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/pait/smartpos/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/sothree/slidinguppanel/library/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/sothree/slidinguppanel/library/R.java" />
@@ -1080,12 +1074,15 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CashMemoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CashMemoActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/FirstActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/FirstActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReturnMemoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReturnMemoActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ReturnMemoRecyclerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ReturnMemoRecyclerAdapter.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/db/DBHandler.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/db/DBHandler.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_inward.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_inward.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/inward_rec_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/inward_rec_item.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/BillReprintCancelFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/BillReprintCancelFragment.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_return_memo.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_return_memo.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/exp_list_item_return_memo.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/exp_list_item_return_memo.xml" />
     </list>
-    <ignored path="D:\sneha_android_project\SmartPOS\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -1107,128 +1104,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ExpenseActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseActivity.java">
+      <file leaf-file-name="CashMemoActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CashMemoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="413" column="32" lean-forward="false" selection-start-line="413" selection-start-column="32" selection-end-line="413" selection-end-column="32" />
+            <state relative-caret-position="66">
+              <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExpenseReportActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseReportActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="185" column="22" lean-forward="false" selection-start-line="185" selection-start-column="22" selection-end-line="185" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExpenseAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ExpenseAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="56" column="19" lean-forward="false" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/db/DBHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="1865" column="87" lean-forward="false" selection-start-line="1865" selection-start-column="87" selection-end-line="1865" selection-end-column="87" />
-              <folding>
-                <element signature="method#onCreate#0;class#DBHandler#0" expanded="false" />
-                <element signature="e#84297#84326#0" expanded="false" />
-                <element signature="method#onUpgrade#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getPaymentType#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getMaxAuto#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getMaxMastId#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getMaxDetAuto#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getMaxDetId#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getMaxCustAuto#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getMaxCustId#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getProductData#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#saveBillMaster#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#saveBillDetail#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getExpMaxAuto#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getExpenseReportData#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getListExpRemark#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getBillMasterData#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getBillDetailData#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#cancelBill#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#inActivateItem#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getCustomerData#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getExpHeadName#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getCollectionSumData#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getCollectionSumData1#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getCustid#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#saveCustomerMaster#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getCompIni#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getGSTPer#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getProductReportData#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getProdQty#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#updateProductQty#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getBillNo#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getBillDet#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getCustName#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getMaxRMAuto#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getMaxRMMastId#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getMaxRMDetAuto#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getMaxRMDetId#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getGstGroupFromProdId#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#saveReturnMemoMaster#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#saveReturnMemoDetail#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#updateRetQty#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#updateTRetQty#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getRateMaster#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getReturnMemo#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getBalRedeemOfMemo#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#updateBalRedeem#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getExpProductReportData#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getExExpenseReportData#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getExpCollectionSumData#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getInwardMaxAuto#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getInwardMaxMastId#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getInwardMaxDetAuto#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getInwardMaxDetId#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#saveInwardMaster#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#saveInwardDetail#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#updateInwardProductQty#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getInwradMaster#0;class#DBHandler#0" expanded="false" />
-                <element signature="method#getInwradDetail#0;class#DBHandler#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>PM_Hsncode</find>
-      <find>BalanceQty</find>
-      <find>tv_total_amount</find>
-      <find>getRate</find>
-      <find>totAmnt</find>
-      <find>tv_final_amnt</find>
-      <find>Table_ExpenseHead</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
-    <option name="UPDATE_CHANGES_POLICY" value="SHELVE" />
-    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="C:\Users\Sneha\.gradle\wrapper\dists\gradle-4.4-all\9br9xq1tocpiv8o6njlyu5op1\gradle-4.4" />
+        <entry key="$PROJECT_DIR$" value="C:\Users\Anup\.gradle\wrapper\dists\gradle-4.4-all\9br9xq1tocpiv8o6njlyu5op1\gradle-4.4" />
       </map>
     </option>
     <option name="myGradleVersions">
@@ -3435,19 +3329,9 @@
       </map>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/inward_rec_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_inward.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/db/DBHandler.java" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
+    <option name="x" value="29" />
+    <option name="y" value="5" />
     <option name="width" value="1260" />
     <option name="height" value="944" />
   </component>
@@ -3467,6 +3351,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -3483,171 +3370,33 @@
               <item name="SmartPOS" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="smartpos" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
             <path>
               <item name="SmartPOS" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="smartpos" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="pait" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartPOS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="pait" type="462c0819:PsiDirectoryNode" />
+              <item name="smartpos" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="D:/android-sdk" />
-    <property name="device.picker.selection" value="0123456789ABCDEF" />
-    <property name="last_opened_file_path" value="D:/databases" />
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/generated/fabric/res/debug/values/com_crashlytics_build_id.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/generated/source/r/debug/com/pait/smartpos/R.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/assets/debug/crashlytics-build.properties</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/debug/resources-debug.ap_</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/AndroidManifest.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CashMemoActivity.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/FirstActivity.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReportMenuActivity.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/db/DBHandler.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__sneha_android_project_SmartPOS_app_lib_commons_net_3_3_jar_unspecified_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__sneha_android_project_SmartPOS_app_lib_ePOS2_jar_unspecified_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__sneha_android_project_SmartPOS_app_lib_hoinsdk_jar_unspecified_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__sneha_android_project_SmartPOS_app_lib_poi_3_8_20120326_jar_unspecified_jar.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__sneha_android_project_SmartPOS_app_lib_universal_image_loader_1_9_5_jar_unspecified_jar.xml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
+    <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -3685,7 +3434,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -3805,11 +3554,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a2ba87b1-bb59-4425-a997-f1f5c9f2e8c8" name="Default" comment="" />
-      <created>1533014606913</created>
+      <changelist id="01595e39-8357-488d-8d4f-85f3374df2c9" name="Default" comment="" />
+      <created>1533034582867</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1533014606913</updated>
+      <updated>1533034582867</updated>
     </task>
     <servers />
   </component>
@@ -3818,28 +3567,27 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40552995" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976957" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3853,360 +3601,23 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <option name="time" value="4" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_inward_first_screen.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/MasterUpdationFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/AddGSTActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="166" column="24" lean-forward="false" selection-start-line="166" selection-start-column="24" selection-end-line="166" selection-end-column="24" />
+        <state relative-caret-position="88">
+          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-480">
-          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardFirstScreenActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="169" column="64" lean-forward="true" selection-start-line="169" selection-start-column="64" selection-end-line="169" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/android-sdk/platforms/android-27/android.jar!/java/util/List.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="37" column="9" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/inward_summery_item.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/InwardSummeryReportAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardReportActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="315" column="19" lean-forward="false" selection-start-line="315" selection-start-column="19" selection-end-line="315" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/inward_rec_item.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="210" column="43" lean-forward="false" selection-start-line="210" selection-start-column="43" selection-end-line="210" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/InwardRecyclerViewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="32" column="84" lean-forward="false" selection-start-line="32" selection-start-column="84" selection-end-line="32" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CashMemoActivityR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="50" column="13" lean-forward="false" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/adapter_item.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CashMemoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="449" column="35" lean-forward="false" selection-start-line="449" selection-start-column="35" selection-end-line="449" selection-end-column="35" />
-          <folding>
-            <element signature="e#4329#4372#0" expanded="false" />
-            <element signature="method#onCreate#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="class#4876:5907" expanded="false" />
-            <element signature="method#onItemSelected#0;class#4876:5907" expanded="false" />
-            <element signature="method#onNothingSelected#0;class#4876:5907" expanded="false" />
-            <element signature="class#5963:6544" expanded="false" />
-            <element signature="method#onItemSelected#0;class#5963:6544" expanded="false" />
-            <element signature="method#onNothingSelected#0;class#5963:6544" expanded="false" />
-            <element signature="class#6590:7724" expanded="false" />
-            <element signature="method#beforeTextChanged#0;class#6590:7724" expanded="false" />
-            <element signature="method#onTextChanged#0;class#6590:7724" expanded="false" />
-            <element signature="method#afterTextChanged#0;class#6590:7724" expanded="false" />
-            <element signature="class#7777:8287" expanded="false" />
-            <element signature="method#beforeTextChanged#0;class#7777:8287" expanded="false" />
-            <element signature="method#onTextChanged#0;class#7777:8287" expanded="false" />
-            <element signature="method#afterTextChanged#0;class#7777:8287" expanded="false" />
-            <element signature="class#8340:9255" expanded="false" />
-            <element signature="method#beforeTextChanged#0;class#8340:9255" expanded="false" />
-            <element signature="method#onTextChanged#0;class#8340:9255" expanded="false" />
-            <element signature="method#afterTextChanged#0;class#8340:9255" expanded="false" />
-            <element signature="class#9305:10164" expanded="false" />
-            <element signature="method#beforeTextChanged#0;class#9305:10164" expanded="false" />
-            <element signature="method#onTextChanged#0;class#9305:10164" expanded="false" />
-            <element signature="method#afterTextChanged#0;class#9305:10164" expanded="false" />
-            <element signature="class#10213:10622" expanded="false" />
-            <element signature="method#onTouch#0;class#10213:10622" expanded="false" />
-            <element signature="class#10675:11482" expanded="false" />
-            <element signature="method#onItemClick#0;class#10675:11482" expanded="false" />
-            <element signature="method#onClick#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#onItemClick#1;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#calculation#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#onItemClick#2;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#onSwiped#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="class#16120:16876" expanded="false" />
-            <element signature="method#onClick#0;class#16120:16876" expanded="false" />
-            <element signature="class#16945:17561" expanded="false" />
-            <element signature="method#onViewAttachedToWindow#0;class#16945:17561" expanded="false" />
-            <element signature="method#onViewDetachedFromWindow#0;class#16945:17561" expanded="false" />
-            <element signature="method#startNewActivty#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#init#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="e#22301#22611#0" expanded="false" />
-            <element signature="method#setProdData#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#setRateList#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#setCustData#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#showProdAlertDialog#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="class#29058:29517" expanded="false" />
-            <element signature="method#beforeTextChanged#0;class#29058:29517" expanded="false" />
-            <element signature="method#onTextChanged#0;class#29058:29517" expanded="false" />
-            <element signature="method#afterTextChanged#0;class#29058:29517" expanded="false" />
-            <element signature="method#showRateAlertDialog#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="class#31510:31969" expanded="false" />
-            <element signature="method#beforeTextChanged#0;class#31510:31969" expanded="false" />
-            <element signature="method#onTextChanged#0;class#31510:31969" expanded="false" />
-            <element signature="method#afterTextChanged#0;class#31510:31969" expanded="false" />
-            <element signature="method#removeQty#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#addQty#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#addToCart#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#setItemwiseDiscount#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#saveBill#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#stringToInt#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#stringToFloat#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#setSpinnerData#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#showDia#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="class#67553:67757" expanded="false" />
-            <element signature="class#67808:68012" expanded="false" />
-            <element signature="class#68160:68398" expanded="false" />
-            <element signature="method#onClick#0;class#68160:68398" expanded="false" />
-            <element signature="class#68449:68653" expanded="false" />
-            <element signature="class#68794:69049" expanded="false" />
-            <element signature="method#onClick#0;class#68794:69049" expanded="false" />
-            <element signature="class#69107:69345" expanded="false" />
-            <element signature="method#onClick#0;class#69107:69345" expanded="false" />
-            <element signature="method#clearField#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="class#CashMemoPrint#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#onPreExecute#0;class#CashMemoPrint#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#doInBackground#0;class#CashMemoPrint#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#onPostExecute#0;class#CashMemoPrint#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#roundTwoDecimals#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#roundDecimals#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#roundDecimals#1;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#roundTwoDecimals#1;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#connectBT#0;class#CashMemoActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_inward.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="639" column="48" lean-forward="false" selection-start-line="639" selection-start-column="48" selection-end-line="639" selection-end-column="48" />
+        <state relative-caret-position="66">
+          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="170" column="37" lean-forward="false" selection-start-line="170" selection-start-column="37" selection-end-line="170" selection-end-column="37" />
-          <folding>
-            <element signature="class#4052:4312" expanded="false" />
-            <element signature="method#onClick#0;class#4052:4312" expanded="false" />
-            <element signature="class#4360:4617" expanded="false" />
-            <element signature="method#onClick#0;class#4360:4617" expanded="false" />
-            <element signature="class#4669:5320" expanded="false" />
-            <element signature="method#beforeTextChanged#0;class#4669:5320" expanded="false" />
-            <element signature="method#onTextChanged#0;class#4669:5320" expanded="false" />
-            <element signature="method#afterTextChanged#0;class#4669:5320" expanded="false" />
-            <element signature="class#5370:6511" expanded="false" />
-            <element signature="method#beforeTextChanged#0;class#5370:6511" expanded="false" />
-            <element signature="method#onTextChanged#0;class#5370:6511" expanded="false" />
-            <element signature="method#afterTextChanged#0;class#5370:6511" expanded="false" />
-            <element signature="method#beforeTextChanged#0;class#6562:7443" expanded="false" />
-            <element signature="method#afterTextChanged#0;class#6562:7443" expanded="false" />
-            <element signature="method#onClick#0;class#InwardActivity#0" expanded="false" />
-            <element signature="method#onResume#0;class#InwardActivity#0" expanded="false" />
-            <element signature="e#8064#8080#0" expanded="false" />
-            <element signature="method#init#0;class#InwardActivity#0" expanded="false" />
-            <element signature="method#setSupplier#0;class#InwardActivity#0" expanded="false" />
-            <element signature="method#setSpinnerValueChecked#0;class#InwardActivity#0" expanded="false" />
-            <element signature="method#setSpinnerValue1#0;class#InwardActivity#0" expanded="false" />
-            <element signature="method#setData#0;class#InwardActivity#0" expanded="false" />
-            <element signature="method#addInCart#0;class#InwardActivity#0" expanded="false" />
-            <element signature="method#saveInward#0;class#InwardActivity#0" expanded="false" />
-            <element signature="method#stringToInt#0;class#InwardActivity#0" expanded="false" />
-            <element signature="method#stringToFloat#0;class#InwardActivity#0" expanded="false" />
-            <element signature="method#roundTwoDecimals#0;class#InwardActivity#0" expanded="false" />
-            <element signature="method#roundDecimals#0;class#InwardActivity#0" expanded="false" />
-            <element signature="method#roundTwoDecimals#1;class#InwardActivity#0" expanded="false" />
-            <element signature="method#setPosition#0;class#InwardActivity#0" expanded="false" />
-            <element signature="method#onItemClick#0;class#InwardActivity#0" expanded="false" />
-            <element signature="method#onItemClick#1;class#InwardActivity#0" expanded="false" />
-            <element signature="method#calculation#0;class#InwardActivity#0" expanded="false" />
-            <element signature="e#33844#33887#0" expanded="false" />
-            <element signature="method#onClick#0;class#38315:38553" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseReportActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="185" column="22" lean-forward="false" selection-start-line="185" selection-start-column="22" selection-end-line="185" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ExpenseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="56" column="19" lean-forward="false" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="413" column="32" lean-forward="false" selection-start-line="413" selection-start-column="32" selection-end-line="413" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/db/DBHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="1865" column="87" lean-forward="false" selection-start-line="1865" selection-start-column="87" selection-end-line="1865" selection-end-column="87" />
-          <folding>
-            <element signature="method#onCreate#0;class#DBHandler#0" expanded="false" />
-            <element signature="e#84297#84326#0" expanded="false" />
-            <element signature="method#onUpgrade#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getPaymentType#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getMaxAuto#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getMaxMastId#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getMaxDetAuto#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getMaxDetId#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getMaxCustAuto#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getMaxCustId#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getProductData#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#saveBillMaster#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#saveBillDetail#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getExpMaxAuto#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getExpenseReportData#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getListExpRemark#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getBillMasterData#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getBillDetailData#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#cancelBill#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#inActivateItem#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getCustomerData#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getExpHeadName#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getCollectionSumData#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getCollectionSumData1#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getCustid#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#saveCustomerMaster#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getCompIni#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getGSTPer#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getProductReportData#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getProdQty#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#updateProductQty#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getBillNo#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getBillDet#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getCustName#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getMaxRMAuto#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getMaxRMMastId#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getMaxRMDetAuto#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getMaxRMDetId#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getGstGroupFromProdId#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#saveReturnMemoMaster#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#saveReturnMemoDetail#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#updateRetQty#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#updateTRetQty#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getRateMaster#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getReturnMemo#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getBalRedeemOfMemo#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#updateBalRedeem#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getExpProductReportData#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getExExpenseReportData#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getExpCollectionSumData#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getInwardMaxAuto#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getInwardMaxMastId#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getInwardMaxDetAuto#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getInwardMaxDetId#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#saveInwardMaster#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#saveInwardDetail#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#updateInwardProductQty#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getInwradMaster#0;class#DBHandler#0" expanded="false" />
-            <element signature="method#getInwradDetail#0;class#DBHandler#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

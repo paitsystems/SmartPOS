@@ -2077,6 +2077,8 @@ public class DBHandler extends SQLiteOpenHelper {
                 master.setBillNo(res.getString(res.getColumnIndex(BM_Billno)));
                 master.setTotalAmt(res.getString(res.getColumnIndex(BM_Totalamt)));
                 master.setPaidAmt(res.getString(res.getColumnIndex(BM_Paidamt)));
+                master.setTotalQty(res.getString(res.getColumnIndex(BM_Totalqty)));
+                master.setTRetQty(res.getString(res.getColumnIndex(BM_TRetQty)));
                 list.add(master);
             }while (res.moveToNext());
         }
@@ -2109,6 +2111,8 @@ public class DBHandler extends SQLiteOpenHelper {
                 det.setAuto(res.getInt(res.getColumnIndex(BD_Auto)));
                 det.setId(res.getInt(res.getColumnIndex(BD_Id)));
                 det.setBillID(res.getInt(res.getColumnIndex(BD_Billid)));
+                det.setQty(res.getString(res.getColumnIndex(BD_Qty)));
+                det.setRetQty(res.getString(res.getColumnIndex(BD_Retqty)));
                 list.add(det);
             }while (res.moveToNext());
         }

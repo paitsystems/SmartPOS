@@ -44,6 +44,7 @@ public class ReturnMemoRecyclerAdapter  extends RecyclerView.Adapter<ReturnMemoR
         holder.tv_rate.setText(det.getRate());
         holder.tv_barcode.setText(det.getBarcode());
         holder.tv_total.setText(det.getTotal());
+        holder.tv_discAmnt.setText(det.getBilldisamt());
         holder.tv_cgstAmnt.setText(det.getCGSTAMT());
         holder.tv_sgstAmnt.setText(det.getSGSTAMT());
         
@@ -60,7 +61,7 @@ public class ReturnMemoRecyclerAdapter  extends RecyclerView.Adapter<ReturnMemoR
 
     public class ProductViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        private TextView tv_fsku, tv_qty, tv_rate, tv_barcode, tv_total, tv_cgstAmnt, tv_sgstAmnt;
+        private TextView tv_fsku, tv_qty, tv_rate, tv_barcode, tv_total, tv_discAmnt, tv_cgstAmnt, tv_sgstAmnt;
 
         public ProductViewHolder(View itemView) {
             super(itemView);
@@ -69,6 +70,7 @@ public class ReturnMemoRecyclerAdapter  extends RecyclerView.Adapter<ReturnMemoR
             tv_rate = itemView.findViewById(R.id.tv_rate);
             tv_barcode = itemView.findViewById(R.id.tv_barcode);
             tv_total = itemView.findViewById(R.id.tv_total);
+            tv_discAmnt = itemView.findViewById(R.id.tv_discAmnt);
             tv_cgstAmnt = itemView.findViewById(R.id.tv_cgstAmnt);
             tv_sgstAmnt = itemView.findViewById(R.id.tv_sgstAmnt);
             
