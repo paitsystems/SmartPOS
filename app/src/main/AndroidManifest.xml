@@ -207,6 +207,12 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ExportOthersActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".InwardFirstScreenActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".InwardReportActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".InwardDetailActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

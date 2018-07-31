@@ -495,7 +495,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
         sp_paymentType = findViewById(R.id.sp_payment);
         ed_cash = findViewById(R.id.ed_cash);
         ed_Qty = findViewById(R.id.ed_Qty);
-        ed_rate = findViewById(R.id.ed_ssp);
+        ed_rate = findViewById(R.id.ed_rate);
         ed_cardNo = findViewById(R.id.ed_cardNo);
         ed_custName = findViewById(R.id.ed_custName);
         ed_custMobNo = findViewById(R.id.ed_custMobNo);

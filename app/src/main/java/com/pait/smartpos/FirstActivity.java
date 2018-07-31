@@ -213,7 +213,8 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
             PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
             dbpath = pInfo.applicationInfo.dataDir+"/databases";
             Constant.showLog(dbpath);
-            CopyDb();
+            new DBHandler(getApplicationContext()).getWritableDatabase();
+            //CopyDb();
         } catch (Exception e) {
             e.printStackTrace();
             writeLog("doThis_"+e.getMessage());

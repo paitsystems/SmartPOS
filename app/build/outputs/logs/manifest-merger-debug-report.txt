@@ -11,10 +11,10 @@ INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:23:9-
 	android:name
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:24:13-67
 manifest
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
-INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
-INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
-INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-218:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-218:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-218:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-218:12
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\fe194bbf7495e250d9319c54267eef16\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\bf796e9bee93599565fa580dc160a21d\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\2f1723a30b21833b2fefb46e4502bbfb\AndroidManifest.xml:17:1-22:12
@@ -61,20 +61,20 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Anup\.gradle\c
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\38f7758451f7e041969c2e7afdfa2cf7\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\7a451036bfbcea1f37fe2672a2dbf238\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f35b07a0e6349945f69e65927044f97e\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
-INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
-INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-218:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-218:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-218:12
 	package
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:3:5-32
 		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
 		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-218:12
 		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-212:12
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-218:12
 		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:11-69
@@ -151,7 +151,7 @@ ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:15:5-65
 	android:name
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:15:22-62
 application
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:17:5-210:19
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:17:5-216:19
 MERGED from [com.sothree.slidinguppanel:library:3.4.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\library-3.4.0.aar\68c601005328842a86fdc90398a13e0d\AndroidManifest.xml:9:5-20
 MERGED from [com.sothree.slidinguppanel:library:3.4.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\library-3.4.0.aar\68c601005328842a86fdc90398a13e0d\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\0f493ae268f6deab548a642aba1b59f5\AndroidManifest.xml:24:5-25:19
@@ -582,6 +582,24 @@ ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:208:9-20
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:209:13-49
 	android:name
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:208:19-55
+activity#com.pait.smartpos.InwardFirstScreenActivity
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:210:9-211:51
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:211:13-49
+	android:name
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:210:19-60
+activity#com.pait.smartpos.InwardReportActivity
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:212:9-213:51
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:213:13-49
+	android:name
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:212:19-55
+activity#com.pait.smartpos.InwardDetailActivity
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:214:9-215:51
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:215:13-49
+	android:name
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:214:19-55
 uses-sdk
 INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml

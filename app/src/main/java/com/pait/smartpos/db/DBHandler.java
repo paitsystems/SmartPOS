@@ -13,6 +13,8 @@ import com.pait.smartpos.model.BillDetailClassR;
 import com.pait.smartpos.model.BillMasterClass;
 import com.pait.smartpos.model.DailyPettyExpClass;
 import com.pait.smartpos.model.ExpenseDetail;
+import com.pait.smartpos.model.InwardDetailClass;
+import com.pait.smartpos.model.InwardMasterClass;
 import com.pait.smartpos.model.ProductClass;
 import com.pait.smartpos.model.ReturnMemoDetailClass;
 import com.pait.smartpos.model.ReturnMemoMasterClass;
@@ -1860,7 +1862,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     public int getExpHeadAuto(String name) {
         int a = 0;
-        String str = "select id from exphead where name='name'";
+        String str = "select "+EXM_Id+" from "+ Table_ExpenseHead+" where "+EXM_Name+"='"+name+"'";
         Constant.showLog(str);
         Cursor cursor = getWritableDatabase().rawQuery(str, null);
         if (cursor.moveToFirst()) {
@@ -2424,4 +2426,285 @@ public class DBHandler extends SQLiteOpenHelper {
         return getWritableDatabase().rawQuery(str, null);
     }
 
+    public String getGSTGroup(String product) {
+        String val = "";
+        Cursor cursor = getWritableDatabase().rawQuery("select " + PM_Gstgroup + " from " + Table_ProductMaster
+                + " where " + PM_Cat3 + " ='" + product + "'", null);
+        if (cursor.moveToFirst()) {
+            do {
+                val = cursor.getString(0);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        return val;
+    }
+
+    public int getInwardMaxAuto() {
+        int id = 0;
+        Cursor res = getWritableDatabase().rawQuery("select max(" + IWM_Autono + ") from " + Table_InwardMaster, null);
+        if (res.moveToFirst()) {
+            do {
+                id = res.getInt(0);
+            } while (res.moveToNext());
+        }
+        res.close();
+        return ++id;
+    }
+
+    public int getInwardMaxMastId(String finYR) {
+        int id = 0;
+        Cursor res = getWritableDatabase().rawQuery("select max(" + IWM_Id + ") from " + Table_InwardMaster + " where " + IWM_Finyr + "='" + finYR + "'", null);
+        if (res.moveToFirst()) {
+            do {
+                id = res.getInt(0);
+            } while (res.moveToNext());
+        }
+        res.close();
+        return ++id;
+    }
+
+    public int getInwardMaxDetAuto() {
+        int id = 0;
+        Cursor res = getWritableDatabase().rawQuery("select max(" + IWD_Autono + ") from " + Table_InwardDetail, null);
+        if (res.moveToFirst()) {
+            do {
+                id = res.getInt(0);
+            } while (res.moveToNext());
+        }
+        res.close();
+        return ++id;
+    }
+
+    public int getInwardMaxDetId(int mastAuto) {
+        int id = 0;
+        Cursor res = getWritableDatabase().rawQuery("select max(" + IWD_Id + ") from " + Table_InwardDetail + " where " + IWD_Id + "=" + mastAuto, null);
+        if (res.moveToFirst()) {
+            do {
+                id = res.getInt(0);
+            } while (res.moveToNext());
+        }
+        res.close();
+        return ++id;
+    }
+
+    public int getInwardProdId(String product) {
+        int id = 0;
+        Cursor res = getWritableDatabase().rawQuery("select " + PM_Id + " from " + Table_ProductMaster + " where " + PM_Cat3 + "='" + product + "'", null);
+        if (res.moveToFirst()) {
+            do {
+                id = res.getInt(0);
+            } while (res.moveToNext());
+        }
+        res.close();
+        return id;
+    }
+
+    public int saveInwardMaster(InwardMasterClass mastClass) {
+        ContentValues cv = new ContentValues();
+        cv.put(IWM_Autono, mastClass.getAutoNo());
+        cv.put(IWM_Id, mastClass.getId());
+        cv.put(IWM_Inwno, mastClass.getInwNo());
+        cv.put(IWM_Branchid, mastClass.getBranchID());
+        cv.put(IWM_Totalqty, mastClass.getTotalQty());
+        cv.put(IWM_Totalamt, mastClass.getTotalAmt());
+        cv.put(IWM_Netamt, mastClass.getNetAmt());
+        cv.put(IWM_Orderamt, mastClass.getOrderAmt());
+        cv.put(IWM_Balanceqty, mastClass.getBalanceQty());
+        cv.put(IWM_Totsuppdisamt, mastClass.getTotSuppDisAmt());
+        cv.put(IWM_Replcolumns, mastClass.getReplColumns());
+        cv.put(IWM_Disper, mastClass.getDisper());
+        cv.put(IWM_Disamt, mastClass.getDisAmt());
+        cv.put(IWM_Grossamt, mastClass.getGrossAmt());
+        cv.put(IWM_Totvat, mastClass.getTotVat());
+        cv.put(IWM_Otheradd, mastClass.getOtherAdd());
+        cv.put(IWM_Rounduppamt, mastClass.getRoundUppAmt());
+        cv.put(IWM_Cstvatper, mastClass.getCSTVatPer());
+        cv.put(IWM_Cgstamt, mastClass.getCGSTAMT());
+        cv.put(IWM_Sgstamt, mastClass.getSGSTAMT());
+        cv.put(IWM_Igstamt, mastClass.getIGSTAMT());
+        cv.put(IWM_Supplierid, mastClass.getSupplierID());
+        cv.put(IWM_Pono, mastClass.getPoNo());
+        cv.put(IWM_Rebarcnt, mastClass.getRebarCnt());
+        cv.put(IWM_Createby, mastClass.getCreateby());
+        cv.put(IWM_Transport_Id, mastClass.getTransport_id());
+        cv.put(IWM_Jobwrkdcid, mastClass.getJobWrkDCid());
+        cv.put(IWM_Cancelledby, mastClass.getCancelledBy());
+        cv.put(IWM_Hocode, mastClass.getHOCode());
+        cv.put(IWM_Inwarddate, mastClass.getInwardDate());
+        cv.put(IWM_Againstpo, mastClass.getAgainstPO());
+        cv.put(IWM_Podate, mastClass.getPoDate());
+        cv.put(IWM_Inwardst, mastClass.getInwardSt());
+        cv.put(IWM_Ramark, mastClass.getRamark());
+        cv.put(IWM_Netamtinword, mastClass.getNetAmtInWord());
+        cv.put(IWM_Totalamtinword, mastClass.getTotalAmtInWord());
+        cv.put(IWM_Finyr, mastClass.getFinYr());
+        cv.put(IWM_Rebarcodest, mastClass.getRebarcodeSt());
+        cv.put(IWM_Billno, mastClass.getBillNo());
+        cv.put(IWM_Billgenerated, mastClass.getBillgenerated());
+        cv.put(IWM_Bgenerateno, mastClass.getBgenerateno());
+        cv.put(IWM_Createdate, mastClass.getCreatedate());
+        cv.put(IWM_Lr_No, mastClass.getLR_No());
+        cv.put(IWM_Lr_Date, mastClass.getLr_Date());
+        cv.put(IWM_Refund, mastClass.getRefund());
+        cv.put(IWM_Refunddate, mastClass.getRefundDate());
+        cv.put(IWM_Pimadest, mastClass.getPIMadeSt());
+        cv.put(IWM_Baleopenno, mastClass.getBaleOpenNo());
+        cv.put(IWM_Jobworktyp, mastClass.getJobWorkTyp());
+        cv.put(IWM_Barcodegenerate, mastClass.getBarcodeGenerate());
+        cv.put(IWM_Consignmentpur, mastClass.getConsignmentPur());
+        cv.put(IWM_Forbranch, mastClass.getForBranch());
+        cv.put(IWM_Nan, mastClass.getNAN());
+        cv.put(IWM_Invno, mastClass.getInvNo());
+        cv.put(IWM_Status, mastClass.getStatus());
+        cv.put(IWM_Canceldate, mastClass.getCancelDate());
+        cv.put(IWM_Cancelreson, mastClass.getCancelReson());
+        cv.put(IWM_Chkcst, mastClass.getChkCST());
+        cv.put(IWM_Esugamno, mastClass.getEsugamNo());
+        cv.put(IWM_Reason, mastClass.getReason());
+        cv.put(IWM_Igstapp, mastClass.getIGSTAPP());
+        getWritableDatabase().insert(Table_InwardMaster, null, cv);
+        return mastClass.getAutoNo();
+    }
+
+    public void saveInwardDetail(InwardDetailClass dtClass) {
+        ContentValues cv = new ContentValues();
+        cv.put(IWD_Autono, dtClass.getAutoNo());
+        cv.put(IWD_Id, dtClass.getId());
+        cv.put(IWD_Inwardid, dtClass.getInwardID());
+        cv.put(IWD_Branchid, dtClass.getBranchId());
+        cv.put(IWD_Productid, dtClass.getProductID());
+        cv.put(IWD_Fathersku, dtClass.getFatherSKU());
+        cv.put(IWD_Barcode, dtClass.getBarcode());
+        cv.put(IWD_Recqty, dtClass.getRecQty());
+        cv.put(IWD_Rate, dtClass.getRate());
+        cv.put(IWD_Totalamt, dtClass.getTotalAmt());
+        cv.put(IWD_Tax, dtClass.getTax());
+        cv.put(IWD_Taxamt, dtClass.getTaxAmt());
+        cv.put(IWD_Productnetamt, dtClass.getProductNetAmt());
+        cv.put(IWD_Discamt, dtClass.getDiscAmt());
+        cv.put(IWD_Discfrompr, dtClass.getDiscFromPr());
+        cv.put(IWD_Purchaserate, dtClass.getPurchaseRate());
+        cv.put(IWD_Freeqty, dtClass.getFreeQty());
+        cv.put(IWD_Mandal, dtClass.getMandal());
+        cv.put(IWD_Mandalper, dtClass.getMandalPer());
+        cv.put(IWD_Custdisamt, dtClass.getCustDisAmt());
+        cv.put(IWD_Custdisper, dtClass.getCustDisper());
+        cv.put(IWD_Itemsaleper, dtClass.getItemSalePer());
+        cv.put(IWD_Expqty, dtClass.getExpQty());
+        cv.put(IWD_Balanceqty, dtClass.getBalanceQty());
+        cv.put(IWD_Mrp, dtClass.getMRP());
+        cv.put(IWD_Nan, dtClass.getNAN());
+        cv.put(IWD_Suppdisamt, dtClass.getSuppDisAmt());
+        cv.put(IWD_Suppdisper, dtClass.getSuppDisPer());
+        cv.put(IWD_Suppbilldisper, dtClass.getSuppBillDisPer());
+        cv.put(IWD_Suppbilldisamt, dtClass.getSuppBillDisAmt());
+        cv.put(IWD_Otheraddded, dtClass.getOtherAddDed());
+        cv.put(IWD_Barcodeqty, dtClass.getBarcodeQty());
+        cv.put(IWD_Wsp, dtClass.getWSP());
+        cv.put(IWD_Netrate, dtClass.getNetRate());
+        cv.put(IWD_Gstper, dtClass.getGSTPER());
+        cv.put(IWD_Cgstamt, dtClass.getCGSTAMT());
+        cv.put(IWD_Sgstamt, dtClass.getSGSTAMT());
+        cv.put(IWD_Igstamt, dtClass.getIGSTAMT());
+        cv.put(IWD_Cgstper, dtClass.getCGSTPER());
+        cv.put(IWD_Sgstper, dtClass.getSGSTPER());
+        cv.put(IWD_Cessamt, dtClass.getCESSAMT());
+        cv.put(IWD_Cessper, dtClass.getCESSPER());
+        cv.put(IWD_Suppdisamt1, dtClass.getSuppDisAmt1());
+        cv.put(IWD_Suppdisper1, dtClass.getSuppDisPer1());
+        cv.put(IWD_Rebarcnt, dtClass.getRebarCnt());
+        cv.put(IWD_Refinwid, dtClass.getRefInwId());
+        cv.put(IWD_Podetauto, dtClass.getPodetauto());
+        cv.put(IWD_Hocode, dtClass.getHOCode());
+        cv.put(IWD_Itemname, dtClass.getItemName());
+        cv.put(IWD_Rebarcodest, dtClass.getRebarcodeSt());
+        cv.put(IWD_Designno, dtClass.getDesignno());
+        cv.put(IWD_Color, dtClass.getColor());
+        cv.put(IWD_Itmimage, dtClass.getItmImage());
+        cv.put(IWD_Imagepath, dtClass.getImagePath());
+        cv.put(IWD_Itemsize, dtClass.getItemSize());
+        cv.put(IWD_Jobworktyp, dtClass.getJobWorkTyp());
+        cv.put(IWD_Oldbarcode, dtClass.getOldBarcode());
+        cv.put(IWD_Repcolumn, dtClass.getRepColumn());
+        cv.put(IWD_Gvapp, dtClass.getGVApp());
+        cv.put(IWD_Scheme1, dtClass.getScheme1());
+        cv.put(IWD_Scheme2, dtClass.getScheme2());
+        cv.put(IWD_Txincextyp, dtClass.getTxIncExTyp());
+        cv.put(IWD_Hsncode, dtClass.getHSNCode());
+        cv.put(IWD_Attr1, dtClass.getAttr1());
+        cv.put(IWD_Attr2, dtClass.getAttr2());
+        cv.put(IWD_Atrr3, dtClass.getAtrr3());
+        cv.put(IWD_Attr4, dtClass.getAttr4());
+        cv.put(IWD_Atrr5, dtClass.getAtrr5());
+        getWritableDatabase().insert(Table_InwardDetail, null, cv);
+    }
+
+    public void updateInwardProductQty(int prodId, int purQty) {
+        ContentValues cv = new ContentValues();
+        int qty = 0;
+        qty = getProdQty(prodId) + purQty;
+       /* if(flag == 1) {
+             qty = getProdQty(prodId) - purQty;
+        }else if(flag == 2){
+            qty = getProdQty(prodId) + purQty;
+        }*/
+        cv.put(PM_StockQty, qty);
+        getWritableDatabase().update(Table_ProductMaster, cv, PM_Id + "=?", new String[]{String.valueOf(prodId)});
+    }
+
+    public Cursor getInwradMaster(String fdate, String tdate, int flag, String supplier, int suppid) {
+        String str = "";
+        if (flag == 0) {
+
+            if (supplier.equals("")) {
+                str = "Select * from " + Table_InwardMaster + " where " + IWM_Inwarddate + ">= '" + fdate + "' and " + IWM_Inwarddate + "<= '" + tdate + "'";
+            } else {
+                str = "Select * from " + Table_InwardMaster + " where " + IWM_Inwarddate + ">= '" + fdate + "' and " + IWM_Inwarddate + "<= '" + tdate + "' and " + IWM_Supplierid + " = " + suppid;
+            }
+
+        } else if (flag == 1) {
+            if (supplier.equals("")) {
+                str = "Select * from " + Table_InwardMaster;
+            } else {
+                str = "Select * from " + Table_InwardMaster + " where " + IWM_Supplierid + " = " + suppid;
+            }
+        }
+        return getWritableDatabase().rawQuery(str, null);
+    }
+
+    public Cursor getInwradDetail(int inwardid, int branchid) {
+        //return getWritableDatabase().rawQuery("Select * from " + Table_InwardDetail + " where " + IWD_Inwardid + " = " + inwardid + " and " + IWD_Branchid + " = " + branchid, null);
+        String str = "select " + Table_InwardMaster + "." + IWM_Supplierid + "," + Table_InwardMaster + "." + IWM_Inwno + "," + Table_InwardDetail + "." + IWD_Inwardid + "," + Table_InwardDetail + "." + IWD_Fathersku + ","
+                + Table_InwardDetail + "." + IWD_Recqty + "," + Table_InwardDetail + "." + IWD_Rate + "," + Table_InwardDetail + "." + IWD_Totalamt + "," + Table_InwardDetail + "." + IWD_Productnetamt + ","
+                + Table_InwardDetail + "." + IWD_Barcode + "," + Table_InwardDetail + "." + IWD_Purchaserate + "," + Table_InwardDetail + "." + IWD_Netrate + "," + Table_InwardDetail + "." + IWD_Gstper + ","
+                + Table_InwardDetail + "." + IWD_Cgstamt + "," + Table_InwardDetail + "." + IWD_Sgstamt + "," + Table_InwardDetail + "." + IWD_Igstamt + "," + Table_InwardDetail + "." + IWD_Hsncode + " from " + Table_InwardMaster +
+                "  inner join " + Table_InwardDetail + " on " + Table_InwardMaster + "." + IWD_Autono + "  = " + Table_InwardDetail + "." + IWD_Inwardid + " where " +
+                Table_InwardDetail + "." + IWD_Inwardid + " = " + inwardid + " and " + Table_InwardDetail + "." + IWD_Branchid + " = " + branchid;
+        Constant.showLog("str" + str);
+        return getWritableDatabase().rawQuery(str, null);
+    }
+
+    public int getInwardSupplierId(String supplier) {
+        int id = 0;
+        Cursor res = getWritableDatabase().rawQuery("select " + SM_Id + " from " + Table_SupplierMaster + " where " + SM_Name + "='" + supplier + "'", null);
+        if (res.moveToFirst()) {
+            do {
+                id = res.getInt(0);
+            } while (res.moveToNext());
+        }
+        res.close();
+        return id;
+    }
+
+    public String getInwardSupplierName(int suppid) {
+        String Name = "";
+        Cursor res = getWritableDatabase().rawQuery("select " + SM_Name + " from " + Table_SupplierMaster + " where " + SM_Id + "='" + suppid + "'", null);
+        if (res.moveToFirst()) {
+            do {
+                Name = res.getString(0);
+            } while (res.moveToNext());
+        }
+        res.close();
+        return Name;
+    }
 }
