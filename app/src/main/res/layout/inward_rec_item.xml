@@ -156,17 +156,17 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:background="@drawable/left_line"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.15"
+                        android:background="@drawable/left_line"
                         android:paddingLeft="@dimen/mobpadding5"
-                        android:text="CGST:"
+                        android:text="GST%"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textColor="@color/black" />
 
                     <TextView
-                        android:id="@+id/tv_cgst"
+                        android:id="@+id/tv_gst_per"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.15"
@@ -177,19 +177,19 @@
                         android:textColor="@color/red" />
 
                     <TextView
-                        android:background="@drawable/left_line"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.15"
+                        android:background="@drawable/left_line"
                         android:gravity="center"
                         android:paddingLeft="@dimen/mobpadding5"
-                        android:text="SGST:"
+                        android:text="CGST:"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textColor="@color/black"
                         android:visibility="visible" />
 
                     <TextView
-                        android:id="@+id/tv_sgst"
+                        android:id="@+id/tv_cgst"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.15"
@@ -202,19 +202,19 @@
                         android:visibility="visible" />
 
                     <TextView
-                        android:background="@drawable/left_line"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="23dp"
                         android:layout_weight="0.15"
+                        android:background="@drawable/left_line"
                         android:gravity="center"
                         android:paddingLeft="@dimen/mobpadding5"
-                        android:text="GST%"
+                        android:text="SGST:"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textColor="@color/black"
                         android:visibility="visible" />
 
                     <TextView
-                        android:id="@+id/tv_gst_per"
+                        android:id="@+id/tv_sgst"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.15"

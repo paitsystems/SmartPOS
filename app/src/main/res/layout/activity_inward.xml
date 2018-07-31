@@ -220,7 +220,7 @@
                     android:layout_weight="0.5"
                     android:background="@drawable/date_border"
                     android:gravity="center"
-                    android:hint="Enter Rate"
+                    android:hint="Enter Purchase Rate"
                     android:inputType="number"
                     android:maxLines="2"
                     android:padding="5dp"
@@ -637,7 +637,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
-                android:inputType="number"
+                android:inputType="numberSigned"
                 android:ems="10"
                 android:text="0"/>
         </LinearLayout>

@@ -1732,7 +1732,7 @@ public class DBHandler extends SQLiteOpenHelper {
         for (DailyPettyExpClass detail : detailList) {
             cv.put(DPE_Autoid, detail.getAutoid());
             cv.put(DPE_Date, detail.getDate());
-            // cv.put(EXP_Time,detail.getTime());
+             cv.put(DPE_Exphead,detail.getExpHead());
             cv.put(DPE_Remark, detail.getRemark());
             cv.put(DPE_Amount, detail.getAmount());
             db.insert(Table_DailyPettyExp, null, cv);
@@ -1777,7 +1777,8 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     public Cursor getDistinctProduct() {
-        String str = "Select distinct " + PM_Cat3 + " from " + Table_ProductMaster;
+       // String str = "Select distinct " + PM_Cat3 + " from " + Table_ProductMaster;
+        String str = "Select distinct " + PM_Finalproduct + " from " + Table_ProductMaster;
         return getWritableDatabase().rawQuery(str, null);
     }
 
@@ -1862,7 +1863,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     public int getExpHeadAuto(String name) {
         int a = 0;
-        String str = "select "+EXM_Id+" from "+ Table_ExpenseHead+" where "+EXM_Name+"='"+name+"'";
+        String str = "select "+EXM_Id+" from "+ Table_ExpenseHead+" where "+EXM_Expdesc+"='"+name+"'";
         Constant.showLog(str);
         Cursor cursor = getWritableDatabase().rawQuery(str, null);
         if (cursor.moveToFirst()) {
@@ -2429,7 +2430,7 @@ public class DBHandler extends SQLiteOpenHelper {
     public String getGSTGroup(String product) {
         String val = "";
         Cursor cursor = getWritableDatabase().rawQuery("select " + PM_Gstgroup + " from " + Table_ProductMaster
-                + " where " + PM_Cat3 + " ='" + product + "'", null);
+                + " where " + PM_Finalproduct + " ='" + product + "'", null);
         if (cursor.moveToFirst()) {
             do {
                 val = cursor.getString(0);
@@ -2489,7 +2490,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     public int getInwardProdId(String product) {
         int id = 0;
-        Cursor res = getWritableDatabase().rawQuery("select " + PM_Id + " from " + Table_ProductMaster + " where " + PM_Cat3 + "='" + product + "'", null);
+        Cursor res = getWritableDatabase().rawQuery("select " + PM_Id + " from " + Table_ProductMaster + " where " + PM_Finalproduct + "='" + product + "'", null);
         if (res.moveToFirst()) {
             do {
                 id = res.getInt(0);
@@ -2706,5 +2707,17 @@ public class DBHandler extends SQLiteOpenHelper {
         }
         res.close();
         return Name;
+    }
+
+    public String getInwardHSNCode(String finalprod) {
+        String id = "";
+        Cursor res = getWritableDatabase().rawQuery("select " + PM_Hsncode+ " from " + Table_ProductMaster + " where " + PM_Finalproduct + "='" + finalprod + "'", null);
+        if (res.moveToFirst()) {
+            do {
+                id = res.getString(0);
+            } while (res.moveToNext());
+        }
+        res.close();
+        return id;
     }
 }

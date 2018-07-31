@@ -2187,7 +2187,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>
@@ -4886,99 +4886,98 @@ public final class R {
     public static final int adapter_item=0x7f0b004d;
     public static final int app_bar_main=0x7f0b004e;
     public static final int app_bar_navigation=0x7f0b004f;
-    public static final int cashmemotest=0x7f0b0050;
-    public static final int categorydialog=0x7f0b0051;
-    public static final int colllection_item=0x7f0b0052;
-    public static final int content_navigation=0x7f0b0053;
-    public static final int cust_drop_down=0x7f0b0054;
-    public static final int custom_autocomplete_list_item=0x7f0b0055;
-    public static final int custom_spinner=0x7f0b0056;
-    public static final int custom_spinner_option=0x7f0b0057;
-    public static final int design_bottom_navigation_item=0x7f0b0058;
-    public static final int design_bottom_sheet_dialog=0x7f0b0059;
-    public static final int design_layout_snackbar=0x7f0b005a;
-    public static final int design_layout_snackbar_include=0x7f0b005b;
-    public static final int design_layout_tab_icon=0x7f0b005c;
-    public static final int design_layout_tab_text=0x7f0b005d;
-    public static final int design_menu_item_action_area=0x7f0b005e;
-    public static final int design_navigation_item=0x7f0b005f;
-    public static final int design_navigation_item_header=0x7f0b0060;
-    public static final int design_navigation_item_separator=0x7f0b0061;
-    public static final int design_navigation_item_subheader=0x7f0b0062;
-    public static final int design_navigation_menu=0x7f0b0063;
-    public static final int design_navigation_menu_item=0x7f0b0064;
-    public static final int design_text_input_password_icon=0x7f0b0065;
-    public static final int drawertest=0x7f0b0066;
-    public static final int exp_list_item_child=0x7f0b0067;
-    public static final int exp_list_item_parent=0x7f0b0068;
-    public static final int exp_list_item_return_memo=0x7f0b0069;
-    public static final int exp_list_item_ub_child=0x7f0b006a;
-    public static final int exp_list_item_ub_parent=0x7f0b006b;
-    public static final int expense_item=0x7f0b006c;
-    public static final int export_list_item=0x7f0b006d;
-    public static final int fragment_main_option=0x7f0b006e;
-    public static final int fragment_paired_devices=0x7f0b006f;
-    public static final int fragment_table_view=0x7f0b0070;
-    public static final int grid_item_all_product=0x7f0b0071;
-    public static final int gst_view_fragment=0x7f0b0072;
-    public static final int inward_rec_item=0x7f0b0073;
-    public static final int inward_report_detail_item=0x7f0b0074;
-    public static final int inward_summery_item=0x7f0b0075;
-    public static final int list_item_addtocart=0x7f0b0076;
-    public static final int list_item_all_product=0x7f0b0077;
-    public static final int list_item_auto_category=0x7f0b0078;
-    public static final int list_item_backup_restore=0x7f0b0079;
-    public static final int list_item_bill_reprint_cancel=0x7f0b007a;
-    public static final int list_item_bluetooth_new_device=0x7f0b007b;
-    public static final int list_item_bluetooth_paired_device=0x7f0b007c;
-    public static final int list_item_cust_order=0x7f0b007d;
-    public static final int list_item_db_order_item=0x7f0b007e;
-    public static final int list_item_exp_category_name=0x7f0b007f;
-    public static final int list_item_exp_gst_detail_row=0x7f0b0080;
-    public static final int list_item_exp_gst_group_name=0x7f0b0081;
-    public static final int list_item_exp_product_name=0x7f0b0082;
-    public static final int list_item_menu_item=0x7f0b0083;
-    public static final int list_item_option_setttings=0x7f0b0084;
-    public static final int list_item_order_item=0x7f0b0085;
-    public static final int list_item_product=0x7f0b0086;
-    public static final int list_item_remove_order=0x7f0b0087;
-    public static final int list_item_repo_collection=0x7f0b0088;
-    public static final int list_item_repo_itemwise_sale=0x7f0b0089;
-    public static final int list_item_table_view=0x7f0b008a;
-    public static final int list_view_item_row=0x7f0b008b;
-    public static final int nav_header=0x7f0b008c;
-    public static final int nav_header_navigation=0x7f0b008d;
-    public static final int notification_action=0x7f0b008e;
-    public static final int notification_action_tombstone=0x7f0b008f;
-    public static final int notification_media_action=0x7f0b0090;
-    public static final int notification_media_cancel_action=0x7f0b0091;
-    public static final int notification_template_big_media=0x7f0b0092;
-    public static final int notification_template_big_media_custom=0x7f0b0093;
-    public static final int notification_template_big_media_narrow=0x7f0b0094;
-    public static final int notification_template_big_media_narrow_custom=0x7f0b0095;
-    public static final int notification_template_custom_big=0x7f0b0096;
-    public static final int notification_template_icon_group=0x7f0b0097;
-    public static final int notification_template_lines_media=0x7f0b0098;
-    public static final int notification_template_media=0x7f0b0099;
-    public static final int notification_template_media_custom=0x7f0b009a;
-    public static final int notification_template_part_chronometer=0x7f0b009b;
-    public static final int notification_template_part_time=0x7f0b009c;
-    public static final int option=0x7f0b009d;
-    public static final int productwise_stock_item=0x7f0b009e;
-    public static final int recycler_list_item_master_updation=0x7f0b009f;
-    public static final int select_dialog_item_material=0x7f0b00a0;
-    public static final int select_dialog_multichoice_material=0x7f0b00a1;
-    public static final int select_dialog_singlechoice_material=0x7f0b00a2;
-    public static final int spinner_item=0x7f0b00a3;
-    public static final int support_simple_spinner_dropdown_item=0x7f0b00a4;
-    public static final int table_button=0x7f0b00a5;
-    public static final int table_occupy=0x7f0b00a6;
-    public static final int table_release=0x7f0b00a7;
-    public static final int table_select=0x7f0b00a8;
-    public static final int test=0x7f0b00a9;
-    public static final int test_option=0x7f0b00aa;
-    public static final int test_option_1=0x7f0b00ab;
-    public static final int toolbar=0x7f0b00ac;
+    public static final int categorydialog=0x7f0b0050;
+    public static final int colllection_item=0x7f0b0051;
+    public static final int content_navigation=0x7f0b0052;
+    public static final int cust_drop_down=0x7f0b0053;
+    public static final int custom_autocomplete_list_item=0x7f0b0054;
+    public static final int custom_spinner=0x7f0b0055;
+    public static final int custom_spinner_option=0x7f0b0056;
+    public static final int design_bottom_navigation_item=0x7f0b0057;
+    public static final int design_bottom_sheet_dialog=0x7f0b0058;
+    public static final int design_layout_snackbar=0x7f0b0059;
+    public static final int design_layout_snackbar_include=0x7f0b005a;
+    public static final int design_layout_tab_icon=0x7f0b005b;
+    public static final int design_layout_tab_text=0x7f0b005c;
+    public static final int design_menu_item_action_area=0x7f0b005d;
+    public static final int design_navigation_item=0x7f0b005e;
+    public static final int design_navigation_item_header=0x7f0b005f;
+    public static final int design_navigation_item_separator=0x7f0b0060;
+    public static final int design_navigation_item_subheader=0x7f0b0061;
+    public static final int design_navigation_menu=0x7f0b0062;
+    public static final int design_navigation_menu_item=0x7f0b0063;
+    public static final int design_text_input_password_icon=0x7f0b0064;
+    public static final int drawertest=0x7f0b0065;
+    public static final int exp_list_item_child=0x7f0b0066;
+    public static final int exp_list_item_parent=0x7f0b0067;
+    public static final int exp_list_item_return_memo=0x7f0b0068;
+    public static final int exp_list_item_ub_child=0x7f0b0069;
+    public static final int exp_list_item_ub_parent=0x7f0b006a;
+    public static final int expense_item=0x7f0b006b;
+    public static final int export_list_item=0x7f0b006c;
+    public static final int fragment_main_option=0x7f0b006d;
+    public static final int fragment_paired_devices=0x7f0b006e;
+    public static final int fragment_table_view=0x7f0b006f;
+    public static final int grid_item_all_product=0x7f0b0070;
+    public static final int gst_view_fragment=0x7f0b0071;
+    public static final int inward_rec_item=0x7f0b0072;
+    public static final int inward_report_detail_item=0x7f0b0073;
+    public static final int inward_summery_item=0x7f0b0074;
+    public static final int list_item_addtocart=0x7f0b0075;
+    public static final int list_item_all_product=0x7f0b0076;
+    public static final int list_item_auto_category=0x7f0b0077;
+    public static final int list_item_backup_restore=0x7f0b0078;
+    public static final int list_item_bill_reprint_cancel=0x7f0b0079;
+    public static final int list_item_bluetooth_new_device=0x7f0b007a;
+    public static final int list_item_bluetooth_paired_device=0x7f0b007b;
+    public static final int list_item_cust_order=0x7f0b007c;
+    public static final int list_item_db_order_item=0x7f0b007d;
+    public static final int list_item_exp_category_name=0x7f0b007e;
+    public static final int list_item_exp_gst_detail_row=0x7f0b007f;
+    public static final int list_item_exp_gst_group_name=0x7f0b0080;
+    public static final int list_item_exp_product_name=0x7f0b0081;
+    public static final int list_item_menu_item=0x7f0b0082;
+    public static final int list_item_option_setttings=0x7f0b0083;
+    public static final int list_item_order_item=0x7f0b0084;
+    public static final int list_item_product=0x7f0b0085;
+    public static final int list_item_remove_order=0x7f0b0086;
+    public static final int list_item_repo_collection=0x7f0b0087;
+    public static final int list_item_repo_itemwise_sale=0x7f0b0088;
+    public static final int list_item_table_view=0x7f0b0089;
+    public static final int list_view_item_row=0x7f0b008a;
+    public static final int nav_header=0x7f0b008b;
+    public static final int nav_header_navigation=0x7f0b008c;
+    public static final int notification_action=0x7f0b008d;
+    public static final int notification_action_tombstone=0x7f0b008e;
+    public static final int notification_media_action=0x7f0b008f;
+    public static final int notification_media_cancel_action=0x7f0b0090;
+    public static final int notification_template_big_media=0x7f0b0091;
+    public static final int notification_template_big_media_custom=0x7f0b0092;
+    public static final int notification_template_big_media_narrow=0x7f0b0093;
+    public static final int notification_template_big_media_narrow_custom=0x7f0b0094;
+    public static final int notification_template_custom_big=0x7f0b0095;
+    public static final int notification_template_icon_group=0x7f0b0096;
+    public static final int notification_template_lines_media=0x7f0b0097;
+    public static final int notification_template_media=0x7f0b0098;
+    public static final int notification_template_media_custom=0x7f0b0099;
+    public static final int notification_template_part_chronometer=0x7f0b009a;
+    public static final int notification_template_part_time=0x7f0b009b;
+    public static final int option=0x7f0b009c;
+    public static final int productwise_stock_item=0x7f0b009d;
+    public static final int recycler_list_item_master_updation=0x7f0b009e;
+    public static final int select_dialog_item_material=0x7f0b009f;
+    public static final int select_dialog_multichoice_material=0x7f0b00a0;
+    public static final int select_dialog_singlechoice_material=0x7f0b00a1;
+    public static final int spinner_item=0x7f0b00a2;
+    public static final int support_simple_spinner_dropdown_item=0x7f0b00a3;
+    public static final int table_button=0x7f0b00a4;
+    public static final int table_occupy=0x7f0b00a5;
+    public static final int table_release=0x7f0b00a6;
+    public static final int table_select=0x7f0b00a7;
+    public static final int test=0x7f0b00a8;
+    public static final int test_option=0x7f0b00a9;
+    public static final int test_option_1=0x7f0b00aa;
+    public static final int toolbar=0x7f0b00ab;
   }
   public static final class menu {
     public static final int activity_navigation_drawer=0x7f0c0000;
@@ -10574,7 +10573,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>
