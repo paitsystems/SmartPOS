@@ -51,6 +51,13 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation 'com.google.android.gms:play-services-auth:15.0.1'
     implementation 'com.google.android.gms:play-services-drive:15.0.1'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.1'
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+    //maven { url "https://jitpack.io&quot" }
 }
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-android'

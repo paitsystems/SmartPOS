@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.pait.smartpos.AllGraphActivity;
 import com.pait.smartpos.CashMemoActivity;
 import com.pait.smartpos.ExpenseActivity;
 import com.pait.smartpos.InwardActivity;
@@ -79,7 +80,7 @@ public class MainOptionFragment extends Fragment implements View.OnClickListener
                 startActivity(new Intent(getContext(), ExpenseActivity.class));
                 break;
             case R.id.lay_report:
-                startActivity(new Intent(getContext(), ReportMenuActivity.class));
+                startActivity(new Intent(getContext(), AllGraphActivity.class));
                 break;
             case R.id.lay_returnmemo:
                 startActivity(new Intent(getContext(), ReturnMemoActivity.class));

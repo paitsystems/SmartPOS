@@ -183,7 +183,7 @@ public class CollectionSumReportActivity extends AppCompatActivity implements Vi
         // CN Redeem,Exp Receipt, Exp Payment
 
         listView.setAdapter(null);
-        Cursor c = db.getCollectionSumData(fadate,tadate);
+        Cursor c = db.getCollectionSumData(fadate,tadate,flag);
         List<CollectionClass> list = new ArrayList<>();
         if (c.moveToFirst()) {
             do {

@@ -233,7 +233,6 @@ public class BillReprintCancelFragment extends Fragment {
                     String amnt = cart.getTotal();
                     totAmnt = totAmnt + Float.parseFloat(amnt);
 
-                    String amnt = cart.getTotal();
                     if (amnt.length() == 1) {
                         amnt = "      " + amnt;
                     }else if (amnt.length() == 2) {
