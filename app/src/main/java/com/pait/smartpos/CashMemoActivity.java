@@ -798,7 +798,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
     private void removeQty(){
         String qty = ed_Qty.getText().toString();
         String amnt = ed_rate.getText().toString();
-        if(!amnt.equals("")) {
+        //if(!amnt.equals("")) {
             if (!qty.equals("")) {
                 int value = stringToInt(qty);
                 if (value > 1) {
@@ -814,16 +814,16 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                 toast.setText("Please Enter Quantity");
                 toast.show();
             }
-        }else {
+        /*}else {
             toast.setText("Please Select Rate First");
             toast.show();
-        }
+        }*/
     }
 
     private void addQty() {
         String qty = ed_Qty.getText().toString();
         String amnt = ed_rate.getText().toString();
-        if (!amnt.equals("")) {
+        //if (!amnt.equals("")) {
             if (!qty.equals("")) {
                 int value = stringToInt(qty);
                 if (value >= 0) {
@@ -839,15 +839,15 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                 toast.setText("Please Enter Quantity");
                 toast.show();
             }
-        } else {
+        /*} else {
             toast.setText("Please Select Rate First");
             toast.show();
-        }
+        }*/
     }
 
     private void addToCart(){
         if(productClass!=null){
-            if(rateMasterClass!=null){
+            //if(rateMasterClass!=null){
                 String qty = ed_Qty.getText().toString();
                 String rate = ed_rate.getText().toString();
                 if (!rate.equals("")) {
@@ -863,7 +863,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                         addToCart.setGstGroup(productClass.getGstGroup());
                         addToCart.setHsnCode(productClass.getHsnCode());
 
-                        Cursor cursor = db.getGSTPer(productClass.getGstGroup());
+                        Cursor cursor = db.getGSTPer(productClass.getGstGroup(), stringToFloat(rate));
                         cursor.moveToFirst();
                         float gstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_GSTPer));
                         float cgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTPer));
@@ -974,10 +974,10 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                     toast.setText("Please Enter Amnt");
                     toast.show();
                 }
-            }else{
+            /*}else{
                 toast.setText("Please Select Rate First");
                 toast.show();
-            }
+            }*/
         }else{
             toast.setText("Please Select Product First");
             toast.show();
@@ -1006,7 +1006,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
             addToCart.setGstGroup(cart.getGstGroup());
             addToCart.setHsnCode(cart.getHsnCode());
 
-            Cursor cursor = db.getGSTPer(cart.getGstGroup());
+            Cursor cursor = db.getGSTPer(cart.getGstGroup(),stringToFloat(cart.getEnteredRate()));
             cursor.moveToFirst();
             float gstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_GSTPer));
             float cgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTPer));
@@ -1640,6 +1640,8 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                 mService.sendMessage("BillNo : " + billNo, "GBK");
                 String space_str13 = "             ";
                 mService.sendMessage(date + space_str13 + time, "GBK");
+                mService.sendMessage("Cust Name : " + ed_custName.getText().toString(), "GBK");
+                mService.sendMessage("Mob No    : " + ed_custMobNo.getText().toString(), "GBK");
 
                 nameFontformat = format;
                 nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));

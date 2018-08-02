@@ -21,6 +21,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -51,6 +52,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 import static android.support.v7.widget.RecyclerView.HORIZONTAL;
 
@@ -149,27 +151,38 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
         auto_barcode.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int j, long l) {
-                auto_barcode.setText(null);
                 billDetail = (BillDetailClass) adapterView.getItemAtPosition(j);
-                totQty = totQty + stringToInt(billDetail.getQty());
-                totAmnt = totAmnt + stringToFloat(billDetail.getTotal());
-                totAmnt = totAmnt - stringToFloat(billDetail.getBilldisamt());
-                totAmnt = totAmnt + stringToFloat(billDetail.getCGSTAMT())+
-                        stringToFloat(billDetail.getSGSTAMT());
-                totDiscAmnt = totDiscAmnt + stringToFloat(billDetail.getBilldisamt());
-                totCGSTAmnt = totCGSTAmnt + stringToFloat(billDetail.getCGSTAMT());
-                totSGSTAmnt = totSGSTAmnt + stringToFloat(billDetail.getSGSTAMT());
-                tv_totQty.setText(roundTwoDecimals(totQty));
-                tv_totAmnt.setText(roundTwoDecimals(totAmnt));
-                System.out.println("Position " + j+"-"+billDetail.getFatherSKU());
-                retMemoList.add(billDetail);
-                if(retMemoList.size()==1) {
-                    adapter = new ReturnMemoRecyclerAdapter(getApplicationContext(), retMemoList);
-                    rv_returnMemo.setAdapter(adapter);
+                ((InputMethodManager) Objects.requireNonNull(getApplicationContext().getSystemService(INPUT_METHOD_SERVICE))).hideSoftInputFromInputMethod(tv_totAmnt.getWindowToken(),0);
+                auto_barcode.setText(null);
+                if(stringToInt(billDetail.getQty())!= stringToInt(billDetail.getRetQty())) {
+                    if(!retMemoList.contains(billDetail)) {
+                        totQty = totQty + stringToInt(billDetail.getQty());
+                        totAmnt = totAmnt + stringToFloat(billDetail.getTotal());
+                        totAmnt = totAmnt - stringToFloat(billDetail.getBilldisamt());
+                        totAmnt = totAmnt + stringToFloat(billDetail.getCGSTAMT()) +
+                                stringToFloat(billDetail.getSGSTAMT());
+                        totDiscAmnt = totDiscAmnt + stringToFloat(billDetail.getBilldisamt());
+                        totCGSTAmnt = totCGSTAmnt + stringToFloat(billDetail.getCGSTAMT());
+                        totSGSTAmnt = totSGSTAmnt + stringToFloat(billDetail.getSGSTAMT());
+                        tv_totQty.setText(roundTwoDecimals(totQty));
+                        tv_totAmnt.setText(roundTwoDecimals(totAmnt));
+                        System.out.println("Position " + j + "-" + billDetail.getFatherSKU());
+                        retMemoList.add(billDetail);
+                        if (retMemoList.size() == 1) {
+                            adapter = new ReturnMemoRecyclerAdapter(getApplicationContext(), retMemoList);
+                            rv_returnMemo.setAdapter(adapter);
+                        } else {
+                            adapter.notifyDataSetChanged();
+                        }
+                        rv_returnMemo.scrollToPosition(retMemoList.size() - 1);
+                    }else{
+                        toast.setText("This Item Is Already Added In List");
+                        toast.show();
+                    }
                 }else{
-                    adapter.notifyDataSetChanged();
+                    toast.setText("This Item Is Already Returned");
+                    toast.show();
                 }
-                rv_returnMemo.scrollToPosition(retMemoList.size()-1);
             }
         });
     }
@@ -616,7 +629,7 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                 String gstGroup = arr[0];
                 String gstType = arr[1];
 
-                Cursor cursor = db.getGSTPer(gstGroup);
+                Cursor cursor = db.getGSTPer(gstGroup,rate);
                 cursor.moveToFirst();
                 float gstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_GSTPer));
                 float cgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTPer));

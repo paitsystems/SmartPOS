@@ -2107,8 +2107,13 @@ public class DBHandler extends SQLiteOpenHelper {
         return ini;
     }
 
-    public Cursor getGSTPer(String gstGroup){
-        String str = "select * from GSTMaster,GSTDetail where GSTMaster.Auto=GSTDetail.MastAuto and GSTMaster.GroupName='"+gstGroup+"'";
+    public Cursor getGSTPer(String gstGroup, float rate){
+        //String str = "select * from GSTMaster,GSTDetail where GSTMaster.Auto=GSTDetail.MastAuto and GSTMaster.GroupName='"+gstGroup+"'";
+        String str = "select * from "+GSTMaster_Table+","+GSTDetail_Table
+                +" where "+GSTMaster_Table+"."+GSTMaster_Auto+"="+GSTDetail_Table+"."+GSTDetail_MastAuto+" and "+
+                GSTMaster_Table+"."+GSTMaster_GroupName+"='"+gstGroup+"' and "+
+                GSTDetail_Table+"."+GSTDetail_FromRange+"<="+rate+" and "+
+                GSTDetail_Table+"."+GSTDetail_ToRange+">="+rate;
         Constant.showLog(str);
         return getWritableDatabase().rawQuery(str,null);
     }
@@ -2191,7 +2196,6 @@ public class DBHandler extends SQLiteOpenHelper {
                 det.setAuto(res.getInt(res.getColumnIndex(BD_Auto)));
                 det.setId(res.getInt(res.getColumnIndex(BD_Id)));
                 det.setBillID(res.getInt(res.getColumnIndex(BD_Billid)));
-                det.setQty(res.getString(res.getColumnIndex(BD_Qty)));
                 det.setRetQty(res.getString(res.getColumnIndex(BD_Retqty)));
                 list.add(det);
             }while (res.moveToNext());
@@ -2375,8 +2379,9 @@ public class DBHandler extends SQLiteOpenHelper {
 
     public void updateRetQty(String retQty, BillDetailClass det){
         ContentValues cv = new ContentValues();
-        cv.put(BD_Retqty,retQty);
-        String str = "update "+Table_BillDetails+" set "+BD_Retqty+"="+retQty+
+        float _retQty = Float.parseFloat(retQty) + getRetQty(det);
+        cv.put(BD_Retqty,_retQty);
+        String str = "update "+Table_BillDetails+" set "+BD_Retqty+"="+_retQty+
                 " where "+BD_Auto+"="+det.getAuto()+" and "+BD_Id+"="+det.getId()+
                 " and "+BD_Billid+"="+det.getBillID()+" and "+BD_Itemid+"="+det.getItemId();
         Constant.showLog(str);
@@ -2386,10 +2391,27 @@ public class DBHandler extends SQLiteOpenHelper {
                         String.valueOf(det.getBillID()),String.valueOf(det.getItemId())});
     }
 
+    private int getRetQty(BillDetailClass det){
+        int qty = 0;
+        String str = "Select "+BD_Retqty+" from "+Table_BillDetails+
+                " where "+BD_Auto+"="+det.getAuto()+" and "+BD_Id+"="+det.getId()+
+                " and "+BD_Billid+"="+det.getBillID()+" and "+BD_Itemid+"="+det.getItemId();
+        Constant.showLog(str);
+        Cursor res = getWritableDatabase().rawQuery(str,null);
+        if (res.moveToFirst()) {
+            do {
+                qty = res.getInt(0);
+            } while (res.moveToNext());
+        }
+        res.close();
+        return qty;
+    }
+
     public void updateTRetQty(String TRetQty, BillMasterClass mast){
         ContentValues cv = new ContentValues();
-        cv.put(BM_TRetQty,TRetQty);
-        String str = "update "+Table_BillMaster+" set "+BM_TRetQty+"="+TRetQty+
+        float _retQty = Float.parseFloat(TRetQty) + getTRetQty(mast);
+        cv.put(BM_TRetQty,_retQty);
+        String str = "update "+Table_BillMaster+" set "+BM_TRetQty+"="+_retQty+
                 " where "+BM_Autono+"="+mast.getAutoNo()+" and "+BM_Id+"="+mast.getId()+
                 " and "+BM_Billno+"='"+mast.getBillNo()+"'";
         Constant.showLog(str);
@@ -2397,6 +2419,22 @@ public class DBHandler extends SQLiteOpenHelper {
                 BM_Autono+"=? and "+BM_Id+"=? and "+BM_Billno+"=?",
                 new String[]{String.valueOf(mast.getAutoNo()),String.valueOf(mast.getId()),
                         mast.getBillNo(),});
+    }
+
+    private int getTRetQty(BillMasterClass mast){
+        int qty = 0;
+        String str = "Select "+BM_TRetQty+" from "+Table_BillMaster+
+                " where "+BM_Autono+"="+mast.getAutoNo()+" and "+BM_Id+"="+mast.getId()+
+                " and "+BM_Billno+"='"+mast.getBillNo()+"'";
+        Constant.showLog(str);
+        Cursor res = getWritableDatabase().rawQuery(str,null);
+        if (res.moveToFirst()) {
+            do {
+                qty = res.getInt(0);
+            } while (res.moveToNext());
+        }
+        res.close();
+        return qty;
     }
 
     public Cursor getRateMaster() {

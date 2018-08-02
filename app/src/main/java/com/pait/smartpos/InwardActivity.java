@@ -167,7 +167,7 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(!charSequence.toString().equals("-")){
+                if(!charSequence.toString().equals("-") && !charSequence.toString().equals("+")){
                     finalCalculation();
                 }
 
@@ -381,7 +381,7 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
         detailClass.setCGSTPER(12);
         cartLs.add(detailClass);*/
 
-        Cursor cursor = db.getGSTPer(gstgroup);
+        Cursor cursor = db.getGSTPer(gstgroup,stringToFloat(_rate));
         cursor.moveToFirst();
         float gstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_GSTPer));
         float cgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTPer));
@@ -831,7 +831,7 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
             //addToCart.setSGSTAMT(dcart.getSGSTAMT());
             //addToCart.setGSTPER(dcart.getGSTPER());
 
-            Cursor cursor = db.getGSTPer(gstgroup);
+            Cursor cursor = db.getGSTPer(gstgroup,dcart.getPurchaseRate());
             cursor.moveToFirst();
             float gstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_GSTPer));
             float cgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTPer));

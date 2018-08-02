@@ -37,7 +37,8 @@ public class Constant {
     public static String ftp_username = "supportftp@lnbinfotech.com";
     public static String ftp_password = "support$456";
     public static String ftp_folder = "SmartPOS";
-    public static String import_fileName = "SmartPOS.xls";
+    //TODO: Check File Name
+    public static String import_fileName = "SmartPOS1.xls";
 
     public static String support_mail_id = "anup.p@paitsystems.com";
 

@@ -35,7 +35,6 @@
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -124,7 +123,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.pait.smartpos.ReportListActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan" />
         <activity
             android:name="com.pait.smartpos.Repo_Collection_Activity"
             android:screenOrientation="landscape" />

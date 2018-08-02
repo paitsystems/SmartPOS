@@ -17,7 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Father SKU"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
 
         <LinearLayout
@@ -38,20 +39,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:gravity="center"
-                android:text="Qty"
+                android:gravity="right|center"
+                android:text="0"
                 android:textColor="@color/black" />
 
             <View
                 android:layout_width="2dp"
                 android:layout_height="match_parent"
-                android:background="@color/lightgray" />
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/black"
+                android:padding="5dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:gravity="center"
                 android:text="Rate"
                 android:textColor="@color/black" />
 
@@ -60,8 +63,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:gravity="center"
-                android:text="Rate"
+                android:gravity="right|center"
+                android:text="0"
                 android:textColor="@color/black" />
 
         </LinearLayout>
@@ -76,46 +79,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:gravity="center"
                 android:text="Total"
                 android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:gravity="right|center"
+                android:text="0"
+                android:textColor="@color/black" />
+
             <View
                 android:layout_width="2dp"
                 android:layout_height="match_parent"
-                android:background="@color/lightgray" />
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/black" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:gravity="center"
                 android:text="DiscAmnt"
                 android:textColor="@color/black" />
-            <View
-                android:layout_width="2dp"
-                android:layout_height="match_parent"
-                android:background="@color/lightgray" />
 
             <TextView
+                android:id="@+id/tv_discAmnt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:gravity="center"
-                android:text="CGST"
+                android:gravity="right|center"
+                android:text="0"
                 android:textColor="@color/black" />
-            <View
-                android:layout_width="2dp"
-                android:layout_height="match_parent"
-                android:background="@color/lightgray" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.7"
-                android:gravity="center"
-                android:text="SCGST"
-                android:textColor="@color/black" />
-
 
 
             <TextView
@@ -145,51 +142,41 @@
             android:padding="5dp">
 
             <TextView
-                android:id="@+id/tv_total"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:gravity="center"
-                android:text="0"
+                android:text="CGST"
                 android:textColor="@color/black" />
-            <View
-                android:layout_width="2dp"
-                android:layout_height="match_parent"
-                android:background="@color/lightgray" />
-
-            <TextView
-                android:id="@+id/tv_discAmnt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.7"
-                android:gravity="center"
-                android:text="0"
-                android:textColor="@color/black" />
-            <View
-                android:layout_width="2dp"
-                android:layout_height="match_parent"
-                android:background="@color/lightgray" />
 
             <TextView
                 android:id="@+id/tv_cgstAmnt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:gravity="center"
+                android:gravity="right|center"
                 android:text="0"
                 android:textColor="@color/black" />
 
             <View
                 android:layout_width="2dp"
                 android:layout_height="match_parent"
-                android:background="@color/lightgray" />
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="SCGST"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/tv_sgstAmnt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:gravity="center"
+                android:gravity="right|center"
                 android:text="0"
                 android:textColor="@color/black" />
         </LinearLayout>

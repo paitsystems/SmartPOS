@@ -253,8 +253,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         VerificationActivity.pref = getSharedPreferences(VerificationActivity.PREF_NAME,MODE_PRIVATE);
         UserProfileClass user = new Constant(getApplicationContext()).getPref();
         if(user!=null){
-            if(user.getUserType().equals("P")) {
-                //TODO:check here expiry date
+            /*if(user.getUserType().equals("P")) {
                 if(checkExpiryDate(user.getExpiryDate())) {
                     startDrawer();
                 }else{
@@ -267,6 +266,11 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
                     toast.setText("You Are Offline");
                     toast.show();
                 }
+            }*/
+            if(checkExpiryDate(user.getExpiryDate())) {
+                startDrawer();
+            }else{
+                showDia(2);
             }
         }else{
             finish();

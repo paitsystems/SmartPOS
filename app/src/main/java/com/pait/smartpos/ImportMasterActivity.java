@@ -235,7 +235,7 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                 }
             });
         } else if (a == 5) {
-            builder.setMessage("App ReOpen Required");
+            builder.setMessage("App Reopen Required");
             builder.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -684,133 +684,108 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                         String _cat1 = row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
                                                         String _cat2 = row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
                                                         String _cat3 = row.getCell(3, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
-                                                        String _cat4 = row.getCell(4, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
-                                                        String _cat5 = row.getCell(5, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
-                                                        String _cat6 = row.getCell(6, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
-                                                        String _finalProd = row.getCell(7, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
-                                                        String _unit = row.getCell(8, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
-                                                        String _pprice = row.getCell(9, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
-                                                        String _mrp = row.getCell(10, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
-                                                        String _wprice = row.getCell(11, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
-                                                        String _active = row.getCell(12, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
-                                                        String _barcode = row.getCell(13, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
-                                                        String _ssp = row.getCell(14, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
-                                                        String _gstgroup = row.getCell(15, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
-                                                        String _hsncode = row.getCell(16, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
-                                                        String _gsttype = row.getCell(17, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
-                                                        String _stockqty = row.getCell(18, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
-
+                                                        String _finalProd = row.getCell(4, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                        String _unit = row.getCell(5, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                        String _pprice = row.getCell(6, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                        String _mrp = row.getCell(7, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                        String _wprice = row.getCell(8, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                        String _active = row.getCell(9, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                        String _barcode = row.getCell(10, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                        String _ssp = row.getCell(11, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                        String _gstgroup = row.getCell(12, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                        String _hsncode = row.getCell(13, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                        String _gsttype = row.getCell(14, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
+                                                        String _stockqty = row.getCell(15, Row.CREATE_NULL_AS_BLANK).getStringCellValue();
 
                                                         if (_id.equals(XlsxCon.PM_Id)) {
                                                             if (_cat1.equals(XlsxCon.PM_Cat1)) {
                                                                 if (_cat2.equals(XlsxCon.PM_Cat2)) {
                                                                     if (_cat3.equals(XlsxCon.PM_Cat3)) {
-                                                                        if (_cat4.equals(XlsxCon.PM_Cat4)) {
-                                                                            if (_cat5.equals(XlsxCon.PM_Cat5)) {
-                                                                                if (_cat6.equals(XlsxCon.PM_Cat6)) {
-                                                                                    if (_finalProd.equals(XlsxCon.PM_Finalproduct)) {
-                                                                                        if (_unit.equals(XlsxCon.PM_Unit)) {
-                                                                                            if (_pprice.equals(XlsxCon.PM_Pprice)) {
-                                                                                                if (_mrp.equals(XlsxCon.PM_Mrp)) {
-                                                                                                    if (_wprice.equals(XlsxCon.PM_Wprice)) {
-                                                                                                        if (_active.equals(XlsxCon.PM_Active)) {
-                                                                                                            if (_barcode.equals(XlsxCon.PM_Barcode)) {
-                                                                                                                if (_ssp.equals(XlsxCon.PM_Ssp)) {
-                                                                                                                    if (_gstgroup.equals(XlsxCon.PM_Gstgroup)) {
-                                                                                                                        if (_hsncode.equals(XlsxCon.PM_Hsncode)) {
-                                                                                                                            if (_gsttype.equals(XlsxCon.PM_GSTType)) {
-                                                                                                                                if (_stockqty.equals(XlsxCon.PM_StockQty)) {
-                                                                                                                                    sequence = true;
-                                                                                                                                    dbAdapter.delete(DBHandler.Table_ProductMaster);
-                                                                                                                                    Constant.showLog(DBHandler.Table_ProductMaster + " Deleted");
-                                                                                                                                }else {
-                                                                                                                                    showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_StockQty);
-                                                                                                                                    writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_StockQty);
-                                                                                                                                    status = null;
-                                                                                                                                    break;
-                                                                                                                                }
-                                                                                                                            }else {
-                                                                                                                                showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_GSTType);
-                                                                                                                                writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_GSTType);
-                                                                                                                                status = null;
-                                                                                                                                break;
-                                                                                                                            }
-                                                                                                                        } else {
-                                                                                                                            showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Hsncode);
-                                                                                                                            writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Hsncode);
-                                                                                                                            status = null;
-                                                                                                                            break;
-                                                                                                                        }
+                                                                        if (_finalProd.equals(XlsxCon.PM_Finalproduct)) {
+                                                                            if (_unit.equals(XlsxCon.PM_Unit)) {
+                                                                                if (_pprice.equals(XlsxCon.PM_Pprice)) {
+                                                                                    if (_mrp.equals(XlsxCon.PM_Mrp)) {
+                                                                                        if (_wprice.equals(XlsxCon.PM_Wprice)) {
+                                                                                            if (_active.equals(XlsxCon.PM_Active)) {
+                                                                                                if (_barcode.equals(XlsxCon.PM_Barcode)) {
+                                                                                                    if (_ssp.equals(XlsxCon.PM_Ssp)) {
+                                                                                                        if (_gstgroup.equals(XlsxCon.PM_Gstgroup)) {
+                                                                                                            if (_hsncode.equals(XlsxCon.PM_Hsncode)) {
+                                                                                                                if (_gsttype.equals(XlsxCon.PM_GSTType)) {
+                                                                                                                    if (_stockqty.equals(XlsxCon.PM_StockQty)) {
+                                                                                                                        sequence = true;
+                                                                                                                        dbAdapter.delete(DBHandler.Table_ProductMaster);
+                                                                                                                        Constant.showLog(DBHandler.Table_ProductMaster + " Deleted");
                                                                                                                     } else {
-                                                                                                                        showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Gstgroup);
-                                                                                                                        writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Gstgroup);
+                                                                                                                        showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_StockQty);
+                                                                                                                        writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_StockQty);
                                                                                                                         status = null;
                                                                                                                         break;
                                                                                                                     }
                                                                                                                 } else {
-                                                                                                                    showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Ssp);
-                                                                                                                    writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Ssp);
+                                                                                                                    showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_GSTType);
+                                                                                                                    writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_GSTType);
                                                                                                                     status = null;
                                                                                                                     break;
                                                                                                                 }
                                                                                                             } else {
-                                                                                                                showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Barcode);
-                                                                                                                writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Barcode);
+                                                                                                                showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Hsncode);
+                                                                                                                writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Hsncode);
                                                                                                                 status = null;
                                                                                                                 break;
                                                                                                             }
-
                                                                                                         } else {
-                                                                                                            showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Active);
-                                                                                                            writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Active);
+                                                                                                            showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Gstgroup);
+                                                                                                            writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Gstgroup);
                                                                                                             status = null;
                                                                                                             break;
                                                                                                         }
                                                                                                     } else {
-                                                                                                        showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Wprice);
-                                                                                                        writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Wprice);
+                                                                                                        showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Ssp);
+                                                                                                        writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Ssp);
                                                                                                         status = null;
                                                                                                         break;
                                                                                                     }
                                                                                                 } else {
-                                                                                                    showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Mrp);
-                                                                                                    writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Mrp);
+                                                                                                    showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Barcode);
+                                                                                                    writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Barcode);
                                                                                                     status = null;
                                                                                                     break;
                                                                                                 }
+
                                                                                             } else {
-                                                                                                showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Pprice);
-                                                                                                writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Pprice);
+                                                                                                showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Active);
+                                                                                                writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Active);
                                                                                                 status = null;
                                                                                                 break;
                                                                                             }
                                                                                         } else {
-                                                                                            showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Unit);
-                                                                                            writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Unit);
+                                                                                            showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Wprice);
+                                                                                            writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Wprice);
                                                                                             status = null;
                                                                                             break;
                                                                                         }
                                                                                     } else {
-                                                                                        showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Finalproduct);
-                                                                                        writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Finalproduct);
+                                                                                        showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Mrp);
+                                                                                        writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Mrp);
                                                                                         status = null;
                                                                                         break;
                                                                                     }
                                                                                 } else {
-                                                                                    showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Cat6);
-                                                                                    writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Cat6);
+                                                                                    showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Pprice);
+                                                                                    writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Pprice);
                                                                                     status = null;
                                                                                     break;
                                                                                 }
                                                                             } else {
-                                                                                showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Cat5);
-                                                                                writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Cat5);
+                                                                                showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Unit);
+                                                                                writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Unit);
                                                                                 status = null;
                                                                                 break;
                                                                             }
                                                                         } else {
-                                                                            showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Cat4);
-                                                                            writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Cat4);
+                                                                            showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Finalproduct);
+                                                                            writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Finalproduct);
                                                                             status = null;
                                                                             break;
                                                                         }
@@ -820,7 +795,6 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                                         status = null;
                                                                         break;
                                                                     }
-
                                                                 } else {
                                                                     showColMisMatchToast("Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Cat2);
                                                                     writeLog("readFile_Column_Not_Matched_Sheet " + XlsxCon.Sheet_PM + " Column " + XlsxCon.PM_Cat2);
@@ -856,29 +830,23 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                                                         row.getCell(13, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
                                                         row.getCell(14, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
                                                         row.getCell(15, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
-                                                        row.getCell(16, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
-                                                        row.getCell(17, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
-                                                        row.getCell(18, Row.CREATE_NULL_AS_BLANK).setCellType(Cell.CELL_TYPE_STRING);
 
                                                         cv.put(DBHandler.PM_Id, row.getCell(0, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
                                                         cv.put(DBHandler.PM_Cat1, row.getCell(1, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
                                                         cv.put(DBHandler.PM_Cat2, row.getCell(2, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
                                                         cv.put(DBHandler.PM_Cat3, row.getCell(3, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                        cv.put(DBHandler.PM_Cat4, row.getCell(4, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                        cv.put(DBHandler.PM_Cat5, row.getCell(5, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                        cv.put(DBHandler.PM_Cat6, row.getCell(6, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                        cv.put(DBHandler.PM_Finalproduct, row.getCell(7, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                        cv.put(DBHandler.PM_Unit, row.getCell(8, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                        cv.put(DBHandler.PM_Pprice, row.getCell(9, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                        cv.put(DBHandler.PM_Mrp, row.getCell(10, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                        cv.put(DBHandler.PM_Wprice, row.getCell(11, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                        cv.put(DBHandler.PM_Active, row.getCell(12, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                        cv.put(DBHandler.PM_Barcode, row.getCell(13, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                        cv.put(DBHandler.PM_Ssp, row.getCell(14, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                        cv.put(DBHandler.PM_Gstgroup, row.getCell(15, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                        cv.put(DBHandler.PM_Hsncode, row.getCell(16, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                        cv.put(DBHandler.PM_GSTType, row.getCell(17, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
-                                                        cv.put(DBHandler.PM_StockQty, row.getCell(18, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                        cv.put(DBHandler.PM_Finalproduct, row.getCell(4, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                        cv.put(DBHandler.PM_Unit, row.getCell(5, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                        cv.put(DBHandler.PM_Pprice, row.getCell(6, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                        cv.put(DBHandler.PM_Mrp, row.getCell(7, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                        cv.put(DBHandler.PM_Wprice, row.getCell(8, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                        cv.put(DBHandler.PM_Active, row.getCell(9, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                        cv.put(DBHandler.PM_Barcode, row.getCell(10, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                        cv.put(DBHandler.PM_Ssp, row.getCell(11, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                        cv.put(DBHandler.PM_Gstgroup, row.getCell(12, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                        cv.put(DBHandler.PM_Hsncode, row.getCell(13, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                        cv.put(DBHandler.PM_GSTType, row.getCell(14, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
+                                                        cv.put(DBHandler.PM_StockQty, row.getCell(15, Row.CREATE_NULL_AS_BLANK).getStringCellValue());
 
                                                         dbAdapter.insert(DBHandler.Table_ProductMaster, cv);
                                                         Constant.showLog(DBHandler.Table_ProductMaster + " Added");

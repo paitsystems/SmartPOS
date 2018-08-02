@@ -107,6 +107,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ReportListActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Repo_Collection_Activity"

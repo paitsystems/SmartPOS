@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: __local_aars__:D.\sneha_android_project\SmartPOS\app\lib\commons-net-3.3.jar:unspecified@jar">
+  <library name="Gradle: __local_aars__:D.\android_project\SmartPOS\app\lib\commons-net-3.3.jar:unspecified@jar">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/app/lib/commons-net-3.3.jar!/" />
     </CLASSES>
