@@ -363,6 +363,8 @@ public class DrawerTestActivity extends AppCompatActivity implements View.OnClic
                     navItemIndex = 2;
                     CURRENT_TAG = TAG_BILL;
                     break;
+                    /*startActivity(new Intent(DrawerTestActivity.this, AddSupplierMaster.class));
+                    return true;*/
                 /*case R.id.billupdate:
                     navItemIndex = 3;
                     CURRENT_TAG = TAG_UB;
@@ -505,7 +507,10 @@ public class DrawerTestActivity extends AppCompatActivity implements View.OnClic
                 flag = 1;
                 break;
             case 2:
-                fragment = new BillReprintCancelFragment();
+                Bundle bundle4 = new Bundle();
+                bundle4.putString("master","master");
+                fragment = new MasterUpdationFragment();
+                fragment.setArguments(bundle4);
                 invalidateOptionsMenu();
                 menuflag = -1;
                 flag = 1;

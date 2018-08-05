@@ -6,15 +6,18 @@ import android.app.ProgressDialog;
 import android.bluetooth.BluetoothDevice;
 import android.content.DialogInterface;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.Message;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
@@ -39,6 +42,7 @@ import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.constant.PrinterCommands;
 import com.pait.smartpos.db.DBHandler;
 import com.pait.smartpos.db.DBHandlerR;
+import com.pait.smartpos.interfaces.RecyclerViewToActivityInterface;
 import com.pait.smartpos.model.AddToCartClass;
 import com.pait.smartpos.model.BillDetailClass;
 import com.pait.smartpos.model.BillMasterClass;
@@ -56,7 +60,8 @@ import java.util.Objects;
 
 import static android.support.v7.widget.RecyclerView.HORIZONTAL;
 
-public class ReturnMemoActivity extends AppCompatActivity implements View.OnClickListener{
+public class ReturnMemoActivity extends AppCompatActivity implements View.OnClickListener,
+        CashMemoRecyclerItemTouchHelper.RecyclerItemTouchHelperListener,ReturnMemoRecyclerItemTouchHelper.RecyclerItemTouchHelperListener {
 
     private RadioButton rdo_retMemo, rdo_cashback;
     private TextView tv_billAmnt, tv_paidAmnt, tv_totQty, tv_totAmnt, tv_custName, tv_mobNo;
@@ -152,10 +157,11 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int j, long l) {
                 billDetail = (BillDetailClass) adapterView.getItemAtPosition(j);
-                ((InputMethodManager) Objects.requireNonNull(getApplicationContext().getSystemService(INPUT_METHOD_SERVICE))).hideSoftInputFromInputMethod(tv_totAmnt.getWindowToken(),0);
+                ((InputMethodManager)getSystemService(INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(auto_barcode.getWindowToken(),0);
                 auto_barcode.setText(null);
                 if(stringToInt(billDetail.getQty())!= stringToInt(billDetail.getRetQty())) {
                     if(!retMemoList.contains(billDetail)) {
+
                         totQty = totQty + stringToInt(billDetail.getQty());
                         totAmnt = totAmnt + stringToFloat(billDetail.getTotal());
                         totAmnt = totAmnt - stringToFloat(billDetail.getBilldisamt());
@@ -166,6 +172,7 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                         totSGSTAmnt = totSGSTAmnt + stringToFloat(billDetail.getSGSTAMT());
                         tv_totQty.setText(roundTwoDecimals(totQty));
                         tv_totAmnt.setText(roundTwoDecimals(totAmnt));
+
                         System.out.println("Position " + j + "-" + billDetail.getFatherSKU());
                         retMemoList.add(billDetail);
                         if (retMemoList.size() == 1) {
@@ -185,6 +192,9 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                 }
             }
         });
+
+        ItemTouchHelper.SimpleCallback itemTouchHelperCallback = new ReturnMemoRecyclerItemTouchHelper(0, ItemTouchHelper.RIGHT, this);
+        new ItemTouchHelper(itemTouchHelperCallback).attachToRecyclerView(rv_returnMemo);
     }
 
     @Override
@@ -237,6 +247,150 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
         super.onDestroy();
     }
 
+    @Override
+    public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction, int position) {
+        if (viewHolder instanceof ReturnMemoRecyclerAdapter.ProductViewHolder) {
+            final int[] flag = {0};
+            String name = retMemoList.get(viewHolder.getAdapterPosition()).getFatherSKU();
+            final BillDetailClass det = retMemoList.get(viewHolder.getAdapterPosition());
+            final int deletedIndex = viewHolder.getAdapterPosition();
+            adapter.removeItem(viewHolder.getAdapterPosition());
+            int qty = stringToInt(det.getQty());
+            float rate = stringToFloat(det.getRate());
+            float billdisper = stringToFloat(det.getBilldisper());
+            float detCGSTAMT=0,detSGSTAMT=0,taxableRate=0;
+            if(qty>1) {
+                totQty = totQty - stringToInt(det.getQty());
+                totAmnt = totAmnt - stringToFloat(det.getTotal());
+                totAmnt = totAmnt + stringToFloat(det.getBilldisamt());
+                totAmnt = totAmnt - stringToFloat(det.getCGSTAMT()) - stringToFloat(det.getSGSTAMT());
+                totDiscAmnt = totDiscAmnt - stringToFloat(det.getBilldisamt());
+                totCGSTAmnt = totCGSTAmnt - stringToFloat(det.getCGSTAMT());
+                totSGSTAmnt = totSGSTAmnt - stringToFloat(det.getSGSTAMT());
+                tv_totQty.setText(roundTwoDecimals(totQty));
+                tv_totAmnt.setText(roundTwoDecimals(totAmnt));
+
+                qty = qty - 1;
+                String str = db.getGstGroupFromProdId(det.getItemId());
+                String arr[] = str.split("-");
+                String gstGroup = arr[0];
+                String gstType = arr[1];
+                Cursor cursor = db.getGSTPer(gstGroup,stringToFloat(det.getRate()));
+                cursor.moveToFirst();
+                float gstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_GSTPer));
+                float cgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTPer));
+                float sgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_SGSTPer));
+                cursor.close();
+
+                if (gstType.equals("I")) {
+                    float accValue = ((gstPer * 100) / (gstPer + 100));
+                    float gstAmnt = (rate * accValue) / 100;
+                    taxableRate  = rate - gstAmnt;
+                    float total = (taxableRate * qty);
+                    float billdiscPer = billdisper;
+                    float billDiscAmnt = (total * billdiscPer) / 100;
+                    float disctedTotal = total - billDiscAmnt;
+                    float cgstAmt = (disctedTotal * cgstPer) / 100;
+                    float sgstAmt = (disctedTotal * sgstPer) / 100;
+                    float netAmt = disctedTotal + cgstAmt + sgstAmt;
+                    detCGSTAMT = cgstAmt;
+                    detSGSTAMT = sgstAmt;
+                } else if (gstType.equals("E")) {
+                    taxableRate = rate;
+                    float total = (taxableRate * qty);
+                    float billdiscPer = billdisper;
+                    float billDiscAmnt = (total * billdiscPer) / 100;
+                    float disctedTotal = total - billDiscAmnt;
+                    float cgstAmt = (disctedTotal * cgstPer) / 100;
+                    float sgstAmt = (disctedTotal * sgstPer) / 100;
+                    float netAmt = disctedTotal + cgstAmt + sgstAmt;
+                    detCGSTAMT = cgstAmt;
+                    detSGSTAMT = sgstAmt;
+                }
+                //BillDetailClass _det = new BillDetailClass();
+                det.setFatherSKU(det.getFatherSKU());
+                det.setQty(String.valueOf(qty));
+                det.setItemId(det.getItemId());
+                det.setBarcode(det.getBarcode());
+                det.setRate(det.getRate());
+                det.setTotal(String.valueOf(qty*rate));
+                det.setDisper(det.getDisper());
+                det.setDisamt(det.getDisamt());
+                det.setMRP(det.getMRP());
+                det.setBilldisper(det.getBilldisper());
+                det.setBilldisamt(det.getBilldisamt());
+                det.setCGSTAMT(roundTwoDecimals(detCGSTAMT));
+                det.setSGSTAMT(roundTwoDecimals(detSGSTAMT));
+                det.setTaxableAmt(roundTwoDecimals(taxableRate));
+                det.setAuto(det.getAuto());
+                det.setId(det.getId());
+                det.setBillID(det.getBillID());
+                det.setRetQty(det.getRetQty());
+                adapter.restoreItem(det, deletedIndex);
+                totQty = totQty + stringToInt(det.getQty());
+                totAmnt = totAmnt + stringToFloat(det.getTotal());
+                totAmnt = totAmnt - stringToFloat(det.getBilldisamt());
+                totAmnt = totAmnt + stringToFloat(det.getCGSTAMT()) +
+                        stringToFloat(det.getSGSTAMT());
+                totDiscAmnt = totDiscAmnt + stringToFloat(det.getBilldisamt());
+                totCGSTAmnt = totCGSTAmnt + stringToFloat(det.getCGSTAMT());
+                totSGSTAmnt = totSGSTAmnt + stringToFloat(det.getSGSTAMT());
+                tv_totQty.setText(roundTwoDecimals(totQty));
+                tv_totAmnt.setText(roundTwoDecimals(totAmnt));
+
+            }else {
+                totQty = totQty - stringToInt(det.getQty());
+                totAmnt = totAmnt - stringToFloat(det.getTotal());
+                totAmnt = totAmnt + stringToFloat(det.getBilldisamt());
+                totAmnt = totAmnt - stringToFloat(det.getCGSTAMT()) - stringToFloat(det.getSGSTAMT());
+                totDiscAmnt = totDiscAmnt - stringToFloat(det.getBilldisamt());
+                totCGSTAmnt = totCGSTAmnt - stringToFloat(det.getCGSTAMT());
+                totSGSTAmnt = totSGSTAmnt - stringToFloat(det.getSGSTAMT());
+                tv_totQty.setText(roundTwoDecimals(totQty));
+                tv_totAmnt.setText(roundTwoDecimals(totAmnt));
+            }
+
+            /*Snackbar snackbar = Snackbar.make(rdo_cashback, name + " removed from list!", Snackbar.LENGTH_LONG);
+            snackbar.setAction("UNDO", new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    flag[0] = 1;
+                    adapter.restoreItem(det, deletedIndex);
+                    totQty = totQty + stringToInt(billDetail.getQty());
+                    totAmnt = totAmnt + stringToFloat(billDetail.getTotal());
+                    totAmnt = totAmnt - stringToFloat(billDetail.getBilldisamt());
+                    totAmnt = totAmnt + stringToFloat(billDetail.getCGSTAMT()) +
+                            stringToFloat(billDetail.getSGSTAMT());
+                    totDiscAmnt = totDiscAmnt + stringToFloat(billDetail.getBilldisamt());
+                    totCGSTAmnt = totCGSTAmnt + stringToFloat(billDetail.getCGSTAMT());
+                    totSGSTAmnt = totSGSTAmnt + stringToFloat(billDetail.getSGSTAMT());
+                    tv_totQty.setText(roundTwoDecimals(totQty));
+                    tv_totAmnt.setText(roundTwoDecimals(totAmnt));
+                }
+            });
+            snackbar.getView().addOnAttachStateChangeListener(new View.OnAttachStateChangeListener() {
+                @Override
+                public void onViewAttachedToWindow(View v) {
+
+                }
+
+                @Override
+                public void onViewDetachedFromWindow(View v) {
+                    if(flag[0] !=1) {
+                        Constant.showLog("3-deletedIndex-"+deletedIndex+"-cartList-"+retMemoList.size());
+                    }
+                }
+            });
+            snackbar.setActionTextColor(Color.YELLOW);
+            snackbar.show();*/
+        }
+    }
+
+    @Override
+    public void startNewActivty(RecyclerView.ViewHolder viewHolder, int direction, int position) {
+
+    }
+
     @SuppressLint("StaticFieldLeak")
     private class CashMemoPrint extends AsyncTask<Void, Void, String> {
 
@@ -286,7 +440,16 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                 mService.sendMessage(date + space_str13 + time, "GBK");
                 mService.sendMessage("Memo No : " + memoNo, "GBK");
                 mService.sendMessage("BillNo : " + billMaster.getBillNo(), "GBK");
-                mService.sendMessage("Customer Name : " + tv_custName.getText().toString(), "GBK");
+                String str1 = tv_custName.getText().toString();
+                String arr[] = str1.split("-");
+                if(arr.length>1){
+                    mService.sendMessage("Customer Name : " + arr[0], "GBK");
+                    mService.sendMessage("Mobile No     : " + arr[1], "GBK");
+                }else {
+                    mService.sendMessage("Customer Name : " + str1, "GBK");
+                    mService.sendMessage("Mobile No     : " , "GBK");
+                }
+
 
                 nameFontformat = format;
                 nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));
@@ -452,14 +615,14 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
 
     private void setBillNo(){
         billMastList = db.getBillNo("","");
-        auto_billNo.setAdapter(new ReturnMemoBillNoAdapter(getApplicationContext(),R.layout.custom_autocomplete_list_item,billMastList));
+        auto_billNo.setAdapter(new ReturnMemoBillNoAdapter(getApplicationContext(),R.layout.adapter_item,billMastList));
         auto_billNo.setThreshold(0);
     }
 
     private void setBillDet(){
         billDetList.clear();
         billDetList = db.getBillDet(billMaster.getId());
-        auto_barcode.setAdapter(new ReturnMemoBarcodeAdapter(getApplicationContext(),R.layout.custom_autocomplete_list_item,billDetList));
+        auto_barcode.setAdapter(new ReturnMemoBarcodeAdapter(getApplicationContext(),R.layout.adapter_item,billDetList));
         auto_barcode.setThreshold(0);
     }
 
@@ -665,7 +828,7 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                 } else if (gstType.equals("E")) {
                     float taxableRate = rate;
                     float total = (taxableRate * qty);
-                    float billdiscPer = disper;
+                    float billdiscPer = billdisper;
                     float billDiscAmnt = (total * billdiscPer) / 100;
                     float disctedTotal = total - billDiscAmnt;
                     float totalGST = (disctedTotal * gstPer) / 100;

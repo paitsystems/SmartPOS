@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
 import com.pait.smartpos.adpaters.ViewPagerAdapter;
 import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.db.DBHandler;
@@ -34,7 +35,7 @@ public class AllGraphActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_graph);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         }
         init();
         setViewPager();
@@ -48,7 +49,7 @@ public class AllGraphActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onResume() {
         super.onResume();
- }
+    }
 
     @Override
     protected void onPause() {
@@ -91,12 +92,12 @@ public class AllGraphActivity extends AppCompatActivity implements View.OnClickL
                 new Constant(AllGraphActivity.this).doFinish();
                 break;
             case R.id.export:
-                startActivity(new Intent(AllGraphActivity.this,ExportOthersActivity.class));
+                startActivity(new Intent(AllGraphActivity.this, ExportOthersActivity.class));
                 // showDia(1);
                 //  new Constant(ReportMenuActivity.this).doFinish();
                 break;
             case R.id.report:
-                startActivity(new Intent(AllGraphActivity.this,ReportMenuActivity.class));
+                startActivity(new Intent(AllGraphActivity.this, ReportMenuActivity.class));
                 // showDia(1);
                 //  new Constant(ReportMenuActivity.this).doFinish();
                 break;
@@ -106,9 +107,9 @@ public class AllGraphActivity extends AppCompatActivity implements View.OnClickL
 
     private void setViewPager() {
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new AllGraphFragment1(), "Collection Summery");
+        adapter.addFragment(new AllGraphFragment1(), "Collection Summary");
         adapter.addFragment(new AllGraphFragment2(), "Productwise Stock");
-        adapter.addFragment(new AllGraphFragment3(), "Expense");
+        adapter.addFragment(new AllGraphFragment3(), "Expense Report");
         pager.setAdapter(adapter);
     }
 

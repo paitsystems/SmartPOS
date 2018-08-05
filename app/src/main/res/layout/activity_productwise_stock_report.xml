@@ -161,14 +161,14 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:fillViewport="true"
-                android:scrollbars="horizontal"
-                android:layout_weight="1">
+                android:scrollbars="horizontal">
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -177,85 +177,88 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:textColor="@color/white"
                             android:id="@+id/tv_finalprod"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_weight="0.4"
+                            android:layout_weight="0.3"
                             android:gravity="left|center"
                             android:paddingLeft="2dp"
-                            android:text="FinalProd" />
+                            android:text="FinalProd"
+                            android:textColor="@color/white" />
 
                         <TextView
                             android:id="@+id/tv_cat3"
-                            android:textColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_weight="0.5"
                             android:gravity="left|center"
                             android:text="Cat3"
+                            android:textColor="@color/white"
                             android:visibility="gone" />
 
                         <TextView
                             android:id="@+id/tv_price"
-                            android:textColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_weight="0.5"
                             android:gravity="right|center"
                             android:paddingLeft="5dp"
-                            android:text="Price" />
+                            android:text="Price"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
 
                         <TextView
                             android:id="@+id/tv_mrp"
-                            android:textColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_weight="0.5"
                             android:gravity="right|center"
                             android:paddingLeft="5dp"
-                            android:text="MRP" />
+                            android:text="MRP"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
 
                         <TextView
                             android:id="@+id/tv_wprice"
-                            android:textColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_weight="0.5"
                             android:gravity="right|center"
                             android:paddingLeft="5dp"
-                            android:text="Wprice" />
+                            android:text="Wprice"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
 
                         <TextView
                             android:id="@+id/tv_ssp"
-                            android:textColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_weight="0.5"
                             android:gravity="right|center"
                             android:paddingLeft="5dp"
-                            android:text="SSP" />
+                            android:text="SSP"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
 
                         <TextView
                             android:id="@+id/tv_qty"
-                            android:textColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_weight="0.5"
+                            android:layout_weight="0.7"
                             android:gravity="right|center"
                             android:paddingLeft="5dp"
-                            android:text="Qty" />
+                            android:text="Qty"
+                            android:textColor="@color/white" />
 
                         <TextView
                             android:id="@+id/tv_head_item"
-                            android:textColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -263,6 +266,7 @@
                             android:gravity="right|center"
                             android:paddingLeft="2dp"
                             android:text="Amount"
+                            android:textColor="@color/white"
                             android:visibility="gone" />
 
 
@@ -273,14 +277,14 @@
                         android:id="@+id/listView"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:background="@drawable/custbtndraw"
                         android:orientation="horizontal"
-                        android:visibility="visible">
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="match_parent"

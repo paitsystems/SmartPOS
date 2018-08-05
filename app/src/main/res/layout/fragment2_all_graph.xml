@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <!-- <LinearLayout
             android:backgroundTint="@color/white"
@@ -81,7 +82,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
+        android:layout_margin="@dimen/mobmargin5"
         android:background="@color/ldblue"
         android:orientation="vertical">
 
@@ -90,14 +91,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_margin="20dp"
+            android:layout_margin="@dimen/mobmargin5"
             android:orientation="vertical">
             <!--android:background="@drawable/dash_grey_bottomrbk"-->
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/piechart"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_margin="@dimen/mobmargin5"
                 android:layout_weight="1"></com.github.mikephil.charting.charts.PieChart>
         </LinearLayout>
     </LinearLayout>

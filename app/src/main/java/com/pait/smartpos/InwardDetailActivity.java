@@ -50,7 +50,7 @@ public class InwardDetailActivity extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inward_detail);
         if(getSupportActionBar() != null){
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
             getSupportActionBar().setTitle("Inward Detail Report");
         }
 
@@ -115,6 +115,7 @@ public class InwardDetailActivity extends AppCompatActivity implements View.OnCl
                 detail.setSGSTAMT(c.getFloat(13));
                 detail.setIGSTAMT(c.getFloat(14));
                 detail.setHSNCode(c.getString(15));
+                detail.setMRP(c.getFloat(16));
                 list.add(detail);
             } while (c.moveToNext());
         }
@@ -144,7 +145,7 @@ public class InwardDetailActivity extends AppCompatActivity implements View.OnCl
             tot_cgst = tot_cgst + eClass.getCGSTAMT();
             tot_sgst = tot_sgst + eClass.getSGSTAMT();
             tot_igst = tot_igst + eClass.getIGSTAMT();
-            tot_salerate = tot_salerate + eClass.getRate();
+            tot_salerate = tot_salerate + eClass.getMRP();
             tot_purchaserate = tot_purchaserate + eClass.getPurchaseRate();
             tot_gstper = tot_gstper + eClass.getGSTPER();
         }

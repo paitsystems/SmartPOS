@@ -120,15 +120,16 @@
                 android:textColor="@color/black" />
 
             <TextView
-                android:background="@drawable/lighht_border"
                 android:id="@+id/tv_exppay"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_margin="1dp"
+                android:background="@drawable/lighht_border"
                 android:gravity="center"
                 android:paddingLeft="2dp"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:visibility="gone" />
 
 
         </LinearLayout>

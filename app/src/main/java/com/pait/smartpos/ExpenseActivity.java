@@ -3,15 +3,14 @@ package com.pait.smartpos;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.content.res.ColorStateList;
 import android.database.Cursor;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.util.Log;
 import android.view.Gravity;
@@ -23,7 +22,6 @@ import android.widget.AutoCompleteTextView;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,7 +31,6 @@ import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.db.DBHandler;
 import com.pait.smartpos.log.WriteLog;
 import com.pait.smartpos.model.DailyPettyExpClass;
-import com.pait.smartpos.model.ExpenseDetail;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -59,12 +56,11 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
             bt_home, bt_food, bt_entertainment, bt_education, bt_transport, bt_shopping, bt_medical, bt_savings, bt_borrow,
             bt_other;
     private int money = 0, amt_money, total_money, check = 0;
-    private AutoCompleteTextView auto_remark,auto_exphead;
+    private AutoCompleteTextView auto_remark, auto_exphead;
     private DBHandler db;
     private EditText ed_amount;
     private List<DailyPettyExpClass> list;
     private Spinner sp_exphead;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +68,7 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_expense);
 
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
             //getSupportActionBar().setTitle();
         }
         init();
@@ -100,7 +96,6 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
                 auto_remark.showDropDown();
             }
         });
-
         moneyMenu();
     }
 
@@ -161,18 +156,18 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
         constant1 = new Constant(getApplicationContext());
         toast = Toast.makeText(getApplicationContext(), "", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0, 0);
-        tv_date = (TextView) findViewById(R.id.tv_date);
-        ed_amount = (EditText) findViewById(R.id.ed_amount);
-        auto_exphead = (AutoCompleteTextView) findViewById(R.id.auto_exphead);
-        amount_menu_lay = (LinearLayout) findViewById(R.id.amount_menu);
-        lay_add = (LinearLayout) findViewById(R.id.lay_add);
-        bt_add_money = (AppCompatButton) findViewById(R.id.bt_addmoney);
-        bt_100 = (AppCompatButton) findViewById(R.id.bt_100);
-        bt_500 = (AppCompatButton) findViewById(R.id.bt_500);
-        bt_1000 = (AppCompatButton) findViewById(R.id.bt_1000);
-        bt_2000 = (AppCompatButton) findViewById(R.id.bt_2000);
-        bt_5000 = (AppCompatButton) findViewById(R.id.bt_5000);
-        bt_10000 = (AppCompatButton) findViewById(R.id.bt_10000);
+        tv_date = findViewById(R.id.tv_date);
+        ed_amount = findViewById(R.id.ed_amount);
+        auto_exphead = findViewById(R.id.auto_exphead);
+        amount_menu_lay = findViewById(R.id.amount_menu);
+        lay_add = findViewById(R.id.lay_add);
+        bt_add_money = findViewById(R.id.bt_addmoney);
+        bt_100 = findViewById(R.id.bt_100);
+        bt_500 = findViewById(R.id.bt_500);
+        bt_1000 = findViewById(R.id.bt_1000);
+        bt_2000 = findViewById(R.id.bt_2000);
+        bt_5000 = findViewById(R.id.bt_5000);
+        bt_10000 = findViewById(R.id.bt_10000);
         auto_remark = findViewById(R.id.auto_remark);
         day = cal.get(Calendar.DAY_OF_MONTH);
         month = cal.get(Calendar.MONTH);
@@ -208,7 +203,19 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
                 }
                 total_money = money + amt_money;
                 ed_amount.setText(String.valueOf(total_money));
-
+                bt_100.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_500.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_1000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_2000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_5000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_10000.setBackgroundTintList(ContextCompat.getColorStateList(getApplicationContext(), R.color.lightblue));
+                bt_100.setPadding(2, 2, 2, 2);
+                bt_500.setPadding(2, 2, 2, 2);
+                bt_1000.setPadding(2, 2, 2, 2);
+                bt_2000.setPadding(2, 2, 2, 2);
+                bt_5000.setPadding(2, 2, 2, 2);
+                bt_10000.setPadding(2, 2, 2, 2);
+                amt_money = 0;
             }
         });
 
@@ -384,79 +391,72 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void saveData() {
-        list.clear();
-        int maxauto = 0;
-       /* if (auto_remark.getText().toString().equals("")) {
-            auto_remark.setError("Please enter remark..");
-        } else*/
-       if (ed_amount.getText().toString().equals("")) {
-            ed_amount.setError("Please enter amount..");
-        } else {
-            ed_amount.setError(null);
-            //auto_remark.setAdapter(null);
-
-            DailyPettyExpClass detail = new DailyPettyExpClass();
-            detail.setAmount(Float.valueOf(ed_amount.getText().toString()));
-
-            try {
-                String date = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(tv_date.getText().toString()));
-                Log.d("Log", "date:" + date);
-                detail.setDate(date);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-            curr_time = constant.getTime();
-            Log.d("Log", "curr_time:" + curr_time);
-            //detail.settime(curr_time);
-            String expHead = sp_exphead.getSelectedItem().toString();
-            Constant.showLog("expHead:"+expHead);
-            int head = db.getExpHeadAuto(expHead);
-            Constant.showLog("head:"+head);
-            detail.setExpHead(head);
-
-            //detail.setExpHead(1);
-            detail.setRemark(auto_remark.getText().toString());
-            maxauto = db.getExpMaxAuto();
-
-            if (maxauto == 0) {
-                maxauto = 1;
+        try {
+            list.clear();
+            int maxauto = 0;
+            if (ed_amount.getText().toString().equals("")) {
+                ed_amount.setError("Please enter amount..");
             } else {
-                maxauto = maxauto + 1;
+                ed_amount.setError(null);
+                DailyPettyExpClass detail = new DailyPettyExpClass();
+                detail.setAmount(Float.valueOf(ed_amount.getText().toString()));
+                String date1 = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(tv_date.getText().toString()));
+                detail.setDate(date1);
+                String expHead = sp_exphead.getSelectedItem().toString();
+                Constant.showLog("expHead:" + expHead);
+                int head = db.getExpHeadAuto(expHead);
+                Constant.showLog("head:" + head);
+                detail.setBranchid(1);
+                detail.setCreatedBy(1);
+                detail.setExpHead(head);
+                String date = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(new SimpleDateFormat("dd/MMM/yyyy", Locale.ENGLISH).parse(constant.getDate()));
+                detail.setCreatedDate(date);
+                detail.setStatus("A");
+                detail.setFinyr(constant.getFinYr());
+                detail.setRemark(auto_remark.getText().toString());
+                maxauto = db.getExpMaxAuto();
+                detail.setAutoid(maxauto);
+                int id = db.getExpMastId(constant.getFinYr());
+                detail.setId(id);
+                String voucNo = "P"+db.getCompIni() + constant.getFinYr() + id;
+                detail.setVouType("Receipt");
+                detail.setVoucherno(voucNo);
+                list.add(detail);
+                db.addExpenseDetail(list);
+                toast.setText("Expense added successfully.");
+                toast.show();
+                ed_amount.setText(null);
+                auto_remark.setText(null);
+                ed_amount.requestFocus();
             }
-            detail.setAutoid(maxauto);
-            list.add(detail);
-            db.addExpenseDetail(list);
-            toast.setText("Expense added successfully.");
-            toast.show();
-            ed_amount.setText("");
-            auto_remark.setText("");
-
+        }
+        catch (Exception e){
+            e.printStackTrace();
         }
     }
 
-    private void get_auto_remark(){
-        ArrayAdapter adapter,adapter2;
+    private void get_auto_remark() {
+        ArrayAdapter adapter, adapter2;
         auto_remark.setAdapter(null);
         List<String> uList = new ArrayList<>();
-            Cursor cursor = db.getListExpRemark();
-            if(cursor.moveToFirst()) {
-               do {
-                    uList.add(cursor.getString(cursor.getColumnIndex(DBHandler.DPE_Remark)));
-                }while (cursor.moveToNext());
-            }
-            cursor.close();
+        Cursor cursor = db.getListExpRemark();
+        if (cursor.moveToFirst()) {
+            do {
+                uList.add(cursor.getString(cursor.getColumnIndex(DBHandler.DPE_Remark)));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
 
-        adapter = new ArrayAdapter(getApplicationContext(),R.layout.adapter_item,uList);
+        adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.adapter_item, uList);
         auto_remark.setAdapter(adapter);
 
 
         List<String> eList = new ArrayList<>();
-         Cursor cursor1 = db.getListExpHead();
-        if(cursor1.moveToFirst()) {
+        Cursor cursor1 = db.getListExpHead();
+        if (cursor1.moveToFirst()) {
             do {
                 eList.add(cursor1.getString(cursor1.getColumnIndex(DBHandler.EXM_Expdesc)));
-            }while (cursor1.moveToNext());
+            } while (cursor1.moveToNext());
         }
         cursor1.close();
         /*eList.add("GIFTS");
@@ -469,7 +469,7 @@ public class ExpenseActivity extends AppCompatActivity implements View.OnClickLi
         eList.add("NOTE");
         eList.add("BIRHDAY");*/
 
-        adapter2 = new ArrayAdapter(getApplicationContext(),R.layout.spinner_item,eList);
+        adapter2 = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_item, eList);
         sp_exphead.setAdapter(adapter2);
     }
 

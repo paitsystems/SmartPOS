@@ -56,8 +56,8 @@ public class CollectionSumReportActivity extends AppCompatActivity implements Vi
         setContentView(R.layout.activity_collection_sum_report);
 
         if(getSupportActionBar() != null){
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setTitle("Collection Summery Report");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+            getSupportActionBar().setTitle("Collection Summary Report");
         }
 
         init();
@@ -86,7 +86,6 @@ public class CollectionSumReportActivity extends AppCompatActivity implements Vi
         cb_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 if (cb_all.isChecked()) {
                     flag = 1;
                     tv_fromdate.setFocusable(false);
@@ -148,6 +147,7 @@ public class CollectionSumReportActivity extends AppCompatActivity implements Vi
         }
         return null;
     }
+
     private void init(){
         listView = findViewById(R.id.listView);
         tv_total_amt = findViewById(R.id.tv_total_amt);
@@ -178,10 +178,8 @@ public class CollectionSumReportActivity extends AppCompatActivity implements Vi
     }
 
     private void setData(String fadate,String tadate) {
-
        //Cashier,Net Collection,Sale Cash,CashBack, Net Cash,Cheque,CRRef.Cheque,Card,Other,
         // CN Redeem,Exp Receipt, Exp Payment
-
         listView.setAdapter(null);
         Cursor c = db.getCollectionSumData(fadate,tadate,flag);
         List<CollectionClass> list = new ArrayList<>();

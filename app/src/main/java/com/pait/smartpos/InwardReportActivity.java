@@ -14,6 +14,7 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -70,8 +71,8 @@ public class InwardReportActivity extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inward_report);
         if(getSupportActionBar() != null){
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setTitle("Inward Summery Report");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+            getSupportActionBar().setTitle("Inward Summary Report");
         }
 
         init();
@@ -154,6 +155,7 @@ public class InwardReportActivity extends AppCompatActivity implements View.OnCl
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_show:
+                ((InputMethodManager)getSystemService(INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(btn_show.getWindowToken(),0);
                 try {
                     String fadate = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(sdf.parse(tv_fromdate.getText().toString()));
                     String tadate = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(sdf.parse(tv_todate.getText().toString()));
@@ -277,7 +279,8 @@ public class InwardReportActivity extends AppCompatActivity implements View.OnCl
                 mastClass.setJobWrkDCid(c.getInt(c.getColumnIndex(DBHandler.IWM_Jobwrkdcid)));
                 mastClass.setCancelledBy(c.getInt(c.getColumnIndex(DBHandler.IWM_Cancelledby)));
                 mastClass.setHOCode(c.getInt(c.getColumnIndex(DBHandler.IWM_Hocode)));
-                mastClass.setInwardDate(c.getString(c.getColumnIndex(DBHandler.IWM_Inwarddate)));
+                String inwDate = c.getString(c.getColumnIndex(DBHandler.IWM_Inwarddate));
+                mastClass.setInwardDate(parseDate(inwDate));
                 mastClass.setAgainstPO(c.getString(c.getColumnIndex(DBHandler.IWM_Againstpo)));
                 mastClass.setPoDate(c.getString(c.getColumnIndex(DBHandler.IWM_Podate)));
                 mastClass.setInwardSt(c.getString(c.getColumnIndex(DBHandler.IWM_Inwardst)));
@@ -293,7 +296,8 @@ public class InwardReportActivity extends AppCompatActivity implements View.OnCl
                 mastClass.setLR_No(c.getString(c.getColumnIndex(DBHandler.IWM_Lr_No)));
                 mastClass.setLr_Date(c.getString(c.getColumnIndex(DBHandler.IWM_Lr_Date)));
                 mastClass.setRefund(c.getString(c.getColumnIndex(DBHandler.IWM_Refund)));
-                mastClass.setRefundDate(c.getString(c.getColumnIndex(DBHandler.IWM_Refunddate)));
+                String refDate = c.getString(c.getColumnIndex(DBHandler.IWM_Refunddate));
+                mastClass.setRefundDate(parseDate(refDate));
                 mastClass.setPIMadeSt(c.getString(c.getColumnIndex(DBHandler.IWM_Pimadest)));
                 mastClass.setBaleOpenNo(c.getString(c.getColumnIndex(DBHandler.IWM_Baleopenno)) );
                 mastClass.setJobWorkTyp(c.getString(c.getColumnIndex(DBHandler.IWM_Jobworktyp)));
@@ -322,6 +326,17 @@ public class InwardReportActivity extends AppCompatActivity implements View.OnCl
         }
         db.close();
         c.close();
+    }
+
+    private String parseDate(String date){
+        String str = "";
+        try {
+            Date d = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).parse(date);
+            str = new SimpleDateFormat("dd/MMM/yyyy", Locale.ENGLISH).format(d);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return str;
     }
 
     private void setTotal(List<InwardMasterClass> list) {

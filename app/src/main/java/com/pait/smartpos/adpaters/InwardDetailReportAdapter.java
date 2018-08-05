@@ -62,10 +62,10 @@ public class InwardDetailReportAdapter  extends BaseAdapter {
         }
 
         InwardDetailClass detail = (InwardDetailClass) getItem(i);
-        holder.tv_inward_no.setText(String.valueOf(detail.getInwardID()));
+        holder.tv_inward_no.setText(detail.getInwno());
         holder.tv_final_prod.setText(detail.getFatherSKU());
         holder.tv_purchase_rate.setText(String.valueOf(detail.getPurchaseRate()));
-        holder.tv_sale_rate.setText(String.valueOf(detail.getRate()));
+        holder.tv_sale_rate.setText(String.valueOf(detail.getMRP()));
         holder.tv_supp.setText(String.valueOf(new DBHandler(context).getInwardSupplierName((detail.getSuppid()))));
         holder.tv_qty.setText(String.valueOf(detail.getRecQty()));
         //holder.tv_amnt.setText(String.valueOf(detail.getTotalAmt()));

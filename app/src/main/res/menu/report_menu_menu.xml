@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
   <item android:id="@+id/export"
-      android:icon="@drawable/export_32"
+      android:icon="@drawable/export_24"
       android:title="Export to Excel"
       app:showAsAction="always"/>
 
   <item android:id="@+id/report"
-      android:icon="@drawable/rep_white_32"
-      android:title="Reports"
+      android:icon="@drawable/rep_white_24"
+      android:title="Detail Reports"
       app:showAsAction="always"/>
 
 </menu>

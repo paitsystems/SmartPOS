@@ -55,19 +55,6 @@
                     android:layout_weight="0.8"
                     android:text="@string/cat1" />
 
-                <EditText
-                    android:id="@+id/ed_cat1"
-                    style="@style/textViewMob"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_weight="0.2"
-                    android:hint="@string/enter_cat1_name"
-                    android:inputType="textNoSuggestions|textCapWords"
-                    android:maxLines="1"
-                    android:padding="@dimen/mobpadding2"
-                    android:singleLine="true"
-                    android:visibility="gone" />
-
                 <AutoCompleteTextView
                     android:id="@+id/auto_cat1"
                     style="@style/textViewMob"
@@ -75,7 +62,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
                     android:hint="@string/select_cat1"
-                    android:imeActionId="@+id/ed_cat2"
                     android:imeOptions="actionNext"
                     android:inputType="textCapWords"
                     android:maxLines="1"
@@ -94,14 +80,64 @@
                     android:layout_weight="0.8"
                     android:text="@string/cat2" />
 
+                <AutoCompleteTextView
+                    android:id="@+id/auto_cat2"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:hint="Select Cat2"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="Cat3" />
+
                 <EditText
-                    android:id="@+id/ed_cat2"
+                    android:id="@+id/ed_cat3"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:hint="Enter Cat3"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="Purchase Rate" />
+
+                <EditText
+                    android:id="@+id/ed_pprice"
                     style="@style/textViewMob"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/mob_ED_size"
                     android:layout_weight="0.2"
-                    android:hint="@string/enter_cat2_name"
-                    android:inputType="textCapWords"
+                    android:hint="Enter Rate"
+                    android:inputType="number|numberDecimal"
                     android:maxLines="1"
                     android:padding="@dimen/mobpadding2"
                     android:singleLine="true" />
@@ -117,7 +153,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.8"
-                    android:text="@string/rate" />
+                    android:text="SSP" />
 
                 <EditText
                     android:id="@+id/ed_ssp"
@@ -125,7 +161,32 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/mob_ED_size"
                     android:layout_weight="0.2"
-                    android:hint="@string/enter_rate"
+                    android:hint="Enter SSP"
+                    android:inputType="number|numberDecimal"
+                    android:maxLines="1"
+                    android:padding="@dimen/mobpadding2"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="Qty" />
+
+                <EditText
+                    android:id="@+id/ed_qty"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mob_ED_size"
+                    android:layout_weight="0.2"
+                    android:hint="Enter QTY"
                     android:inputType="number|numberDecimal"
                     android:maxLines="1"
                     android:padding="@dimen/mobpadding2"
@@ -172,7 +233,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/tv_InActive"
@@ -212,7 +274,7 @@
                     android:layout_weight="0.5"
                     android:text="@string/change_cat1"
                     android:textColor="@color/white"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     app:backgroundTint="@color/maroon" />
 
                 <!-- <Button
@@ -254,7 +316,8 @@
         <ExpandableListView
             android:id="@+id/expandableListView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
 
     </LinearLayout>
 

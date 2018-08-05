@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:sothree="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
     android:id="@+id/sliding_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,420 +18,421 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-<LinearLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".InwardActivity">
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:background="@drawable/black_border_curve_draw"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="3dp"
-            android:visibility="gone">
-
-
-            <AutoCompleteTextView
-                android:id="@+id/auto_supplier"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/pinkd"
-                android:clickable="true"
-                android:drawableRight="@drawable/search"
-                android:focusable="true"
-                android:hint="Enter Supplier"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:background="@drawable/black_border_curve_draw"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="3dp">
-
-
-            <AutoCompleteTextView
-                android:id="@+id/auto_product"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/pinkd"
-                android:clickable="true"
-                android:drawableRight="@drawable/search"
-                android:focusable="true"
-                android:hint="Enter Product"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="2dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="3dp"
-            android:visibility="gone">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/date_border"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <Spinner
-                    android:id="@+id/sp_prod"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:backgroundTint="@color/pinkd" />
-            </LinearLayout>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="3dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center|bottom"
-                android:orientation="horizontal"
-                android:visibility="gone">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
-                    android:gravity="center|bottom"
-                    android:orientation="horizontal"
-                    android:padding="3dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/date_color_green"
-                        android:gravity="center"
-                        android:padding="2dp"
-                        android:text="Qty"
-                        android:textColor="@color/white"
-                        android:visibility="visible" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
-                    android:gravity="center|bottom"
-                    android:orientation="horizontal"
-                    android:padding="3dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/date_color_green"
-                        android:gravity="center"
-                        android:padding="2dp"
-                        android:text="Rate"
-                        android:textColor="@color/white"
-                        android:visibility="visible" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="0.2"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="3dp">
-
-                <EditText
-                    android:id="@+id/ed_qty"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_margin="2dp"
-                    android:layout_weight="0.5"
-                    android:background="@drawable/date_border"
-                    android:gravity="center"
-                    android:hint="Enter Qty"
-                    android:inputType="number"
-                    android:maxLines="2"
-                    android:padding="5dp"
-                    android:visibility="visible" />
-
-                <TextView
-                    android:id="@+id/tv_gstgroup"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_margin="2dp"
-                    android:layout_weight="0.5"
-                    android:background="@drawable/date_border"
-                    android:gravity="center"
-                    android:textColor="@color/black"
-                    android:maxLines="1"
-                    android:padding="5dp"
-                    android:visibility="visible" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="0.2"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="3dp">
-
-                <EditText
-                    android:id="@+id/ed_rate"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_margin="2dp"
-                    android:layout_weight="0.5"
-                    android:background="@drawable/date_border"
-                    android:gravity="center"
-                    android:hint="Enter Purchase Rate"
-                    android:inputType="number"
-                    android:maxLines="2"
-                    android:padding="5dp"
-                    android:visibility="visible" />
-
-                <EditText
-                    android:id="@+id/ed_ssp"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_margin="2dp"
-                    android:layout_weight="0.5"
-                    android:background="@drawable/date_border"
-                    android:gravity="center"
-                    android:hint="Enter SSP"
-                    android:inputType="number"
-                    android:maxLines="2"
-                    android:padding="5dp"
-                    android:visibility="visible" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="0.5"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="3dp">
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:background="@drawable/date_color_border"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:visibility="invisible" />
-
-                <Button
-                    android:id="@+id/btn_add"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:background="@drawable/date_color_border"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="ADD"
-                    android:textColor="@color/white"
-                    android:visibility="visible" />
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:background="@drawable/date_color_border"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:visibility="invisible" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:background="@drawable/custbtndraw"
-            android:orientation="horizontal"
-            android:visibility="gone">
-
-            <TextView
-                android:id="@+id/tv_fsku"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="0.5"
-                android:gravity="left|center"
-                android:paddingLeft="2dp"
-                android:text="FatherSKU"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/tv_qty"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="0.5"
-                android:gravity="left|center"
-                android:text="Qty"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/tv_rate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="0.5"
-                android:gravity="left|center"
-                android:text="Rate"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/tv_ssp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="0.5"
-                android:gravity="right|center"
-                android:paddingLeft="2dp"
-                android:text="SSP"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/tv_cgst"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="0.5"
-                android:gravity="right|center"
-                android:paddingLeft="2dp"
-                android:text="CGST"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/tv_sgst"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="0.5"
-                android:gravity="right|center"
-                android:paddingLeft="2dp"
-                android:text="SGST"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/tv_gst_per"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="0.5"
-                android:gravity="right|center"
-                android:paddingLeft="2dp"
-                android:text="GST%"
-                android:textColor="@color/white" />
-
-
-        </LinearLayout>
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_data"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginBottom="68dp"
-            android:layout_weight="1" />
-
-        <!--<android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_data"
+        <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="vertical">
+            android:orientation="vertical"
+            tools:context=".InwardActivity">
 
-        </android.support.v7.widget.RecyclerView>-->
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@drawable/row_cover"
-        android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        <TextView
-            style="@style/textViewMobW"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="0.3"
-            android:text="ITEM" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/black_border_curve_draw"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="3dp"
+                    android:visibility="gone">
 
-        <TextView
-            style="@style/textViewMobW"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="0.5"
-            android:gravity="right"
-            android:text="Qty" />
 
-        <TextView
-            style="@style/textViewMobW"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="0.5"
-            android:gravity="right"
-            android:text="Rate" />
+                    <AutoCompleteTextView
+                        android:id="@+id/auto_supplier"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:backgroundTint="@color/pinkd"
+                        android:clickable="true"
+                        android:drawableRight="@drawable/ic_search_black_24dp"
+                        android:focusable="true"
+                        android:hint="Enter Supplier"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
 
-        <TextView
-            style="@style/textViewMobW"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="0.5"
-            android:gravity="right"
-            android:text="Amnt" />
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/black_border_curve_draw"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="3dp">
 
-    <!--<TextView
-        style="@style/footerstyleMob"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />-->
 
-</LinearLayout>
+                    <AutoCompleteTextView
+                        android:id="@+id/auto_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:backgroundTint="@color/pinkd"
+                        android:clickable="true"
+                        android:drawableRight="@drawable/ic_search_black_24dp"
+                        android:focusable="true"
+                        android:hint="Enter Product"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="3dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/date_border"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/sp_prod"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:backgroundTint="@color/pinkd" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center|bottom"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="center|bottom"
+                            android:orientation="horizontal"
+                            android:padding="3dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/date_color_green"
+                                android:gravity="center"
+                                android:padding="2dp"
+                                android:text="Qty"
+                                android:textColor="@color/white"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="center|bottom"
+                            android:orientation="horizontal"
+                            android:padding="3dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/date_color_green"
+                                android:gravity="center"
+                                android:padding="2dp"
+                                android:text="Rate"
+                                android:textColor="@color/white"
+                                android:visibility="visible" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <EditText
+                            android:id="@+id/ed_qty"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="2dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/date_border"
+                            android:gravity="center"
+                            android:hint="Enter Qty"
+                            android:inputType="number"
+                            android:maxLines="2"
+                            android:padding="5dp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tv_gstgroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="2dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/date_border"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <EditText
+                            android:id="@+id/ed_rate"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="2dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/date_border"
+                            android:gravity="center"
+                            android:hint="Enter Purchase Rate"
+                            android:inputType="number"
+                            android:maxLines="2"
+                            android:padding="5dp"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/ed_ssp"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="2dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/date_border"
+                            android:gravity="center"
+                            android:hint="Enter SSP"
+                            android:inputType="number"
+                            android:maxLines="2"
+                            android:padding="5dp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/date_color_border"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:visibility="invisible" />
+
+                        <Button
+                            android:id="@+id/btn_add"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/date_color_border"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:visibility="visible" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/date_color_border"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/custbtndraw"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_fsku"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="left|center"
+                        android:paddingLeft="2dp"
+                        android:text="FatherSKU"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_qty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="left|center"
+                        android:text="Qty"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="left|center"
+                        android:text="Rate"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_ssp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="right|center"
+                        android:paddingLeft="2dp"
+                        android:text="SSP"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_cgst"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="right|center"
+                        android:paddingLeft="2dp"
+                        android:text="CGST"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_sgst"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="right|center"
+                        android:paddingLeft="2dp"
+                        android:text="SGST"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_gst_per"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="right|center"
+                        android:paddingLeft="2dp"
+                        android:text="GST%"
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="68dp"
+                    android:layout_weight="1" />
+
+                <!--<android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical">
+
+                </android.support.v7.widget.RecyclerView>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/row_cover"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.3"
+                    android:text="ITEM" />
+
+                <TextView
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:text="Qty" />
+
+                <TextView
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:text="Rate" />
+
+                <TextView
+                    style="@style/textViewMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:text="Amnt" />
+            </LinearLayout>
+
+            <!--<TextView
+                style="@style/footerstyleMob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />-->
+
+        </LinearLayout>
     </FrameLayout>
+
     <LinearLayout
         android:id="@+id/dragView"
         android:layout_width="match_parent"
@@ -441,360 +442,375 @@
         android:focusable="false"
         android:orientation="vertical">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:clickable="false"
+            android:focusable="false"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="2dp"
-                android:layout_weight="0.5"
-                android:background="@drawable/pre_abs_red"
-                android:orientation="vertical"
-                android:padding="7dp">
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@null"
-                    android:text="@string/total"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="2dp"
-                android:layout_weight="0.5"
-                android:background="@drawable/pre_abs_red"
-                android:orientation="vertical"
-                android:padding="7dp">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.6"
-                        android:orientation="vertical">
+                        android:layout_height="50dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/pre_abs_red"
+                        android:orientation="vertical"
+                        android:padding="7dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tot Qty"
-                            android:textColor="#FFFFFF"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.4"
-                        android:gravity="right|bottom"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/tv_total_qty"
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:gravity="bottom|right"
-                            android:text="@string/_0"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:textColor="@color/black"
+                            android:background="@null"
+                            android:text="@string/total"
+                            android:textColor="#FFFFFF"
                             android:textStyle="bold" />
+                    </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/pre_abs_red"
+                        android:orientation="vertical"
+                        android:padding="7dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tot Qty"
+                                    android:textColor="#FFFFFF"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.4"
+                                android:gravity="right|bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_total_qty"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="bottom|right"
+                                    android:text="@string/_0"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/pre_abs_red"
+                        android:orientation="vertical"
+                        android:padding="7dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tot Amnt"
+                                    android:textColor="#FFFFFF"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:gravity="right|bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_total_amount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="right"
+                                    android:text="@string/_0"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="2dp"
-                android:layout_weight="0.5"
-                android:background="@drawable/pre_abs_red"
-                android:orientation="vertical"
-                android:padding="7dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/mobpadding5">
 
-                    <LinearLayout
+                    <TextView
+                        style="@style/textViewMob"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.6"
-                        android:orientation="vertical">
+                        android:text="Disc %" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tot Amnt"
-                            android:textColor="#FFFFFF"
-                            android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/ed_discPer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:selectAllOnFocus="true"
+                        android:text="0" />
+                </LinearLayout>
 
-                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/mobpadding5">
 
-                    <LinearLayout
+                    <TextView
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="Disc Amnt" />
+
+                    <EditText
+                        android:id="@+id/ed_discAmnt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:selectAllOnFocus="true"
+                        android:text="0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/mobpadding5">
+
+                    <TextView
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="Other  sp disc Amnt" />
+
+                    <EditText
+                        android:id="@+id/ed_otherAdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:ems="10"
+                        android:inputType="numberSigned"
+                        android:selectAllOnFocus="true"
+                        android:text="0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="CGST" />
+
+                    <TextView
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="SGST" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/mobpadding2">
+
+                    <TextView
+                        android:id="@+id/tv_tot_cgst"
+                        style="@style/textViewMob"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.3"
-                        android:gravity="right|bottom"
-                        android:orientation="vertical">
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/tabmargin2"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/cashmwmo_ed_draw"
+                        android:gravity="center"
+                        android:hint="@string/balance_amount_will_show_here"
+                        android:singleLine="true"
+                        android:text="0" />
 
-                        <TextView
-                            android:id="@+id/tv_total_amount"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="right"
-                            android:text="@string/_0"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:textColor="@color/black"
-                            android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tv_tot_sgst"
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/tabmargin2"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/cashmwmo_ed_draw"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="0" />
+                </LinearLayout>
 
-                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="IGST" />
+
+                    <TextView
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Total Amnt" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/mobpadding2">
+
+                    <TextView
+                        android:id="@+id/tv_tot_igst"
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/tabmargin2"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/cashmwmo_ed_draw"
+                        android:gravity="center"
+                        android:hint="@string/balance_amount_will_show_here"
+                        android:singleLine="true"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/tv_final_amnt"
+                        style="@style/textViewMob"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/tabmargin2"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/cashmwmo_ed_draw"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:text="@string/cancel"
+                        android:textColor="@color/white"
+                        android:visibility="visible"
+                        app:backgroundTint="@color/red" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_reset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:text="@string/reset"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        app:backgroundTint="@color/red" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:text="@string/save"
+                        android:textColor="@color/white"
+                        android:visibility="visible"
+                        app:backgroundTint="@color/red" />
+
                 </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="@dimen/mobpadding5">
-
-            <TextView
-                style="@style/textViewMob"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.6"
-                android:text="Disc %" />
-
-            <EditText
-                android:id="@+id/ed_discPer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:ems="10"
-                android:inputType="number"
-                android:selectAllOnFocus="true"
-                android:text="0" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="@dimen/mobpadding5">
-
-            <TextView
-                style="@style/textViewMob"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.6"
-                android:text="Disc Amnt" />
-
-            <EditText
-                android:id="@+id/ed_discAmnt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:ems="10"
-                android:inputType="number"
-                android:selectAllOnFocus="true"
-                android:text="0" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="@dimen/mobpadding5">
-
-            <TextView
-                style="@style/textViewMob"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.6"
-                android:text="Other  sp disc Amnt" />
-
-            <EditText
-                android:selectAllOnFocus="true"
-                android:id="@+id/ed_otherAdd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:inputType="numberSigned"
-                android:ems="10"
-                android:text="0"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                style="@style/textViewMob"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:gravity="center"
-                android:text="CGST" />
-
-            <TextView
-                style="@style/textViewMob"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:gravity="center"
-                android:text="SGST" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="@dimen/mobpadding2">
-
-            <TextView
-                android:id="@+id/tv_tot_cgst"
-                style="@style/textViewMob"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/tabmargin2"
-                android:layout_weight="0.5"
-                android:background="@drawable/cashmwmo_ed_draw"
-                android:gravity="center"
-                android:hint="@string/balance_amount_will_show_here"
-                android:singleLine="true"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/tv_tot_sgst"
-                style="@style/textViewMob"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/tabmargin2"
-                android:layout_weight="0.5"
-                android:background="@drawable/cashmwmo_ed_draw"
-                android:gravity="center"
-                android:singleLine="true"
-                android:text="0" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                style="@style/textViewMob"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:gravity="center"
-                android:text="IGST" />
-
-            <TextView
-                style="@style/textViewMob"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:gravity="center"
-                android:text="Total Amnt" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="@dimen/mobpadding2">
-
-            <TextView
-                android:id="@+id/tv_tot_igst"
-                style="@style/textViewMob"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/tabmargin2"
-                android:layout_weight="0.5"
-                android:background="@drawable/cashmwmo_ed_draw"
-                android:gravity="center"
-                android:hint="@string/balance_amount_will_show_here"
-                android:singleLine="true"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/tv_final_amnt"
-                style="@style/textViewMob"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/tabmargin2"
-                android:layout_weight="0.5"
-                android:background="@drawable/cashmwmo_ed_draw"
-                android:gravity="center"
-                android:singleLine="true"
-                android:text="0" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <android.support.v7.widget.AppCompatButton
-                android:id="@+id/btn_cancel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="0.5"
-                android:text="@string/cancel"
-                android:textColor="@color/white"
-                android:visibility="visible"
-                app:backgroundTint="@color/red" />
-
-            <android.support.v7.widget.AppCompatButton
-                android:id="@+id/btn_reset"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="0.5"
-                android:text="@string/reset"
-                android:textColor="@color/white"
-                android:visibility="gone"
-                app:backgroundTint="@color/red" />
-
-            <android.support.v7.widget.AppCompatButton
-                android:id="@+id/btn_save"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/save"
-                android:textColor="@color/white"
-                android:visibility="visible"
-                android:layout_gravity="center"
-                android:layout_weight="0.5"
-                app:backgroundTint="@color/red" />
-
-        </LinearLayout>
-
+        </ScrollView>
     </LinearLayout>
-    ]</com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

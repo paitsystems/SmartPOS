@@ -107,8 +107,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ReportListActivity"
-            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan" />
         <activity
             android:name=".Repo_Collection_Activity"
             android:screenOrientation="landscape" />
@@ -138,6 +138,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".NavigationActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -209,7 +210,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ReturnMemoActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".CollectionSumReportActivity"
             android:screenOrientation="portrait" />
@@ -224,11 +226,15 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".InwardReportActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".InwardDetailActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".AllGraphActivity"></activity>
+        <activity android:name=".AllGraphActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".AddSupplierMaster"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

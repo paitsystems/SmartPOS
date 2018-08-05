@@ -20,6 +20,7 @@
     <color name="test">#f8551f</color>
     <color name="lgreen">#b5ffae</color>
     <color name="lyellow">#f6f3ad</color>
+    <color name="lightyellow2">#9f925b</color>
     <color name="lred">#ffaa7b</color>
     <color name="lpurple">#EA80FC</color>
     <color name="lpink">#ea6894</color>
@@ -56,6 +57,7 @@
     <color name="purpled">#9C27B0</color>
     <color name="g1">#ed96a6</color>
     <color name="light_green">#f2fcd2</color>
+    <color name="light_green2">#c1e452</color>
     <color name="light_green1">#e9f9b6</color>
     <color name="light_red">#FFCCCC</color>
 

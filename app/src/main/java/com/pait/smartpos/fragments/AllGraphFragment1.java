@@ -28,6 +28,7 @@ import com.pait.smartpos.R;
 import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.db.DBHandler;
 import com.pait.smartpos.model.CollectionClass;
+import com.pait.smartpos.model.MyMarkerView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -172,8 +173,8 @@ public class AllGraphFragment1 extends Fragment {
                 coll.setExp_receipt(c.getString(10));
                 list2.add(Float.valueOf(c.getString(10)));
                 coll.setExp_payment(c.getString(11));
-                list2.add(Float.valueOf(c.getString(11)));
-                list.add(coll);
+                //list2.add(Float.valueOf(c.getString(11)));
+                //list.add(coll);
 
             } while (c.moveToNext());
         }
@@ -188,7 +189,7 @@ public class AllGraphFragment1 extends Fragment {
         xValues.add("Card");
         xValues.add("OtherPayAmt");
         xValues.add("ExpReceipt");
-        xValues.add("ExpPayment");
+        //xValues.add("ExpPayment");
 
         for (int i = 0; i < list2.size(); i++) {
             CollectionClass coll = new CollectionClass();
@@ -201,7 +202,10 @@ public class AllGraphFragment1 extends Fragment {
             yValues.add(new PieEntry(Float.valueOf(coll.getOtherPayAmt()), xValues.get(i)));
             yValues.add(new PieEntry(Float.valueOf(coll.getExp_receipt()), xValues.get(i)));
             yValues.add(new PieEntry(Float.valueOf(coll.getExp_payment()), xValues.get(i)));*/
-            yValues.add(new PieEntry(Float.valueOf(list2.get(i)), xValues.get(i)));
+            //yValues.add(new PieEntry(Float.valueOf(list2.get(i)), xValues.get(i)));
+            String labelstr = xValues.get(i)+"-"+list2.get(i);
+            Constant.showLog("labelstr"+labelstr);
+            yValues.add(new PieEntry(Float.valueOf(list2.get(i)), labelstr));
         }
         setChartDataStock(xValues, yValues, "");
     }
@@ -209,16 +213,16 @@ public class AllGraphFragment1 extends Fragment {
     private void setChartDataStock(List<String> xValues, List<PieEntry> yValues, String label) {
         pieDataSet = new PieDataSet(yValues, label);
         int[] colors = {R.color.purpled, R.color.red, R.color.blue
-                , R.color.pinkd, R.color.lblue, R.color.buttoncolor, R.color.llyellow, R.color.greend
+                , R.color.pinkd, R.color.lblue, R.color.buttoncolor, R.color.lightyellow, R.color.greend
                 , R.color.lightgray, R.color.buttoncolor, R.color.light_green, R.color.orange, R.color.morange
                 , R.color.blue, R.color.grey};
         pieDataSet.setColors(colors, getContext());
-        pieDataSet.setXValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
-         //pieDataSet.setValueFormatter(new PercentFormatter());                      // for display values in percentage
+        // pieDataSet.setXValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
+        //pieDataSet.setValueFormatter(new PercentFormatter());                      // for display values in percentage
         //pieDataSet.setValueFormatter(new DefaultValueFormatter(0));              // default value
         pieDataSet.setValueFormatter(new DefaultValueFormatter(0));
         pieDataSet.setValueTextColor(Color.WHITE);
-        pieDataSet.setValueTextSize(30f);
+        pieDataSet.setValueTextSize(15f);
         pieDataSet.setSliceSpace(3);
         Legend legend = pieChart.getLegend();
         //legend.setPosition(Legend.LegendPosition.LEFT_OF_CHART);
@@ -229,15 +233,15 @@ public class AllGraphFragment1 extends Fragment {
         legend.setTextColor(Color.WHITE);
         legend.setWordWrapEnabled(true);
 
-        pieChart.setDrawSliceText(true);
+        pieChart.setDrawSliceText(false);
         //pieData = new PieData(xValues, pieDataSet);
         pieData = new PieData(pieDataSet);
         // pieData.setDataSet(pieDataSet);
         pieChart.setData(pieData);
-        //MarkerView mv = new MarkerView(getContext(),R.layout.custom_marker);
-        //pieChart.setMarker(mv);
+        MyMarkerView mv = new MyMarkerView(getContext(),R.layout.custom_marker);
+        pieChart.setMarker(mv);
         //pieChart.setDescription("This is  pichart..");
-        pieChart.setCenterText("Collection \n Summery");
+        //pieChart.setCenterText("Collection \n Summery");
         pieChart.setCenterTextSize(20f);
         pieChart.setCenterTextColor(R.color.red);
         //pieChart.animateXY(1400,1400);
@@ -266,7 +270,7 @@ public class AllGraphFragment1 extends Fragment {
     private void getYearFirstDate() {
         Calendar c = Calendar.getInstance();
         int year = c.get(Calendar.YEAR);
-        int month = 4;
+        int month = 3;
         int day = 1;
         c.set(year, month, day);
         int numOfYearInMonth = c.getActualMaximum(Calendar.YEAR);
@@ -281,7 +285,6 @@ public class AllGraphFragment1 extends Fragment {
             e.printStackTrace();
         }
     }
-
 
 }
 

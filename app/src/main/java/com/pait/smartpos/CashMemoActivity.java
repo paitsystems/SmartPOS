@@ -28,6 +28,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -97,7 +98,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
     private SlidingUpPanelLayout sliding_layout;
     private BluetoothService mService;
     private BluetoothDevice con_dev = null;
-    private String billNo, cgstPerStr, sgstPerStr;
+    private String billNo, cgstPerStr, sgstPerStr, gstNo = "";
     private Dialog prodDialog = null;
     private int allSelected = -1, prodSelected = -1, rateSelected = -1;
 
@@ -560,6 +561,8 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
             ed_custMobNo.setText(arr[1]);
             ed_remark.requestFocus();*/
         });
+
+        gstNo = db.getGSTNo();
     }
 
     private void setProdData() {
@@ -852,6 +855,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                 String rate = ed_rate.getText().toString();
                 if (!rate.equals("")) {
                     if (!qty.equals("")) {
+                        ((InputMethodManager)getSystemService(INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(sliding_layout.getWindowToken(),0);
                         AddToCartClass addToCart = new AddToCartClass();
                         addToCart.setItemId(productClass.getProduct_ID());
                         addToCart.setProdName(productClass.getProduct_Name());
@@ -1447,6 +1451,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                 db.saveBillDetail(det);
                 db.updateProductQty(cart.getItemId(), cart.getQty());
             }
+            ((InputMethodManager)getSystemService(INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(sliding_layout.getWindowToken(),0);
             showDia(2);
         }else {
             if(validate == 99){
@@ -1623,13 +1628,14 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
 
                 UserProfileClass user = new Constant(getApplicationContext()).getPref();
 
-                mService.sendMessage(user.getFirmName(), "GBK");
+                mService.sendMessage(user.getFirmName().toUpperCase(), "GBK");
 
                 nameFontformat[2] = arrayOfByte1[2];
                 mService.write(nameFontformat);
 
                 mService.sendMessage(user.getCity(), "GBK");
                 mService.sendMessage(user.getMobileNo(), "GBK");
+                mService.sendMessage("GSTIN : "+gstNo, "GBK");
                 mService.sendMessage("TAX INVOICE", "GBK");
 
                 byte[] left = {27, 97, 0};
@@ -1640,7 +1646,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                 mService.sendMessage("BillNo : " + billNo, "GBK");
                 String space_str13 = "             ";
                 mService.sendMessage(date + space_str13 + time, "GBK");
-                mService.sendMessage("Cust Name : " + ed_custName.getText().toString(), "GBK");
+                mService.sendMessage("Cust Name : " + auto_CustName.getText().toString(), "GBK");
                 mService.sendMessage("Mob No    : " + ed_custMobNo.getText().toString(), "GBK");
 
                 nameFontformat = format;
@@ -1778,7 +1784,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                 mService.write(left2);
                 nameFontformat[2] = arrayOfByte1[2];
                 mService.write(nameFontformat);
-                mService.sendMessage("    www.paitsystems.com", "GBK");
+                mService.sendMessage("Contact No : 020 24339954", "GBK");
 
                 mService.write(PrinterCommands.ESC_ENTER);
                 String space_str = "                        ";

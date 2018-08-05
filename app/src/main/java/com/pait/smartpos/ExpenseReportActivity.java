@@ -53,7 +53,7 @@ public class ExpenseReportActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expense_report);
         if(getSupportActionBar() != null){
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
             getSupportActionBar().setTitle("Expense Report");
         }
 
@@ -166,8 +166,18 @@ public class ExpenseReportActivity extends AppCompatActivity implements View.OnC
         toast.setGravity(Gravity.CENTER, 0, 0);
     }
 
-    private void setData(String fadate,String tadate) {
+    private String parseDate(String date){
+        String str = "";
+        try {
+            Date d = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).parse(date);
+            str = new SimpleDateFormat("dd/MMM", Locale.ENGLISH).format(d);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return str;
+    }
 
+    private void setData(String fadate,String tadate) {
             listView.setAdapter(null);
             Cursor c = db.getExpenseReportData(fadate,tadate,flag);
             List<DailyPettyExpClass> list = new ArrayList<>();
@@ -176,7 +186,8 @@ public class ExpenseReportActivity extends AppCompatActivity implements View.OnC
                     DailyPettyExpClass exp = new DailyPettyExpClass();
                     exp.setRemark(c.getString(c.getColumnIndex(DBHandler.DPE_Remark)));
                     exp.setAmount(c.getFloat(c.getColumnIndex(DBHandler.DPE_Amount)));
-                    exp.setDate(c.getString(c.getColumnIndex(DBHandler.DPE_Date)));
+                    String expDate = c.getString(c.getColumnIndex(DBHandler.DPE_Date));
+                    exp.setDate(parseDate(expDate));
                     exp.setExpHead(c.getInt(c.getColumnIndex(DBHandler.DPE_Exphead)));
                     // exp.setTime(c.getString(c.getColumnIndex(DBHandler.EXM_Remark)));
                     list.add(exp);

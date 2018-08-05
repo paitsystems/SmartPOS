@@ -1,5 +1,6 @@
 package com.pait.smartpos;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
@@ -26,7 +28,7 @@ import android.widget.Toast;
 
 import com.pait.smartpos.constant.Constant;
 import com.pait.smartpos.adpaters.CategoryExpandableListAdapter;
-import com.pait.smartpos.db.DBHandlerR;
+import com.pait.smartpos.db.DBHandler;
 import com.pait.smartpos.model.CategoryClass;
 import com.pait.smartpos.model.GSTDetailClass;
 import com.pait.smartpos.model.GSTMasterClass;
@@ -43,8 +45,8 @@ import java.util.Locale;
 
 public class AddProductMasterActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private AutoCompleteTextView auto_cat1;
-    private EditText ed_cat2, ed_rate;
+    private AutoCompleteTextView auto_cat1, auto_cat2;
+    private EditText ed_cat3, ed_rate, ed_ssp, ed_qty;
     private Button btn_add, btn_proceed, btn_change_cat1;
     private Switch aSwitch;
     private boolean changeCat1Clicked = false;
@@ -56,12 +58,11 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
     private HashMap<Integer,String> catIdNameMap;
     private HashMap<String,List<String>> catNameProdName;
     private HashMap<Integer,List<Integer>> catIDProdIdMap;
-
     private GetPermission permission;
     private Constant constant;
     private Toast toast;
-    private DBHandlerR db;
-    private List<String> catList;
+    private DBHandler db;
+    private List<String> cat1List, cat2List;
     private int flag = -1;//0-ViewOnly, 1-Add,2-Update
     private String prodChangeStr = "", catChangeStr = "";
     private int flag1 = 0;
@@ -71,6 +72,7 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
     private RadioButton rdo_gstInclude, rdo_gstExclude;
     private TextView tv_InActive;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,7 +80,7 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
 
         init();
 
-        String from = getIntent().getExtras().getString("from");
+        /*String from = getIntent().getExtras().getString("from");
         assert from != null;
         if(from.equals("FromVerificationActivity")){
             flag1 = 1;
@@ -91,11 +93,11 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
             flag = 1;
             addLayout.setVisibility(View.VISIBLE);
             setCategory();
-            prepareExpandableList();
+            //prepareExpandableList();
             if(getSupportActionBar()!=null){
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             }
-        }
+        }*/
 
         /*auto_cat1.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -110,11 +112,27 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
             }
         });*/
 
-        auto_cat1.setOnClickListener(new View.OnClickListener() {
+        auto_cat1.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                ((InputMethodManager)getSystemService(INPUT_METHOD_SERVICE)).showSoftInputFromInputMethod(auto_cat1.getWindowToken(),0);
-                auto_cat1.showDropDown();
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                final int action = motionEvent.getAction();
+                if (action == MotionEvent.ACTION_DOWN) {
+                    auto_cat1.showDropDown();
+                    auto_cat1.setThreshold(0);
+                }
+                return false;
+            }
+        });
+
+        auto_cat2.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                final int action = motionEvent.getAction();
+                if (action == MotionEvent.ACTION_DOWN) {
+                    auto_cat2.showDropDown();
+                    auto_cat2.setThreshold(0);
+                }
+                return false;
             }
         });
 
@@ -164,16 +182,14 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
                 return false;
             }
         });
+
+        setCategory();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        if(isUpdated == 1){
-            setCategory();
-            prepareExpandableList();
-            isUpdated = 0;
-        }
+
     }
 
     @Override
@@ -183,7 +199,7 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
                 validation();
                 break;
             case R.id.btn_proceed:
-                proceed();
+                //proceed();
                 break;
             case R.id.btn_change_cat1:
                 changeCat1Clicked = true;
@@ -223,56 +239,73 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
     }
 
     private void init(){
-        aSwitch = (Switch) findViewById(R.id.switch1);
-        auto_cat1 = (AutoCompleteTextView) findViewById(R.id.auto_cat1);
-        ed_cat2 = (EditText) findViewById(R.id.ed_cat2);
-        ed_rate = (EditText) findViewById(R.id.ed_ssp);
-        btn_change_cat1 = (Button) findViewById(R.id.btn_change_cat1);
-        btn_add = (Button) findViewById(R.id.btn_add);
-        btn_proceed = (Button) findViewById(R.id.btn_proceed);
+        aSwitch = findViewById(R.id.switch1);
+        auto_cat1 = findViewById(R.id.auto_cat1);
+        auto_cat2 = findViewById(R.id.auto_cat2);
+        ed_cat3 = findViewById(R.id.ed_cat3);
+        ed_rate = findViewById(R.id.ed_pprice);
+        ed_ssp = findViewById(R.id.ed_ssp);
+        ed_qty = findViewById(R.id.ed_qty);
+        btn_change_cat1 = findViewById(R.id.btn_change_cat1);
+        btn_add = findViewById(R.id.btn_add);
+        btn_proceed = findViewById(R.id.btn_proceed);
         btn_change_cat1.setOnClickListener(this);
         btn_add.setOnClickListener(this);
         btn_proceed.setOnClickListener(this);
-        listView = (ExpandableListView) findViewById(R.id.expandableListView);
+        listView = findViewById(R.id.expandableListView);
         permission = new GetPermission();
         constant = new Constant(AddProductMasterActivity.this);
         toast = Toast.makeText(getApplicationContext(),"",Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER,0,0);
-        db = new DBHandlerR(getApplicationContext());
-        catList = new ArrayList<>();
+        db = new DBHandler(getApplicationContext());
+        cat1List = new ArrayList<>();
+        cat2List = new ArrayList<>();
         catNameList = new ArrayList<>();
         catIdList  = new ArrayList<>();
         prodIdList  = new ArrayList<>();
         catIdNameMap = new HashMap<>();
         catIDProdIdMap = new HashMap<>();
         catNameProdName = new HashMap<>();
-        addLayout = (LinearLayout) findViewById(R.id.add_layout);
+        addLayout = findViewById(R.id.add_layout);
 
-        sp_gstGroup = (Spinner) findViewById(R.id.sp_gstgroup);
+        sp_gstGroup = findViewById(R.id.sp_gstgroup);
         gstList = new ArrayList<>();
         gstList = db.getGSTGroup();
         sp_gstGroup.setAdapter(new ArrayAdapter<>(getApplicationContext(),R.layout.custom_spinner,gstList));
-        rdo_gstInclude = (RadioButton) findViewById(R.id.rdo_gstInclude);
-        rdo_gstExclude = (RadioButton) findViewById(R.id.rdo_gstExclude);
-        tv_InActive = (TextView) findViewById(R.id.tv_InActive);
+        rdo_gstInclude = findViewById(R.id.rdo_gstInclude);
+        rdo_gstExclude = findViewById(R.id.rdo_gstExclude);
+        tv_InActive = findViewById(R.id.tv_InActive);
         rdo_gstInclude.setOnClickListener(this);
         rdo_gstExclude.setOnClickListener(this);
         aSwitch.setOnClickListener(this);
     }
 
     private void setCategory(){
-        catList.clear();
+        cat1List.clear();
+        cat2List.clear();
         auto_cat1.setAdapter(null);
-        Cursor res = db.getCatgory();
+        auto_cat2.setAdapter(null);
+        Cursor res1 = db.getCat1();
+        if(res1.moveToFirst()){
+            do {
+                cat1List.add(res1.getString(0));
+            }while (res1.moveToNext());
+        }else{
+            cat1List.add("NA");
+        }
+        res1.close();
+        auto_cat1.setAdapter(new ArrayAdapter<>(getApplicationContext(),R.layout.list_item_auto_category,cat1List));
+
+        Cursor res = db.getCat2();
         if(res.moveToFirst()){
             do {
-                catList.add(res.getString(1));
+                cat2List.add(res.getString(0));
             }while (res.moveToNext());
         }else{
-            catList.add("NA");
+            cat1List.add("NA");
         }
-        auto_cat1.setAdapter(new ArrayAdapter<>(getApplicationContext(),R.layout.list_item_auto_category,catList));
         res.close();
+        auto_cat2.setAdapter(new ArrayAdapter<>(getApplicationContext(),R.layout.list_item_auto_category,cat2List));
     }
 
     private void prepareExpandableList(){
@@ -281,7 +314,7 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
         catIdNameMap.clear();
         catNameList.clear();
         catNameProdName.clear();
-        Cursor res = db.getAllCatgory();
+        Cursor res = db.getCat1();
         if(res.moveToFirst()){
             do{
                 catIdList.add(res.getInt(0));
@@ -296,7 +329,7 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
 
         if(!catIdNameMap.isEmpty()){
             for(Integer i : catIdList){
-               Cursor res1 = db.getProduct(i);
+               Cursor res1 = db.getCat1();
                 List<String> prodlist = new ArrayList<>();
                 List<Integer> prodId = new ArrayList<>();
                 if(res1.moveToFirst()){
@@ -318,18 +351,36 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
 
     private void validation() {
         String cat1 = auto_cat1.getText().toString();
-        String cat2 = ed_cat2.getText().toString();
+        String cat2 = auto_cat2.getText().toString();
+        String cat3 = ed_cat3.getText().toString();
         String rate = ed_rate.getText().toString();
+        String ssp = ed_ssp.getText().toString();
+        String qty = ed_qty.getText().toString();
 
         boolean check = true;
         View view = null;
+        if (qty.equals("") || qty.length() == 0) {
+            toast.setText("Please Enter Qty");
+            view = ed_qty;
+            check = false;
+        }
+        if (ssp.equals("") || ssp.length() == 0) {
+            toast.setText("Please Enter SSP");
+            view = ed_ssp;
+            check = false;
+        }
         if (rate.equals("") || rate.length() == 0) {
             toast.setText("Please Enter Rate");
             view = ed_rate;
             check = false;
         }
+        if (cat3.equals("") || cat3.length() == 0) {
+            view = ed_cat3;
+            toast.setText("Please Enter Cat2");
+            check = false;
+        }
         if (cat2.equals("") || cat2.length() == 0) {
-            view = ed_cat2;
+            view = auto_cat2;
             toast.setText("Please Enter Cat2");
             check = false;
         }
@@ -352,82 +403,55 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
         }
     }
 
-    private void addProduct(){
-        String catname = auto_cat1.getText().toString();
-        String prodName = ed_cat2.getText().toString();
-        double rate = Double.parseDouble(ed_rate.getText().toString());
-
-        if(!db.isCategoryAlreadyPresent(catname)){
-            CategoryClass categoryClass = new CategoryClass();
-            int max = db.getMax(DBHandlerR.Category_Table);
-            categoryClass.setCategory_ID(max);
-            categoryClass.setCategory(catname);
-            if(aSwitch.isChecked()) {
-                categoryClass.setIsActive("Y");
-            }else{
-                categoryClass.setIsActive("N");
-            }
-            db.addCategory(categoryClass);
+    private void addProduct() {
+        String cat1 = auto_cat1.getText().toString();
+        String cat2 = auto_cat2.getText().toString();
+        String cat3 = ed_cat3.getText().toString();
+        float rate = Float.parseFloat(ed_rate.getText().toString());
+        float ssp = Float.parseFloat(ed_ssp.getText().toString());
+        int qty = Integer.parseInt(ed_qty.getText().toString());
+        String gstType;
+        if (rdo_gstInclude.isChecked()) {
+            gstType = "I";
+        } else {
+            gstType = "E";
         }
-        if(!db.isProductAlreadyPresent(prodName,String.valueOf(rate))) {
-            int catid = db.getCategoryID(catname);
-            int prodMax = db.getMax(DBHandlerR.Product_Table);
-            ProductClass productClass = new ProductClass();
-            productClass.setProduct_Barcode("1");
-            productClass.setProduct_KArea("1");
-            productClass.setProduct_Cat(catid);
-            productClass.setProduct_ID(prodMax);
-            productClass.setProduct_Name(prodName);
-            productClass.setProduct_Rate(rate);
-            productClass.setGstGroup(Constant.default_gst_name);
-            productClass.setTaxType("I");
-            db.addProduct(productClass);
-            toast.setText("Added Successfully");
-            toast.show();
-            setCategory();
-            prepareExpandableList();
-            clearField();
-        }else{
-            toast.setText("This ProductClass Already Present");
-            toast.show();
-        }
+        int prodMax = db.getMaxPMId();
+        ProductClass productClass = new ProductClass();
+        productClass.setProduct_ID(prodMax);
+        productClass.setCat1(cat1);
+        productClass.setCat2(cat2);
+        productClass.setCat3(cat3);
+        productClass.setFinalProduct(cat1 + "-" + cat2 + "-" + cat3);
+        productClass.setPprice(rate);
+        productClass.setProduct_Barcode(String.valueOf(prodMax));
+        productClass.setIsActive("Y");
+        productClass.setHsnCode(String.valueOf(prodMax));
+        productClass.setSsp(ssp);
+        productClass.setGstGroup(gstList.get(sp_gstGroup.getSelectedItemPosition()));
+        productClass.setGstType(gstType);
+        productClass.setStockQty(qty);
+        db.addProduct(productClass);
+        toast.setText("Added Successfully");
+        toast.show();
+        clearField();
     }
 
     private void clearField(){
         aSwitch.setChecked(true);
-        ed_cat2.setText(null);
+        auto_cat1.setText(null);
+        auto_cat2.setText(null);
+        ed_cat3.setText(null);
         ed_rate.setText(null);
-        ed_cat2.requestFocus();
-        if(changeCat1Clicked){
-            auto_cat1.setText(null);
-            auto_cat1.requestFocus();
-            changeCat1Clicked = false;
-        }
-    }
-
-    private void proceed(){
-        int max = db.getMaxId(DBHandlerR.Category_Table);
-        if(max!=0){
-            saveLocally();
-            flag1 = 2;
-            doFinish();
-        }else{
-            toast.setText("Please Enter Atleast One CategoryClass");
-            toast.show();
-        }
+        ed_ssp.setText(null);
+        ed_qty.setText(null);
+        auto_cat1.requestFocus();
+        sp_gstGroup.setSelection(0);
     }
 
     private void doFinish(){
         toast.cancel();
         finish();
-        if(flag1 == 2){
-            addDefaultTax();
-            //startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            startActivity(new Intent(getApplicationContext(),DrawerTestActivity.class));
-            overridePendingTransition(R.anim.enter, R.anim.exit);
-        }else if(flag1 == 1){
-            overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
-        }
         Runtime.getRuntime().gc();
         Runtime.getRuntime().freeMemory();
     }
@@ -457,7 +481,7 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
         gst.setCrby(1);
         gst.setRemark("");
         gst.setStatus("Y");
-        int a = db.addGSTMaster(gst);
+        int a = db.getExpMaxAuto();
         addGSTDetail(a);
     }
 
@@ -472,7 +496,7 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
         gstD.setCgstShare(50f);
         gstD.setSgstShare(50f);
         gstD.setCessPer(0f);
-        db.addGSTDetail(gstD);
+        //db.addGSTDetail(gstD);
         //db.setDefaultGSTToTable();
     }
 
@@ -486,7 +510,7 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
                 public void onClick(DialogInterface dialogInterface, int i) {
                     flag = 0;
                     addLayout.setVisibility(View.GONE);
-                    prepareExpandableList();
+                    //prepareExpandableList();
                     dialogInterface.dismiss();
                 }
             });
@@ -496,7 +520,7 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
                     flag = 1;
                     addLayout.setVisibility(View.VISIBLE);
                     setCategory();
-                    prepareExpandableList();
+                    //prepareExpandableList();
                     dialogInterface.dismiss();
                 }
             });
@@ -505,7 +529,7 @@ public class AddProductMasterActivity extends AppCompatActivity implements View.
                 public void onClick(DialogInterface dialogInterface, int i) {
                     flag = 2;
                     addLayout.setVisibility(View.GONE);
-                    prepareExpandableList();
+                    //prepareExpandableList();
                     dialogInterface.dismiss();
                 }
             });

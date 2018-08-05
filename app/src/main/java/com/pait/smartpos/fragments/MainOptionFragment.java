@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.pait.smartpos.AllGraphActivity;
+import com.pait.smartpos.BillReprintCancelActivity;
 import com.pait.smartpos.CashMemoActivity;
 import com.pait.smartpos.ExpenseActivity;
 import com.pait.smartpos.InwardActivity;
@@ -23,7 +24,7 @@ import com.pait.smartpos.ReturnMemoActivity;
 public class MainOptionFragment extends Fragment implements View.OnClickListener{
 
     private Button btn_cashMemo, btn_inward,btn_expense,btn_reports;
-    private LinearLayout lay_cashmemo,lay_inward,lay_expense,lay_report,lay_returnmemo;
+    private LinearLayout lay_cashmemo,lay_inward,lay_expense,lay_report,lay_returnmemo, lay_billreprint;
 
     @Nullable
     @Override
@@ -40,6 +41,7 @@ public class MainOptionFragment extends Fragment implements View.OnClickListener
         lay_expense.setOnClickListener(this);
         lay_report.setOnClickListener(this);
         lay_returnmemo.setOnClickListener(this);
+        lay_billreprint.setOnClickListener(this);
         return view;
     }
 
@@ -53,6 +55,7 @@ public class MainOptionFragment extends Fragment implements View.OnClickListener
         lay_expense = view.findViewById(R.id.lay_expense);
         lay_report = view.findViewById(R.id.lay_report);
         lay_returnmemo = view.findViewById(R.id.lay_returnmemo);
+        lay_billreprint = view.findViewById(R.id.lay_billreprint);
     }
 
     @Override
@@ -84,6 +87,9 @@ public class MainOptionFragment extends Fragment implements View.OnClickListener
                 break;
             case R.id.lay_returnmemo:
                 startActivity(new Intent(getContext(), ReturnMemoActivity.class));
+                break;
+            case R.id.lay_billreprint:
+                startActivity(new Intent(getContext(), BillReprintCancelActivity.class));
                 break;
         }
     }

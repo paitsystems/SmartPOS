@@ -38,7 +38,7 @@ public class ReturnMemoBarcodeAdapter extends ArrayAdapter<BillDetailClass> {
         }
         BillDetailClass det = items.get(position);
         if (det != null) {
-            TextView productLabel = v.findViewById(R.id.tv_auto);
+            TextView productLabel = v.findViewById(R.id.textView);
             if (productLabel != null) {
                 productLabel.setText(det.getFatherSKU());
             }

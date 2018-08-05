@@ -19,6 +19,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.pait.smartpos.AddProductMasterActivity;
+import com.pait.smartpos.AddSupplierMaster;
 import com.pait.smartpos.R;
 import com.pait.smartpos.RecyclerItemTouchHelper;
 import com.pait.smartpos.UpdateCategoryActivity;
@@ -54,7 +56,7 @@ public class MasterUpdationFragment extends Fragment
 
         init(view);
 
-        ItemTouchHelper.SimpleCallback itemTouchHelperCallback = new RecyclerItemTouchHelper(0, ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT, this);
+        ItemTouchHelper.SimpleCallback itemTouchHelperCallback = new RecyclerItemTouchHelper(0, ItemTouchHelper.LEFT, this);
         new ItemTouchHelper(itemTouchHelperCallback).attachToRecyclerView(recyclerView);
         
         Bundle bundle = getArguments();
@@ -71,9 +73,11 @@ public class MasterUpdationFragment extends Fragment
         } else if (masterType.equals("cat3")) {
             setProductData();
         } else if (masterType.equals("table")) {
-            setTableData();
+            setMasterData();
         } else if (masterType.equals("category")) {
             setCategoryData();
+        }if (masterType.equals("master")) {
+            setMasterData();
         }
     }
 
@@ -139,6 +143,12 @@ public class MasterUpdationFragment extends Fragment
                 intent = new Intent(getContext(),UpdateTableMasterActivity.class);
             }else if(masterType.equals("category")) {
                 intent = new Intent(getContext(),UpdateCategoryActivity.class);
+            }else if(masterType.equals("master")) {
+                if(master.getMasterType().equals("P")) {
+                    intent = new Intent(getContext(), AddProductMasterActivity.class);
+                }else if(master.getMasterType().equals("S")) {
+                    intent = new Intent(getContext(), AddSupplierMaster.class);
+                }
             }
             intent.putExtra("obj",master);
             startActivity(intent);
@@ -185,7 +195,22 @@ public class MasterUpdationFragment extends Fragment
         recyclerView.setAdapter(adapter);
     }
 
-    private void setTableData(){
+    private void setMasterData(){
+        list.clear();
+        recyclerView.setAdapter(null);
+        MasterUpdationClass mast1 = new MasterUpdationClass();
+        mast1.setMasterName("Product Master");
+        mast1.setMasterType("P");
+        list.add(mast1);
+        MasterUpdationClass mast = new MasterUpdationClass();
+        mast.setMasterName("Supplier Master");
+        mast.setMasterType("S");
+        list.add(mast);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        adapter = new MasterUpdationRecyclerAdapter(getContext(),list,this);
+        recyclerView.setAdapter(adapter);
     }
 
     private void setCategoryData(){

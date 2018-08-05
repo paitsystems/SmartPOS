@@ -115,7 +115,7 @@
         <item>Home</item>
         <!--<item>Product Master</item>-->
         <item>Printer Options</item>
-        <item>Bills Report</item>
+        <item>Master</item>
         <!--<item>Updated Bills</item>-->
         <item>Logout</item>
     </string-array>

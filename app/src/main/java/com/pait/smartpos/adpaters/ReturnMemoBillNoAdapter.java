@@ -40,7 +40,7 @@ public class ReturnMemoBillNoAdapter extends ArrayAdapter<BillMasterClass> {
         }
         BillMasterClass master = items.get(position);
         if (master != null) {
-            TextView productLabel = v.findViewById(R.id.tv_auto);
+            TextView productLabel = v.findViewById(R.id.textView);
             if (productLabel != null) {
                 productLabel.setText(master.getBillNo());
             }

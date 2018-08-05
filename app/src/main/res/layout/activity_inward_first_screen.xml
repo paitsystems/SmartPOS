@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,8 +9,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,18 +29,18 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/pinkd"
                 android:clickable="true"
-                android:drawableRight="@drawable/search"
+                android:drawableRight="@drawable/ic_search_black_24dp"
                 android:focusable="true"
                 android:hint="Enter Supplier"
                 android:maxLines="1"
                 android:singleLine="true"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
         </LinearLayout>
+
         <LinearLayout
-            android:layout_margin="2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.1"
+            android:layout_margin="2dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:visibility="visible">
@@ -48,12 +49,12 @@
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_margin="@dimen/mobmargin2"
                 android:layout_weight="0.5"
                 android:background="@drawable/color_back"
                 android:drawableStart="@drawable/calw24"
                 android:gravity="center"
                 android:lines="2"
-                android:paddingLeft="4dp"
                 android:text="INWARD DATE"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@color/white"
@@ -64,6 +65,7 @@
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_margin="@dimen/mobmargin2"
                 android:layout_weight="0.5"
                 android:background="@drawable/date_border"
                 android:gravity="center"
@@ -74,11 +76,11 @@
                 android:textColor="@color/black"
                 android:visibility="visible" />
         </LinearLayout>
+
         <LinearLayout
-            android:layout_margin="2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.1"
+            android:layout_margin="2dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:visibility="visible">
@@ -88,6 +90,7 @@
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_margin="2dp"
                 android:layout_weight="0.5"
                 android:background="@drawable/color_back"
                 android:drawableStart="@drawable/inv24"
@@ -104,20 +107,22 @@
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_margin="2dp"
                 android:layout_weight="0.5"
                 android:background="@drawable/date_border"
                 android:gravity="center"
+                android:inputType="textCapWords"
                 android:lines="2"
                 android:paddingLeft="4dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@color/black"
                 android:visibility="visible" />
         </LinearLayout>
+
         <LinearLayout
-            android:layout_margin="2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.1"
+            android:layout_margin="2dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:visibility="visible">
@@ -126,6 +131,7 @@
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_margin="2dp"
                 android:layout_weight="0.5"
                 android:background="@drawable/color_back"
                 android:drawableStart="@drawable/calw24"
@@ -138,13 +144,14 @@
                 android:visibility="visible" />
 
             <TextView
-                android:gravity="center"
                 android:id="@+id/tv_invoice_date"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_margin="2dp"
                 android:layout_weight="0.5"
                 android:background="@drawable/date_border"
+                android:gravity="center"
                 android:lines="2"
                 android:paddingLeft="4dp"
                 android:text="30/05/2018"
@@ -152,11 +159,11 @@
                 android:textColor="@color/black"
                 android:visibility="visible" />
         </LinearLayout>
+
         <LinearLayout
-            android:layout_margin="2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.1"
+            android:layout_margin="2dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:visibility="visible">
@@ -165,6 +172,7 @@
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_margin="2dp"
                 android:layout_weight="0.5"
                 android:background="@drawable/color_back"
                 android:drawableStart="@drawable/ic_edit_black_24dp"
@@ -181,9 +189,11 @@
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_margin="2dp"
                 android:layout_weight="0.5"
                 android:background="@drawable/date_border"
                 android:gravity="center"
+                android:inputType="textCapWords"
                 android:lines="2"
                 android:paddingLeft="4dp"
                 android:text=""
@@ -197,7 +207,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="0.5"
             android:background="@drawable/date_color_border"
             android:gravity="center"
             android:padding="5dp"
@@ -205,4 +214,9 @@
             android:textColor="@color/white"
             android:visibility="visible" />
     </LinearLayout>
+
+    <TextView
+        style="@style/footerstyleMob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

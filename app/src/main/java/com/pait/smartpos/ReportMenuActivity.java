@@ -21,7 +21,7 @@ public class ReportMenuActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_report_menu);
 
         if(getSupportActionBar() != null){
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
             //getSupportActionBar().setTitle();
         }
 
@@ -55,11 +55,10 @@ public class ReportMenuActivity extends AppCompatActivity implements View.OnClic
         super.onBackPressed();
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         writeLog("onCreateOptionsMenu Called");
-        getMenuInflater().inflate(R.menu.report_menu_menu, menu);
+        //getMenuInflater().inflate(R.menu.report_menu_menu, menu);
         return super.onCreateOptionsMenu(menu);
 
     }
@@ -73,7 +72,7 @@ public class ReportMenuActivity extends AppCompatActivity implements View.OnClic
                 new Constant(ReportMenuActivity.this).doFinish();
                 break;
             case R.id.export:
-                startActivity(new Intent(ReportMenuActivity.this,ExportOthersActivity.class));
+                //startActivity(new Intent(ReportMenuActivity.this,ExportOthersActivity.class));
                // showDia(1);
               //  new Constant(ReportMenuActivity.this).doFinish();
                 break;

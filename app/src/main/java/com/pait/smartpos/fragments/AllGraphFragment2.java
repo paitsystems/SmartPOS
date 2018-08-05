@@ -143,8 +143,11 @@ public class AllGraphFragment2 extends Fragment {
         c.close();
 
         for (int i = 0; i < list2.size(); i++) {
-            CollectionClass coll = new CollectionClass();
-            yValues.add(new PieEntry(Float.valueOf(list2.get(i)), xValues.get(i)));
+            //CollectionClass coll = new CollectionClass();
+            //yValues.add(new PieEntry(Float.valueOf(list2.get(i)), xValues.get(i)));
+            String labelstr = xValues.get(i)+"-"+list2.get(i);
+            Constant.showLog("labelstr"+labelstr);
+            yValues.add(new PieEntry(Float.valueOf(list2.get(i)), labelstr));
         }
         setChartDataStock(xValues, yValues, "");
     }
@@ -153,9 +156,9 @@ public class AllGraphFragment2 extends Fragment {
         pieDataSet = new PieDataSet(yValues, label);
         int[] colors = {R.color.purpled, R.color.red, R.color.blue, R.color.pinkd,
                 R.color.lblue, R.color.buttoncolor, R.color.lightyellow, R.color.lpurple,
-                R.color.llyellow, R.color.greend, R.color.lightgray, R.color.lgreen,
+                R.color.lightyellow2, R.color.greend, R.color.lightgray, R.color.lgreen,
                 R.color.buttoncolor, R.color.light_green, R.color.orange, R.color.morange
-                , R.color.blue, R.color.grey,R.color.G8color,R.color.pblue2,R.color.G9color};
+                , R.color.purpule, R.color.grey,R.color.G8color,R.color.pblue2,R.color.G9color};
         pieDataSet.setColors(colors, getContext());
         //pieDataSet.setXValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
         //pieDataSet.setValueFormatter(new PercentFormatter());                      // for display values in percentage
@@ -183,7 +186,7 @@ public class AllGraphFragment2 extends Fragment {
         pieChart.setMarker(mv);
         //pieChart.setDescription("This is  pichart..");
         pieChart.setHighlightPerTapEnabled(true);
-        pieChart.setCenterText("Productwise \n Stock");
+        //pieChart.setCenterText("Productwise \n Stock");
         pieChart.setCenterTextSize(20f);
         pieChart.setCenterTextColor(R.color.red);
         //pieChart.animateXY(1400,1400);
@@ -205,7 +208,6 @@ public class AllGraphFragment2 extends Fragment {
             }
         });*/
     }
-
     private void getMonthFirstDate() {
         Calendar c = Calendar.getInstance();
         int year = c.get(Calendar.YEAR);

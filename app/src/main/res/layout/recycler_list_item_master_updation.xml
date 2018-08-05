@@ -74,13 +74,13 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/activity_padding_horizontal"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_restaurant_menu_black_24dp"
+            app:srcCompat="@drawable/ic_four_black_squares"
             android:visibility="visible" />
 
         <TextView
             android:id="@+id/tv_masterName"
             style="@style/textViewMob"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/thumbnail"
             android:ellipsize="end"
@@ -92,10 +92,11 @@
 
         <TextView
             android:id="@+id/tv_active"
-            android:layout_width="6dp"
-            android:layout_height="6dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_alignParentRight="true"
-            android:background="@drawable/active_draw"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/ic_keyboard_arrow_right_black_24dp"
             android:gravity="center"
             android:textColor="@color/black" />
 

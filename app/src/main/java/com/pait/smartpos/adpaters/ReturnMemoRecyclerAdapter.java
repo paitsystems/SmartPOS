@@ -7,10 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.pait.smartpos.R;
 import com.pait.smartpos.interfaces.RecyclerViewToActivityInterface;
+import com.pait.smartpos.model.AddToCartClass;
 import com.pait.smartpos.model.BillDetailClass;
 import com.pait.smartpos.model.BillDetailClass;
 import com.pait.smartpos.model.RateMasterClass;
@@ -59,9 +61,20 @@ public class ReturnMemoRecyclerAdapter  extends RecyclerView.Adapter<ReturnMemoR
         this.listener = _listener;
     }
 
+    public void removeItem(int position) {
+        detList.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public void restoreItem(BillDetailClass item, int position) {
+        detList.add(position, item);
+        notifyItemInserted(position);
+    }
+
     public class ProductViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         private TextView tv_fsku, tv_qty, tv_rate, tv_barcode, tv_total, tv_discAmnt, tv_cgstAmnt, tv_sgstAmnt;
+        public RelativeLayout viewBackground, viewForeground;
 
         public ProductViewHolder(View itemView) {
             super(itemView);
@@ -73,7 +86,8 @@ public class ReturnMemoRecyclerAdapter  extends RecyclerView.Adapter<ReturnMemoR
             tv_discAmnt = itemView.findViewById(R.id.tv_discAmnt);
             tv_cgstAmnt = itemView.findViewById(R.id.tv_cgstAmnt);
             tv_sgstAmnt = itemView.findViewById(R.id.tv_sgstAmnt);
-            
+            viewBackground = itemView.findViewById(R.id.view_background);
+            viewForeground = itemView.findViewById(R.id.view_foreground);
         }
 
         @Override

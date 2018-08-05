@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
         android:orientation="horizontal">
 
         <TextView
@@ -13,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="0.4"
+            android:layout_weight="0.3"
             android:gravity="left|center"
             android:paddingLeft="2dp"
             android:textColor="@color/black" />
@@ -36,7 +37,8 @@
             android:layout_weight="0.5"
             android:gravity="right|center"
             android:paddingLeft="5dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/tv_mrp"
@@ -46,7 +48,8 @@
             android:layout_weight="0.5"
             android:gravity="right|center"
             android:paddingLeft="5dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/tv_wprice"
@@ -56,7 +59,8 @@
             android:layout_weight="0.5"
             android:gravity="right|center"
             android:paddingLeft="5dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/tv_ssp"
@@ -66,14 +70,15 @@
             android:layout_weight="0.5"
             android:gravity="right|center"
             android:paddingLeft="5dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/tv_qty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="0.5"
+            android:layout_weight="0.7"
             android:gravity="right|center"
             android:paddingLeft="5dp"
             android:textColor="@color/black" />

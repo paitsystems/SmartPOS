@@ -25,6 +25,7 @@
             android:id="@+id/bt_today"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="@dimen/mobmargin2"
             android:layout_weight="0.5"
             android:background="@drawable/buton_color_border"
             android:text="TODAY"
@@ -42,6 +43,7 @@
             android:id="@+id/bt_mtd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="@dimen/mobmargin2"
             android:layout_weight="0.5"
             android:background="@drawable/button__color_border2"
             android:text="MTD"
@@ -63,6 +65,7 @@
             android:id="@+id/bt_ytd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="@dimen/mobmargin2"
             android:layout_weight="0.5"
             android:background="@drawable/button__color_border2"
             android:text="YTD"
@@ -77,7 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
+        android:layout_margin="@dimen/mobmargin5"
         android:background="@color/ldblue"
         android:orientation="vertical">
 
@@ -86,14 +89,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_margin="20dp"
+            android:layout_margin="@dimen/mobmargin5"
             android:orientation="vertical">
             <!--android:background="@drawable/dash_grey_bottomrbk"-->
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/piechart"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_margin="@dimen/mobmargin5"
                 android:layout_weight="1"></com.github.mikephil.charting.charts.PieChart>
         </LinearLayout>
     </LinearLayout>

@@ -57,7 +57,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:srcCompat="@drawable/cashmemo_32" />
+                                    app:srcCompat="@drawable/op1" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -71,7 +71,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                style="@style/textViewMobW"
+                                style="@style/textViewMob"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="CASH MEMO" />
@@ -84,7 +84,7 @@
                         android:layout_height="100dp"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/option_returnmemo_draw"
+                        android:background="@drawable/option_cashmemo_draw"
                         android:orientation="horizontal"
                         android:visibility="visible">
 
@@ -95,7 +95,11 @@
                             android:gravity="center"
                             android:orientation="vertical">
 
-                            <LinearLayout
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/op2" />
+                            <!--<LinearLayout
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
                                 android:layout_gravity="center"
@@ -106,8 +110,8 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:srcCompat="@drawable/returnmemo32" />
-                            </LinearLayout>
+                                    app:srcCompat="@drawable/op2" />
+                            </LinearLayout>-->
                         </LinearLayout>
 
                         <LinearLayout
@@ -120,7 +124,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                style="@style/textViewMobW"
+                                style="@style/textViewMob"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="RETURN MEMO" />
@@ -139,7 +143,7 @@
                         android:layout_height="100dp"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/option_inward_draw"
+                        android:background="@drawable/option_cashmemo_draw"
                         android:orientation="horizontal"
                         android:visibility="visible">
 
@@ -150,7 +154,11 @@
                             android:gravity="center"
                             android:orientation="vertical">
 
-                            <LinearLayout
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/op3" />
+                            <!--<LinearLayout
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
                                 android:layout_gravity="center"
@@ -161,8 +169,8 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:srcCompat="@drawable/inward32" />
-                            </LinearLayout>
+                                    app:srcCompat="@drawable/op3" />
+                            </LinearLayout>-->
                         </LinearLayout>
 
                         <LinearLayout
@@ -175,7 +183,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                style="@style/textViewMobW"
+                                style="@style/textViewMob"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="INWARD" />
@@ -188,7 +196,7 @@
                         android:layout_height="100dp"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/option_expense_draw"
+                        android:background="@drawable/option_cashmemo_draw"
                         android:orientation="horizontal"
                         android:visibility="visible">
 
@@ -199,7 +207,11 @@
                             android:gravity="center"
                             android:orientation="vertical">
 
-                            <LinearLayout
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/op4" />
+                            <!--<LinearLayout
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
                                 android:layout_gravity="center"
@@ -210,8 +222,8 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:srcCompat="@drawable/wallet" />
-                            </LinearLayout>
+                                    app:srcCompat="@drawable/op4" />
+                            </LinearLayout>-->
                         </LinearLayout>
 
                         <LinearLayout
@@ -224,7 +236,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                style="@style/textViewMobW"
+                                style="@style/textViewMob"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="EXPENSE" />
@@ -243,7 +255,7 @@
                         android:layout_height="100dp"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/option_reports_draw"
+                        android:background="@drawable/option_cashmemo_draw"
                         android:orientation="horizontal"
                         android:visibility="visible">
 
@@ -254,7 +266,11 @@
                             android:gravity="center"
                             android:orientation="vertical">
 
-                            <LinearLayout
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/op5" />
+                            <!--<LinearLayout
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
                                 android:layout_gravity="center"
@@ -265,8 +281,8 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:srcCompat="@drawable/report32" />
-                            </LinearLayout>
+                                    app:srcCompat="@drawable/op5" />
+                            </LinearLayout>-->
                         </LinearLayout>
 
                         <LinearLayout
@@ -279,7 +295,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                style="@style/textViewMobW"
+                                style="@style/textViewMob"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="REPORTS" />
@@ -287,13 +303,14 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/lay_billreprint"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/option_cashmemo_draw"
                         android:orientation="horizontal"
-                        android:visibility="invisible">
+                        android:visibility="visible">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -302,7 +319,11 @@
                             android:gravity="center"
                             android:orientation="vertical">
 
-                            <LinearLayout
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/op6" />
+                            <!--<LinearLayout
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
                                 android:layout_gravity="center"
@@ -313,8 +334,8 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:srcCompat="@drawable/ic_male" />
-                            </LinearLayout>
+                                    app:srcCompat="@drawable/op6" />
+                            </LinearLayout>-->
                         </LinearLayout>
 
                         <LinearLayout
@@ -327,10 +348,10 @@
                             android:orientation="vertical">
 
                             <TextView
-                                style="@style/textViewMobW"
+                                style="@style/textViewMob"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="EXPENSE" />
+                                android:text="BILL REPRINT" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>

@@ -7,12 +7,35 @@
     android:orientation="vertical"
     tools:context=".AddProductMasterActivity">
 
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_proceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/mobmargin2"
+        android:padding="@dimen/mobpadding2"
+        android:text="@string/proceed"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:backgroundTint="@color/maroon" />
+
+    <!--<Button
+        android:id="@+id/btn_proceed"
+        style="@style/btnStyleMobW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/mobmargin2"
+        android:padding="@dimen/mobpadding2"
+        android:text="@string/proceed"
+        android:visibility="gone" />-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="vertical"
-        android:padding="5dp">
+        android:padding="@dimen/mobpadding5">
 
         <LinearLayout
             android:id="@+id/add_layout"
@@ -26,33 +49,19 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/textViewTab"
+                    style="@style/textViewMob"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.8"
                     android:text="@string/cat1" />
 
-                <EditText
-                    android:id="@+id/ed_cat1"
-                    style="@style/textViewTab"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_weight="0.2"
-                    android:hint="@string/enter_cat1_name"
-                    android:inputType="textNoSuggestions|textCapWords"
-                    android:maxLines="1"
-                    android:padding="2dp"
-                    android:singleLine="true"
-                    android:visibility="gone" />
-
                 <AutoCompleteTextView
                     android:id="@+id/auto_cat1"
-                    style="@style/textViewTab"
+                    style="@style/textViewMob"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
                     android:hint="@string/select_cat1"
-                    android:imeActionId="@+id/ed_cat2"
                     android:imeOptions="actionNext"
                     android:inputType="textCapWords"
                     android:maxLines="1"
@@ -65,22 +74,22 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/textViewTab"
+                    style="@style/textViewMob"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.8"
                     android:text="@string/cat2" />
 
-                <EditText
-                    android:id="@+id/ed_cat2"
-                    style="@style/textViewTab"
+                <AutoCompleteTextView
+                    android:id="@+id/auto_cat2"
+                    style="@style/textViewMob"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/tab_ED_size"
+                    android:layout_height="wrap_content"
                     android:layout_weight="0.2"
-                    android:hint="@string/enter_cat2_name"
+                    android:hint="Select Cat2"
+                    android:imeOptions="actionNext"
                     android:inputType="textCapWords"
                     android:maxLines="1"
-                    android:padding="2dp"
                     android:singleLine="true" />
             </LinearLayout>
 
@@ -90,22 +99,97 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/textViewTab"
+                    style="@style/textViewMob"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.8"
-                    android:text="@string/rate" />
+                    android:text="Cat3" />
+
+                <EditText
+                    android:id="@+id/ed_cat3"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:hint="Enter Cat3"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="Purchase Rate" />
+
+                <EditText
+                    android:id="@+id/ed_pprice"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mob_ED_size"
+                    android:layout_weight="0.2"
+                    android:hint="Enter Rate"
+                    android:inputType="number|numberDecimal"
+                    android:maxLines="1"
+                    android:padding="@dimen/mobpadding2"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="SSP" />
 
                 <EditText
                     android:id="@+id/ed_ssp"
-                    style="@style/textViewTab"
+                    style="@style/textViewMob"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/tab_ED_size"
+                    android:layout_height="@dimen/mob_ED_size"
                     android:layout_weight="0.2"
-                    android:hint="@string/enter_rate"
+                    android:hint="Enter SSP"
                     android:inputType="number|numberDecimal"
                     android:maxLines="1"
-                    android:padding="2dp"
+                    android:padding="@dimen/mobpadding2"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:text="Qty" />
+
+                <EditText
+                    android:id="@+id/ed_qty"
+                    style="@style/textViewMob"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mob_ED_size"
+                    android:layout_weight="0.2"
+                    android:hint="Enter QTY"
+                    android:inputType="number|numberDecimal"
+                    android:maxLines="1"
+                    android:padding="@dimen/mobpadding2"
                     android:singleLine="true" />
             </LinearLayout>
 
@@ -149,7 +233,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/tv_InActive"
@@ -181,17 +266,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <!--<Button
-                    android:id="@+id/btn_change_cat1"
-                    style="@style/btnStyleTabW"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="2dp"
-                    android:layout_weight="0.5"
-                    android:padding="2dp"
-                    android:text="@string/change_cat1" />-->
-
                 <android.support.v7.widget.AppCompatButton
                     android:id="@+id/btn_change_cat1"
                     android:layout_width="match_parent"
@@ -200,19 +274,19 @@
                     android:layout_weight="0.5"
                     android:text="@string/change_cat1"
                     android:textColor="@color/white"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     app:backgroundTint="@color/maroon" />
 
-                <!--<Button
-                    android:id="@+id/btn_add"
-                    style="@style/btnStyleTabW"
+                <!-- <Button
+                    android:id="@+id/btn_change_cat1"
+                    style="@style/btnStyleMobW"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_margin="2dp"
+                    android:layout_margin="@dimen/mobmargin2"
                     android:layout_weight="0.5"
-                    android:padding="2dp"
-                    android:text="@string/add" />-->
+                    android:padding="@dimen/mobpadding2"
+                    android:text="@string/change_cat1" />-->
 
                 <android.support.v7.widget.AppCompatButton
                     android:id="@+id/btn_add"
@@ -225,38 +299,27 @@
                     android:visibility="visible"
                     app:backgroundTint="@color/maroon" />
 
+                <!--<Button
+                    android:id="@+id/btn_add"
+                    style="@style/btnStyleMobW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/mobmargin2"
+                    android:layout_weight="0.5"
+                    android:padding="@dimen/mobpadding2"
+                    android:text="@string/add" />-->
+
             </LinearLayout>
         </LinearLayout>
 
         <ExpandableListView
             android:id="@+id/expandableListView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
 
     </LinearLayout>
-
-    <!--<Button
-        android:id="@+id/btn_proceed"
-        style="@style/btnStyleTabW"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="2dp"
-        android:padding="2dp"
-        android:text="@string/proceed"
-        android:visibility="gone" />-->
-
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_proceed"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="@dimen/mobmargin2"
-        android:padding="@dimen/mobpadding2"
-        android:text="@string/proceed"
-        android:textColor="@color/white"
-        android:visibility="gone"
-        app:backgroundTint="@color/maroon" />
 
     <TextView
         style="@style/footerstyleMob"

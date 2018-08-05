@@ -49,16 +49,18 @@ public class MasterUpdationRecyclerAdapter extends RecyclerView.Adapter<MasterUp
         });
         if(master.getMasterType().equals("P")){
             holder.thumbnail.setImageDrawable(ContextCompat.getDrawable(context,R.drawable.ic_four_black_squares));
+        }else if(master.getMasterType().equals("S")){
+            holder.thumbnail.setImageDrawable(ContextCompat.getDrawable(context,R.drawable.ic_four_black_squares));
         }else if(master.getMasterType().equals("T")){
             holder.thumbnail.setImageDrawable(ContextCompat.getDrawable(context,R.drawable.ic_table_icon_black));
         }else if(master.getMasterType().equals("C")){
             holder.thumbnail.setImageDrawable(ContextCompat.getDrawable(context,R.drawable.ic_restaurant_menu_black_24dp));
         }
-        if(master.getIsMasterActive().equals("Y")||master.getIsMasterActive().equals("A")){
+       /* if(master.getIsMasterActive().equals("Y")||master.getIsMasterActive().equals("A")){
             holder.tv_active.setBackground(ContextCompat.getDrawable(context,R.drawable.active_draw));
         }else {
             holder.tv_active.setBackground(ContextCompat.getDrawable(context,R.drawable.inactive_draw));
-        }
+        }*/
     }
 
     @Override

@@ -8,23 +8,24 @@
     tools:context=".ExpenseReportActivity">
 
 
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="1"
-      android:orientation="vertical">
-
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="30dp"
-          android:layout_gravity="center"
-          android:background="@drawable/color_back"
-          android:gravity="center"
-          android:padding="2dp"
-          android:text="Expense Report"
-          android:textColor="@color/white"
-          android:visibility="gone" />
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/color_back"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Expense Report"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -39,7 +40,7 @@
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp">
+                android:padding="@dimen/mobmargin2">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -49,19 +50,17 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/mobmargin2"
                         android:layout_weight="0.5"
-                        android:padding="2dp"
-                        android:layout_margin="5dp"
                         android:text="@string/from_date"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textColor="#000000" />
 
                     <TextView
-                        android:layout_margin="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
                         android:layout_weight="0.5"
-                        android:padding="2dp"
                         android:text="@string/to_date"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textColor="#000000" />
@@ -82,8 +81,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:layout_margin="5dp"
+                        android:layout_height="30dp"
                         android:layout_weight="0.5"
                         android:background="@drawable/date_border">
 
@@ -93,15 +91,14 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:padding="10dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="04/Aug/2018"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/black" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:layout_margin="5dp"
+                        android:layout_height="30dp"
                         android:layout_weight="0.5"
                         android:background="@drawable/date_border">
 
@@ -112,8 +109,7 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:padding="10dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@color/black" />
                     </LinearLayout>
 
@@ -124,10 +120,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.5"
                         android:text="All Date"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
                 </LinearLayout>
             </TableLayout>
-
 
 
             <LinearLayout
@@ -136,12 +131,11 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <Button
+                <android.support.v7.widget.AppCompatButton
                     android:id="@+id/btn_show"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/mobmargin5"
-                    android:background="@drawable/date_color_border"
+                    android:backgroundTint="@color/red"
                     android:enabled="true"
                     android:gravity="center"
                     android:text="@string/show"
@@ -150,123 +144,127 @@
 
             </LinearLayout>
         </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="3dp"
-        android:orientation="horizontal">
-
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fillViewport="true"
-        android:scrollbars="horizontal"
-        android:layout_weight="1">
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="3dp">
 
-            <LinearLayout
+            <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:background="@drawable/custbtndraw"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fillViewport="true"
+                android:scrollbars="horizontal">
 
-                <TextView
-                    android:textColor="@color/white"
-                    android:id="@+id/tv_head_branch"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left|center"
-                    android:text="Date"
-                    android:paddingLeft="2dp"
-                    android:layout_weight="0.5" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:textColor="@color/white"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left|center"
-                    android:text="Exp Head"
-                    android:layout_weight="0.5" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/custbtndraw"
+                        android:orientation="horizontal">
 
-                <TextView
-                    android:textColor="@color/white"
-                    android:id="@+id/tv_head_supplier"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left|center"
-                    android:text="Remark"
-                    android:layout_weight="0.5" />
+                        <TextView
+                            android:id="@+id/tv_head_branch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="left|center"
+                            android:paddingLeft="2dp"
+                            android:text="Date"
+                            android:textColor="@color/white" />
 
-                <TextView
-                    android:textColor="@color/white"
-                    android:paddingLeft="2dp"
-                    android:id="@+id/tv_head_item"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="right|center"
-                    android:text="Amount"
-                    android:layout_weight="0.5" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="left|center"
+                            android:text="Exp Head"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_head_supplier"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="left|center"
+                            android:text="Remark"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_head_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="right|center"
+                            android:paddingLeft="2dp"
+                            android:text="Amount"
+                            android:textColor="@color/white" />
 
 
-            </LinearLayout>
+                    </LinearLayout>
 
-            <ListView
-                android:id="@+id/listView"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
+                    <ListView
+                        android:id="@+id/listView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:background="@drawable/custbtndraw"
-                android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/custbtndraw"
+                        android:orientation="horizontal">
 
-                <TextView
-                    android:paddingLeft="2dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Total"
-                    android:gravity="left|center"
-                    android:textColor="@color/white"
-                    android:layout_weight="0.5" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left|center"
-                    android:layout_weight="0.5" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="left|center"
-                    android:layout_weight="0.5" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="left|center"
+                            android:paddingLeft="2dp"
+                            android:text="Total"
+                            android:textColor="@color/white" />
 
-                <TextView
-                    android:id="@+id/tv_total_amt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="0"
-                    android:textColor="@color/white"
-                    android:layout_weight="0.5"
-                    android:gravity="right|center" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="left|center" />
 
-            </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="left|center" />
+
+                        <TextView
+                            android:id="@+id/tv_total_amt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="right|center"
+                            android:text="0"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
         </LinearLayout>
-    </HorizontalScrollView>
     </LinearLayout>
-  </LinearLayout>
+
     <TextView
         style="@style/footerstyleMob"
         android:layout_width="match_parent"

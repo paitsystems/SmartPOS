@@ -31,8 +31,8 @@
             android:title="@string/reports" />-->
         <item
             android:id="@+id/billreprint"
-            android:icon="@drawable/ic_pay"
-            android:title="@string/bill" />
+            android:icon="@drawable/ic_four_black_squares"
+            android:title="Master" />
        <!-- <item
             android:id="@+id/billupdate"
             android:icon="@drawable/ic_exchange"

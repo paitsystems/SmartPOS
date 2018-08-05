@@ -56,7 +56,7 @@ public class InwardFirstScreenActivity extends AppCompatActivity implements View
         setContentView(R.layout.activity_inward_first_screen);
 
         if(getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
             getSupportActionBar().setTitle("Inward");
         }
 
@@ -101,7 +101,6 @@ public class InwardFirstScreenActivity extends AppCompatActivity implements View
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_next:
-
                 if(auto_supplier.getText().toString().equals("")){
                     toast.setText("Please,Enter Supplier");
                     toast.show();
@@ -170,10 +169,10 @@ public class InwardFirstScreenActivity extends AppCompatActivity implements View
         constant = new Constant(InwardFirstScreenActivity.this);
         toast = Toast.makeText(getApplicationContext(), "", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0, 0);
-        tv_invoice_date = (TextView) findViewById(R.id.tv_invoice_date);
-        tv_inward_date = (TextView) findViewById(R.id.tv_inward_date);
-        ed_inv_no = (EditText) findViewById(R.id.ed_inv_no);
-        ed_remark = (EditText) findViewById(R.id.ed_remark);
+        tv_invoice_date = findViewById(R.id.tv_invoice_date);
+        tv_inward_date = findViewById(R.id.tv_inward_date);
+        ed_inv_no = findViewById(R.id.ed_inv_no);
+        ed_remark = findViewById(R.id.ed_remark);
         auto_supplier = findViewById(R.id.auto_supplier);
         day = cal.get(Calendar.DAY_OF_MONTH);
         month = cal.get(Calendar.MONTH);
@@ -181,7 +180,6 @@ public class InwardFirstScreenActivity extends AppCompatActivity implements View
         btn_next = findViewById(R.id.btn_next);
         suppList = new ArrayList<>();
     }
-
 
     private void setSupplier(){
         auto_supplier.setAdapter(null);
@@ -195,7 +193,7 @@ public class InwardFirstScreenActivity extends AppCompatActivity implements View
         }
         res.close();   //todo uncomment for live data
 
-        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(),R.layout.adapter_item,suppList);
+        ArrayAdapter adapter = new ArrayAdapter<>(getApplicationContext(),R.layout.adapter_item,suppList);
         auto_supplier.setAdapter(adapter);
     }
 

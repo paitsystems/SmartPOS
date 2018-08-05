@@ -11,10 +11,10 @@ INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:23:9-
 	android:name
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:24:13-67
 manifest
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-234:12
-INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-234:12
-INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-234:12
-INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-234:12
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-240:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-240:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-240:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-240:12
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\fe194bbf7495e250d9319c54267eef16\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\bf796e9bee93599565fa580dc160a21d\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\2f1723a30b21833b2fefb46e4502bbfb\AndroidManifest.xml:17:1-22:12
@@ -62,20 +62,20 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Anup\.gradle\c
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\38f7758451f7e041969c2e7afdfa2cf7\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\7a451036bfbcea1f37fe2672a2dbf238\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f35b07a0e6349945f69e65927044f97e\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-234:12
-INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-234:12
-INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-234:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-240:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-240:12
+INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-240:12
 	package
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:3:5-32
 		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
 		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-234:12
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-240:12
 		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-234:12
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:1-240:12
 		INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:2:11-69
@@ -152,7 +152,7 @@ ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:15:5-65
 	android:name
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:15:22-62
 application
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:17:5-232:19
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:17:5-238:19
 MERGED from [com.sothree.slidinguppanel:library:3.4.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\library-3.4.0.aar\68c601005328842a86fdc90398a13e0d\AndroidManifest.xml:9:5-20
 MERGED from [com.sothree.slidinguppanel:library:3.4.0] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\library-3.4.0.aar\68c601005328842a86fdc90398a13e0d\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-crash:16.0.1] C:\Users\Anup\.gradle\caches\transforms-1\files-1.1\firebase-crash-16.0.1.aar\0f493ae268f6deab548a642aba1b59f5\AndroidManifest.xml:24:5-25:19
@@ -358,11 +358,11 @@ ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:105:9-10
 	android:name
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:106:13-46
 activity#com.pait.smartpos.ReportListActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:108:9-111:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:108:9-111:80
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:111:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:110:13-49
 	android:windowSoftInputMode
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:110:13-77
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:111:13-77
 	android:name
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:109:13-47
 activity#com.pait.smartpos.Repo_Collection_Activity
@@ -420,193 +420,207 @@ ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:136:9-13
 	android:name
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:137:13-49
 activity#com.pait.smartpos.NavigationActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:139:9-142:59
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:139:9-143:59
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:141:13-49
 	android:label
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:141:13-62
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:142:13-62
 	android:theme
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:142:13-56
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:143:13-56
 	android:name
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:140:13-47
 activity#com.pait.smartpos.ImportMasterActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:143:9-145:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:144:9-146:52
 	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:146:13-49
+	android:name
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:145:13-49
-	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:144:13-49
 activity#com.pait.smartpos.MasterUpdationActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:146:9-148:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:147:9-149:52
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:148:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:149:13-49
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:147:13-51
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:148:13-51
 activity#com.pait.smartpos.AddCategoryMasterActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:149:9-151:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:150:9-152:52
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:151:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:152:13-49
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:150:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:151:13-54
 activity#com.pait.smartpos.UserProfileActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:152:9-154:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:153:9-155:52
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:154:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:155:13-49
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:153:13-48
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:154:13-48
 activity#com.pait.smartpos.CheckOTPActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:155:9-158:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:156:9-159:57
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:157:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:158:13-49
 	android:windowSoftInputMode
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:158:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:159:13-54
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:156:13-45
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:157:13-45
 activity#com.pait.smartpos.ContactUsActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:159:9-162:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:160:9-163:57
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:161:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:162:13-49
 	android:windowSoftInputMode
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:162:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:163:13-54
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:160:13-46
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:161:13-46
 activity#com.pait.smartpos.AboutUsActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:163:9-166:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:164:9-167:57
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:165:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:166:13-49
 	android:windowSoftInputMode
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:166:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:167:13-54
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:164:13-44
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:165:13-44
 activity#com.pait.smartpos.DataBackupActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:167:9-170:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:168:9-171:57
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:169:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:170:13-49
 	android:windowSoftInputMode
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:170:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:171:13-54
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:168:13-47
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:169:13-47
 activity#com.pait.smartpos.drive.CreateFileActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:171:9-174:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:172:9-175:57
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:173:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:174:13-49
 	android:windowSoftInputMode
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:174:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:175:13-54
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:172:13-53
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:173:13-53
 activity#com.pait.smartpos.drive.CreateFolderActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:175:9-178:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:176:9-179:57
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:177:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:178:13-49
 	android:windowSoftInputMode
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:178:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:179:13-54
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:176:13-55
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:177:13-55
 activity#com.pait.smartpos.drive.DeleteFileActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:179:9-182:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:180:9-183:57
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:181:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:182:13-49
 	android:windowSoftInputMode
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:182:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:183:13-54
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:180:13-53
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:181:13-53
 activity#com.pait.smartpos.drive.RetrieveContentsActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:183:9-186:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:184:9-187:57
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:185:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:186:13-49
 	android:windowSoftInputMode
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:186:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:187:13-54
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:184:13-59
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:185:13-59
 activity#com.pait.smartpos.BillReprintCancelActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:187:9-189:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:188:9-190:52
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:189:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:190:13-49
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:188:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:189:13-54
 activity#com.pait.smartpos.UpdatedBillReportActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:190:9-192:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:191:9-193:52
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:192:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:193:13-49
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:191:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:192:13-54
 activity#com.pait.smartpos.CashMemoActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:193:9-196:57
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:194:9-197:57
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:195:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:196:13-49
 	android:windowSoftInputMode
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:196:13-54
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:197:13-54
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:194:13-45
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:195:13-45
 activity#com.pait.smartpos.InwardActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:197:9-200:59
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:198:9-201:59
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:199:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:200:13-49
 	android:windowSoftInputMode
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:200:13-56
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:201:13-56
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:198:13-43
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:199:13-43
 activity#com.pait.smartpos.ExpenseActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:201:9-203:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:202:9-204:52
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:203:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:204:13-49
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:202:13-44
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:203:13-44
 activity#com.pait.smartpos.ReportMenuActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:204:9-206:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:205:9-207:52
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:206:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:207:13-49
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:205:13-47
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:206:13-47
 activity#com.pait.smartpos.ExpenseReportActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:207:9-209:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:208:9-210:52
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:209:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:210:13-49
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:208:13-50
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:209:13-50
 activity#com.pait.smartpos.ReturnMemoActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:210:9-212:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:211:9-214:54
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:212:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:213:13-49
+	android:windowSoftInputMode
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:214:13-52
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:211:13-47
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:212:13-47
 activity#com.pait.smartpos.CollectionSumReportActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:213:9-215:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:215:9-217:52
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:215:13-49
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:217:13-49
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:214:13-56
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:216:13-56
 activity#com.pait.smartpos.ProductwiseStockReportActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:216:9-218:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:218:9-220:52
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:218:13-49
-	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:217:13-59
-activity#com.pait.smartpos.ExportOthersActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:219:9-221:52
-	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:221:13-49
-	android:name
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:220:13-49
+	android:name
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:219:13-59
+activity#com.pait.smartpos.ExportOthersActivity
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:221:9-223:52
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:223:13-49
+	android:name
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:222:13-49
 activity#com.pait.smartpos.InwardFirstScreenActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:222:9-224:52
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:224:9-226:52
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:224:13-49
-	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:223:13-54
-activity#com.pait.smartpos.InwardReportActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:225:9-227:52
-	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:227:13-49
-	android:name
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:226:13-49
-activity#com.pait.smartpos.InwardDetailActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:228:9-230:52
+	android:name
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:225:13-54
+activity#com.pait.smartpos.InwardReportActivity
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:227:9-230:56
 	android:screenOrientation
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:230:13-49
-	android:name
 		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:229:13-49
-activity#com.pait.smartpos.AllGraphActivity
-ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:231:9-63
+	android:windowSoftInputMode
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:230:13-54
 	android:name
-		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:231:19-51
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:228:13-49
+activity#com.pait.smartpos.InwardDetailActivity
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:231:9-233:52
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:233:13-49
+	android:name
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:232:13-49
+activity#com.pait.smartpos.AllGraphActivity
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:234:9-235:52
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:235:13-49
+	android:name
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:234:19-51
+activity#com.pait.smartpos.AddSupplierMaster
+ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:236:9-237:51
+	android:screenOrientation
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:237:13-49
+	android:name
+		ADDED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml:236:19-52
 uses-sdk
 INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\android_project\SmartPOS\app\src\main\AndroidManifest.xml

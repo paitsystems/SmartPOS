@@ -12,6 +12,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -64,10 +65,10 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
     private String supplier = "", inward_date = "", invoice_no = "", invoice_date = "", remark = "";
     private Toast toast;
     private String billNo, gstPerStr, cgstPerStr, sgstPerStr, gstgroup;
-    private float rate = 0, totQty = 0, totAmnt = 0, totCGSTAmnt, totSGSTAmnt, totnetAmt,grossAmt;
+    private float rate = 0, totQty = 0, totAmnt = 0, totCGSTAmnt, totSGSTAmnt, totnetAmt, grossAmt;
     private AppCompatButton btn_cancel, btn_reset, btn_save;
     private SlidingUpPanelLayout sliding_layout;
-    private String  current_date = "", curr_time = "";
+    private String current_date = "", curr_time = "";
     private Constant constant;
 
     @Override
@@ -76,7 +77,7 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
         setContentView(R.layout.activity_inward);
 
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
             //getSupportActionBar().setTitle();
         }
         init();
@@ -167,7 +168,7 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(!charSequence.toString().equals("-") && !charSequence.toString().equals("+")){
+                if (!charSequence.toString().equals("-") && !charSequence.toString().equals("+")) {
                     finalCalculation();
                 }
 
@@ -263,8 +264,7 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
             }
         }
         res.close();
-
-        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), R.layout.adapter_item, suppList);
+        ArrayAdapter adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.adapter_item, suppList);
         auto_supplier.setAdapter(adapter);
     }
 
@@ -280,8 +280,7 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
             }
         }
         res.close();
-
-        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), R.layout.adapter_item, prodList);
+        ArrayAdapter adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.adapter_item, prodList);
         auto_product.setAdapter(adapter);
 
     }
@@ -312,11 +311,11 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
 
         //List<CustomSpinnerClass> all_objects = getMyObjects();
         for (CustomSpinnerClass o : listVOs) {
-            spinner_items.add(new CheckableSpinnerAdapter.SpinnerItem<CustomSpinnerClass>(o, o.getTitle()));
+            spinner_items.add(new CheckableSpinnerAdapter.SpinnerItem<>(o, o.getTitle()));
         }
 
         String headerText = "Select Product";
-        CheckableSpinnerAdapter adapter = new CheckableSpinnerAdapter<CustomSpinnerClass>(this, headerText, spinner_items, selected_items);
+        CheckableSpinnerAdapter adapter = new CheckableSpinnerAdapter<>(this, headerText, spinner_items, selected_items);
         spinner.setAdapter(adapter);
     }
 
@@ -381,7 +380,7 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
         detailClass.setCGSTPER(12);
         cartLs.add(detailClass);*/
 
-        Cursor cursor = db.getGSTPer(gstgroup,stringToFloat(_rate));
+        Cursor cursor = db.getGSTPer(gstgroup, stringToFloat(_rate));
         cursor.moveToFirst();
         float gstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_GSTPer));
         float cgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTPer));
@@ -432,11 +431,13 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
         rv_data.setAdapter(adapter);
         adapter.setOnClickListener1(this);
 
-        auto_product.setText("");
-        tv_gstgroup.setText("");
-        ed_rate.setText("");
-        ed_qty.setText("");
-        ed_ssp.setText("");
+        auto_product.setText(null);
+        tv_gstgroup.setText(null);
+        ed_rate.setText(null);
+        ed_qty.setText(null);
+        ed_ssp.setText(null);
+        auto_product.requestFocus();
+
     }
 
     private void saveInward() {
@@ -492,7 +493,8 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
             //GrossAmt = stringToFloat(tv_final_amnt.getText().toString());
             GrossAmt = grossAmt;
             TotVat = 0;
-            OtherAdd = stringToFloat(ed_otherAdd.getText().toString());;
+            OtherAdd = stringToFloat(ed_otherAdd.getText().toString());
+            ;
             RoundUppAmt = 0;
             CSTVatPer = 0;
             CGSTAMT = stringToFloat(tv_tot_cgst.getText().toString());
@@ -723,24 +725,25 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
                 int recqty = (int) dtClass.getRecQty();
                 db.updateInwardProductQty(Integer.valueOf(dtClass.getProductID()), recqty);
             }
+            ((InputMethodManager)getSystemService(INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(sliding_layout.getWindowToken(),0);
             showDia(2);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     private int stringToInt(String value) {
-        if(value.equalsIgnoreCase("")){
+        if (value.equalsIgnoreCase("")) {
             return 0;
-        }else {
+        } else {
             return Integer.parseInt(value);
         }
     }
 
     private float stringToFloat(String value) {
-        if(value.equalsIgnoreCase("")){
+        if (value.equalsIgnoreCase("")) {
             return 0;
-        }else {
+        } else {
             return Float.parseFloat(value);
         }
     }
@@ -793,16 +796,16 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
         finalCalculation();
     }
 
-    private void finalCalculation(){
+    private void finalCalculation() {
         float discAmnt = 0, otherSpDiscAmt = 0, totAmnt = 0;
 
         totAmnt = stringToFloat(tv_total_amount.getText().toString());
 
-        if(!ed_discPer.getText().toString().equalsIgnoreCase("")){
+        if (!ed_discPer.getText().toString().equalsIgnoreCase("")) {
             float discPer = stringToFloat(ed_discPer.getText().toString());
-            discAmnt = (totAmnt*discPer)/100;
+            discAmnt = (totAmnt * discPer) / 100;
         }
-        if(!ed_otherAdd.getText().toString().equalsIgnoreCase("")){
+        if (!ed_otherAdd.getText().toString().equalsIgnoreCase("")) {
             otherSpDiscAmt = stringToFloat(ed_otherAdd.getText().toString());
         }
 
@@ -810,7 +813,6 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
         totAmnt = totAmnt - discAmnt + otherSpDiscAmt;
         tv_final_amnt.setText(roundDecimals(totAmnt));
         ed_discAmnt.setText(roundTwoDecimals(discAmnt));
-
     }
 
     private void setItemwiseDiscount(String discPer) {
@@ -831,7 +833,7 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
             //addToCart.setSGSTAMT(dcart.getSGSTAMT());
             //addToCart.setGSTPER(dcart.getGSTPER());
 
-            Cursor cursor = db.getGSTPer(gstgroup,dcart.getPurchaseRate());
+            Cursor cursor = db.getGSTPer(gstgroup, dcart.getPurchaseRate());
             cursor.moveToFirst();
             float gstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_GSTPer));
             float cgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTPer));
@@ -849,7 +851,7 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
             float taxableRate = _rate;
             float total = (taxableRate * qty1);
             //float billdiscPer = stringToFloat(ed_discPer.getText().toString());
-            if(discPer.equals("")){
+            if (discPer.equals("")) {
                 discPer = "0";
             }
             float billdiscPer = stringToFloat(discPer);
@@ -859,7 +861,7 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
             float cgstAmt = (disctedTotal * cgstPer) / 100;
             float sgstAmt = (disctedTotal * sgstPer) / 100;
             float netAmt = disctedTotal + cgstAmt + sgstAmt;
-            totAmnt = totAmnt + total  ;
+            totAmnt = totAmnt + total;
 
             cgstPerStr = roundTwoDecimals(cgstPer);
             sgstPerStr = roundTwoDecimals(sgstPer);
@@ -885,7 +887,7 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
         rv_data.scrollToPosition(cartLsTempDisc.size() - 1);
     }
 
-    private void clearField(){
+    private void clearField() {
         //setProduct();
         auto_product.setText(null);
         cartLs.clear();
