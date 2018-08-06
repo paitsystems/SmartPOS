@@ -269,7 +269,9 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
             }*/
             if(checkExpiryDate(user.getExpiryDate())) {
                 startDrawer();
-            }else{
+            }else if(checkExpiryDateOtherFormat(user.getExpiryDate())) {
+                startDrawer();
+            }else {
                 showDia(2);
             }
         }else{
@@ -291,6 +293,21 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         boolean stat = false;
         try {
             Date _expDate = new SimpleDateFormat("dd/MMM/yyyy", Locale.ENGLISH).parse(expDate);
+            Date _curDate = new Date();
+            if(_expDate.compareTo(_curDate)>=0){
+                stat = true;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            stat = false;
+        }
+        return stat;
+    }
+
+    private boolean checkExpiryDateOtherFormat(String expDate){
+        boolean stat = false;
+        try {
+            Date _expDate = new SimpleDateFormat("MMM dd yyyy HH:mma", Locale.ENGLISH).parse(expDate);
             Date _curDate = new Date();
             if(_expDate.compareTo(_curDate)>=0){
                 stat = true;

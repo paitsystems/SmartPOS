@@ -3,7 +3,9 @@ package com.pait.smartpos;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothSocket;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -62,6 +64,9 @@ import com.pait.smartpos.model.RateMasterClass;
 import com.pait.smartpos.model.UserProfileClass;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -70,6 +75,9 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
+import java.util.UUID;
+
 import android.widget.AdapterView.OnItemClickListener;
 
 public class CashMemoActivity extends AppCompatActivity implements View.OnClickListener,
@@ -102,6 +110,21 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
     private Dialog prodDialog = null;
     private int allSelected = -1, prodSelected = -1, rateSelected = -1;
 
+    // android built in classes for bluetooth operations
+    BluetoothAdapter mBluetoothAdapter;
+    BluetoothSocket mmSocket;
+    BluetoothDevice mmDevice;
+
+    // needed for communication to bluetooth device / network
+    OutputStream mmOutputStream;
+    InputStream mmInputStream;
+    Thread workerThread;
+
+    byte[] readBuffer;
+    int readBufferPosition;
+    volatile boolean stopWorker;
+    String printData = "";
+
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,6 +141,13 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
         }
         mService = new BluetoothService(getApplicationContext(), mHandler1);
         connectBT();
+
+       /*try {
+           findBT();
+           openBT();
+       }catch (Exception e){
+           e.printStackTrace();
+       }*/
 
         sp_paymentType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -391,6 +421,8 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
             }
             prodDialog.dismiss();
         }
+        ((InputMethodManager)getSystemService(INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(tv_prodAll.getWindowToken(),0);
+
     }
 
     @Override
@@ -452,6 +484,11 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
     protected void onDestroy() {
         if (mService != null) {
             mService.stop();
+        }
+        try {
+            closeBT();
+        }catch (Exception e){
+            e.printStackTrace();
         }
         super.onDestroy();
     }
@@ -1543,8 +1580,14 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
             builder.setPositiveButton("Print", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    new CashMemoPrint().execute();
+                    /*try {
+                        sendData();
+                        clearField();
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }*/
                     dialog.dismiss();
+                    new CashMemoPrint().execute();
                 }
             });
             builder.setNegativeButton("New Order", new DialogInterface.OnClickListener() {
@@ -1599,6 +1642,220 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
     }
 
     @SuppressLint("StaticFieldLeak")
+    private class CashMemoPrint1 extends AsyncTask<Void, Void, String> {
+
+        private ProgressDialog pd;
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            pd = new ProgressDialog(CashMemoActivity.this);
+            pd.setCancelable(false);
+            pd.setMessage("Please Wait...");
+            pd.show();
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            String str;
+            StringBuilder textData = new StringBuilder();
+            try {
+                byte[] arrayOfByte1 = {27, 33, 0};
+                byte[] format = {27, 33, 0};
+
+                byte[] center = {27, 97, 1};
+                mService.write(PrinterCommands.ESC_ALIGN_CENTER);
+                byte nameFontformat[] = format;
+                nameFontformat[2] = ((byte) (0x20 | arrayOfByte1[2]));
+                mService.write(nameFontformat);
+
+                UserProfileClass user = new Constant(getApplicationContext()).getPref();
+
+                mService.sendMessage(user.getFirmName().toUpperCase(), "UTF-8");
+
+                nameFontformat[2] = arrayOfByte1[2];
+                mService.write(nameFontformat);
+
+                mService.sendMessage(user.getCity(), "UTF-8");
+                mService.sendMessage(user.getMobileNo(), "UTF-8");
+                mService.sendMessage("GSTIN : "+gstNo, "UTF-8");
+                mService.sendMessage("TAX INVOICE", "UTF-8");
+
+                byte[] left = {27, 97, 0};
+                mService.write(PrinterCommands.ESC_ALIGN_LEFT);
+
+                String date = new SimpleDateFormat("dd/MMM/yyyy", Locale.ENGLISH).format(Calendar.getInstance().getTime());
+                String time = new SimpleDateFormat("HH:mm", Locale.ENGLISH).format(Calendar.getInstance().getTime());
+                mService.sendMessage("BillNo : " + billNo, "UTF-8");
+                String space_str13 = "             ";
+                mService.sendMessage(date + space_str13 + time, "UTF-8");
+                if(!auto_CustName.getText().toString().equals("")) {
+                    mService.sendMessage("Cust Name : " + auto_CustName.getText().toString(), "UTF-8");
+                    mService.sendMessage("Mob No    : " + ed_custMobNo.getText().toString(), "UTF-8");
+                }else{
+                    mService.sendMessage("Cust Name : CASH SALE", "UTF-8");
+                    mService.sendMessage("Mob No    : 0", "UTF-8");
+                }
+
+                nameFontformat = format;
+                nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));
+                mService.write(nameFontformat);
+                String line_str = "--------------------------------";
+                mService.sendMessage(line_str, "UTF-8");
+                nameFontformat = format;
+                nameFontformat[2] = arrayOfByte1[2];
+                mService.write(nameFontformat);
+
+                mService.sendMessage("Item           " + "Qty" + "  Rate" + "  Amnt", "UTF-8");
+                nameFontformat = format;
+                nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));
+                mService.write(nameFontformat);
+                mService.sendMessage(line_str, "UTF-8");
+                nameFontformat = format;
+                nameFontformat[2] = arrayOfByte1[2];
+                mService.write(nameFontformat);
+
+                int count = 0, totQty = 0;
+
+                StringBuilder data = new StringBuilder();
+                for (int i = 0; i < cartList.size(); i++) {
+                    AddToCartClass cart = cartList.get(i);
+                    StringBuilder item = new StringBuilder(cart.getProdName());
+                    String item1 = cart.getProdName();
+                    int flag = 0;
+                    if (item.length() >= 14) {
+                        item = new StringBuilder(item.substring(0, 13));
+                        item.append(" ");
+                        flag = 1;
+                    } else {
+                        int size = 13 - item.length();
+                        for (int j = 0; j < size; j++) {
+                            item.append(" ");
+                        }
+                        item.append(" ");
+                    }
+
+                    String qty = String.valueOf(cart.getQty());
+                    if (qty.length() == 1) {
+                        qty = "  " + qty;
+                    } else if (qty.length() == 2) {
+                        qty = " " + qty;
+                    }
+
+                    String rate = String.valueOf(cart.getRate());
+                    if (rate.length() == 1) {
+                        rate = "      " + rate;
+                    }else if (rate.length() == 2) {
+                        rate = "     " + rate;
+                    }else if (rate.length() == 3) {
+                        rate = "     " + rate;
+                    }else if (rate.length() == 4) {
+                        rate = "   " + rate;
+                    } else if (rate.length() == 5) {
+                        rate = "  " + rate;
+                    }else if (rate.length() == 6) {
+                        rate = " " + rate;
+                    }
+
+                    String amnt = String.valueOf(cart.getAmnt());
+                    if (amnt.length() == 1) {
+                        amnt = "      " + amnt;
+                    }else if (amnt.length() == 2) {
+                        amnt = "     " + amnt;
+                    }else if (amnt.length() == 3) {
+                        amnt = "    " + amnt;
+                    }else if (amnt.length() == 4) {
+                        amnt = "   " + amnt;
+                    }else if (amnt.length() == 5) {
+                        amnt = "  " + amnt;
+                    }else if (amnt.length() == 6) {
+                        amnt = " " + amnt;
+                    }
+
+                    if (flag != 1) {
+                        data.append(item).append(qty).append(rate).append(amnt).append("\n");
+                        textData.append("").append(item).append(qty).append(rate).append(amnt).append("\n");
+                    } else {
+                        String q = item1.substring(13, item1.length());
+                        if (q.length() < 32) {
+                            data.append(item).append(qty).append(rate).append(amnt).append("\n").append(q).append("\n");
+                            textData.append("").append(item).append(qty).append(rate).append(amnt).append("\n").append(q).append("\n");
+                        }
+                    }
+                    count++;
+                }
+
+                String _count = String.valueOf(count);
+
+                mService.sendMessage(data.toString(), "UTF-8");
+                nameFontformat = format;
+                nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));
+                mService.write(nameFontformat);
+                mService.sendMessage(line_str, "UTF-8");
+                textData.delete(0, textData.length());
+
+                String  totalamt = roundDecimals(tv_netAmnt.getText().toString());
+                /*String[] totArr = totalamt.split("\\.");
+                if (totArr.length > 1) {
+                    totalamt = totArr[0];
+                }*/
+                //textData.append("Total              ").append("  "+count).append("      ").append(totalamt).append("\n");
+                if (_count.length() == 1 && totalamt.length() == 2) {
+                    textData.append("Total          ").append("  ").append(count).append("        ").append(roundTwoDecimals(String.valueOf(totAmnt))).append("\n");
+                } else if (_count.length() == 1 && totalamt.length() == 3) {
+                    textData.append("Total          ").append("  ").append(count).append("       ").append(roundTwoDecimals(String.valueOf(totAmnt))).append("\n");
+                } else if (_count.length() == 1 && totalamt.length() == 4) {
+                    textData.append("Total          ").append(count).append("      ").append(roundTwoDecimals(String.valueOf(totAmnt))).append("\n");
+                }
+                nameFontformat = format;
+                nameFontformat[2] = arrayOfByte1[2];
+                mService.write(nameFontformat);
+                mService.sendMessage(textData.toString(), "UTF-8");
+
+                nameFontformat = format;
+                nameFontformat[2] = arrayOfByte1[2];
+                mService.write(nameFontformat);
+                mService.sendMessage("CGST " + cgstPerStr + " % : " + roundTwoDecimals(totCGSTAmnt), "UTF-8");
+                mService.sendMessage("SGST " + sgstPerStr + " % : " + roundTwoDecimals(totSGSTAmnt), "UTF-8");
+
+                nameFontformat = format;
+                nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));
+                mService.write(nameFontformat);
+                mService.sendMessage(line_str, "UTF-8");
+
+                nameFontformat = format;
+                nameFontformat[2] = ((byte) (0x16 | arrayOfByte1[2]));
+                mService.write(nameFontformat);
+                mService.sendMessage("NET AMNT              " + totalamt, "UTF-8");
+
+                byte[] left2 = {27, 97, 0};
+                mService.write(left2);
+                nameFontformat[2] = arrayOfByte1[2];
+                mService.write(nameFontformat);
+                mService.sendMessage("Contact No : 020 24339954", "UTF-8");
+
+                mService.write(PrinterCommands.ESC_ENTER);
+                String space_str = "                        ";
+                mService.sendMessage(space_str, "UTF-8");
+
+                Log.d("Log", textData.toString());
+            } catch (Exception e) {
+                e.printStackTrace();
+                str = "Printer May Not Be Connected ";
+                return str;
+            }
+            return "Order Received By Kitchen 3";
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+            Log.d("Print3", result);
+            pd.dismiss();
+            clearField();
+        }
+    }
+
     private class CashMemoPrint extends AsyncTask<Void, Void, String> {
 
         private ProgressDialog pd;
@@ -1646,11 +1903,16 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                 mService.sendMessage("BillNo : " + billNo, "GBK");
                 String space_str13 = "             ";
                 mService.sendMessage(date + space_str13 + time, "GBK");
-                mService.sendMessage("Cust Name : " + auto_CustName.getText().toString(), "GBK");
-                mService.sendMessage("Mob No    : " + ed_custMobNo.getText().toString(), "GBK");
+                if(!auto_CustName.getText().toString().equals("")) {
+                    mService.sendMessage("Cust Name : " + auto_CustName.getText().toString(), "GBK");
+                    mService.sendMessage("Mob No    : " + ed_custMobNo.getText().toString(), "GBK");
+                }else{
+                    mService.sendMessage("Cust Name : CASH SALE", "GBK");
+                    mService.sendMessage("Mob No    : 0", "GBK");
+                }
 
                 nameFontformat = format;
-                nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));
+                nameFontformat[2] = (arrayOfByte1[2]);
                 mService.write(nameFontformat);
                 String line_str = "--------------------------------";
                 mService.sendMessage(line_str, "GBK");
@@ -1793,6 +2055,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
                 Log.d("Log", textData.toString());
             } catch (Exception e) {
                 e.printStackTrace();
+                Log.d("Log", e.getMessage());
                 str = "Printer May Not Be Connected ";
                 return str;
             }
@@ -1802,7 +2065,7 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
-            Log.d("Print3", result);
+            Log.d("Log", result);
             pd.dismiss();
             clearField();
         }
@@ -1886,4 +2149,375 @@ public class CashMemoActivity extends AppCompatActivity implements View.OnClickL
             }
         }
     };
+
+    // this will find a bluetooth printer device
+    void findBT() {
+        try {
+            mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+
+            if(mBluetoothAdapter == null) {
+                Constant.showLog("No bluetooth adapter available");
+            }
+
+            if(!mBluetoothAdapter.isEnabled()) {
+                Intent enableBluetooth = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                startActivityForResult(enableBluetooth, 0);
+            }
+
+            Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
+
+            if(pairedDevices.size() > 0) {
+                for (BluetoothDevice device : pairedDevices) {
+
+                    // RPP300 is the name of the bluetooth printer device
+                    // we got this name from the list of paired devices
+                    if (device.getName().equals("BlueTooth Printer")) {
+                        mmDevice = device;
+                        break;
+                    }
+                }
+            }
+
+            Constant.showLog("Bluetooth device found.");
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    // tries to open a connection to the bluetooth printer device
+    void openBT() throws IOException {
+        try {
+
+            // Standard SerialPortService ID
+            UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805f9b34fb");
+            mmSocket = mmDevice.createRfcommSocketToServiceRecord(uuid);
+            mmSocket.connect();
+            mmOutputStream = mmSocket.getOutputStream();
+            mmInputStream = mmSocket.getInputStream();
+
+            beginListenForData();
+
+            Constant.showLog("Bluetooth Opened");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /*
+     * after opening a connection to bluetooth printer device,
+     * we have to listen and check if a data were sent to be printed.
+     */
+    void beginListenForData() {
+        try {
+            final Handler handler = new Handler();
+
+            // this is the ASCII code for a newline character
+            final byte delimiter = 10;
+
+            stopWorker = false;
+            readBufferPosition = 0;
+            readBuffer = new byte[1024];
+
+            workerThread = new Thread(new Runnable() {
+                public void run() {
+
+                    while (!Thread.currentThread().isInterrupted() && !stopWorker) {
+
+                        try {
+
+                            int bytesAvailable = mmInputStream.available();
+
+                            if (bytesAvailable > 0) {
+
+                                byte[] packetBytes = new byte[bytesAvailable];
+                                mmInputStream.read(packetBytes);
+
+                                for (int i = 0; i < bytesAvailable; i++) {
+
+                                    byte b = packetBytes[i];
+                                    if (b == delimiter) {
+
+                                        byte[] encodedBytes = new byte[readBufferPosition];
+                                        System.arraycopy(
+                                                readBuffer, 0,
+                                                encodedBytes, 0,
+                                                encodedBytes.length
+                                        );
+
+                                        // specify US-ASCII encoding
+                                        final String data = new String(encodedBytes, "US-ASCII");
+                                        readBufferPosition = 0;
+
+                                        // tell the user data were sent to bluetooth printer device
+                                        handler.post(new Runnable() {
+                                            public void run() {
+                                                Constant.showLog(data);
+                                            }
+                                        });
+
+                                    } else {
+                                        readBuffer[readBufferPosition++] = b;
+                                    }
+                                }
+                            }
+
+                        } catch (IOException ex) {
+                            stopWorker = true;
+                        }
+
+                    }
+                }
+            });
+
+            workerThread.start();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // this will send text data to be printed by the bluetooth printer
+    void sendData() throws IOException {
+        try {
+
+            // the text typed by the user
+            String msg = "Anup Patil";
+            msg += "\n";
+
+            //mmOutputStream.write(msg.getBytes());
+            // tell the user data were sent
+            Constant.showLog("Data sent.");
+            String str;
+            StringBuilder textData = new StringBuilder();
+            byte[] arrayOfByte1 = {27, 33, 0};
+            byte[] format = {27, 33, 0};
+
+            byte[] center = {27, 97, 1};
+            byte[] ALIGN_LEFT = {0x1B, 0x61, 0};
+            byte[] ALIGN_CENTER = {0x1B, 0x61, 1};
+            //byte[] ALIGN_CENTER = new byte[] { 0x1b, 'a', 0x01 };
+            byte[] ALIGN_RIGHT = new byte[]{27, 97, 2};
+            //mmOutputStream.write(PrinterCommands.LF);
+            byte nameFontformat[] = format;
+            nameFontformat[2] = ((byte) (0x20 | arrayOfByte1[2]));
+            //mmOutputStream.write(nameFontformat);
+            nameFontformat[2] = arrayOfByte1[2];
+            mmOutputStream.write(nameFontformat);
+
+            UserProfileClass user = new Constant(getApplicationContext()).getPref();
+            String _firmName = user.getFirmName().toUpperCase() + "\n";
+            _firmName = String.format("%1$-10s %2$10s %3$1s", "", user.getFirmName().toUpperCase(), "")+ "\n";
+
+            mmOutputStream.write(_firmName.getBytes());
+            Constant.showLog(_firmName);
+
+            nameFontformat[2] = arrayOfByte1[2];
+            mmOutputStream.write(nameFontformat);
+            String _city = user.getCity() + "\n";
+            _city = String.format("%1$-10s %2$10s %3$1s", "", user.getCity(), "")+ "\n";
+            mmOutputStream.write(_city.getBytes());
+            String _userMobNo = user.getMobileNo() + "\n";
+            _userMobNo = String.format("%1$-10s %2$10s", "", user.getMobileNo())+ "\n";
+
+            mmOutputStream.write(_userMobNo.getBytes());
+
+            String _gstNo = "GSTIN : " + gstNo + "\n";
+            _gstNo = String.format("%1$-10s %2$10s", "","GSTIN : " + gstNo)+ "\n";
+
+            mmOutputStream.write(_gstNo.getBytes());
+            String _taxInvoice = String.format("%1$-10s %2$10s %3$1s %4$1s","", "TAX INVOICE", "", "")+ "\n";
+            mmOutputStream.write(_taxInvoice.getBytes());
+
+            byte[] left = {27, 97, 0};
+            mmOutputStream.write(PrinterCommands.ESC_ALIGN_LEFT);
+
+            String date = new SimpleDateFormat("dd/MMM/yyyy", Locale.ENGLISH).format(Calendar.getInstance().getTime());
+            String time = new SimpleDateFormat("HH:mm", Locale.ENGLISH).format(Calendar.getInstance().getTime());
+            String _billNo = "BillNo : " + billNo + "\n";
+            mmOutputStream.write(_billNo.getBytes());
+            String space_str13 = "             ";
+            String _dateTime = date + space_str13 + time + "\n";
+            mmOutputStream.write(_dateTime.getBytes());
+            if (!auto_CustName.getText().toString().equals("")) {
+                String _custName = "Cust Name : " + auto_CustName.getText().toString() + "\n";
+                mmOutputStream.write(_custName.getBytes());
+                String _mobNo = "Mob No    : " + ed_custMobNo.getText().toString() + "\n";
+                mmOutputStream.write(_mobNo.getBytes());
+            } else {
+                mmOutputStream.write("Cust Name : CASH SALE\n".getBytes());
+                mmOutputStream.write("Mob No    : 0\n".getBytes());
+            }
+
+            nameFontformat = format;
+            nameFontformat[2] = (arrayOfByte1[2]);
+            mmOutputStream.write(nameFontformat);
+            String line_str = "--------------------------------\n";
+            //String line_str = "________________________________\n";
+            /*String line_str = "A";
+            for(int i=0;i<32;i++){
+                mmOutputStream.write(line_str.getBytes());
+            }*/
+            mmOutputStream.write(line_str.getBytes());
+            mmOutputStream.write(nameFontformat);
+            nameFontformat = format;
+            nameFontformat[2] = arrayOfByte1[2];
+            mmOutputStream.write(nameFontformat);
+
+            String _head = "Item           " + "Qty" + "  Rate" + "  Amnt" + "\n";
+            mmOutputStream.write(_head.getBytes());
+            nameFontformat = format;
+            nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));
+            mmOutputStream.write(nameFontformat);
+            mmOutputStream.write(line_str.getBytes());
+            nameFontformat = format;
+            nameFontformat[2] = arrayOfByte1[2];
+            mmOutputStream.write(nameFontformat);
+
+            int count = 0, totQty = 0;
+
+            StringBuilder data = new StringBuilder();
+            for (int i = 0; i < cartList.size(); i++) {
+                AddToCartClass cart = cartList.get(i);
+                StringBuilder item = new StringBuilder(cart.getProdName());
+                String item1 = cart.getProdName();
+                int flag = 0;
+                if (item.length() >= 14) {
+                    item = new StringBuilder(item.substring(0, 13));
+                    item.append(" ");
+                    flag = 1;
+                } else {
+                    int size = 13 - item.length();
+                    for (int j = 0; j < size; j++) {
+                        item.append(" ");
+                    }
+                    item.append(" ");
+                }
+
+                String qty = String.valueOf(cart.getQty());
+                if (qty.length() == 1) {
+                    qty = "  " + qty;
+                } else if (qty.length() == 2) {
+                    qty = " " + qty;
+                }
+
+                String rate = String.valueOf(cart.getRate());
+                if (rate.length() == 1) {
+                    rate = "      " + rate;
+                } else if (rate.length() == 2) {
+                    rate = "     " + rate;
+                } else if (rate.length() == 3) {
+                    rate = "     " + rate;
+                } else if (rate.length() == 4) {
+                    rate = "   " + rate;
+                } else if (rate.length() == 5) {
+                    rate = "  " + rate;
+                } else if (rate.length() == 6) {
+                    rate = " " + rate;
+                }
+
+                String amnt = String.valueOf(cart.getAmnt());
+                if (amnt.length() == 1) {
+                    amnt = "      " + amnt;
+                } else if (amnt.length() == 2) {
+                    amnt = "     " + amnt;
+                } else if (amnt.length() == 3) {
+                    amnt = "    " + amnt;
+                } else if (amnt.length() == 4) {
+                    amnt = "   " + amnt;
+                } else if (amnt.length() == 5) {
+                    amnt = "  " + amnt;
+                } else if (amnt.length() == 6) {
+                    amnt = " " + amnt;
+                }
+
+                if (flag != 1) {
+                    data.append(item).append(qty).append(rate).append(amnt).append("\n");
+                    textData.append("").append(item).append(qty).append(rate).append(amnt).append("\n");
+                } else {
+                    String q = item1.substring(13, item1.length());
+                    if (q.length() < 32) {
+                        data.append(item).append(qty).append(rate).append(amnt).append("\n").append(q).append("\n");
+                        textData.append("").append(item).append(qty).append(rate).append(amnt).append("\n").append(q).append("\n");
+                    }
+                }
+                count++;
+            }
+
+            String _count = String.valueOf(count);
+
+            mmOutputStream.write(data.toString().getBytes());
+            nameFontformat = format;
+            nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));
+            mmOutputStream.write(nameFontformat);
+            mmOutputStream.write(line_str.getBytes());
+            textData.delete(0, textData.length());
+
+            String totalamt = roundDecimals(tv_netAmnt.getText().toString());
+                /*String[] totArr = totalamt.split("\\.");
+                if (totArr.length > 1) {
+                    totalamt = totArr[0];
+                }*/
+            //textData.append("Total              ").append("  "+count).append("      ").append(totalamt).append("\n");
+            if (_count.length() == 1 && totalamt.length() == 2) {
+                textData.append("Total          ").append("  ").append(count).append("        ").append(roundTwoDecimals(String.valueOf(totAmnt))).append("\n");
+            } else if (_count.length() == 1 && totalamt.length() == 3) {
+                textData.append("Total          ").append("  ").append(count).append("       ").append(roundTwoDecimals(String.valueOf(totAmnt))).append("\n");
+            } else if (_count.length() == 1 && totalamt.length() == 4) {
+                textData.append("Total          ").append(count).append("      ").append(roundTwoDecimals(String.valueOf(totAmnt))).append("\n");
+            }
+            nameFontformat = format;
+            nameFontformat[2] = arrayOfByte1[2];
+            mmOutputStream.write(nameFontformat);
+            mmOutputStream.write(textData.toString().getBytes());
+
+            nameFontformat = format;
+            nameFontformat[2] = arrayOfByte1[2];
+            mmOutputStream.write(nameFontformat);
+            String _cgst = "CGST " + cgstPerStr + " % : " + roundTwoDecimals(totCGSTAmnt) + "\n";
+            mmOutputStream.write(_cgst.getBytes());
+            String _sgst = "SGST " + sgstPerStr + " % : " + roundTwoDecimals(totSGSTAmnt) + "\n";
+            mmOutputStream.write(_sgst.getBytes());
+
+            nameFontformat = format;
+            nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));
+            mmOutputStream.write(nameFontformat);
+            mmOutputStream.write(line_str.getBytes());
+
+            nameFontformat = format;
+            nameFontformat[2] = ((byte) (0x16 | arrayOfByte1[2]));
+            mmOutputStream.write(nameFontformat);
+            String _netAmnt = "NET AMNT              " + totalamt + "\n";
+            mmOutputStream.write(_netAmnt.getBytes());
+
+            byte[] left2 = {27, 97, 0};
+            mmOutputStream.write(left2);
+            nameFontformat[2] = arrayOfByte1[2];
+            mmOutputStream.write(nameFontformat);
+            mmOutputStream.write("Contact No : 020 24339954\n\n\n".getBytes());
+
+            mmOutputStream.write(PrinterCommands.ESC_ENTER);
+            String space_str = "                        ";
+            mmOutputStream.write(space_str.getBytes());
+            mmOutputStream.flush();
+            Log.d("Log", textData.toString());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // close the connection to bluetooth printer.
+    void closeBT() throws IOException {
+        try {
+            stopWorker = true;
+            mmOutputStream.close();
+            mmInputStream.close();
+            mmSocket.close();
+            Constant.showLog("Bluetooth Closed");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

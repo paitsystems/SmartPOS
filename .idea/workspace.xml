@@ -11,43 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="292c60bc-e99d-4a2e-b859-84310fe2e824" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/AddSupplierMaster.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReturnMemoRecyclerItemTouchHelper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/SupplierMasterClass.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/op1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/op2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/op3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/op4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/op5.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/op6.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/op1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/op2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/op3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/op4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/op5.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/op6.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/op1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/op2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/op3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/op4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/op5.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/op6.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/op1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/op2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/op3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/op4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/op5.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/op6.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/exchange.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_keyboard_arrow_right_black_24dp.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_search_black_24dp.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/pay.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/payment.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/return_box.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/supermarket_cashier.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/transfer.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_supplier_master.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_keyboard_arrow_down_black_24dp.xml" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
@@ -58,11 +22,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/fabric/res/debug/values/com_crashlytics_build_id.xml" afterPath="$PROJECT_DIR$/app/build/generated/fabric/res/debug/values/com_crashlytics_build_id.xml" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/compat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/compat/R.java" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/constraint/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/constraint/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/coreui/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/coreui/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/coreutils/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/coreutils/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" />
@@ -74,100 +39,53 @@
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v4/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v4/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/recyclerview/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/recyclerview/R.java" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/auth/api/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/auth/api/R.java" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/base/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/base/R.java" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/firebase/crash/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/firebase/crash/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/firebase/firebase_common/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/firebase/firebase_common/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/pait/smartpos/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/pait/smartpos/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/sothree/slidinguppanel/library/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/sothree/slidinguppanel/library/R.java" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/crashlytics-build.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/crashlytics-build.properties" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/import.html" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/import.html" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/resources-debug.ap_" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable_ic_add_circle_outline_black_24dp.xml.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable_ic_add_circle_outline_black_24dp.xml.flat" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable_ic_rupee_black.xml.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable_ic_rupee_black.xml.flat" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-large_activity_add_product_master.xml.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-large_activity_add_product_master.xml.flat" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-v21_activity_add_product_master.xml.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-v21_activity_add_product_master.xml.flat" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_add_product_master.xml.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_add_product_master.xml.flat" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_bill_reprint_cancel.xml.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_bill_reprint_cancel.xml.flat" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_cash_memo.xml.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_cash_memo.xml.flat" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_inward.xml.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_inward.xml.flat" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_recycler_list_item_master_updation.xml.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_recycler_list_item_master_updation.xml.flat" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu_menu_drawer.xml.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu_menu_drawer.xml.flat" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
-      <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/AddProductMasterActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/AddProductMasterActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/AllGraphActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/AllGraphActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SmartPOS.db" afterPath="$PROJECT_DIR$/app/src/main/assets/SmartPOS.db" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/import.html" afterPath="$PROJECT_DIR$/app/src/main/assets/import.html" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/ic_launcher-web.png" afterPath="$PROJECT_DIR$/app/src/main/ic_launcher-web.png" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/BillReprintCancelActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/BillReprintCancelActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CashMemoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CashMemoActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CollectionSumReportActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CollectionSumReportActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/DrawerTestActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/DrawerTestActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseReportActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseReportActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ImportMasterActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ImportMasterActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardDetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardDetailActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardFirstScreenActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardFirstScreenActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardReportActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardReportActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ProductwiseStockReportActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ProductwiseStockReportActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReportMenuActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReportMenuActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/FirstActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/FirstActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReturnMemoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReturnMemoActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/InwardDetailReportAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/InwardDetailReportAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/MasterUpdationRecyclerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/MasterUpdationRecyclerAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ReturnMemoBarcodeAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ReturnMemoBarcodeAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ReturnMemoBillNoAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ReturnMemoBillNoAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ReturnMemoRecyclerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ReturnMemoRecyclerAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/constant/Constant.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/constant/Constant.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/db/DBHandler.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/db/DBHandler.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/AllGraphFragment1.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/AllGraphFragment1.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/AllGraphFragment2.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/AllGraphFragment2.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/AllGraphFragment3.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/AllGraphFragment3.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/MainOptionFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/MainOptionFragment.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/MasterUpdationFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/MasterUpdationFragment.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/option_expense_draw.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/option_expense_draw.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/option_inward_draw.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/option_inward_draw.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/option_reports_draw.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/option_reports_draw.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/option_returnmemo_draw.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/option_returnmemo_draw.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add_circle_outline_black_24dp.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add_circle_outline_black_24dp.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_rupee_black.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_rupee_black.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/option_cashmemo_draw.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/option_cashmemo_draw.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/wallet.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-large/activity_add_product_master.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-large/activity_add_product_master.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-v21/activity_add_product_master.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-v21/activity_add_product_master.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_product_master.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_product_master.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_bill_reprint_cancel.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_bill_reprint_cancel.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cash_memo.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cash_memo.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_collection_sum_report.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_collection_sum_report.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_expense.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_expense.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_expense_report.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_expense_report.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_export_excel.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_export_excel.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_inward.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_inward.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_inward_detail.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_inward_detail.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_inward_first_screen.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_inward_first_screen.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_inward_report.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_inward_report.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_productwise_stock_report.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_productwise_stock_report.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_report_menu.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_report_menu.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_return_memo.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_return_memo.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/colllection_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/colllection_item.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/exp_list_item_return_memo.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/exp_list_item_return_memo.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment1_all_graph.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment1_all_graph.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment2_all_graph.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment2_all_graph.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/grid_item_all_product.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/grid_item_all_product.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/inward_report_detail_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/inward_report_detail_item.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/productwise_stock_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/productwise_stock_item.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/recycler_list_item_master_updation.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/recycler_list_item_master_updation.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/test_option_1.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/test_option_1.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_drawer.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_drawer.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/report_menu_menu.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/report_menu_menu.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/com/android/support/group-index.xml" afterPath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/com/android/support/group-index.xml" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/com/google/android/gms/group-index.xml" afterPath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/com/google/android/gms/group-index.xml" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/com/google/firebase/group-index.xml" afterPath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/com/google/firebase/group-index.xml" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/master-index.xml" afterPath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/master-index.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -199,7 +117,138 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Constant.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/constant/Constant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-792">
+              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirstActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/FirstActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="274" column="27" lean-forward="true" selection-start-line="274" selection-start-column="27" selection-end-line="274" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReturnMemoActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReturnMemoActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="394" column="70" lean-forward="false" selection-start-line="394" selection-start-column="70" selection-end-line="394" selection-end-column="70" />
+              <folding>
+                <element signature="class#CashMemoPrint#0;class#ReturnMemoActivity#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CashMemoActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CashMemoActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="1857" column="0" lean-forward="true" selection-start-line="1857" selection-start-column="0" selection-end-line="1857" selection-end-column="0" />
+              <folding>
+                <element signature="e#5031#5074#0" expanded="false" />
+                <element signature="class#5708:6739" expanded="false" />
+                <element signature="method#onItemSelected#0;class#5708:6739" expanded="false" />
+                <element signature="method#onNothingSelected#0;class#5708:6739" expanded="false" />
+                <element signature="class#6795:7376" expanded="false" />
+                <element signature="method#onItemSelected#0;class#6795:7376" expanded="false" />
+                <element signature="method#onNothingSelected#0;class#6795:7376" expanded="false" />
+                <element signature="class#7422:8556" expanded="false" />
+                <element signature="method#beforeTextChanged#0;class#7422:8556" expanded="false" />
+                <element signature="method#onTextChanged#0;class#7422:8556" expanded="false" />
+                <element signature="method#afterTextChanged#0;class#7422:8556" expanded="false" />
+                <element signature="class#8609:9119" expanded="false" />
+                <element signature="method#beforeTextChanged#0;class#8609:9119" expanded="false" />
+                <element signature="method#onTextChanged#0;class#8609:9119" expanded="false" />
+                <element signature="method#afterTextChanged#0;class#8609:9119" expanded="false" />
+                <element signature="class#9172:10087" expanded="false" />
+                <element signature="method#beforeTextChanged#0;class#9172:10087" expanded="false" />
+                <element signature="method#onTextChanged#0;class#9172:10087" expanded="false" />
+                <element signature="method#afterTextChanged#0;class#9172:10087" expanded="false" />
+                <element signature="class#10137:11019" expanded="false" />
+                <element signature="method#beforeTextChanged#0;class#10137:11019" expanded="false" />
+                <element signature="method#onTextChanged#0;class#10137:11019" expanded="false" />
+                <element signature="method#afterTextChanged#0;class#10137:11019" expanded="false" />
+                <element signature="method#onClick#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#onCreateOptionsMenu#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#onOptionsItemSelected#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#onItemClick#1;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#calculation#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#onItemClick#2;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#onSwiped#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="class#17926:18542" expanded="false" />
+                <element signature="method#onViewAttachedToWindow#0;class#17926:18542" expanded="false" />
+                <element signature="method#onViewDetachedFromWindow#0;class#17926:18542" expanded="false" />
+                <element signature="method#startNewActivty#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#onDestroy#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#finalCalculation#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#init#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="e#23644#23954#0" expanded="false" />
+                <element signature="method#setProdData#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#setRateList#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#setCustData#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#showProdAlertDialog#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="class#30472:30931" expanded="false" />
+                <element signature="method#beforeTextChanged#0;class#30472:30931" expanded="false" />
+                <element signature="method#onTextChanged#0;class#30472:30931" expanded="false" />
+                <element signature="method#afterTextChanged#0;class#30472:30931" expanded="false" />
+                <element signature="method#showRateAlertDialog#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="class#32924:33383" expanded="false" />
+                <element signature="method#beforeTextChanged#0;class#32924:33383" expanded="false" />
+                <element signature="method#onTextChanged#0;class#32924:33383" expanded="false" />
+                <element signature="method#afterTextChanged#0;class#32924:33383" expanded="false" />
+                <element signature="method#removeQty#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#addQty#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#addToCart#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#setItemwiseDiscount#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#saveBill#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#stringToInt#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#stringToFloat#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#setSpinnerData#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#showDia#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#clearField#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="class#CashMemoPrint1#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#onPreExecute#0;class#CashMemoPrint1#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#onPostExecute#0;class#CashMemoPrint1#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="class#CashMemoPrint#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#onPreExecute#0;class#CashMemoPrint#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#onPostExecute#0;class#CashMemoPrint#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#roundTwoDecimals#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#roundDecimals#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#roundDecimals#1;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#roundTwoDecimals#1;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#connectBT#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#findBT#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#openBT#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#beginListenForData#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#sendData#0;class#CashMemoActivity#0" expanded="false" />
+                <element signature="method#closeBT#0;class#CashMemoActivity#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BillReprintCancelActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/BillReprintCancelActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5786">
+              <caret line="356" column="45" lean-forward="false" selection-start-line="356" selection-start-column="45" selection-end-line="356" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -210,13 +259,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getCatgory</find>
-      <find>PM_StockQty</find>
-      <find>auto_cat2</find>
-      <find>auto_cat1</find>
-      <find>addProduct</find>
-      <find>setCategory</find>
-      <find>ed_qty</find>
       <find>cat1</find>
       <find>Table_SupplierMaster</find>
       <find>getContext</find>
@@ -240,6 +282,13 @@
       <find>BankName</find>
       <find>reprintBill</find>
       <find>gstNo</find>
+      <find>cgstPerStr</find>
+      <find>showDia</find>
+      <find>clearField</find>
+      <find>CashMemoPrint</find>
+      <find>sendMessage</find>
+      <find>delimiter</find>
+      <find>GBK</find>
     </findStrings>
     <replaceStrings>
       <replace>ed_cat3</replace>
@@ -249,7 +298,14 @@
       <replace>getApplicationContext</replace>
       <replace>ProductViewHolder</replace>
       <replace>ic_rupee_black</replace>
+      <replace>mmOutputStream</replace>
+      <replace>write</replace>
+      <replace>UTF-8</replace>
     </replaceStrings>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="E:\project_requirement\key.jks" />
+    <option name="KEY_ALIAS" value="lnb" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -2467,14 +2523,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/return_box.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/supermarket_cashier.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/option_returnmemo_draw.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/option_inward_draw.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/option_expense_draw.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/option_reports_draw.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/grid_item_all_product.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_cash_memo.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_rupee_black.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_add_circle_outline_black_24dp.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/report_menu_menu.xml" />
@@ -2506,11 +2557,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseReportActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExpenseActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/db/DBHandler.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CashMemoActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/BillReprintCancelActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ReturnMemoBillNoAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ReturnMemoBarcodeAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReturnMemoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/constant/Constant.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/AllGraphFragment3.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/AllGraphFragment2.java" />
@@ -2518,6 +2566,14 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/option_cashmemo_draw.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/recycler_list_item_master_updation.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/test_option_1.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/BillReprintCancelActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReturnMemoActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/grid_item_all_product.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_keyboard_arrow_down_black_24dp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_cash_memo.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/import.html" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/FirstActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CashMemoActivity.java" />
       </list>
     </option>
   </component>
@@ -2545,8 +2601,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2584,7 +2639,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -2597,10 +2652,22 @@
               <item name="SmartPOS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
+            <path>
+              <item name="SmartPOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SmartPOS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="gradle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartPOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SmartPOS" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="gradle" type="462c0819:PsiDirectoryNode" />
+              <item name="wrapper" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2610,17 +2677,22 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="android.profiler.active" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi" />
+    <property name="ExportApk.ApkPath" value="C:\Users\Anup\Desktop" />
+    <property name="ExportApk.Flavors" value="" />
+    <property name="ExportApk.BuildType" value="release" />
+    <property name="ExportApk.SignV1" value="true" />
+    <property name="ExportApk.SignV2" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
       <recent name="com.pait.smartpos" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\android_project\SmartPOS\app\src\main\assets" />
       <recent name="D:\android_project\SmartPOS\app\src\main\res\drawable-xxhdpi" />
       <recent name="D:\android_project\SmartPOS\app\src\main\res\drawable-xhdpi" />
       <recent name="D:\android_project\SmartPOS\app\src\main\res\drawable-mdpi" />
       <recent name="D:\android_project\SmartPOS\app\src\main\res\drawable-hdpi" />
-      <recent name="D:\android_project\SmartPOS\app\src\main\res\drawable" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -2792,7 +2864,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533212720190</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Aug_05_2018_12_00 Completed The changes told after demo">
+      <created>1533449876431</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1533449876431</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2806,23 +2885,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.547235" sideWeight="0.50647247" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46774194" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54262674" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25809062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.547235" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30420712" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.547235" sideWeight="0.4935275" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6367314" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2846,19 +2926,12 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Aug_02_2018_18_00 Change done after demo given." />
-    <option name="LAST_COMMIT_MESSAGE" value="Aug_02_2018_18_00 Change done after demo given." />
+    <MESSAGE value="Aug_05_2018_12_00 Completed The changes told after demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aug_05_2018_12_00 Completed The changes told after demo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CashMemoActivity.java</url>
-          <line>1615</line>
-          <properties class="com.pait.smartpos.CashMemoActivity.CashMemoPrint" method="doInBackground">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/BillReprintCancelActivity.java</url>
           <line>134</line>
@@ -2866,205 +2939,11 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ExportOthersActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="129" column="35" lean-forward="false" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_return_memo.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1452">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_inward_first_screen.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="216" column="0" lean-forward="false" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardFirstScreenActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2054">
-          <caret line="58" column="65" lean-forward="false" selection-start-line="58" selection-start-column="65" selection-end-line="58" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cash_memo.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="234" column="47" lean-forward="false" selection-start-line="223" selection-start-column="8" selection-end-line="234" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_inward.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="75" column="77" lean-forward="false" selection-start-line="75" selection-start-column="77" selection-end-line="75" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/AllGraphActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="99" column="71" lean-forward="false" selection-start-line="99" selection-start-column="71" selection-end-line="99" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/colllection_item.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/CollectionSumAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="46" column="51" lean-forward="false" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/date_color_border.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_report_menu.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/ProductwiseStockAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="44" column="55" lean-forward="false" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_productwise_stock_report.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="246" column="53" lean-forward="false" selection-start-line="246" selection-start-column="53" selection-end-line="246" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/productwise_stock_item.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="73" column="37" lean-forward="false" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ProductwiseStockReportActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="56" column="65" lean-forward="false" selection-start-line="56" selection-start-column="65" selection-end-line="56" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_inward_report.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="6072">
-          <caret line="276" column="27" lean-forward="false" selection-start-line="276" selection-start-column="27" selection-end-line="276" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/inward_report_detail_item.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_inward_detail.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="210" column="57" lean-forward="false" selection-start-line="210" selection-start-column="57" selection-end-line="210" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReportMenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="41" column="74" lean-forward="false" selection-start-line="41" selection-start-column="74" selection-end-line="41" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="52" column="67" lean-forward="true" selection-start-line="52" selection-start-column="67" selection-end-line="52" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/InwardDetailReportAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/adpaters/InwardSummeryReportAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="45" column="7" lean-forward="false" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4308">
-          <caret line="527" column="19" lean-forward="false" selection-start-line="527" selection-start-column="19" selection-end-line="527" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_collection_sum_report.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3072,6 +2951,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
           <caret line="125" column="23" lean-forward="false" selection-start-line="108" selection-start-column="8" selection-end-line="125" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3082,6 +2962,14 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+          <folding>
+            <element signature="e#1578#1597#0" expanded="false" />
+            <element signature="e#1987#2006#0" expanded="false" />
+            <element signature="e#2096#2115#0" expanded="false" />
+            <element signature="e#2547#2564#0" expanded="false" />
+            <element signature="e#2944#2963#0" expanded="false" />
+            <element signature="e#6006#6020#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3113,6 +3001,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="10230">
           <caret line="465" column="17" lean-forward="false" selection-start-line="465" selection-start-column="17" selection-end-line="465" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3120,6 +3009,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="407" column="49" lean-forward="false" selection-start-line="407" selection-start-column="49" selection-end-line="407" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3144,98 +3034,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/db/DBHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38214">
-          <caret line="2959" column="75" lean-forward="false" selection-start-line="2959" selection-start-column="75" selection-end-line="2959" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/BillReprintCancelActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6072">
-          <caret line="309" column="63" lean-forward="false" selection-start-line="309" selection-start-column="63" selection-end-line="309" selection-end-column="63" />
-          <folding>
-            <element signature="e#3654#3655#0" expanded="false" />
-            <element signature="e#3703#3704#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CashMemoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="100" column="60" lean-forward="false" selection-start-line="100" selection-start-column="60" selection-end-line="100" selection-end-column="60" />
-          <folding>
-            <element signature="e#4393#4436#0" expanded="false" />
-            <element signature="class#4940:5971" expanded="false" />
-            <element signature="method#onItemSelected#0;class#4940:5971" expanded="false" />
-            <element signature="method#onNothingSelected#0;class#4940:5971" expanded="false" />
-            <element signature="class#6027:6608" expanded="false" />
-            <element signature="method#onItemSelected#0;class#6027:6608" expanded="false" />
-            <element signature="method#onNothingSelected#0;class#6027:6608" expanded="false" />
-            <element signature="class#6654:7788" expanded="false" />
-            <element signature="method#beforeTextChanged#0;class#6654:7788" expanded="false" />
-            <element signature="method#onTextChanged#0;class#6654:7788" expanded="false" />
-            <element signature="method#afterTextChanged#0;class#6654:7788" expanded="false" />
-            <element signature="class#7841:8351" expanded="false" />
-            <element signature="method#beforeTextChanged#0;class#7841:8351" expanded="false" />
-            <element signature="method#onTextChanged#0;class#7841:8351" expanded="false" />
-            <element signature="method#afterTextChanged#0;class#7841:8351" expanded="false" />
-            <element signature="class#8404:9319" expanded="false" />
-            <element signature="method#beforeTextChanged#0;class#8404:9319" expanded="false" />
-            <element signature="method#onTextChanged#0;class#8404:9319" expanded="false" />
-            <element signature="method#afterTextChanged#0;class#8404:9319" expanded="false" />
-            <element signature="class#9369:10251" expanded="false" />
-            <element signature="method#beforeTextChanged#0;class#9369:10251" expanded="false" />
-            <element signature="method#onTextChanged#0;class#9369:10251" expanded="false" />
-            <element signature="method#afterTextChanged#0;class#9369:10251" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#onItemClick#1;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#calculation#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#onItemClick#2;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#onSwiped#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="class#17032:17648" expanded="false" />
-            <element signature="method#onViewAttachedToWindow#0;class#17032:17648" expanded="false" />
-            <element signature="method#onViewDetachedFromWindow#0;class#17032:17648" expanded="false" />
-            <element signature="method#startNewActivty#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#finalCalculation#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="e#22640#22950#0" expanded="false" />
-            <element signature="method#setProdData#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#setRateList#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#setCustData#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#showProdAlertDialog#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="class#29468:29927" expanded="false" />
-            <element signature="method#beforeTextChanged#0;class#29468:29927" expanded="false" />
-            <element signature="method#onTextChanged#0;class#29468:29927" expanded="false" />
-            <element signature="method#afterTextChanged#0;class#29468:29927" expanded="false" />
-            <element signature="method#showRateAlertDialog#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="class#31920:32379" expanded="false" />
-            <element signature="method#beforeTextChanged#0;class#31920:32379" expanded="false" />
-            <element signature="method#onTextChanged#0;class#31920:32379" expanded="false" />
-            <element signature="method#afterTextChanged#0;class#31920:32379" expanded="false" />
-            <element signature="method#removeQty#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#addQty#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#addToCart#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#setItemwiseDiscount#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#stringToInt#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#stringToFloat#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#setSpinnerData#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#showDia#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#clearField#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#onPreExecute#0;class#CashMemoPrint#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#onPostExecute#0;class#CashMemoPrint#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#roundTwoDecimals#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#roundDecimals#0;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#roundDecimals#1;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#roundTwoDecimals#1;class#CashMemoActivity#0" expanded="false" />
-            <element signature="method#connectBT#0;class#CashMemoActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/adapter_item.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3243,6 +3041,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3257,13 +3056,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReturnMemoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="451" column="0" lean-forward="false" selection-start-line="451" selection-start-column="0" selection-end-line="451" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -3288,13 +3080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/constant/Constant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/MasterUpdationFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -3316,6 +3101,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
           <caret line="76" column="58" lean-forward="false" selection-start-line="76" selection-start-column="58" selection-end-line="76" selection-end-column="58" />
+          <folding>
+            <element signature="e#620#638#0" expanded="false" />
+            <element signature="e#673#691#0" expanded="false" />
+            <element signature="e#832#848#0" expanded="false" />
+            <element signature="e#1115#1131#0" expanded="false" />
+            <element signature="e#1212#1228#0" expanded="false" />
+            <element signature="e#1659#1677#0" expanded="false" />
+            <element signature="e#1712#1730#0" expanded="false" />
+            <element signature="e#1870#1886#0" expanded="false" />
+            <element signature="e#2151#2167#0" expanded="false" />
+            <element signature="e#2245#2259#0" expanded="false" />
+            <element signature="e#2591#2607#0" expanded="false" />
+            <element signature="e#2805#2841#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3340,13 +3139,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="296" column="37" lean-forward="true" selection-start-line="296" selection-start-column="37" selection-end-line="296" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
@@ -3354,6 +3151,305 @@
             <element signature="e#1081#1099#0" expanded="false" />
             <element signature="e#1626#1656#0" expanded="false" />
             <element signature="e#6170#6205#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_keyboard_arrow_down_black_24dp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/grid_item_all_product.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="70" lean-forward="false" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cash_memo.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1341">
+          <caret line="506" column="0" lean-forward="false" selection-start-line="506" selection-start-column="0" selection-end-line="506" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/constant/PrinterCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/android-sdk/platforms/android-27/android.jar!/java/lang/String.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="157" column="35" lean-forward="false" selection-start-line="157" selection-start-column="35" selection-end-line="157" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/db/DBHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/fragments/MainFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="131" column="10" lean-forward="false" selection-start-line="131" selection-start-column="10" selection-end-line="131" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/Driver_utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="281" column="19" lean-forward="false" selection-start-line="281" selection-start-column="19" selection-end-line="281" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/model/CircleTransform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/AddGSTActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="296" column="10" lean-forward="false" selection-start-line="296" selection-start-column="10" selection-end-line="296" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/AddProductMasterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="479" column="10" lean-forward="false" selection-start-line="479" selection-start-column="10" selection-end-line="479" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/DrawerTestActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="315" column="10" lean-forward="false" selection-start-line="315" selection-start-column="10" selection-end-line="315" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/InwardFirstScreenActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="193" column="25" lean-forward="false" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="254" column="11" lean-forward="false" selection-start-line="254" selection-start-column="11" selection-end-line="254" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/VerificationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="95" column="10" lean-forward="false" selection-start-line="95" selection-start-column="10" selection-end-line="95" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/import.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="58" lean-forward="false" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/constant/Constant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-792">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/BillReprintCancelActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5786">
+          <caret line="356" column="45" lean-forward="false" selection-start-line="356" selection-start-column="45" selection-end-line="356" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/CashMemoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="1857" column="0" lean-forward="true" selection-start-line="1857" selection-start-column="0" selection-end-line="1857" selection-end-column="0" />
+          <folding>
+            <element signature="e#5031#5074#0" expanded="false" />
+            <element signature="class#5708:6739" expanded="false" />
+            <element signature="method#onItemSelected#0;class#5708:6739" expanded="false" />
+            <element signature="method#onNothingSelected#0;class#5708:6739" expanded="false" />
+            <element signature="class#6795:7376" expanded="false" />
+            <element signature="method#onItemSelected#0;class#6795:7376" expanded="false" />
+            <element signature="method#onNothingSelected#0;class#6795:7376" expanded="false" />
+            <element signature="class#7422:8556" expanded="false" />
+            <element signature="method#beforeTextChanged#0;class#7422:8556" expanded="false" />
+            <element signature="method#onTextChanged#0;class#7422:8556" expanded="false" />
+            <element signature="method#afterTextChanged#0;class#7422:8556" expanded="false" />
+            <element signature="class#8609:9119" expanded="false" />
+            <element signature="method#beforeTextChanged#0;class#8609:9119" expanded="false" />
+            <element signature="method#onTextChanged#0;class#8609:9119" expanded="false" />
+            <element signature="method#afterTextChanged#0;class#8609:9119" expanded="false" />
+            <element signature="class#9172:10087" expanded="false" />
+            <element signature="method#beforeTextChanged#0;class#9172:10087" expanded="false" />
+            <element signature="method#onTextChanged#0;class#9172:10087" expanded="false" />
+            <element signature="method#afterTextChanged#0;class#9172:10087" expanded="false" />
+            <element signature="class#10137:11019" expanded="false" />
+            <element signature="method#beforeTextChanged#0;class#10137:11019" expanded="false" />
+            <element signature="method#onTextChanged#0;class#10137:11019" expanded="false" />
+            <element signature="method#afterTextChanged#0;class#10137:11019" expanded="false" />
+            <element signature="method#onClick#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#onItemClick#1;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#calculation#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#onItemClick#2;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#onSwiped#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="class#17926:18542" expanded="false" />
+            <element signature="method#onViewAttachedToWindow#0;class#17926:18542" expanded="false" />
+            <element signature="method#onViewDetachedFromWindow#0;class#17926:18542" expanded="false" />
+            <element signature="method#startNewActivty#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#finalCalculation#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#init#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="e#23644#23954#0" expanded="false" />
+            <element signature="method#setProdData#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#setRateList#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#setCustData#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#showProdAlertDialog#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="class#30472:30931" expanded="false" />
+            <element signature="method#beforeTextChanged#0;class#30472:30931" expanded="false" />
+            <element signature="method#onTextChanged#0;class#30472:30931" expanded="false" />
+            <element signature="method#afterTextChanged#0;class#30472:30931" expanded="false" />
+            <element signature="method#showRateAlertDialog#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="class#32924:33383" expanded="false" />
+            <element signature="method#beforeTextChanged#0;class#32924:33383" expanded="false" />
+            <element signature="method#onTextChanged#0;class#32924:33383" expanded="false" />
+            <element signature="method#afterTextChanged#0;class#32924:33383" expanded="false" />
+            <element signature="method#removeQty#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#addQty#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#addToCart#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#setItemwiseDiscount#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#saveBill#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#stringToInt#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#stringToFloat#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#setSpinnerData#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#showDia#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#clearField#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="class#CashMemoPrint1#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#onPreExecute#0;class#CashMemoPrint1#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#onPostExecute#0;class#CashMemoPrint1#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="class#CashMemoPrint#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#onPreExecute#0;class#CashMemoPrint#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#onPostExecute#0;class#CashMemoPrint#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#roundTwoDecimals#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#roundDecimals#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#roundDecimals#1;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#roundTwoDecimals#1;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#connectBT#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#findBT#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#openBT#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#beginListenForData#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#sendData#0;class#CashMemoActivity#0" expanded="false" />
+            <element signature="method#closeBT#0;class#CashMemoActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/FirstActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="274" column="27" lean-forward="true" selection-start-line="274" selection-start-column="27" selection-end-line="274" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/pait/smartpos/ReturnMemoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="394" column="70" lean-forward="false" selection-start-line="394" selection-start-column="70" selection-end-line="394" selection-end-column="70" />
+          <folding>
+            <element signature="class#CashMemoPrint#0;class#ReturnMemoActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>

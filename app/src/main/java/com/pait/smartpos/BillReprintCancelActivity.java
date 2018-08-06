@@ -143,7 +143,7 @@ public class BillReprintCancelActivity extends AppCompatActivity {
 
                 UserProfileClass user = new Constant(getApplicationContext()).getPref();
 
-                mService.sendMessage(user.getFirmName(), "GBK");
+                mService.sendMessage(user.getFirmName().toUpperCase(), "GBK");
 
                 nameFontformat[2] = arrayOfByte1[2];
                 mService.write(nameFontformat);
@@ -275,11 +275,11 @@ public class BillReprintCancelActivity extends AppCompatActivity {
                 }*/
                 //textData.append("Total              ").append("  "+count).append("      ").append(totalamt).append("\n");
                 if (_count.length() == 1 && totalamt.length() == 2) {
-                    textData.append("Total          ").append("  ").append(totQty).append("        ").append(roundDecimals(totAmnt)).append("\n");
+                    textData.append("Total          ").append("  ").append(totQty).append("        ").append(roundTwoDecimals(totAmnt)).append("\n");
                 } else if (_count.length() == 1 && totalamt.length() == 3) {
-                    textData.append("Total          ").append("  ").append(totQty).append("       ").append(roundDecimals(totAmnt)).append("\n");
+                    textData.append("Total          ").append("  ").append(totQty).append("       ").append(roundTwoDecimals(totAmnt)).append("\n");
                 } else if (_count.length() == 1 && totalamt.length() == 4) {
-                    textData.append("Total          ").append(totQty).append("      ").append(roundDecimals(totAmnt)).append("\n");
+                    textData.append("Total          ").append(totQty).append("      ").append(roundTwoDecimals(totAmnt)).append("\n");
                 }
                 nameFontformat = format;
                 nameFontformat[2] = arrayOfByte1[2];
@@ -352,6 +352,11 @@ public class BillReprintCancelActivity extends AppCompatActivity {
     private String roundTwoDecimals(String d) {
         DecimalFormat twoDForm = new DecimalFormat("#.##");
         return twoDForm.format(Double.parseDouble(d));
+    }
+
+    private String roundTwoDecimals(float d) {
+        DecimalFormat twoDForm = new DecimalFormat("#.##");
+        return twoDForm.format(Double.parseDouble(String.valueOf(d)));
     }
 
     private String roundDecimals(String d) {

@@ -255,6 +255,7 @@
                             android:background="@null"
                             android:text="@string/total"
                             android:textColor="#FFFFFF"
+                            android:drawableLeft="@drawable/ic_keyboard_arrow_down_black_24dp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -462,7 +463,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
-                        android:layout_weight="0.6"
+                        android:layout_weight="0.5"
                         android:background="@drawable/black_border_curve_draw"
                         android:orientation="vertical">
 
@@ -476,7 +477,7 @@
                         android:id="@+id/ed_cash"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.4"
+                        android:layout_weight="0.5"
                         android:clickable="false"
                         android:editable="false"
                         android:ems="10"
@@ -494,7 +495,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
-                        android:layout_weight="0.6"
+                        android:layout_weight="0.5"
                         android:background="@drawable/black_border_curve_draw"
                         android:orientation="vertical">
 
@@ -508,7 +509,7 @@
                         android:id="@+id/ed_retMemo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.4"
+                        android:layout_weight="0.5"
                         android:ems="10"
                         android:inputType="number" />
                 </LinearLayout>

@@ -79,7 +79,7 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
     private float totQty = 0, totAmnt = 0, totDiscAmnt = 0, totCGSTAmnt = 0, totSGSTAmnt = 0;
     private BluetoothService mService;
     private BluetoothDevice con_dev = null;
-    private String memoNo, customerName;
+    private String memoNo, cgstPerStr, sgstPerStr, customerName;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -421,7 +421,7 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
 
                 UserProfileClass user = new Constant(getApplicationContext()).getPref();
 
-                mService.sendMessage(user.getFirmName(), "GBK");
+                mService.sendMessage(user.getFirmName().toUpperCase(), "GBK");
 
                 nameFontformat[2] = arrayOfByte1[2];
                 mService.write(nameFontformat);
@@ -572,8 +572,8 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                 nameFontformat = format;
                 nameFontformat[2] = arrayOfByte1[2];
                 mService.write(nameFontformat);
-                //mService.sendMessage("CGST " + cgstPerStr + " % : " + roundTwoDecimals(totCGSTAmnt), "GBK");
-                //mService.sendMessage("SGST " + sgstPerStr + " % : " + roundTwoDecimals(totSGSTAmnt), "GBK");
+                mService.sendMessage("CGST " + cgstPerStr + " % : " + roundTwoDecimals(totCGSTAmnt), "GBK");
+                mService.sendMessage("SGST " + sgstPerStr + " % : " + roundTwoDecimals(totSGSTAmnt), "GBK");
 
                 nameFontformat = format;
                 nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));
@@ -590,7 +590,7 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                 mService.write(left2);
                 nameFontformat[2] = arrayOfByte1[2];
                 mService.write(nameFontformat);
-                mService.sendMessage("    www.paitsystems.com", "GBK");
+                mService.sendMessage("Contact No : 020 24339954", "GBK");
 
                 mService.write(PrinterCommands.ESC_ENTER);
                 String space_str = "                        ";
@@ -610,6 +610,7 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
             super.onPostExecute(result);
             Log.d("Print3", result);
             pd.dismiss();
+            clearFields();
         }
     }
 
@@ -823,6 +824,8 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                     detCESSAMT = 0;
                     detIGSTAMT = 0;
                     TaxableAmt = taxableRate;
+                    cgstPerStr = roundTwoDecimals(cgstPer);
+                    sgstPerStr = roundTwoDecimals(sgstPer);
                     totCGSTAmnt = totCGSTAmnt + cgstAmt;
                     totSGSTAmnt = totSGSTAmnt + sgstAmt;
                 } else if (gstType.equals("E")) {
@@ -845,6 +848,8 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                     detCESSAMT = 0;
                     detIGSTAMT = 0;
                     TaxableAmt = taxableRate;
+                    cgstPerStr = roundTwoDecimals(cgstPer);
+                    sgstPerStr = roundTwoDecimals(sgstPer);
                     totCGSTAmnt = totCGSTAmnt + cgstAmt;
                     totSGSTAmnt = totSGSTAmnt + sgstAmt;
                 }
@@ -892,7 +897,6 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
             }
             db.updateTRetQty(String.valueOf(totQty), billMaster);
             showDia(2);
-            new CashMemoPrint().execute();
         }else{
             toast.setText("Please Select Atleast One Item");
             toast.show();
@@ -993,13 +997,21 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
             });
         }else if (a == 2) {
             builder.setMessage("Return Memo Saved Sucessfully");
-            builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setPositiveButton("Print", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                    new CashMemoPrint().execute();
+                }
+            });
+            builder.setNegativeButton("New Return Memo", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss();
                     clearFields();
                 }
             });
+
         }
         builder.create().show();
     }
