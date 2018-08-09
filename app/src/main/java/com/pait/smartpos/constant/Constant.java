@@ -30,7 +30,7 @@ public class Constant {
     //public static final String ipaddress = "http://172.30.1.209/PAITSP/service.svc";
     public static final String ipaddress = "http://license.lnbinfotech.com/PAITSP/service.svc";
     //TODO: Check CustImage Url
-    public static final String imgIpaddress = "http://license.lnbinfotech.com/PAIT/Aditya_Wawse.jpg";
+    public static final String imgIpaddress = "http://license.lnbinfotech.com/PAIT/PAIT.jpg";
     public static final String bgImgIPAddress = "https://api.androidhive.info/images/nav-menu-header-bg.jpg";
 
     public static String ftp_adress = "ftp.lnbinfotech.com";

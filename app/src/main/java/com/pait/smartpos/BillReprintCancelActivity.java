@@ -3,6 +3,7 @@ package com.pait.smartpos;
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.bluetooth.BluetoothDevice;
+import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -44,7 +45,9 @@ public class BillReprintCancelActivity extends AppCompatActivity {
     private Toast toast;
     private BluetoothService mService;
     private BluetoothDevice con_dev = null;
-    private String gstNo = "";
+    private String compName = "PA", compAddress="PUNE", compPhone="02024339957",
+            compInit="PA", compGSTNo = "27ABCD1234EFGH2", custName = "CashSale-0";
+    private int gstApplicable = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,11 +58,28 @@ public class BillReprintCancelActivity extends AppCompatActivity {
 
         listView.setOnItemClickListener((adapterView, view, i, l) -> {
             bill = (BillReprintCancelClass) listView.getItemAtPosition(i);
+            custName = db.getCustName(bill.getCustId());
             showDia(1);
         });
 
         mService = new BluetoothService(getApplicationContext(), mHandler1);
         connectBT();
+
+        Cursor res = db.getCompanyDetail();
+        if (res.moveToFirst()) {
+            do {
+                compName = res.getString(res.getColumnIndex(DBHandler.CPM_CompanyName));
+                compAddress = res.getString(res.getColumnIndex(DBHandler.CPM_Address));
+                compPhone = res.getString(res.getColumnIndex(DBHandler.CPM_Phone));
+                compInit = res.getString(res.getColumnIndex(DBHandler.CPM_Initials));
+                compGSTNo = res.getString(res.getColumnIndex(DBHandler.CPM_GSTNo));
+            } while (res.moveToNext());
+        }
+        res.close();
+
+        if(compGSTNo.length()==15) {
+            gstApplicable = 1;
+        }
 
     }
 
@@ -78,7 +98,6 @@ public class BillReprintCancelActivity extends AppCompatActivity {
         listView = findViewById(R.id.listView);
         list = new ArrayList<>();
         db = new DBHandler(getApplicationContext());
-        gstNo = db.getGSTNo();
 
     }
 
@@ -141,16 +160,16 @@ public class BillReprintCancelActivity extends AppCompatActivity {
                 nameFontformat[2] = ((byte) (0x20 | arrayOfByte1[2]));
                 mService.write(nameFontformat);
 
-                UserProfileClass user = new Constant(getApplicationContext()).getPref();
-
-                mService.sendMessage(user.getFirmName().toUpperCase(), "GBK");
+                mService.sendMessage(compName.toUpperCase(), "GBK");
 
                 nameFontformat[2] = arrayOfByte1[2];
                 mService.write(nameFontformat);
 
-                mService.sendMessage(user.getCity(), "GBK");
-                mService.sendMessage(user.getMobileNo(), "GBK");
-                mService.sendMessage("GSTIN : "+gstNo, "GBK");
+                mService.sendMessage(compAddress, "GBK");
+                mService.sendMessage(compPhone, "GBK");
+                if(gstApplicable == 1) {
+                    mService.sendMessage("GSTIN : " + compGSTNo, "GBK");
+                }
                 mService.sendMessage("TAX INVOICE", "GBK");
 
                 byte[] left = {27, 97, 0};
@@ -162,6 +181,9 @@ public class BillReprintCancelActivity extends AppCompatActivity {
                 mService.sendMessage("BillNo : " + bill.getBillNo(), "GBK");
                 String space_str13 = "             ";
                 mService.sendMessage(date + space_str13 + time, "GBK");
+                String[] arr = custName.split("-");
+                mService.sendMessage("Cust Name : " + arr[0], "GBK");
+                mService.sendMessage("Mob No    : " + arr[1], "GBK");
 
                 nameFontformat = format;
                 nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));
@@ -172,7 +194,9 @@ public class BillReprintCancelActivity extends AppCompatActivity {
                 nameFontformat[2] = arrayOfByte1[2];
                 mService.write(nameFontformat);
 
-                mService.sendMessage("Item           " + "Qty" + "  Rate" + "  Amnt", "GBK");
+                String _heading = String.format("%1$-10s %2$3s %3$8s %4$8s","Item", "Qty", "Rate", "Amnt");
+                Constant.showLog(_heading);
+                mService.sendMessage(_heading,"GBK");
                 nameFontformat = format;
                 nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));
                 mService.write(nameFontformat);
@@ -185,112 +209,66 @@ public class BillReprintCancelActivity extends AppCompatActivity {
                 float totAmnt = 0;
                 String cgstPerStr = "", sgstPerStr = "";
 
-                StringBuilder data = new StringBuilder();
                 for (int i = 0; i < cartList.size(); i++) {
+                    String _itemData;
                     BillDetailClass cart = cartList.get(i);
                     StringBuilder item = new StringBuilder(cart.getFatherSKU());
                     String item1 = cart.getFatherSKU();
                     int flag = 0;
-                    if (item.length() >= 14) {
-                        item = new StringBuilder(item.substring(0, 13));
+                    String qty = cart.getQty();
+                    totQty = Integer.parseInt(qty);
+                    String amnt = cart.getTotal();
+                    totAmnt = totAmnt + Float.parseFloat(amnt);
+                    if (item.length() >= 10) {
+                        item = new StringBuilder(item.substring(0, 9));
                         item.append(" ");
                         flag = 1;
                     } else {
-                        int size = 13 - item.length();
+                        int size = 9 - item.length();
                         for (int j = 0; j < size; j++) {
                             item.append(" ");
                         }
                         item.append(" ");
                     }
-
-                    String qty = cart.getQty();
-                    totQty = Integer.parseInt(qty);
-                    if (qty.length() == 1) {
-                        qty = "  " + qty;
-                    } else if (qty.length() == 2) {
-                        qty = " " + qty;
+                    if (flag != 1) {
+                        _itemData = String.format("%1$-10s %2$3s %3$8s %4$8s",item, cart.getQty(),
+                                cart.getRate(),cart.getTotal());
+                        mService.sendMessage(_itemData,"GBK");
+                    } else {
+                        _itemData = String.format("%1$-10s %2$3s %3$8s %4$8s",item, cart.getQty(),
+                                cart.getRate(),cart.getTotal());
+                        mService.sendMessage(_itemData,"GBK");
+                        String q = item1.substring(9, item1.length());
+                        _itemData = String.format("%1$-10s %2$1s %3$1s %4$1s",q,"","","");
+                        mService.sendMessage(_itemData,"GBK");
                     }
-
-                    String rate = cart.getRate();
-                    if (rate.length() == 1) {
-                        rate = "      " + rate;
-                    }else if (rate.length() == 2) {
-                        rate = "     " + rate;
-                    }else if (rate.length() == 3) {
-                        rate = "     " + rate;
-                    }else if (rate.length() == 4) {
-                        rate = "   " + rate;
-                    } else if (rate.length() == 5) {
-                        rate = "  " + rate;
-                    }else if (rate.length() == 6) {
-                        rate = " " + rate;
-                    }
-
-                    String amnt = cart.getTotal();
-                    totAmnt = totAmnt + Float.parseFloat(amnt);
-
-                    if (amnt.length() == 1) {
-                        amnt = "      " + amnt;
-                    }else if (amnt.length() == 2) {
-                        amnt = "     " + amnt;
-                    }else if (amnt.length() == 3) {
-                        amnt = "    " + amnt;
-                    }else if (amnt.length() == 4) {
-                        amnt = "   " + amnt;
-                    }else if (amnt.length() == 5) {
-                        amnt = "  " + amnt;
-                    }else if (amnt.length() == 6) {
-                        amnt = " " + amnt;
-                    }
-
                     cgstPerStr = cart.getCGSTPER();
                     sgstPerStr = cart.getSGSTPER();
-
-                    if (flag != 1) {
-                        data.append(item).append(qty).append(rate).append(amnt).append("\n");
-                        textData.append("").append(item).append(qty).append(rate).append(amnt).append("\n");
-                    } else {
-                        String q = item1.substring(13, item1.length());
-                        if (q.length() < 32) {
-                            data.append(item).append(qty).append(rate).append(amnt).append("\n").append(q).append("\n");
-                            textData.append("").append(item).append(qty).append(rate).append(amnt).append("\n").append(q).append("\n");
-                        }
-                    }
                     count++;
                 }
 
                 String _count = String.valueOf(count);
 
-                mService.sendMessage(data.toString(), "GBK");
+                /*mService.sendMessage(data.toString(), "GBK");
                 nameFontformat = format;
                 nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));
                 mService.write(nameFontformat);
+                textData.delete(0, textData.length());*/
                 mService.sendMessage(line_str, "GBK");
-                textData.delete(0, textData.length());
-
                 String  totalamt = roundDecimals(bill.getNetAmt());
-               /* String[] totArr = totalamt.split("\\.");
-                if (totArr.length > 1) {
-                    totalamt = totArr[0];
-                }*/
-                //textData.append("Total              ").append("  "+count).append("      ").append(totalamt).append("\n");
-                if (_count.length() == 1 && totalamt.length() == 2) {
-                    textData.append("Total          ").append("  ").append(totQty).append("        ").append(roundTwoDecimals(totAmnt)).append("\n");
-                } else if (_count.length() == 1 && totalamt.length() == 3) {
-                    textData.append("Total          ").append("  ").append(totQty).append("       ").append(roundTwoDecimals(totAmnt)).append("\n");
-                } else if (_count.length() == 1 && totalamt.length() == 4) {
-                    textData.append("Total          ").append(totQty).append("      ").append(roundTwoDecimals(totAmnt)).append("\n");
-                }
+                String _totalData = String.format("%1$-10s %2$3s %3$8s %4$8s","Total", _count,"",roundTwoDecimals(String.valueOf(totAmnt)));
                 nameFontformat = format;
                 nameFontformat[2] = arrayOfByte1[2];
                 mService.write(nameFontformat);
-                mService.sendMessage(textData.toString(), "GBK");
+                mService.sendMessage(_totalData, "GBK");
 
                 nameFontformat = format;
                 nameFontformat[2] = arrayOfByte1[2];
                 mService.write(nameFontformat);
-                mService.sendMessage("CGST " + cgstPerStr + " % : " + roundTwoDecimals(bill.getCGSTAMNT()), "GBK");
-                mService.sendMessage("SGST " + sgstPerStr + " % : " + roundTwoDecimals(bill.getSGSTAMNT()), "GBK");
+                if(gstApplicable == 1) {
+                    mService.sendMessage("CGST " + cgstPerStr + " % : " + roundTwoDecimals(bill.getCGSTAMNT()), "GBK");
+                    mService.sendMessage("SGST " + sgstPerStr + " % : " + roundTwoDecimals(bill.getSGSTAMNT()), "GBK");
+                }
 
                 nameFontformat = format;
                 nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));

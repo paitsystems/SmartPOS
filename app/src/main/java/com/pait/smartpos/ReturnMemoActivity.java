@@ -79,7 +79,9 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
     private float totQty = 0, totAmnt = 0, totDiscAmnt = 0, totCGSTAmnt = 0, totSGSTAmnt = 0;
     private BluetoothService mService;
     private BluetoothDevice con_dev = null;
-    private String memoNo, cgstPerStr, sgstPerStr, customerName;
+    private String memoNo, cgstPerStr, sgstPerStr, compName = "PA", compAddress="PUNE", compPhone="02024339957",
+            compInit="PA", compGSTNo = "27ABCD1234EFGH2", custName = "CashSale-0";
+    private int gstApplicable = 0;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -170,6 +172,8 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                         totDiscAmnt = totDiscAmnt + stringToFloat(billDetail.getBilldisamt());
                         totCGSTAmnt = totCGSTAmnt + stringToFloat(billDetail.getCGSTAMT());
                         totSGSTAmnt = totSGSTAmnt + stringToFloat(billDetail.getSGSTAMT());
+                        Constant.showLog(billDetail.getCGSTAMT()+"-"+billDetail.getSGSTAMT()+"-"+
+                        totCGSTAmnt+"-"+totSGSTAmnt);
                         tv_totQty.setText(roundTwoDecimals(totQty));
                         tv_totAmnt.setText(roundTwoDecimals(totAmnt));
 
@@ -195,6 +199,22 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
 
         ItemTouchHelper.SimpleCallback itemTouchHelperCallback = new ReturnMemoRecyclerItemTouchHelper(0, ItemTouchHelper.RIGHT, this);
         new ItemTouchHelper(itemTouchHelperCallback).attachToRecyclerView(rv_returnMemo);
+
+        Cursor res = db.getCompanyDetail();
+        if (res.moveToFirst()) {
+            do {
+                compName = res.getString(res.getColumnIndex(DBHandler.CPM_CompanyName));
+                compAddress = res.getString(res.getColumnIndex(DBHandler.CPM_Address));
+                compPhone = res.getString(res.getColumnIndex(DBHandler.CPM_Phone));
+                compInit = res.getString(res.getColumnIndex(DBHandler.CPM_Initials));
+                compGSTNo = res.getString(res.getColumnIndex(DBHandler.CPM_GSTNo));
+            } while (res.moveToNext());
+        }
+        res.close();
+
+        if(compGSTNo.length()==15) {
+            gstApplicable = 1;
+        }
     }
 
     @Override
@@ -419,15 +439,16 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                 nameFontformat[2] = ((byte) (0x20 | arrayOfByte1[2]));
                 mService.write(nameFontformat);
 
-                UserProfileClass user = new Constant(getApplicationContext()).getPref();
-
-                mService.sendMessage(user.getFirmName().toUpperCase(), "GBK");
+                mService.sendMessage(compName.toUpperCase(), "GBK");
 
                 nameFontformat[2] = arrayOfByte1[2];
                 mService.write(nameFontformat);
 
-                mService.sendMessage(user.getCity(), "GBK");
-                mService.sendMessage(user.getMobileNo(), "GBK");
+                mService.sendMessage(compAddress, "GBK");
+                mService.sendMessage(compPhone, "GBK");
+                if(gstApplicable == 1) {
+                    mService.sendMessage("GSTIN : " + compGSTNo, "GBK");
+                }
                 mService.sendMessage("Credit Note", "GBK");
 
                 byte[] left = {27, 97, 0};
@@ -449,8 +470,6 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                     mService.sendMessage("Customer Name : " + str1, "GBK");
                     mService.sendMessage("Mobile No     : " , "GBK");
                 }
-
-
                 nameFontformat = format;
                 nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));
                 mService.write(nameFontformat);
@@ -460,7 +479,9 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                 nameFontformat[2] = arrayOfByte1[2];
                 mService.write(nameFontformat);
 
-                mService.sendMessage("Item           " + "Qty" + "  Rate" + "  Amnt", "GBK");
+                String _heading = String.format("%1$-10s %2$3s %3$8s %4$8s","Item", "Qty", "Rate", "Amnt");
+                Constant.showLog(_heading);
+                mService.sendMessage(_heading,"GBK");
                 nameFontformat = format;
                 nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));
                 mService.write(nameFontformat);
@@ -474,70 +495,36 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
 
                 StringBuilder data = new StringBuilder();
                 for (int i = 0; i < retMemoList.size(); i++) {
+                    String _itemData;
                     BillDetailClass cart = retMemoList.get(i);
                     StringBuilder item = new StringBuilder(cart.getFatherSKU());
                     String item1 = cart.getFatherSKU();
                     int flag = 0;
-                    if (item.length() >= 14) {
-                        item = new StringBuilder(item.substring(0, 13));
+                    String qty = cart.getQty();
+                    totQty = Integer.parseInt(qty);
+                    _totAmnt = _totAmnt + stringToFloat(cart.getTotal());
+                    if (item.length() >= 10) {
+                        item = new StringBuilder(item.substring(0, 9));
                         item.append(" ");
                         flag = 1;
                     } else {
-                        int size = 13 - item.length();
+                        int size = 9 - item.length();
                         for (int j = 0; j < size; j++) {
                             item.append(" ");
                         }
                         item.append(" ");
                     }
-
-                    totQty = totQty + Integer.parseInt(cart.getQty());
-                    String qty = String.valueOf(cart.getQty());
-                    if (qty.length() == 1) {
-                        qty = "  " + qty;
-                    } else if (qty.length() == 2) {
-                        qty = " " + qty;
-                    }
-
-                    String rate = String.valueOf(cart.getRate());
-                    if (rate.length() == 1) {
-                        rate = "      " + rate;
-                    }else if (rate.length() == 2) {
-                        rate = "     " + rate;
-                    }else if (rate.length() == 3) {
-                        rate = "     " + rate;
-                    }else if (rate.length() == 4) {
-                        rate = "   " + rate;
-                    } else if (rate.length() == 5) {
-                        rate = "  " + rate;
-                    }else if (rate.length() == 6) {
-                        rate = " " + rate;
-                    }
-
-                    _totAmnt = _totAmnt + stringToFloat(cart.getTotal());
-                    String amnt = String.valueOf(cart.getTotal());
-                    if (amnt.length() == 1) {
-                        amnt = "      " + amnt;
-                    }else if (amnt.length() == 2) {
-                        amnt = "     " + amnt;
-                    }else if (amnt.length() == 3) {
-                        amnt = "    " + amnt;
-                    }else if (amnt.length() == 4) {
-                        amnt = "   " + amnt;
-                    }else if (amnt.length() == 5) {
-                        amnt = "  " + amnt;
-                    }else if (amnt.length() == 6) {
-                        amnt = " " + amnt;
-                    }
-
                     if (flag != 1) {
-                        data.append(item).append(qty).append(rate).append(amnt).append("\n");
-                        textData.append("").append(item).append(qty).append(rate).append(amnt).append("\n");
+                        _itemData = String.format("%1$-10s %2$3s %3$8s %4$8s",item, cart.getQty(),
+                                cart.getRate(),cart.getTotal());
+                        mService.sendMessage(_itemData,"GBK");
                     } else {
-                        String q = item1.substring(13, item1.length());
-                        if (q.length() < 32) {
-                            data.append(item).append(qty).append(rate).append(amnt).append("\n").append(q).append("\n");
-                            textData.append("").append(item).append(qty).append(rate).append(amnt).append("\n").append(q).append("\n");
-                        }
+                        _itemData = String.format("%1$-10s %2$3s %3$8s %4$8s",item, cart.getQty(),
+                                cart.getRate(),cart.getTotal());
+                        mService.sendMessage(_itemData,"GBK");
+                        String q = item1.substring(9, item1.length());
+                        _itemData = String.format("%1$-10s %2$1s %3$1s %4$1s",q,"","","");
+                        mService.sendMessage(_itemData,"GBK");
                     }
                     count++;
                 }
@@ -552,29 +539,19 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
                 textData.delete(0, textData.length());
 
                 String  totalamt = roundDecimals(tv_totAmnt.getText().toString());
-                /*String[] totArr = totalamt.split("\\.");
-                if (totArr.length > 1) {
-                    totalamt = totArr[0];
-                }*/
-                //textData.append("Total              ").append("  "+count).append("      ").append(totalamt).append("\n");
-                if (_count.length() == 1 && totalamt.length() == 2) {
-                    textData.append("Total          ").append("  ").append(totQty).append("        ").append(roundTwoDecimals(_totAmnt)).append("\n");
-                } else if (_count.length() == 1 && totalamt.length() == 3) {
-                    textData.append("Total          ").append("  ").append(totQty).append("       ").append(roundTwoDecimals(_totAmnt)).append("\n");
-                } else if (_count.length() == 1 && totalamt.length() == 4) {
-                    textData.append("Total          ").append(count).append("      ").append(roundTwoDecimals(_totAmnt)).append("\n");
+                String _totalData = String.format("%1$-10s %2$3s %3$8s %4$8s","Total", _count,"",roundTwoDecimals(String.valueOf(_totAmnt)));
+                nameFontformat = format;
+                nameFontformat[2] = arrayOfByte1[2];
+                mService.write(nameFontformat);
+                mService.sendMessage(_totalData, "GBK");
+
+                nameFontformat = format;
+                nameFontformat[2] = arrayOfByte1[2];
+                mService.write(nameFontformat);
+                if(gstApplicable == 1) {
+                    mService.sendMessage("CGST " + cgstPerStr + " % : " + roundTwoDecimals(totCGSTAmnt), "GBK");
+                    mService.sendMessage("SGST " + sgstPerStr + " % : " + roundTwoDecimals(totSGSTAmnt), "GBK");
                 }
-                nameFontformat = format;
-                nameFontformat[2] = arrayOfByte1[2];
-                mService.write(nameFontformat);
-                mService.sendMessage(textData.toString(), "GBK");
-
-                nameFontformat = format;
-                nameFontformat[2] = arrayOfByte1[2];
-                mService.write(nameFontformat);
-                mService.sendMessage("CGST " + cgstPerStr + " % : " + roundTwoDecimals(totCGSTAmnt), "GBK");
-                mService.sendMessage("SGST " + sgstPerStr + " % : " + roundTwoDecimals(totSGSTAmnt), "GBK");
-
                 nameFontformat = format;
                 nameFontformat[2] = ((byte) (0x8 | arrayOfByte1[2]));
                 mService.write(nameFontformat);
@@ -628,7 +605,12 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
     }
 
     private void saveReturnMemo(){
-        float netbillamt,returnqty,returnamt,dis,tax,grossamt,netamt,BalRedeem,
+        totAmnt = 0;
+        totDiscAmnt = 0;
+        totCGSTAmnt = 0;
+        totSGSTAmnt = 0;
+
+        float netbillamt,returnqty,returnamt,dis,tax,grossamt = 0,netamt,BalRedeem,
                 BillKnockAmt,RevGainPts,RevRdmPts,CGSTAMT,SGSTAMT,IGSTAMT;
 
         int auto,id,empname,createby,modifiedby,deletedby,maxno,branchID,OpenBy, validate = -1;
@@ -654,25 +636,20 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
             memoNo = rMemoNo = "RM"+financialyr+"/"+db.getCompIni()+"/"+id;
             detRMemoNo = rMemoNo;
             type = "R";
-            BalRedeem = totAmnt;
         }else{
             memoNo = rMemoNo = "CB"+financialyr+"/"+db.getCompIni()+"/"+id;
             detRMemoNo = rMemoNo;
             type = "C";
-            BalRedeem = 0;
         }
         machineName = new Constant(getApplicationContext()).getIMEINo1();
         counterNo = "1";
         detCounterNo = counterNo;
         billNo = billMaster.getBillNo();
         custcode = billMaster.getCustID();
-        netbillamt = stringToFloat(billMaster.getTotalAmt());
+        netbillamt = stringToFloat(billMaster.getNetamt());
         returnqty = totQty;
-        returnamt = totAmnt;
         dis = totDiscAmnt;
         tax = 0;
-        grossamt = netbillamt;
-        netamt = netbillamt;
         remark = "";
         empname = 1;
         createby = 1;
@@ -691,7 +668,6 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
         redeemtype = "CN";
         SpecialRight = "N";
         msreplclm = "";
-        BillKnockAmt = returnamt;
         OpenSt = "Open";
         OpenBy = 0;
         OpenDate = "";
@@ -702,12 +678,158 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
         CreatedFrom = "C";
         RevGainPts = 0;
         RevRdmPts = 0;
-        CGSTAMT = totCGSTAmnt;
-        SGSTAMT = totSGSTAmnt;
         IGSTAPP = "N";
         IGSTAMT = 0;
 
         if(retMemoList!=null && retMemoList.size()!=0) {
+            for (BillDetailClass det : retMemoList) {
+                detId = db.getMaxRMDetAuto();
+                mastid = db.getMaxRMDetId(detId);
+                itemcode = det.getItemId();
+                barcode = det.getBarcode();
+                qty = stringToInt(det.getQty());
+                rate = stringToFloat(det.getRate());
+                grossamt = grossamt + (rate*qty);
+                amt = stringToFloat(det.getTotal());
+                returnID = mastid;
+                branchID = 1;
+                detFinancialyr = financialyr;
+                counterNo = "1";
+                autoID = 0;
+                disper = stringToFloat(det.getDisper());
+                disamt = stringToFloat(det.getDisamt());
+                vatper = 0;
+                vatamt = 0;
+                nonbarst = "N";
+                itemName = det.getFatherSKU();
+                empid = 1;
+                MRP = stringToFloat(det.getMRP());
+                mastid = det.getAuto();
+                BillDetAuto = billDetail.getAuto();
+                dtlid = billDetail.getId();
+                billdisper = stringToFloat(det.getBilldisper());
+                billdisamt = stringToFloat(det.getBilldisamt());
+
+                String str = db.getGstGroupFromProdId(itemcode);
+                String arr[] = str.split("-");
+                String gstGroup = arr[0];
+                String gstType = arr[1];
+
+                float gstPer = 0, cgstPer = 0, sgstPer = 0,cgstShare = 0, sgstShare = 0;
+                if(gstApplicable == 1) {
+                    Cursor cursor = db.getGSTPer(gstGroup, rate);
+                    cursor.moveToFirst();
+                    gstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_GSTPer));
+                    cgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTPer));
+                    sgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_SGSTPer));
+                    cgstShare = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTShare));
+                    sgstShare = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_SGSTShare));
+                    cursor.close();
+                }
+
+                if (gstType.equals("I")) {
+                    float accValue = ((gstPer * 100) / (gstPer + 100));
+                    float gstAmnt = (rate * accValue) / 100;
+                    //float taxableRate = rate - gstAmnt;
+                    float total = (rate * qty);
+                    float billdiscPer = billdisper;
+                    float billDiscAmnt = (total * billdiscPer) / 100;
+                    float disctedTotal = total - billDiscAmnt;
+                    float totalGST = (disctedTotal * gstPer) / 100;
+                    float cgstAmt = (disctedTotal * cgstPer) / 100;
+                    float sgstAmt = (disctedTotal * sgstPer) / 100;
+                    float netAmt = disctedTotal + cgstAmt + sgstAmt;
+                    totAmnt = totAmnt + netAmt;
+                    detGSTPER = gstPer;
+                    detCGSTAMT = cgstAmt;
+                    detSGSTAMT = sgstAmt;
+                    detCGSTPER = cgstPer;
+                    detSGSTPER = sgstPer;
+                    detCESSPER = 0;
+                    detCESSAMT = 0;
+                    detIGSTAMT = 0;
+                    TaxableAmt = disctedTotal;
+                    cgstPerStr = roundTwoDecimals(cgstPer);
+                    sgstPerStr = roundTwoDecimals(sgstPer);
+                    totCGSTAmnt = totCGSTAmnt + cgstAmt;
+                    totSGSTAmnt = totSGSTAmnt + sgstAmt;
+                } else if (gstType.equals("E")) {
+                    float taxableRate = rate;
+                    float total = (taxableRate * qty);
+                    float billdiscPer = billdisper;
+                    float billDiscAmnt = (total * billdiscPer) / 100;
+                    float disctedTotal = total - billDiscAmnt;
+                    float totalGST = (disctedTotal * gstPer) / 100;
+                    float cgstAmt = (disctedTotal * cgstPer) / 100;
+                    float sgstAmt = (disctedTotal * sgstPer) / 100;
+                    float netAmt = disctedTotal + cgstAmt + sgstAmt;
+                    totAmnt = totAmnt + netAmt;
+                    detGSTPER = gstPer;
+                    detCGSTAMT = cgstAmt;
+                    detSGSTAMT = sgstAmt;
+                    detCGSTPER = cgstPer;
+                    detSGSTPER = sgstPer;
+                    detCESSPER = 0;
+                    detCESSAMT = 0;
+                    detIGSTAMT = 0;
+                    TaxableAmt = disctedTotal;
+                    cgstPerStr = roundTwoDecimals(cgstPer);
+                    sgstPerStr = roundTwoDecimals(sgstPer);
+                    totCGSTAmnt = totCGSTAmnt + cgstAmt;
+                    totSGSTAmnt = totSGSTAmnt + sgstAmt;
+                }
+                ReturnMemoDetailClass retDet = new ReturnMemoDetailClass();
+                retDet.setId(detId);
+                retDet.setMastid(auto);
+                retDet.setrMemoNo(detRMemoNo);
+                retDet.setItemcode(itemcode);
+                retDet.setBarcode(barcode);
+                retDet.setQty(String.valueOf(qty));
+                retDet.setRate(String.valueOf(rate));
+                retDet.setAmt(roundTwoDecimals(amt));
+                retDet.setReturnID(returnID);
+                retDet.setBranchID(branchID);
+                retDet.setFinancialyr(detFinancialyr);
+                retDet.setCounterNo(detCounterNo);
+                retDet.setAutoID(autoID);
+                retDet.setDisper(String.valueOf(disper));
+                retDet.setDisamt(String.valueOf(disamt));
+                retDet.setVatper(String.valueOf(vatper));
+                retDet.setVatamt(String.valueOf(vatamt));
+                retDet.setNonbarst(nonbarst);
+                retDet.setItemName(itemName);
+                retDet.setEmpid(empid);
+                retDet.setMRP(roundTwoDecimals(MRP));
+                retDet.setMastid(mastid);
+                retDet.setBillDetAuto(BillDetAuto);
+                retDet.setDtlid(dtlid);
+                retDet.setBilldisper(roundTwoDecimals(billdisper));
+                retDet.setBilldisamt(roundTwoDecimals(billdisamt));
+
+                retDet.setGSTPER(roundTwoDecimals(detGSTPER));
+                retDet.setCGSTAMT(roundTwoDecimals(detCGSTAMT));
+                retDet.setSGSTAMT(roundTwoDecimals(detSGSTAMT));
+                retDet.setCGSTPER(roundTwoDecimals(detCGSTPER));
+                retDet.setSGSTPER(roundTwoDecimals(detSGSTPER));
+                retDet.setCESSPER(roundTwoDecimals(detCESSPER));
+                retDet.setCESSAMT(roundTwoDecimals(detCESSAMT));
+                retDet.setIGSTAMT(roundTwoDecimals(detIGSTAMT));
+                retDet.setTaxableAmt(roundTwoDecimals(TaxableAmt));
+
+                db.saveReturnMemoDetail(retDet);
+                db.updateRetQty(String.valueOf(qty), det);
+                db.updateInwardProductQty(itemcode,stringToInt(det.getQty()));
+            }
+            returnamt = totAmnt;
+            netamt = returnamt;
+            BillKnockAmt = 0;
+            CGSTAMT = totCGSTAmnt;
+            SGSTAMT = totSGSTAmnt;
+            if(type.equals("R")){
+                BalRedeem = totAmnt;
+            }else{
+                BalRedeem = 0;
+            }
             ReturnMemoMasterClass master = new ReturnMemoMasterClass();
             master.setAuto(auto);
             master.setId(id);
@@ -755,146 +877,11 @@ public class ReturnMemoActivity extends AppCompatActivity implements View.OnClic
             master.setCreatedFrom(CreatedFrom);
             master.setRevGainPts(roundDecimals(RevGainPts));
             master.setRevRdmPts(roundDecimals(RevRdmPts));
-            master.setCGSTAMT(roundDecimals(CGSTAMT));
-            master.setSGSTAMT(roundDecimals(SGSTAMT));
+            master.setCGSTAMT(roundTwoDecimals(CGSTAMT));
+            master.setSGSTAMT(roundTwoDecimals(SGSTAMT));
             master.setIGSTAPP(IGSTAPP);
-            master.setIGSTAPP(roundDecimals(IGSTAMT));
+            master.setIGSTAPP(roundTwoDecimals(IGSTAMT));
             db.saveReturnMemoMaster(master);
-
-            for (BillDetailClass det : retMemoList) {
-                detId = db.getMaxRMDetAuto();
-                mastid = db.getMaxRMDetId(detId);
-                itemcode = det.getItemId();
-                barcode = det.getBarcode();
-                qty = stringToInt(det.getQty());
-                rate = stringToFloat(det.getRate());
-                amt = stringToFloat(det.getTotal());
-                returnID = mastid;
-                branchID = 1;
-                detFinancialyr = financialyr;
-                counterNo = "1";
-                autoID = 0;
-                disper = stringToFloat(det.getDisper());
-                disamt = stringToFloat(det.getDisamt());
-                vatper = 0;
-                vatamt = 0;
-                nonbarst = "N";
-                itemName = det.getFatherSKU();
-                empid = 1;
-                MRP = stringToFloat(det.getMRP());
-                mastid = det.getAuto();
-                BillDetAuto = billDetail.getAuto();
-                dtlid = billDetail.getId();
-                billdisper = stringToFloat(det.getBilldisper());
-                billdisamt = stringToFloat(det.getBilldisamt());
-
-                String str = db.getGstGroupFromProdId(itemcode);
-                String arr[] = str.split("-");
-                String gstGroup = arr[0];
-                String gstType = arr[1];
-
-                Cursor cursor = db.getGSTPer(gstGroup,rate);
-                cursor.moveToFirst();
-                float gstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_GSTPer));
-                float cgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTPer));
-                float sgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_SGSTPer));
-                float cgstShare = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTShare));
-                float sgstShare = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_SGSTShare));
-                cursor.close();
-
-                if (gstType.equals("I")) {
-                    float accValue = ((gstPer * 100) / (gstPer + 100));
-                    float gstAmnt = (rate * accValue) / 100;
-                    float taxableRate = rate - gstAmnt;
-                    float total = (taxableRate * qty);
-                    float billdiscPer = billdisper;
-                    float billDiscAmnt = (total * billdiscPer) / 100;
-                    float disctedTotal = total - billDiscAmnt;
-                    float totalGST = (disctedTotal * gstPer) / 100;
-                    float cgstAmt = (disctedTotal * cgstPer) / 100;
-                    float sgstAmt = (disctedTotal * sgstPer) / 100;
-                    float netAmt = disctedTotal + cgstAmt + sgstAmt;
-                    totAmnt = totAmnt + netAmt;
-                    detGSTPER = gstPer;
-                    detCGSTAMT = cgstAmt;
-                    detSGSTAMT = sgstAmt;
-                    detCGSTPER = cgstPer;
-                    detSGSTPER = sgstPer;
-                    detCESSPER = 0;
-                    detCESSAMT = 0;
-                    detIGSTAMT = 0;
-                    TaxableAmt = taxableRate;
-                    cgstPerStr = roundTwoDecimals(cgstPer);
-                    sgstPerStr = roundTwoDecimals(sgstPer);
-                    totCGSTAmnt = totCGSTAmnt + cgstAmt;
-                    totSGSTAmnt = totSGSTAmnt + sgstAmt;
-                } else if (gstType.equals("E")) {
-                    float taxableRate = rate;
-                    float total = (taxableRate * qty);
-                    float billdiscPer = billdisper;
-                    float billDiscAmnt = (total * billdiscPer) / 100;
-                    float disctedTotal = total - billDiscAmnt;
-                    float totalGST = (disctedTotal * gstPer) / 100;
-                    float cgstAmt = (disctedTotal * cgstPer) / 100;
-                    float sgstAmt = (disctedTotal * sgstPer) / 100;
-                    float netAmt = disctedTotal + cgstAmt + sgstAmt;
-                    totAmnt = totAmnt + netAmt;
-                    detGSTPER = gstPer;
-                    detCGSTAMT = cgstAmt;
-                    detSGSTAMT = sgstAmt;
-                    detCGSTPER = cgstPer;
-                    detSGSTPER = sgstPer;
-                    detCESSPER = 0;
-                    detCESSAMT = 0;
-                    detIGSTAMT = 0;
-                    TaxableAmt = taxableRate;
-                    cgstPerStr = roundTwoDecimals(cgstPer);
-                    sgstPerStr = roundTwoDecimals(sgstPer);
-                    totCGSTAmnt = totCGSTAmnt + cgstAmt;
-                    totSGSTAmnt = totSGSTAmnt + sgstAmt;
-                }
-                ReturnMemoDetailClass retDet = new ReturnMemoDetailClass();
-                retDet.setId(detId);
-                retDet.setMastid(auto);
-                retDet.setrMemoNo(detRMemoNo);
-                retDet.setItemcode(itemcode);
-                retDet.setBarcode(barcode);
-                retDet.setQty(String.valueOf(qty));
-                retDet.setRate(String.valueOf(rate));
-                retDet.setAmt(roundTwoDecimals(amt));
-                retDet.setReturnID(returnID);
-                retDet.setBranchID(branchID);
-                retDet.setFinancialyr(detFinancialyr);
-                retDet.setCounterNo(detCounterNo);
-                retDet.setAutoID(autoID);
-                retDet.setDisper(String.valueOf(disper));
-                retDet.setDisamt(String.valueOf(disamt));
-                retDet.setVatper(String.valueOf(vatper));
-                retDet.setVatamt(String.valueOf(vatamt));
-                retDet.setNonbarst(nonbarst);
-                retDet.setItemName(itemName);
-                retDet.setEmpid(empid);
-                retDet.setMRP(roundTwoDecimals(MRP));
-                retDet.setMastid(mastid);
-                retDet.setBillDetAuto(BillDetAuto);
-                retDet.setDtlid(dtlid);
-                retDet.setBilldisper(roundTwoDecimals(billdisper));
-                retDet.setBilldisamt(roundTwoDecimals(billdisamt));
-
-                retDet.setGSTPER(roundTwoDecimals(detGSTPER));
-                retDet.setCGSTAMT(roundTwoDecimals(detCGSTAMT));
-                retDet.setSGSTAMT(roundTwoDecimals(detSGSTAMT));
-                retDet.setCGSTPER(roundTwoDecimals(detCGSTPER));
-                retDet.setSGSTPER(roundTwoDecimals(detSGSTPER));
-                retDet.setCESSPER(roundTwoDecimals(detCESSPER));
-                retDet.setCESSAMT(roundTwoDecimals(detCESSAMT));
-                retDet.setIGSTAMT(roundTwoDecimals(detIGSTAMT));
-                retDet.setTaxableAmt(roundTwoDecimals(TaxableAmt));
-
-                db.saveReturnMemoDetail(retDet);
-
-                db.updateRetQty(String.valueOf(qty), det);
-            }
             db.updateTRetQty(String.valueOf(totQty), billMaster);
             showDia(2);
         }else{

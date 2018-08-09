@@ -68,8 +68,10 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
     private float rate = 0, totQty = 0, totAmnt = 0, totCGSTAmnt, totSGSTAmnt, totnetAmt, grossAmt;
     private AppCompatButton btn_cancel, btn_reset, btn_save;
     private SlidingUpPanelLayout sliding_layout;
-    private String current_date = "", curr_time = "";
+    private String current_date = "", curr_time = "", compName = "PA", compAddress="PUNE", compPhone="02024339957",
+            compInit="PA", compGSTNo = "27ABCD1234EFGH2";
     private Constant constant;
+    private int gstApplicable = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -189,6 +191,22 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
         btn_add.setOnClickListener(this::onClick);
         btn_save.setOnClickListener(this::onClick);
         btn_cancel.setOnClickListener(this::onClick);
+
+        Cursor res = db.getCompanyDetail();
+        if (res.moveToFirst()) {
+            do {
+                compName = res.getString(res.getColumnIndex(DBHandler.CPM_CompanyName));
+                compAddress = res.getString(res.getColumnIndex(DBHandler.CPM_Address));
+                compPhone = res.getString(res.getColumnIndex(DBHandler.CPM_Phone));
+                compInit = res.getString(res.getColumnIndex(DBHandler.CPM_Initials));
+                compGSTNo = res.getString(res.getColumnIndex(DBHandler.CPM_GSTNo));
+            } while (res.moveToNext());
+        }
+        res.close();
+
+        if(compGSTNo.length()==15) {
+            gstApplicable = 1;
+        }
     }
 
     @Override
@@ -262,8 +280,8 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
                     suppList.add(res.getString(res.getColumnIndex(DBHandler.SM_Name)));
                 } while (res.moveToNext());
             }
+            res.close();
         }
-        res.close();
         ArrayAdapter adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.adapter_item, suppList);
         auto_supplier.setAdapter(adapter);
     }
@@ -278,8 +296,8 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
                     prodList.add(res.getString(res.getColumnIndex(DBHandler.PM_Finalproduct)));
                 } while (res.moveToNext());
             }
+            res.close();
         }
-        res.close();
         ArrayAdapter adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.adapter_item, prodList);
         auto_product.setAdapter(adapter);
 
@@ -380,14 +398,17 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
         detailClass.setCGSTPER(12);
         cartLs.add(detailClass);*/
 
-        Cursor cursor = db.getGSTPer(gstgroup, stringToFloat(_rate));
-        cursor.moveToFirst();
-        float gstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_GSTPer));
-        float cgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTPer));
-        float sgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_SGSTPer));
-        float cgstShare = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTShare));
-        float sgstShare = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_SGSTShare));
-        cursor.close();
+        float gstPer = 0, cgstPer = 0, sgstPer = 0,cgstShare = 0, sgstShare = 0;
+        if(gstApplicable == 1) {
+            Cursor cursor = db.getGSTPer(gstgroup, stringToFloat(_rate));
+            cursor.moveToFirst();
+            gstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_GSTPer));
+            cgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTPer));
+            sgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_SGSTPer));
+            cgstShare = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTShare));
+            sgstShare = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_SGSTShare));
+            cursor.close();
+        }
 
         int qty1 = stringToInt(qty);
         float _Rate = stringToFloat(_rate);
@@ -784,11 +805,6 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
 
     @Override
     public void calculation(float qty, float amnt) {
-        /*if (!ed_discPer.getText().toString().equals("")) {
-            float disc = Float.parseFloat(ed_discPer.getText().toString());
-            float discAmt = (totAmnt * disc) / 100;
-            ed_discAmnt.setText(String.valueOf(discAmt));
-        }*/
         tv_total_qty.setText(String.valueOf(totQty));
         tv_total_amount.setText(roundTwoDecimals(totAmnt));
         tv_tot_cgst.setText(roundTwoDecimals(totCGSTAmnt));
@@ -829,18 +845,18 @@ public class InwardActivity extends AppCompatActivity implements checkBoxListene
             addToCart.setRate(dcart.getRate());
             addToCart.setPurchaseRate(dcart.getPurchaseRate());
             addToCart.setRecQty(dcart.getRecQty());
-            //addToCart.setCGSTAMT(dcart.getCGSTAMT());
-            //addToCart.setSGSTAMT(dcart.getSGSTAMT());
-            //addToCart.setGSTPER(dcart.getGSTPER());
 
-            Cursor cursor = db.getGSTPer(gstgroup, dcart.getPurchaseRate());
-            cursor.moveToFirst();
-            float gstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_GSTPer));
-            float cgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTPer));
-            float sgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_SGSTPer));
-            float cgstShare = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTShare));
-            float sgstShare = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_SGSTShare));
-            cursor.close();
+            float gstPer = 0, cgstPer = 0, sgstPer = 0,cgstShare = 0, sgstShare = 0;
+            if(gstApplicable == 1) {
+                Cursor cursor = db.getGSTPer(gstgroup, dcart.getPurchaseRate());
+                cursor.moveToFirst();
+                gstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_GSTPer));
+                cgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTPer));
+                sgstPer = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_SGSTPer));
+                cgstShare = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_CGSTShare));
+                sgstShare = cursor.getFloat(cursor.getColumnIndex(DBHandlerR.GSTDetail_SGSTShare));
+                cursor.close();
+            }
 
             float q = dcart.getRecQty();
             int qty1 = (int) q;

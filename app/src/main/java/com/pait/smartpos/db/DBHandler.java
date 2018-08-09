@@ -1832,6 +1832,7 @@ public class DBHandler extends SQLiteOpenHelper {
                 BillReprintCancelClass bill = new BillReprintCancelClass();
                 bill.setAuto(res.getInt(res.getColumnIndex(BM_Autono)));
                 bill.setBillNo(res.getString(res.getColumnIndex(BM_Billno)));
+                bill.setCustId(res.getString(res.getColumnIndex(BM_Custid)));
                 bill.setQty(res.getInt(res.getColumnIndex(BM_Totalqty)));
                 bill.setStatus(res.getString(res.getColumnIndex(BM_Billst)));
                 bill.setBillDate(res.getString(res.getColumnIndex(BM_Billdate)));
@@ -2189,6 +2190,7 @@ public class DBHandler extends SQLiteOpenHelper {
                 master.setCustID(res.getString(res.getColumnIndex(BM_Custid)));
                 master.setBillNo(res.getString(res.getColumnIndex(BM_Billno)));
                 master.setTotalAmt(res.getString(res.getColumnIndex(BM_Totalamt)));
+                master.setNetamt(res.getString(res.getColumnIndex(BM_Netamt)));
                 master.setPaidAmt(res.getString(res.getColumnIndex(BM_Paidamt)));
                 master.setTotalQty(res.getString(res.getColumnIndex(BM_Totalqty)));
                 master.setTRetQty(res.getString(res.getColumnIndex(BM_TRetQty)));
@@ -2967,6 +2969,27 @@ public class DBHandler extends SQLiteOpenHelper {
         }
         res.close();
         return ini;
+    }
+
+    public Cursor getCompanyDetail() {
+        String ini = "PA";
+        String str = "select " + CPM_CompanyName+","+CPM_Address+","+CPM_Phone+","+CPM_Initials+","+CPM_GSTNo + " from " + Table_CompanyMaster;
+        Constant.showLog(str);
+        return getWritableDatabase().rawQuery(str, null);
+    }
+
+    public String getcCustNameFromId(String custId){
+        String custName = "CashSale-0";
+        String str = "select " + CSM_Name+","+CSM_Mobno + " from " + Table_CustomerMaster+" where "+CSM_Id+"='"+custId+"'";
+        Constant.showLog(str);
+        Cursor res = getWritableDatabase().rawQuery(str, null);
+        if (res.moveToFirst()) {
+            do {
+                custName = res.getString(0)+"-"+res.getString(1);
+            } while (res.moveToNext());
+        }
+        res.close();
+        return custName;
     }
 }
 
