@@ -604,10 +604,6 @@
         "source": "C:\\Users\\Anup\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\a1e6338af8162e4f9eb7df240088d09a\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
-        "merged": "D:\\android_project\\SmartPOS\\app\\build\\intermediates\\res\\merged\\debug\\layout_cashmemotest.xml.flat",
-        "source": "D:\\android_project\\SmartPOS\\app\\src\\main\\res\\layout\\cashmemotest.xml"
-    },
-    {
         "merged": "D:\\android_project\\SmartPOS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Anup\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\2f1723a30b21833b2fefb46e4502bbfb\\res\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },

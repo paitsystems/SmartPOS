@@ -9,7 +9,7 @@ android {
         applicationId "com.pait.smartpos"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode = "2"
+        versionCode = "3"
         versionName = "1.1"
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
