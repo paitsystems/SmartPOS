@@ -17,6 +17,8 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         initImageLoader(getApplicationContext());
+        AppSignatureHelper appSignature = new AppSignatureHelper(this);
+        appSignature.getAppSignatures();
     }
     @Override
     protected void attachBaseContext(Context base) {

@@ -9,9 +9,6 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RECEIVE_SMS" />
-    <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -87,12 +84,9 @@
             android:theme="@style/NewAppTheme" />
 
         <receiver android:name=".broadcastreceivers.DateChangeBroadcastReceiver" />
-        <receiver
-            android:name=".CheckOTPActivity$MySMSReceiver"
-            android:enabled="true"
-            android:exported="true">
+        <receiver android:name=".broadcastreceivers.MySMSBroadcastReceiver" android:exported="true">
             <intent-filter>
-                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED"/>
             </intent-filter>
         </receiver>
 

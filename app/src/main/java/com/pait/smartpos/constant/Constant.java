@@ -46,12 +46,14 @@ public class Constant {
     private Context context;
     private ProgressDialog pd;
 
-    public static int liveTestFlag = 0;
+    public static int liveTestFlag = 1;
     public static int TIMEOUT_CON = 10000;
     public static int TIMEOUT_SO = 70000;
 
     public static void showLog(String log) {
-        Log.d("Log", ""+log);
+        if(liveTestFlag==0) {
+            Log.d("Log", "" + log);
+        }
     }
 
     public Constant(Activity activity) {

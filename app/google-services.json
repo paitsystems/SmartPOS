@@ -23,6 +23,22 @@
           }
         },
         {
+          "client_id": "602691189237-2gn1j37sgqarld9spvoe61ahpd9p6p21.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pait.smartpos",
+            "certificate_hash": "b1c6f2b7f5d07dd51418f7c833c7be3f7e763275"
+          }
+        },
+        {
+          "client_id": "602691189237-eddjiagsu7hugmj7trufpiobba91c8nn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pait.smartpos",
+            "certificate_hash": "95a24eed912ffe45f0e0d1c736b46423fabbc2e5"
+          }
+        },
+        {
           "client_id": "602691189237-u08m2vivl0si5bhrep4aoeakdlb2p5oc.apps.googleusercontent.com",
           "client_type": 3
         }

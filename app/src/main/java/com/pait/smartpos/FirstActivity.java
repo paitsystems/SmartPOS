@@ -188,22 +188,22 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         builder.create().show();
     }
 
-    private void checkpermmission(){
-        if(!permission.checkBluetoothPermission(getApplicationContext())){
-            permission.requestBluetoothPermission(getApplicationContext(),FirstActivity.this);//9
-        }else if(!permission.checkBluetoothAdminPermission(getApplicationContext())){
-            permission.requestBluetoothAdminPermission(getApplicationContext(),FirstActivity.this);//10
-        }else if(!permission.checkReadPhoneStatePermission(getApplicationContext())){
-            permission.requestReadPhoneStatePermission(getApplicationContext(),FirstActivity.this);//11
-        }else if(!permission.checkReadExternalStoragePermission(getApplicationContext())){
-            permission.requestReadExternalPermission(getApplicationContext(),FirstActivity.this);//2
-        }else if(!permission.checkSendSMSPermission(getApplicationContext())){
-            permission.requestSendSMSPermission(getApplicationContext(),FirstActivity.this);//12
-        }else if(!permission.checkCameraPermission(getApplicationContext())){
-            permission.requestCameraPermission(getApplicationContext(),FirstActivity.this);//1
-        }else if(!permission.checkWriteExternalStoragePermission(getApplicationContext())){
-            permission.requestWriteExternalPermission(getApplicationContext(),FirstActivity.this);//3
-        }else {
+    private void checkpermmission() {
+        if (!permission.checkBluetoothPermission(getApplicationContext())) {
+            permission.requestBluetoothPermission(getApplicationContext(), FirstActivity.this);//9
+        } else if (!permission.checkBluetoothAdminPermission(getApplicationContext())) {
+            permission.requestBluetoothAdminPermission(getApplicationContext(), FirstActivity.this);//10
+        } else if (!permission.checkReadPhoneStatePermission(getApplicationContext())) {
+            permission.requestReadPhoneStatePermission(getApplicationContext(), FirstActivity.this);//11
+        } else if (!permission.checkReadExternalStoragePermission(getApplicationContext())) {
+            permission.requestReadExternalPermission(getApplicationContext(), FirstActivity.this);//2
+        } /*else if (!permission.checkSendSMSPermission(getApplicationContext())) {
+            permission.requestSendSMSPermission(getApplicationContext(), FirstActivity.this);//12
+        }*/ else if (!permission.checkCameraPermission(getApplicationContext())) {
+            permission.requestCameraPermission(getApplicationContext(), FirstActivity.this);//1
+        } else if (!permission.checkWriteExternalStoragePermission(getApplicationContext())) {
+            permission.requestWriteExternalPermission(getApplicationContext(), FirstActivity.this);//3
+        } else {
             doThis();
         }
     }

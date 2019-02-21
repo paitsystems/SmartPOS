@@ -2,7 +2,6 @@ package com.pait.smartpos;
 
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
-import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
@@ -16,7 +15,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
-import android.provider.OpenableColumns;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -30,7 +28,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.pait.smartpos.constant.Constant;
-import com.pait.smartpos.db.DBHandler;
 import com.pait.smartpos.db.DBHandler;
 import com.pait.smartpos.log.WriteLog;
 import com.pait.smartpos.model.UserProfileClass;
@@ -1562,7 +1559,7 @@ public class ImportMasterActivity extends AppCompatActivity implements View.OnCl
                         writeLog("readFile_f[]!=2");
                     }
                     pd1.dismiss();
-                } catch (IOException e) {
+                } catch (Exception e) {
                     writeLog("readFile_"+e.getMessage());
                     e.printStackTrace();
                     pd1.dismiss();
