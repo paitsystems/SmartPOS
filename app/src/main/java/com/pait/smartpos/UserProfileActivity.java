@@ -119,7 +119,8 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
             case R.id.btn_otp:
                 flag = 1;
                 if(validation()) {
-                    requestOTP();
+                    //requestOTP();
+                    doThis("0");
                 }
                 break;
             case R.id.btn_valid:
@@ -345,16 +346,16 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
             builder.setPositiveButton("Try Again", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    if(ConnectivityTest.getNetStat(getApplicationContext())) {
+                    if (ConnectivityTest.getNetStat(getApplicationContext())) {
                         requestOTP();
-                    }else{
+                    } else {
                         toast.setText("You Are Offline");
                         toast.show();
                     }
                     dialog.dismiss();
                 }
             });
-        }else if (a == 5) {
+        } else if (a == 5) {
             builder.setMessage("Something Went Wrong...");
             builder.setPositiveButton("Try Again", new DialogInterface.OnClickListener() {
                 @Override
@@ -362,7 +363,7 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
                     dialog.dismiss();
                 }
             });
-        }else if (a == 6) {
+        } else if (a == 6) {
             builder.setMessage("No Record Available");
             builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override

@@ -99,7 +99,7 @@ public class CheckOTPActivity extends AppCompatActivity implements View.OnClickL
 
         user = (UserProfileClass) getIntent().getSerializableExtra("user");
         response_value = user.getOTP();
-        tv_otp.setText(response_value);
+        //tv_otp.setText(response_value);
         mobNo = user.getMobileNo();
         imeiNo = user.getImeiNo();
         flag = user.getRegisterValidFlag();
@@ -150,6 +150,8 @@ public class CheckOTPActivity extends AppCompatActivity implements View.OnClickL
         filter.addAction(SmsRetriever.SMS_RETRIEVED_ACTION);
         getApplicationContext().registerReceiver(receiver, filter);
         startSMSListener();
+
+        requestOTP();
 
         if (countDown == null) {
             tv_text1.setText("Your OTP will get within 5 min..");
